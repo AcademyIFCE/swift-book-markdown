@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" xml:lang="en"
+ unique-identifier="TP40016643"
+ prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/">
+  <metadata xmlns:opf="http://www.idpf.org/2007/opf"
+        xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:language>en</dc:language>
+    <dc:title>The Swift Programming Language (Swift 5.1)</dc:title>
+    <dc:description>unknown</dc:description>
+    <dc:creator>Apple Inc.</dc:creator>
+    <dc:contributor>unknown</dc:contributor>
+    <dc:publisher>Apple Inc.</dc:publisher>
+    <dc:rights>Copyright &amp;copy; 2019 Apple Inc. All rights reserved.</dc:rights>
+    <dc:identifier id="TP40016643">//apple_ref/doc/uid/</dc:identifier>
+    <dc:date>2019-09-04T15:19:52Z</dc:date>
+    <meta property="dcterms:modified">2019-09-04T15:19:52Z</meta>
+    <meta property="ibooks:version">5.1</meta>
+    <meta property="ibooks:specified-fonts">true</meta>
+    <meta property="ibooks:binding">true</meta>
+    <meta property="ibooks:scroll-axis">vertical</meta>
+    <meta name="cover" content="epub-111"/>
+  </metadata>
+  <manifest>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
+    <item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+    <item id="epub-0" href="Trademarks.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-1" href="GuidedTour/AboutSwift.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-2" href="GuidedTour/Compatibility.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-3" href="GuidedTour/GuidedTour.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-4" href="GuidedTour/GuidedTourPart.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-5" href="LanguageGuide/AccessControl.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-6" href="LanguageGuide/AdvancedOperators.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-7" href="LanguageGuide/AutomaticReferenceCounting.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-8" href="LanguageGuide/BasicOperators.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-9" href="LanguageGuide/ClassesAndStructures.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-10" href="LanguageGuide/Closures.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-11" href="LanguageGuide/CollectionTypes.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-12" href="LanguageGuide/ControlFlow.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-13" href="LanguageGuide/Deinitialization.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-14" href="LanguageGuide/Enumerations.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-15" href="LanguageGuide/ErrorHandling.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-16" href="LanguageGuide/Extensions.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-17" href="LanguageGuide/Functions.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-18" href="LanguageGuide/Generics.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-19" href="LanguageGuide/Inheritance.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-20" href="LanguageGuide/Initialization.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-21" href="LanguageGuide/LanguageGuidePart.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-22" href="LanguageGuide/MemorySafety.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-23" href="LanguageGuide/Methods.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-24" href="LanguageGuide/NestedTypes.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-25" href="LanguageGuide/OpaqueTypes.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-26" href="LanguageGuide/OptionalChaining.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-27" href="LanguageGuide/Properties.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-28" href="LanguageGuide/Protocols.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-29" href="LanguageGuide/StringsAndCharacters.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-30" href="LanguageGuide/Subscripts.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-31" href="LanguageGuide/TheBasics.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-32" href="LanguageGuide/TypeCasting.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-33" href="ReferenceManual/AboutTheLanguageReference.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-34" href="ReferenceManual/Attributes.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-35" href="ReferenceManual/Declarations.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-36" href="ReferenceManual/Expressions.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-37" href="ReferenceManual/GenericParametersAndArguments.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-38" href="ReferenceManual/LexicalStructure.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-39" href="ReferenceManual/Patterns.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-40" href="ReferenceManual/ReferenceManualPart.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-41" href="ReferenceManual/Statements.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-42" href="ReferenceManual/Types.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-43" href="ReferenceManual/zzSummaryOfTheGrammar.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-44" href="RevisionHistory/RevisionHistory.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-45" href="RevisionHistory/RevisionHistoryPart.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-46" href="_images/CollectionTypes_intro_2x.png" media-type="image/png" />
+    <item id="epub-47" href="_images/UTF16_2x.png" media-type="image/png" />
+    <item id="epub-48" href="_images/UTF8_2x.png" media-type="image/png" />
+    <item id="epub-49" href="_images/UnicodeScalar_2x.png" media-type="image/png" />
+    <item id="epub-50" href="_images/barcode_QR_2x.png" media-type="image/png" />
+    <item id="epub-51" href="_images/barcode_UPC_2x.png" media-type="image/png" />
+    <item id="epub-52" href="_images/bitshiftSignedAddition_2x.png" media-type="image/png" />
+    <item id="epub-53" href="_images/bitshiftSignedFour_2x.png" media-type="image/png" />
+    <item id="epub-54" href="_images/bitshiftSignedMinusFourValue_2x.png" media-type="image/png" />
+    <item id="epub-55" href="_images/bitshiftSignedMinusFour_2x.png" media-type="image/png" />
+    <item id="epub-56" href="_images/bitshiftSigned_2x.png" media-type="image/png" />
+    <item id="epub-57" href="_images/bitshiftUnsigned_2x.png" media-type="image/png" />
+    <item id="epub-58" href="_images/bitwiseAND_2x.png" media-type="image/png" />
+    <item id="epub-59" href="_images/bitwiseNOT_2x.png" media-type="image/png" />
+    <item id="epub-60" href="_images/bitwiseOR_2x.png" media-type="image/png" />
+    <item id="epub-61" href="_images/bitwiseXOR_2x.png" media-type="image/png" />
+    <item id="epub-62" href="_images/chessBoard_2x.png" media-type="image/png" />
+    <item id="epub-63" href="_images/closureReferenceCycle01_2x.png" media-type="image/png" />
+    <item id="epub-64" href="_images/closureReferenceCycle02_2x.png" media-type="image/png" />
+    <item id="epub-65" href="_images/computedProperties_2x.png" media-type="image/png" />
+    <item id="epub-66" href="_images/coordinateGraphComplex_2x.png" media-type="image/png" />
+    <item id="epub-67" href="_images/coordinateGraphMedium_2x.png" media-type="image/png" />
+    <item id="epub-68" href="_images/coordinateGraphSimple_2x.png" media-type="image/png" />
+    <item id="epub-69" href="_images/initializerDelegation01_2x.png" media-type="image/png" />
+    <item id="epub-70" href="_images/initializerDelegation02_2x.png" media-type="image/png" />
+    <item id="epub-71" href="_images/initializersExample01_2x.png" media-type="image/png" />
+    <item id="epub-72" href="_images/initializersExample02_2x.png" media-type="image/png" />
+    <item id="epub-73" href="_images/initializersExample03_2x.png" media-type="image/png" />
+    <item id="epub-74" href="_images/memory_increment_2x.png" media-type="image/png" />
+    <item id="epub-75" href="_images/memory_share_health_maria_2x.png" media-type="image/png" />
+    <item id="epub-76" href="_images/memory_share_health_oscar_2x.png" media-type="image/png" />
+    <item id="epub-77" href="_images/memory_shopping_2x.png" media-type="image/png" />
+    <item id="epub-78" href="_images/multilineStringWhitespace_2x.png" media-type="image/png" />
+    <item id="epub-79" href="_images/overflowAddition_2x.png" media-type="image/png" />
+    <item id="epub-80" href="_images/overflowSignedSubtraction_2x.png" media-type="image/png" />
+    <item id="epub-81" href="_images/overflowUnsignedSubtraction_2x.png" media-type="image/png" />
+    <item id="epub-82" href="_images/referenceCycle01_2x.png" media-type="image/png" />
+    <item id="epub-83" href="_images/referenceCycle02_2x.png" media-type="image/png" />
+    <item id="epub-84" href="_images/referenceCycle03_2x.png" media-type="image/png" />
+    <item id="epub-85" href="_images/remainderInteger_2x.png" media-type="image/png" />
+    <item id="epub-86" href="_images/setEulerDiagram_2x.png" media-type="image/png" />
+    <item id="epub-87" href="_images/setVennDiagram_2x.png" media-type="image/png" />
+    <item id="epub-88" href="_images/sharedStateClass_2x.png" media-type="image/png" />
+    <item id="epub-89" href="_images/sharedStateStruct_2x.png" media-type="image/png" />
+    <item id="epub-90" href="_images/snakesAndLadders_2x.png" media-type="image/png" />
+    <item id="epub-91" href="_images/stackPoppedOneString_2x.png" media-type="image/png" />
+    <item id="epub-92" href="_images/stackPushPop_2x.png" media-type="image/png" />
+    <item id="epub-93" href="_images/stackPushedFourStrings_2x.png" media-type="image/png" />
+    <item id="epub-94" href="_images/staticPropertiesVUMeter_2x.png" media-type="image/png" />
+    <item id="epub-95" href="_images/stringSubstring_2x.png" media-type="image/png" />
+    <item id="epub-96" href="_images/subscriptMatrix01_2x.png" media-type="image/png" />
+    <item id="epub-97" href="_images/subscriptMatrix02_2x.png" media-type="image/png" />
+    <item id="epub-98" href="_images/twoPhaseInitialization01_2x.png" media-type="image/png" />
+    <item id="epub-99" href="_images/twoPhaseInitialization02_2x.png" media-type="image/png" />
+    <item id="epub-100" href="_images/unownedReference01_2x.png" media-type="image/png" />
+    <item id="epub-101" href="_images/unownedReference02_2x.png" media-type="image/png" />
+    <item id="epub-102" href="_images/vectorAddition_2x.png" media-type="image/png" />
+    <item id="epub-103" href="_images/weakReference01_2x.png" media-type="image/png" />
+    <item id="epub-104" href="_images/weakReference02_2x.png" media-type="image/png" />
+    <item id="epub-105" href="_images/weakReference03_2x.png" media-type="image/png" />
+    <item id="epub-106" href="_static/ajax-loader.gif" media-type="image/gif" />
+    <item id="epub-107" href="_static/basic.css" media-type="text/css" />
+    <item id="epub-108" href="_static/comment-bright.png" media-type="image/png" />
+    <item id="epub-109" href="_static/comment-close.png" media-type="image/png" />
+    <item id="epub-110" href="_static/comment.png" media-type="image/png" />
+    <item id="epub-111" href="_static/cover.jpg" media-type="image/jpeg" />
+    <item id="epub-112" href="_static/down-pressed.png" media-type="image/png" />
+    <item id="epub-113" href="_static/down.png" media-type="image/png" />
+    <item id="epub-114" href="_static/epub.css" media-type="text/css" />
+    <item id="epub-115" href="_static/file.png" media-type="image/png" />
+    <item id="epub-116" href="_static/minus.png" media-type="image/png" />
+    <item id="epub-117" href="_static/plus.png" media-type="image/png" />
+    <item id="epub-118" href="_static/pygments.css" media-type="text/css" />
+    <item id="epub-119" href="_static/up-pressed.png" media-type="image/png" />
+    <item id="epub-120" href="_static/up.png" media-type="image/png" />
+  </manifest>
+  <spine toc="ncx" page-progression-direction="ltr">
+    <itemref idref="epub-4" />
+    <itemref idref="epub-1" />
+    <itemref idref="epub-2" />
+    <itemref idref="epub-3" />
+    <itemref idref="epub-21" />
+    <itemref idref="epub-31" />
+    <itemref idref="epub-8" />
+    <itemref idref="epub-29" />
+    <itemref idref="epub-11" />
+    <itemref idref="epub-12" />
+    <itemref idref="epub-17" />
+    <itemref idref="epub-10" />
+    <itemref idref="epub-14" />
+    <itemref idref="epub-9" />
+    <itemref idref="epub-27" />
+    <itemref idref="epub-23" />
+    <itemref idref="epub-30" />
+    <itemref idref="epub-19" />
+    <itemref idref="epub-20" />
+    <itemref idref="epub-13" />
+    <itemref idref="epub-26" />
+    <itemref idref="epub-15" />
+    <itemref idref="epub-32" />
+    <itemref idref="epub-24" />
+    <itemref idref="epub-16" />
+    <itemref idref="epub-28" />
+    <itemref idref="epub-18" />
+    <itemref idref="epub-25" />
+    <itemref idref="epub-7" />
+    <itemref idref="epub-22" />
+    <itemref idref="epub-5" />
+    <itemref idref="epub-6" />
+    <itemref idref="epub-40" />
+    <itemref idref="epub-33" />
+    <itemref idref="epub-38" />
+    <itemref idref="epub-42" />
+    <itemref idref="epub-36" />
+    <itemref idref="epub-41" />
+    <itemref idref="epub-35" />
+    <itemref idref="epub-34" />
+    <itemref idref="epub-39" />
+    <itemref idref="epub-37" />
+    <itemref idref="epub-43" />
+    <itemref idref="epub-45" />
+    <itemref idref="epub-44" />
+    <itemref idref="epub-0" />
+  </spine>
+</package>

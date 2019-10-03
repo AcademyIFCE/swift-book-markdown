@@ -1,0 +1,290 @@
+<?xml version="1.0"?>
+<ncx version="2005-1" xmlns="http://www.daisy.org/z3986/2005/ncx/">
+  <head>
+    <meta name="dtb:uid" content="TP40016643"/>
+    <meta name="dtb:depth" content="2"/>
+    <meta name="dtb:totalPageCount" content="0"/>
+    <meta name="dtb:maxPageNumber" content="0"/>
+  </head>
+  <docTitle>
+    <text>The Swift Programming Language (Swift 5.1)</text>
+  </docTitle>
+  <navMap>    
+    <navPoint id="navPoint1" playOrder="1">
+      <navLabel>
+        <text>Welcome to Swift</text>
+      </navLabel>
+      <content src="GuidedTour/GuidedTourPart.xhtml" />  
+      <navPoint id="navPoint3" playOrder="2">
+        <navLabel>
+          <text>About Swift</text>
+        </navLabel>
+        <content src="GuidedTour/AboutSwift.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint4" playOrder="3">
+        <navLabel>
+          <text>Version Compatibility</text>
+        </navLabel>
+        <content src="GuidedTour/Compatibility.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint5" playOrder="4">
+        <navLabel>
+          <text>A Swift Tour</text>
+        </navLabel>
+        <content src="GuidedTour/GuidedTour.xhtml" />  
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint6" playOrder="5">
+      <navLabel>
+        <text>Language Guide</text>
+      </navLabel>
+      <content src="LanguageGuide/LanguageGuidePart.xhtml" />  
+      <navPoint id="navPoint8" playOrder="6">
+        <navLabel>
+          <text>The Basics</text>
+        </navLabel>
+        <content src="LanguageGuide/TheBasics.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint9" playOrder="7">
+        <navLabel>
+          <text>Basic Operators</text>
+        </navLabel>
+        <content src="LanguageGuide/BasicOperators.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint10" playOrder="8">
+        <navLabel>
+          <text>Strings and Characters</text>
+        </navLabel>
+        <content src="LanguageGuide/StringsAndCharacters.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint11" playOrder="9">
+        <navLabel>
+          <text>Collection Types</text>
+        </navLabel>
+        <content src="LanguageGuide/CollectionTypes.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint12" playOrder="10">
+        <navLabel>
+          <text>Control Flow</text>
+        </navLabel>
+        <content src="LanguageGuide/ControlFlow.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint13" playOrder="11">
+        <navLabel>
+          <text>Functions</text>
+        </navLabel>
+        <content src="LanguageGuide/Functions.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint14" playOrder="12">
+        <navLabel>
+          <text>Closures</text>
+        </navLabel>
+        <content src="LanguageGuide/Closures.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint15" playOrder="13">
+        <navLabel>
+          <text>Enumerations</text>
+        </navLabel>
+        <content src="LanguageGuide/Enumerations.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint16" playOrder="14">
+        <navLabel>
+          <text>Structures and Classes</text>
+        </navLabel>
+        <content src="LanguageGuide/ClassesAndStructures.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint17" playOrder="15">
+        <navLabel>
+          <text>Properties</text>
+        </navLabel>
+        <content src="LanguageGuide/Properties.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint18" playOrder="16">
+        <navLabel>
+          <text>Methods</text>
+        </navLabel>
+        <content src="LanguageGuide/Methods.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint19" playOrder="17">
+        <navLabel>
+          <text>Subscripts</text>
+        </navLabel>
+        <content src="LanguageGuide/Subscripts.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint20" playOrder="18">
+        <navLabel>
+          <text>Inheritance</text>
+        </navLabel>
+        <content src="LanguageGuide/Inheritance.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint21" playOrder="19">
+        <navLabel>
+          <text>Initialization</text>
+        </navLabel>
+        <content src="LanguageGuide/Initialization.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint22" playOrder="20">
+        <navLabel>
+          <text>Deinitialization</text>
+        </navLabel>
+        <content src="LanguageGuide/Deinitialization.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint23" playOrder="21">
+        <navLabel>
+          <text>Optional Chaining</text>
+        </navLabel>
+        <content src="LanguageGuide/OptionalChaining.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint24" playOrder="22">
+        <navLabel>
+          <text>Error Handling</text>
+        </navLabel>
+        <content src="LanguageGuide/ErrorHandling.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint25" playOrder="23">
+        <navLabel>
+          <text>Type Casting</text>
+        </navLabel>
+        <content src="LanguageGuide/TypeCasting.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint26" playOrder="24">
+        <navLabel>
+          <text>Nested Types</text>
+        </navLabel>
+        <content src="LanguageGuide/NestedTypes.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint27" playOrder="25">
+        <navLabel>
+          <text>Extensions</text>
+        </navLabel>
+        <content src="LanguageGuide/Extensions.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint28" playOrder="26">
+        <navLabel>
+          <text>Protocols</text>
+        </navLabel>
+        <content src="LanguageGuide/Protocols.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint29" playOrder="27">
+        <navLabel>
+          <text>Generics</text>
+        </navLabel>
+        <content src="LanguageGuide/Generics.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint30" playOrder="28">
+        <navLabel>
+          <text>Opaque Types</text>
+        </navLabel>
+        <content src="LanguageGuide/OpaqueTypes.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint31" playOrder="29">
+        <navLabel>
+          <text>Automatic Reference Counting</text>
+        </navLabel>
+        <content src="LanguageGuide/AutomaticReferenceCounting.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint32" playOrder="30">
+        <navLabel>
+          <text>Memory Safety</text>
+        </navLabel>
+        <content src="LanguageGuide/MemorySafety.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint33" playOrder="31">
+        <navLabel>
+          <text>Access Control</text>
+        </navLabel>
+        <content src="LanguageGuide/AccessControl.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint34" playOrder="32">
+        <navLabel>
+          <text>Advanced Operators</text>
+        </navLabel>
+        <content src="LanguageGuide/AdvancedOperators.xhtml" />  
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint35" playOrder="33">
+      <navLabel>
+        <text>Language Reference</text>
+      </navLabel>
+      <content src="ReferenceManual/ReferenceManualPart.xhtml" />  
+      <navPoint id="navPoint37" playOrder="34">
+        <navLabel>
+          <text>About the Language Reference</text>
+        </navLabel>
+        <content src="ReferenceManual/AboutTheLanguageReference.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint38" playOrder="35">
+        <navLabel>
+          <text>Lexical Structure</text>
+        </navLabel>
+        <content src="ReferenceManual/LexicalStructure.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint39" playOrder="36">
+        <navLabel>
+          <text>Types</text>
+        </navLabel>
+        <content src="ReferenceManual/Types.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint40" playOrder="37">
+        <navLabel>
+          <text>Expressions</text>
+        </navLabel>
+        <content src="ReferenceManual/Expressions.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint41" playOrder="38">
+        <navLabel>
+          <text>Statements</text>
+        </navLabel>
+        <content src="ReferenceManual/Statements.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint42" playOrder="39">
+        <navLabel>
+          <text>Declarations</text>
+        </navLabel>
+        <content src="ReferenceManual/Declarations.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint43" playOrder="40">
+        <navLabel>
+          <text>Attributes</text>
+        </navLabel>
+        <content src="ReferenceManual/Attributes.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint44" playOrder="41">
+        <navLabel>
+          <text>Patterns</text>
+        </navLabel>
+        <content src="ReferenceManual/Patterns.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint45" playOrder="42">
+        <navLabel>
+          <text>Generic Parameters and Arguments</text>
+        </navLabel>
+        <content src="ReferenceManual/GenericParametersAndArguments.xhtml" />  
+      </navPoint>
+      <navPoint id="navPoint46" playOrder="43">
+        <navLabel>
+          <text>Summary of the Grammar</text>
+        </navLabel>
+        <content src="ReferenceManual/zzSummaryOfTheGrammar.xhtml" />  
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint47" playOrder="44">
+      <navLabel>
+        <text>Revision History</text>
+      </navLabel>
+      <content src="RevisionHistory/RevisionHistoryPart.xhtml" />  
+      <navPoint id="navPoint49" playOrder="45">
+        <navLabel>
+          <text>Document Revision History</text>
+        </navLabel>
+        <content src="RevisionHistory/RevisionHistory.xhtml" />  
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint50" playOrder="46">
+      <navLabel>
+        <text>Trademarks</text>
+      </navLabel>
+      <content src="Trademarks.xhtml" />  
+    </navPoint>
+  </navMap>
+</ncx>

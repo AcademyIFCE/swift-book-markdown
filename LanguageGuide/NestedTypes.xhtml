@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <title>Nested Types</title>
+    <link rel="stylesheet" href="../_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /> 
+  </head><body>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="nested-types">
+<h1>Nested Types</h1>
+<p>Enumerations are often created to support a specific class or structure’s functionality. Similarly, it can be convenient to define utility classes and structures purely for use within the context of a more complex type. To accomplish this, Swift enables you to define <em>nested types</em>, whereby you nest supporting enumerations, classes, and structures within the definition of the type they support.</p>
+<p>To nest a type within another type, write its definition within the outer braces of the type it supports. Types can be nested to as many levels as are required.</p>
+<div class="section" id="ID243">
+<h2>Nested Types in Action</h2>
+<p>The example below defines a structure called <code class="docutils literal notranslate"><span class="pre">BlackjackCard</span></code>, which models a playing card as used in the game of Blackjack. The <code class="docutils literal notranslate"><span class="pre">BlackjackCard</span></code> structure contains two nested enumeration types called <code class="docutils literal notranslate"><span class="pre">Suit</span></code> and <code class="docutils literal notranslate"><span class="pre">Rank</span></code>.</p>
+<p>In Blackjack, the Ace cards have a value of either one or eleven. This feature is represented by a structure called <code class="docutils literal notranslate"><span class="pre">Values</span></code>, which is nested within the <code class="docutils literal notranslate"><span class="pre">Rank</span></code> enumeration:</p>
+<div class="highlight-swift notranslate"><div class="code-sample"><div class="Swift highlight"><ol class="code-lines"><li><span class="k">struct</span> <span class="nv">BlackjackCard</span> {
+</li><li>
+</li><li>    <span class="c">// nested Suit enumeration</span>
+</li><li>    <span class="k">enum</span> <span class="nv">Suit</span>: <span class="nc">Character</span> {
+</li><li>        <span class="k">case</span> <span class="nv">spades</span> = <span class="s">&quot;♠&quot;</span>, <span class="nv">hearts</span> = <span class="s">&quot;♡&quot;</span>, <span class="nv">diamonds</span> = <span class="s">&quot;♢&quot;</span>, <span class="nv">clubs</span> = <span class="s">&quot;♣&quot;</span>
+</li><li>    }
+</li><li>
+</li><li>    <span class="c">// nested Rank enumeration</span>
+</li><li>    <span class="k">enum</span> <span class="nv">Rank</span>: <span class="nc">Int</span> {
+</li><li>        <span class="k">case</span> <span class="nv">two</span> = <span class="m">2</span>, <span class="nv">three</span>, <span class="nv">four</span>, <span class="nv">five</span>, <span class="nv">six</span>, <span class="nv">seven</span>, <span class="nv">eight</span>, <span class="nv">nine</span>, <span class="nv">ten</span>
+</li><li>        <span class="k">case</span> <span class="nv">jack</span>, <span class="nv">queen</span>, <span class="nv">king</span>, <span class="nv">ace</span>
+</li><li>        <span class="k">struct</span> <span class="nv">Values</span> {
+</li><li>            <span class="k">let</span> <span class="nv">first</span>: <span class="nc">Int</span>, <span class="nv">second</span>: <span class="nc">Int</span>?
+</li><li>        }
+</li><li>        <span class="k">var</span> <span class="nv">values</span>: <span class="nc">Values</span> {
+</li><li>            <span class="k">switch</span> <span class="k">self</span> {
+</li><li>            <span class="k">case</span> .<span class="nv">ace</span>:
+</li><li>                <span class="k">return</span> <span class="nv">Values</span>(<span class="nv">first</span>: <span class="m">1</span>, <span class="nv">second</span>: <span class="m">11</span>)
+</li><li>            <span class="k">case</span> .<span class="nv">jack</span>, .<span class="nv">queen</span>, .<span class="nv">king</span>:
+</li><li>                <span class="k">return</span> <span class="nv">Values</span>(<span class="nv">first</span>: <span class="m">10</span>, <span class="nv">second</span>: <span class="k">nil</span>)
+</li><li>            <span class="k">default</span>:
+</li><li>                <span class="k">return</span> <span class="nv">Values</span>(<span class="nv">first</span>: <span class="k">self</span>.<span class="nv">rawValue</span>, <span class="nv">second</span>: <span class="k">nil</span>)
+</li><li>            }
+</li><li>        }
+</li><li>    }
+</li><li>
+</li><li>    <span class="c">// BlackjackCard properties and methods</span>
+</li><li>    <span class="k">let</span> <span class="nv">rank</span>: <span class="nc">Rank</span>, <span class="nv">suit</span>: <span class="nc">Suit</span>
+</li><li>    <span class="k">var</span> <span class="nv">description</span>: <span class="nc">String</span> {
+</li><li>        <span class="k">var</span> <span class="nv">output</span> = <span class="s">&quot;suit is </span>\<span class="p">(</span><span class="nv">suit</span>.<span class="nv">rawValue</span><span class="p">)</span><span class="s">,&quot;</span>
+</li><li>        <span class="nv">output</span> += <span class="s">&quot; value is </span>\<span class="p">(</span><span class="nv">rank</span>.<span class="nv">values</span>.<span class="nv">first</span><span class="p">)</span><span class="s">&quot;</span>
+</li><li>        <span class="k">if</span> <span class="k">let</span> <span class="nv">second</span> = <span class="nv">rank</span>.<span class="nv">values</span>.<span class="nv">second</span> {
+</li><li>            <span class="nv">output</span> += <span class="s">&quot; or </span>\<span class="p">(</span><span class="nv">second</span><span class="p">)</span><span class="s">&quot;</span>
+</li><li>        }
+</li><li>        <span class="k">return</span> <span class="nv">output</span>
+</li><li>    }
+</li><li>}
+</li></ol></div></div></div>
+<p>The <code class="docutils literal notranslate"><span class="pre">Suit</span></code> enumeration describes the four common playing card suits, together with a raw <code class="docutils literal notranslate"><span class="pre">Character</span></code> value to represent their symbol.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">Rank</span></code> enumeration describes the thirteen possible playing card ranks, together with a raw <code class="docutils literal notranslate"><span class="pre">Int</span></code> value to represent their face value. (This raw <code class="docutils literal notranslate"><span class="pre">Int</span></code> value is not used for the Jack, Queen, King, and Ace cards.)</p>
+<p>As mentioned above, the <code class="docutils literal notranslate"><span class="pre">Rank</span></code> enumeration defines a further nested structure of its own, called <code class="docutils literal notranslate"><span class="pre">Values</span></code>. This structure encapsulates the fact that most cards have one value, but the Ace card has two values. The <code class="docutils literal notranslate"><span class="pre">Values</span></code> structure defines two properties to represent this:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">first</span></code>, of type <code class="docutils literal notranslate"><span class="pre">Int</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">second</span></code>, of type <code class="docutils literal notranslate"><span class="pre">Int?</span></code>, or “optional <code class="docutils literal notranslate"><span class="pre">Int</span></code>”</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">Rank</span></code> also defines a computed property, <code class="docutils literal notranslate"><span class="pre">values</span></code>, which returns an instance of the <code class="docutils literal notranslate"><span class="pre">Values</span></code> structure. This computed property considers the rank of the card and initializes a new <code class="docutils literal notranslate"><span class="pre">Values</span></code> instance with appropriate values based on its rank. It uses special values for <code class="docutils literal notranslate"><span class="pre">jack</span></code>, <code class="docutils literal notranslate"><span class="pre">queen</span></code>, <code class="docutils literal notranslate"><span class="pre">king</span></code>, and <code class="docutils literal notranslate"><span class="pre">ace</span></code>. For the numeric cards, it uses the rank’s raw <code class="docutils literal notranslate"><span class="pre">Int</span></code> value.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">BlackjackCard</span></code> structure itself has two properties—<code class="docutils literal notranslate"><span class="pre">rank</span></code> and <code class="docutils literal notranslate"><span class="pre">suit</span></code>. It also defines a computed property called <code class="docutils literal notranslate"><span class="pre">description</span></code>, which uses the values stored in <code class="docutils literal notranslate"><span class="pre">rank</span></code> and <code class="docutils literal notranslate"><span class="pre">suit</span></code> to build a description of the name and value of the card. The <code class="docutils literal notranslate"><span class="pre">description</span></code> property uses optional binding to check whether there is a second value to display, and if so, inserts additional description detail for that second value.</p>
+<p>Because <code class="docutils literal notranslate"><span class="pre">BlackjackCard</span></code> is a structure with no custom initializers, it has an implicit memberwise initializer, as described in <a class="reference internal" href="Initialization.xhtml#ID214"><span class="std std-ref">Memberwise Initializers for Structure Types</span></a>. You can use this initializer to initialize a new constant called <code class="docutils literal notranslate"><span class="pre">theAceOfSpades</span></code>:</p>
+<div class="highlight-swift notranslate"><div class="code-sample"><div class="Swift highlight"><ol class="code-lines"><li><span class="k">let</span> <span class="nv">theAceOfSpades</span> = <span class="nv">BlackjackCard</span>(<span class="nv">rank</span>: .<span class="nv">ace</span>, <span class="nv">suit</span>: .<span class="nv">spades</span>)
+</li><li><span class="nv">print</span>(<span class="s">&quot;theAceOfSpades: </span>\<span class="p">(</span><span class="nv">theAceOfSpades</span>.<span class="nv">description</span><span class="p">)</span><span class="s">&quot;</span>)
+</li><li><span class="c">// Prints &quot;theAceOfSpades: suit is ♠, value is 1 or 11&quot;</span>
+</li></ol></div></div></div>
+<p>Even though <code class="docutils literal notranslate"><span class="pre">Rank</span></code> and <code class="docutils literal notranslate"><span class="pre">Suit</span></code> are nested within <code class="docutils literal notranslate"><span class="pre">BlackjackCard</span></code>, their type can be inferred from context, and so the initialization of this instance is able to refer to the enumeration cases by their case names (<code class="docutils literal notranslate"><span class="pre">.ace</span></code> and <code class="docutils literal notranslate"><span class="pre">.spades</span></code>) alone. In the example above, the <code class="docutils literal notranslate"><span class="pre">description</span></code> property correctly reports that the Ace of Spades has a value of <code class="docutils literal notranslate"><span class="pre">1</span></code> or <code class="docutils literal notranslate"><span class="pre">11</span></code>.</p>
+</div>
+<div class="section" id="ID244">
+<h2>Referring to Nested Types</h2>
+<p>To use a nested type outside of its definition context, prefix its name with the name of the type it is nested within:</p>
+<div class="highlight-swift notranslate"><div class="code-sample"><div class="Swift highlight"><ol class="code-lines"><li><span class="k">let</span> <span class="nv">heartsSymbol</span> = <span class="nv">BlackjackCard</span>.<span class="nv">Suit</span>.<span class="nv">hearts</span>.<span class="nv">rawValue</span>
+</li><li><span class="c">// heartsSymbol is &quot;♡&quot;</span>
+</li></ol></div></div></div>
+<p>For the example above, this enables the names of <code class="docutils literal notranslate"><span class="pre">Suit</span></code>, <code class="docutils literal notranslate"><span class="pre">Rank</span></code>, and <code class="docutils literal notranslate"><span class="pre">Values</span></code> to be kept deliberately short, because their names are naturally qualified by the context in which they are defined.</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </body>
+</html>
