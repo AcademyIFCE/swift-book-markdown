@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:_images">
+   </FileRef>
+   <FileRef
+      location = "group:_static">
+   </FileRef>
+   <FileRef
+      location = "group:content.opf">
+   </FileRef>
+   <FileRef
+      location = "group:GuidedTour">
+   </FileRef>
+   <FileRef
+      location = "group:LanguageGuide">
+   </FileRef>
+   <FileRef
+      location = "group:META-INF">
+   </FileRef>
+   <FileRef
+      location = "group:mimetype">
+   </FileRef>
+   <FileRef
+      location = "group:nav.xhtml">
+   </FileRef>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <FileRef
+      location = "group:ReferenceManual">
+   </FileRef>
+   <FileRef
+      location = "group:RevisionHistory">
+   </FileRef>
+   <FileRef
+      location = "group:toc.ncx">
+   </FileRef>
+   <FileRef
+      location = "group:Trademarks.xhtml">
+   </FileRef>
+</Workspace>
