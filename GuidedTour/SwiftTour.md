@@ -16,7 +16,7 @@ This tour gives you enough information to start writing code in Swift by showing
 
 **Note**
 
-On a Mac with Xcode installed, or on an iPad with Swift Playgrounds, you can open this chapter as a playground. Playgrounds allow you to edit the code listings and see the result immediately.
+> On a Mac with Xcode installed, or on an iPad with Swift Playgrounds, you can open this chapter as a playground. Playgrounds allow you to edit the code listings and see the result immediately.
 
 [Download Playground](https://docs.swift.org/swift-book/GuidedTour/GuidedTour.playground.zip)
 
@@ -43,7 +43,7 @@ let explicitDouble: Double = 70
 
 **Experiment**
 
-Create a constant with an explicit type of `Float` and a value of `4`.
+> Create a constant with an explicit type of `Float` and a value of `4`.
 
 Values are never implicitly converted to another type. If you need to convert a value to a different type, explicitly make an instance of the desired type.
 
@@ -55,7 +55,7 @@ let widthLabel = label + String(width)
 
 **Experiment**
 
-Try removing the conversion to `String` from the last line. What error do you get?
+> Try removing the conversion to `String` from the last line. What error do you get?
 
 There’s an even simpler way to include values in strings: Write the value in parentheses, and write a backslash (`\`) before the parentheses. For example:
 
@@ -68,7 +68,7 @@ let fruitSummary = "I have \(apples + oranges) pieces of fruit."
 
 **Experiment**
 
-Use `\()` to include a floating-point calculation in a string and to include someone’s name in a greeting.
+> Use `\()` to include a floating-point calculation in a string and to include someone’s name in a greeting.
 
 Use three double quotation marks (`"""`) for strings that take up multiple lines. Indentation at the start of each quoted line is removed, as long as it matches the indentation of the closing quotation marks. For example:
 
@@ -150,7 +150,7 @@ if let name = optionalName {
 
 **Experiment**
 
-Change `optionalName` to `nil`. What greeting do you get? Add an `else` clause that sets a different greeting if `optionalName` is `nil`.
+> Change `optionalName` to `nil`. What greeting do you get? Add an `else` clause that sets a different greeting if `optionalName` is `nil`.
 
 If the optional value is `nil`, the conditional is `false` and the code in braces is skipped. Otherwise, the optional value is unwrapped and assigned to the constant after `let`, which makes the unwrapped value available inside the block of code.
 
@@ -181,7 +181,7 @@ default:
 
 **Experiment**
 
-Try removing the default case. What error do you get?
+> Try removing the default case. What error do you get?
 
 Notice how `let` can be used in a pattern to assign the value that matched the pattern to a constant.
 
@@ -209,7 +209,7 @@ print(largest)
 
 **Experiment**
 
-Add another variable to keep track of which kind of number was the largest, as well as what that largest number was.
+> Add another variable to keep track of which kind of number was the largest, as well as what that largest number was.
 
 Use `while` to repeat a block of code until a condition changes. The condition of a loop can be at the end instead, ensuring that the loop is run at least once.
 
@@ -256,7 +256,7 @@ greet(person: "Bob", day: "Tuesday")
 
 **Experiment**
 
-Remove the `day` parameter. Add a parameter to include today’s lunch special in the greeting.
+> Remove the `day` parameter. Add a parameter to include today’s lunch special in the greeting.
 
 By default, functions use their parameter names as labels for their arguments. Write a custom argument label before the parameter name, or write `_` to use no argument label.
 
@@ -349,7 +349,7 @@ numbers.map({ (number: Int) -> Int in
 
 **Experiment**
 
-Rewrite the closure to return zero for all odd numbers.
+> Rewrite the closure to return zero for all odd numbers.
 
 You have several options for writing closures more concisely. When a closure’s type is already known, such as the callback for a delegate, you can omit the type of its parameters, its return type, or both. Single statement closures implicitly return the value of their only statement.
 
@@ -383,7 +383,7 @@ class Shape {
 
 **Experiment**
 
-Add a constant property with `let`, and add another method that takes an argument.
+> Add a constant property with `let`, and add another method that takes an argument.
 
 Create an instance of a class by putting parentheses after the class name. Use dot syntax to access the properties and methods of the instance.
 
@@ -443,7 +443,7 @@ test.simpleDescription()
 
 **Experiment**
 
-Make another subclass of `NamedShape` called `Circle` that takes a radius and a name as arguments to its initializer. Implement an `area()` and a `simpleDescription()` method on the `Circle` class.
+> Make another subclass of `NamedShape` called `Circle` that takes a radius and a name as arguments to its initializer. Implement an `area()` and a `simpleDescription()` method on the `Circle` class.
 
 In addition to simple properties that are stored, properties can have a getter and a setter.
 
@@ -556,7 +556,7 @@ let aceRawValue = ace.rawValue
 
 **Experiment**
 
-Write a function that compares two `Rank` values by comparing their raw values.
+> Write a function that compares two `Rank` values by comparing their raw values.
 
 By default, Swift assigns the raw values starting at zero and incrementing by one each time, but you can change this behavior by explicitly specifying values. In the example above, `Ace` is explicitly given a raw value of `1`, and the rest of the raw values are assigned in order. You can also use strings or floating-point numbers as the raw type of an enumeration. Use the `rawValue` property to access the raw value of an enumeration case.
 
@@ -593,7 +593,7 @@ let heartsDescription = hearts.simpleDescription()
 
 **Experiment**
 
-Add a `color()` method to `Suit` that returns “black” for spades and clubs, and returns “red” for hearts and diamonds.
+> Add a `color()` method to `Suit` that returns “black” for spades and clubs, and returns “red” for hearts and diamonds.
 
 Notice the two ways that the `hearts` case of the enumeration is referred to above: When assigning a value to the `hearts` constant, the enumeration case `Suit.hearts` is referred to by its full name because the constant doesn’t have an explicit type specified. Inside the switch, the enumeration case is referred to by the abbreviated form `.hearts` because the value of `self` is already known to be a suit. You can use the abbreviated form anytime the value’s type is already known.
 
@@ -619,7 +619,7 @@ If an enumeration has raw values, those values are determined as part of the dec
 
 **Experiment**
 
-Add a third case to `ServerResponse` and to the switch.
+> Add a third case to `ServerResponse` and to the switch.
 
 Notice how the sunrise and sunset times are extracted from the `ServerResponse` value as part of matching the value against the switch cases.
 
@@ -639,7 +639,7 @@ let threeOfSpadesDescription = threeOfSpades.simpleDescription()
 
 **Experiment**
 
-Write a function that returns an array containing a full deck of cards, with one card of each combination of rank and suit.
+> Write a function that returns an array containing a full deck of cards, with one card of each combination of rank and suit.
 
 Protocols and Extensions
 ------------------------
@@ -680,7 +680,7 @@ let bDescription = b.simpleDescription
 
 **Experiment**
 
-Add another requirement to `ExampleProtocol`. What changes do you need to make to `SimpleClass` and `SimpleStructure` so that they still conform to the protocol?
+> Add another requirement to `ExampleProtocol`. What changes do you need to make to `SimpleClass` and `SimpleStructure` so that they still conform to the protocol?
 
 Notice the use of the `mutating` keyword in the declaration of `SimpleStructure` to mark a method that modifies the structure. The declaration of `SimpleClass` doesn’t need any of its methods marked as mutating because methods on a class can always modify the class.
 
@@ -701,7 +701,7 @@ print(7.simpleDescription)
 
 **Experiment**
 
-Write an extension for the `Double` type that adds an `absoluteValue` property.
+> Write an extension for the `Double` type that adds an `absoluteValue` property.
 
 You can use a protocol name just like any other named type—for example, to create a collection of objects that have different types but that all conform to a single protocol. When you work with values whose type is a protocol type, methods outside the protocol definition are not available.
 
@@ -750,7 +750,7 @@ do {
 
 **Experiment**
 
-Change the printer name to `"Never Has Toner"`, so that the `send(job:toPrinter:)` function throws an error.
+> Change the printer name to `"Never Has Toner"`, so that the `send(job:toPrinter:)` function throws an error.
 
 You can provide multiple `catch` blocks that handle specific errors. You write a pattern after `catch` just as you do after `case` in a switch.
 
@@ -770,7 +770,7 @@ do {
 
 **Experiment**
 
-Add code to throw an error inside the `do` block. What kind of error do you need to throw so that the error is handled by the first `catch` block? What about the second and third blocks?
+> Add code to throw an error inside the `do` block. What kind of error do you need to throw so that the error is handled by the first `catch` block? What about the second and third blocks?
 
 Another way to handle errors is to use `try?` to convert the result to an optional. If the function throws an error, the specific error is discarded and the result is `nil`. Otherwise, the result is an optional containing the value that the function returned.
 
@@ -844,6 +844,6 @@ anyCommonElements([1, 2, 3], [3])
 
 **Experiment**
 
-Modify the `anyCommonElements(_:_:)` function to make a function that returns an array of the elements that any two sequences have in common.
+> Modify the `anyCommonElements(_:_:)` function to make a function that returns an array of the elements that any two sequences have in common.
 
 Writing `<T: Equatable>` is the same as writing `<T> ... where T: Equatable`.
