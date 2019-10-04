@@ -26,7 +26,7 @@
     <item id="epub-0" href="Trademarks.xhtml" media-type="application/xhtml+xml" />
     <item id="epub-1" href="GuidedTour/AboutSwift.xhtml" media-type="application/xhtml+xml" />
     <item id="epub-2" href="GuidedTour/Compatibility.xhtml" media-type="application/xhtml+xml" />
-    <item id="epub-3" href="GuidedTour/GuidedTour.xhtml" media-type="application/xhtml+xml" />
+    <item id="epub-3" href="GuidedTour/SwiftTour.xhtml" media-type="application/xhtml+xml" />
     <item id="epub-4" href="GuidedTour/GuidedTourPart.xhtml" media-type="application/xhtml+xml" />
     <item id="epub-5" href="LanguageGuide/AccessControl.xhtml" media-type="application/xhtml+xml" />
     <item id="epub-6" href="LanguageGuide/AdvancedOperators.xhtml" media-type="application/xhtml+xml" />

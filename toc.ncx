@@ -31,7 +31,7 @@
         <navLabel>
           <text>A Swift Tour</text>
         </navLabel>
-        <content src="GuidedTour/GuidedTour.xhtml" />  
+        <content src="GuidedTour/SwiftTour.xhtml" />  
       </navPoint>
     </navPoint>
     <navPoint id="navPoint6" playOrder="5">
