@@ -9,6 +9,17 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
 - [ ] About Swift
 - [ ] Version Compatibility
 - [ ] A Swift Tour
+  - [ ] Intro
+  - [ ] Simple Values
+  - [ ] Control Flow
+  - [ ] Functions and Clojures
+  - [ ] Objects and Classes
+  - [ ] Enumerations and Structures
+  - [ ] Protocols and Extensions
+  - [ ] Error Handling
+  - [ ] Generics
+
+Cada item dessa lista terá uma Issue. **Antes de pegar um desses items para traduzir, verifique a Issue e descubra se alguém já não está traduzindo**. Quando alguém pegar um dessas `sessao/topico` para traduzir, terá seu nome atribuído a Issue.
 
 ## Convenções
 
