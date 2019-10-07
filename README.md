@@ -23,12 +23,12 @@ Cada item dessa lista terá uma Issue. **Antes de pegar um desses items para tra
 
 ## Convenções
 
-Para facilitar o processo de revisão e diminuir a inconsistências entre traduções, quem contribuir deverá seguir algumas convenções:
+Para facilitar o processo de revisão e diminuir as inconsistências entre traduções, quem contribuir deverá seguir algumas convenções:
 
 * Não traduzir palavras reservadas.
-* Na dúvida entre traduzir ou não determinado termo, deixe o termo em inglês.
+* Na dúvida entre traduzir ou não determinado termo, deixar o termo em inglês.
 * Criar Branches no padrão `sessao/topico`  e traduzir por *Sessao* e *Tópico* (textos mais internos dentro da *Sessão*).
-* *Pull Requests* devem ser feitos para `master`.
+* *Pull Requests* devem ser feitos para `master`, marcando a Issue que resolvem.
 
 ## Criação de Branches
 
