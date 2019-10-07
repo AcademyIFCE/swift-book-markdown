@@ -19,7 +19,7 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
   - [ ] Error Handling
   - [ ] Generics
 
-Cada item dessa lista terá uma Issue. **Antes de pegar um desses items para traduzir, verifique a Issue e descubra se alguém já não está traduzindo**. Quando alguém pegar um dessas `sessao/topico` para traduzir, terá seu nome atribuído a Issue.
+Cada item dessa lista terá uma Issue. **Antes de pegar um desses items para traduzir, verifique a Issue e descubra se alguém já não está traduzindo**. Quando alguém pegar uma dessas `sessao/topico` para traduzir, terá o nome atribuído a Issue.
 
 ## Convenções
 
@@ -44,7 +44,7 @@ Caso não existam tópicos para determinada sessão, a branch deve ter somente o
 
 ## Pull Requests
 
-Os Pull Requests serão feitos diretamente para a branch `master` e serão revisados avaliando a tradução em si, a coerência do texto da tradução, e a coerência com as traduções anteriores.
+Os Pull Requests devem ser feitos diretamente para a branch `master`, e marcar a Issue que está resolvendo. A revisão será feita avaliando a tradução em si, a coerência do texto da tradução, e a coerência com as traduções anteriores.
 
 ## Começe Agora! 🎉  
 
