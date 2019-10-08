@@ -1,17 +1,16 @@
- Version Compatibility
+ Versão de Compatibilidade
 
-Version Compatibility
+Versão de Compatibilidade
 =====================
 
-This book describes Swift 5.1, the default version of Swift that’s included in Xcode 11. You can use Xcode 11 to build targets that are written in either Swift 5.1, Swift 4.2, or Swift 4.
+Este livro descreve a versão Swift 5.1, a versão atual do Swift que já vem incluída no Xcode 11. Você pode usar o Xcode 11 para criar targets escritos em Swift 5.1, Swift 4.2 ou Swift 4.
 
-When you use Xcode 11 to build Swift 4 and Swift 4.2 code, most Swift 5.1 functionality is available. That said, the following changes are available only to code that uses Swift 5.1 or later:
+Quando você usa o Xcode 11 para criar o código em Swift 4 e Swift 4.2, a maioria das funcionalidades do Swift 5.1 já estão disponíveis. Com isso, as alterações abaixo estão disponíveis apenas para códigos que utilizam a versão Swift 5.1 ou posterior:
 
-*   Functions that return an opaque type require the Swift 5.1 runtime.
+*   Funções que tem como retorno um tipo opaco requerem o *runtime* do Swift 5.1
     
-*   The `try?` expression doesn’t introduce an extra level of optionality to expressions that already return optionals.
-    
-*   Large integer literal initialization expressions are inferred to be of the correct integer type. For example, `UInt64(0xffff_ffff_ffff_ffff)` evaluates to the correct value rather than overflowing.
-    
+*   A expressão `try?` não introduz um nível extra de opcionalidade para expressões que já retornam opcionais.
 
-A target written in Swift 5.1 can depend on a target that’s written in Swift 4.2 or Swift 4, and vice versa. This means, if you have a large project that’s divided into multiple frameworks, you can migrate your code from Swift 4 to Swift 5.1 one framework at a time.
+*   As expressões literais inteiras grandes de inicialização são inferidas como sendo do tipo inteiro correto. Por exemplo, `UInt64 (0xffff_ffff_ffff_ffff)` avalia o valor correto ao invés de ter *overflow*.
+
+Um target escrito em Swift 5.1 pode depender de um target escrito em Swift 4.2 ou Swift 4 e vice-versa. Isso significa que, se você tiver em um projeto grande dividido em vários *frameworks*, poderá migrar seu código do Swift 4 para Swift 5.1, um *framework* por vez.

@@ -7,9 +7,9 @@ Esse projeto tem como objetivo traduzir e disponibilizar gratuitamente em portug
 O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  antes de ser traduzido. A seguintes *Sessões* já estão em formato *Markdown* e já podem ser traduzidas através de Pull Requests:
 
 - [x] About Swift
-- [ ] Version Compatibility
+- [X] Version Compatibility
 - [ ] A Swift Tour
-  - [ ] Intro
+  - [x] Intro
   - [ ] Simple Values
   - [ ] Control Flow
   - [ ] Functions and Clojures
