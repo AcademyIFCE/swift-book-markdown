@@ -1,29 +1,28 @@
- About Swift
+Sobre Swift
 
-About Swift
+Sobre Swift
 ===========
 
-Swift is a fantastic way to write software, whether it’s for phones, desktops, servers, or anything else that runs code. It’s a safe, fast, and interactive programming language that combines the best in modern language thinking with wisdom from the wider Apple engineering culture and the diverse contributions from its open-source community. The compiler is optimized for performance and the language is optimized for development, without compromising on either.
+Swift é um jeito fantástico de escrever *software*, seja para celulares, computadores, servidores, ou qualquer coisa que executa códigos. É uma linguagem de programação segura, rápida e interativa que combina o melhor do pensamento moderno de linguagem com sabedoria da ampla cultura de engenharia da Apple e as diversas contribuições da sua comunidade *open source*.
 
-Swift is friendly to new programmers. It’s an industrial-quality programming language that’s as expressive and enjoyable as a scripting language. Writing Swift code in a playground lets you experiment with code and see the results immediately, without the overhead of building and running an app.
+Swift é amigável para novos programadores. É uma linguagem de programação de qualidade industrial, tão expressiva e agradável quanto uma linguagem de *script*. Escrever código Swift em um *playground* permite experimentar com código e visualizar o resultado imediatamente, sem o trabalho de criar e executar um aplicativo.
 
-Swift defines away large classes of common programming errors by adopting modern programming patterns:
+Swift resolve grandes classes de erros de programação comuns adotando padrões de programação modernos:
 
-*   Variables are always initialized before use.
-    
-*   Array indices are checked for out-of-bounds errors.
-    
-*   Integers are checked for overflow.
-    
-*   Optionals ensure that `nil` values are handled explicitly.
-    
-*   Memory is managed automatically.
-    
-*   Error handling allows controlled recovery from unexpected failures.
-    
+* As variáveis são sempre inicializadas antes do uso.
+    
+* Os índices de *Array* são verificados quanto a erros fora dos limites.
+    
+* Os números inteiros são verificados quanto a *overflow*.
+    
+* Opcionais garantem que os valores `nil` sejam tratados explicitamente.
+    
+* A memória é gerenciada automaticamente.
+    
+* O tratamento de erros permite a recuperação controlada de falhas inesperadas.
 
-Swift code is compiled and optimized to get the most out of modern hardware. The syntax and standard library have been designed based on the guiding principle that the obvious way to write your code should also perform the best. Its combination of safety and speed make Swift an excellent choice for everything from “Hello, world!” to an entire operating system.
+Código em Swift é compilado e otimizado para aproveitar ao máximo o *hardware* moderno. A sintaxe e a biblioteca padrão foram projetadas com base no princípio orientador de que a maneira óbvia de escrever seu código também deve ter o melhor desempenho. Sua combinação de segurança e velocidade faz Swift uma excelente opção para tudo, desde *"Hello, World!"* a todo o sistema operacional.
 
-Swift combines powerful type inference and pattern matching with a modern, lightweight syntax, allowing complex ideas to be expressed in a clear and concise manner. As a result, code is not just easier to write, but easier to read and maintain as well.
+Swift combina poderosa inferência de tipos e correspondência de padrões com uma sintaxe moderna e leve, permitindo que idéias complexas sejam expressas de maneira clara e concisa. Como resultado, o código não é apenas mais fácil de escrever, mas também mais fácil de ler e manter.
 
-Swift has been years in the making, and it continues to evolve with new features and capabilities. Our goals for Swift are ambitious. We can’t wait to see what you create with it.
+Swift vem sendo desenvolvida por anos, e continua a evoluir com novas funcionalidade e capacidade. Mal podemos esperar para ver o que você cria com ela.  -->
