@@ -1,24 +1,24 @@
- A Swift Tour
+ Uma Tour pela Swift
 
-A Swift Tour
+Uma Tour pela Swift
 ============
 
-Tradition suggests that the first program in a new language should print the words “Hello, world!” on the screen. In Swift, this can be done in a single line:
+A Tradição sugere que o primeiro programa feito em uma linguagem nova deve imprimir as palavras "Hello, world!" na tela. Em Swift isso pode ser feito em uma única linha de código:
 
 ```swift
 print("Hello, world!")
-// Prints "Hello, world!"
+// Imprime "Hello, world!"
 ```
 
-If you have written code in C or Objective-C, this syntax looks familiar to you—in Swift, this line of code is a complete program. You don’t need to import a separate library for functionality like input/output or string handling. Code written at global scope is used as the entry point for the program, so you don’t need a `main()` function. You also don’t need to write semicolons at the end of every statement.
+Se você escreveu código em C ou Objective-C, esta sintaxe pode parece familiar pra voce, esta linha de código é um programa completo. Você não precisa importar uma biblioteca separada para funcionalidades como input output ou manipulação de string. Código escrito no escopo global é usado como um ponto de entrada para o programa, então você não precisa de uma função `main()`. Você também não precisa escrever ponto e virgula no final de cada declaração.
 
-This tour gives you enough information to start writing code in Swift by showing you how to accomplish a variety of programming tasks. Don’t worry if you don’t understand something—everything introduced in this tour is explained in detail in the rest of this book.
+Esta tour lhe dará informação suficiente para começar a escrever código em Swift mostrando como concluir uma variedade de tarefas de programação. Não se preocupe se você não entender alguma coisa introduzida nessa Tour, pois será explicado em mais detalhes no resto desse livro.
 
-**Note**
+**Nota**
 
-> On a Mac with Xcode installed, or on an iPad with Swift Playgrounds, you can open this chapter as a playground. Playgrounds allow you to edit the code listings and see the result immediately.
+> Em um Mac com Xcode instalado, ou em um iPad com Swift Playgrounds, você pode abrir esse capítulo como um playground. Playgrounds possibilita voce editar o código listings e ver os resultados imediatamente.
 
-[Download Playground](https://docs.swift.org/swift-book/GuidedTour/GuidedTour.playground.zip)
+[Baixar Playground](https://docs.swift.org/swift-book/GuidedTour/GuidedTour.playground.zip)
 
 [//]: # (Simple Values)
 Valores Simples
