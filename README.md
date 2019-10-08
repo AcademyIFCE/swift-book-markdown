@@ -9,7 +9,7 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
 - [ ] About Swift
 - [ ] Version Compatibility
 - [ ] A Swift Tour
-  - [ ] Intro
+  - [x] Intro
   - [ ] Simple Values
   - [ ] Control Flow
   - [ ] Functions and Clojures
