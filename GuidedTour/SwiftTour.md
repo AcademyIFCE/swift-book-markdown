@@ -717,7 +717,7 @@ Even though the variable `protocolValue` has a runtime type of `SimpleClass`, th
 Error Handling
 --------------
 
-You represent errors using any type that adopts the `Error` protocol.
+Você apresenta erros usando qualquer tipo que assine o protocolo `Error`.
 
 ```swift
 enum PrinterError: Error {
@@ -727,7 +727,7 @@ enum PrinterError: Error {
 }
 ```
 
-Use `throw` to throw an error and `throws` to mark a function that can throw an error. If you throw an error in a function, the function returns immediately and the code that called the function handles the error.
+Use `throw` para disparar um erro e `throws` para marcar uma função que pode disparar um error. Se você disparar um error em uma função, a função retorna imediatamente e o código que chamou a função trata o error.
 
 ```swift
 func send(job: Int, toPrinter printerName: String) throws -> String {
@@ -738,7 +738,7 @@ func send(job: Int, toPrinter printerName: String) throws -> String {
 }
 ```
 
-There are several ways to handle errors. One way is to use `do`\-`catch`. Inside the `do` block, you mark code that can throw an error by writing `try` in front of it. Inside the `catch` block, the error is automatically given the name `error` unless you give it a different name.
+Existem diversars maneiras de se tratar errors. Uma das maneiras é utilizando o `do`\-`catch`. Dentro do bloco `do`, você assinala um código que pode disparar um error escrevendo `try` na frente dele. Dentro do bloco `catch`, o error é dado o nome de `error` automaticamente, a menos que você dê um nome diferente.
 
 ```swift
 do {
@@ -752,9 +752,9 @@ do {
 
 **Experiment**
 
-> Change the printer name to `"Never Has Toner"`, so that the `send(job:toPrinter:)` function throws an error.
+> Mude o nome do printer para `"Never Has Toner"`, para que a função `send(job:toPrinter:)` dispare um error.
 
-You can provide multiple `catch` blocks that handle specific errors. You write a pattern after `catch` just as you do after `case` in a switch.
+Você pode fornecer múltiplos blocos de `catch` que tratam errors específicos. Você escreve um pattern após o `catch` da mesma maneira que você faz após o `case` em um switch.
 
 ```swift
 do {
@@ -770,17 +770,18 @@ do {
 // Prints "Job sent"
 ```
 
-**Experiment**
+**Experimento**
 
-> Add code to throw an error inside the `do` block. What kind of error do you need to throw so that the error is handled by the first `catch` block? What about the second and third blocks?
+> Adicione um código para disparar um error dentro do bloco `do`. Que tipo de error você precisa disparar para que o error seja tratado dentro do primeiro bloco de `catch`? E o segundo e terceiro bloco?
 
-Another way to handle errors is to use `try?` to convert the result to an optional. If the function throws an error, the specific error is discarded and the result is `nil`. Otherwise, the result is an optional containing the value that the function returned.
+Outra maneira de tratar errors é usando o `try?` para converter o resultado em um optional. Se a função disparar um error, o error específico é descartado e o resultado é `nil`. Se não, o resultado é um optional contendo o valor retornado pela função.
 
 ```swift
 let printerSuccess = try? send(job: 1884, toPrinter: "Mergenthaler")
 let printerFailure = try? send(job: 1885, toPrinter: "Never Has Toner")
 ```
-Use `defer` to write a block of code that is executed after all other code in the function, just before the function returns. The code is executed regardless of whether the function throws an error. You can use `defer` to write setup and cleanup code next to each other, even though they need to be executed at different times.
+
+Use `defer` para escrever um bloco de código que é executado após todos os outros códigos na função, logo antes da função retornar. O código é executado mesmo se a função disparar um error. Você pode usar `defer` para escrever o código setup e o cleanup próximo um ao outro, mesmo quando eles devem ser executados em momentos diferentes.
 
 ```swift
 var fridgeIsOpen = false
