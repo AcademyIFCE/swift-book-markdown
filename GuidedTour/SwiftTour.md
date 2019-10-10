@@ -20,10 +20,10 @@ Esta tour lhe dará informação suficiente para começar a escrever c
 
 [Baixar Playground](https://docs.swift.org/swift-book/GuidedTour/GuidedTour.playground.zip)
 
-Simple Values
+[//]: # (Simple Values)
+Valores Simples
 -------------
-
-Use `let` to make a constant and `var` to make a variable. The value of a constant doesn’t need to be known at compile time, but you must assign it a value exactly once. This means you can use constants to name a value that you determine once but use in many places.
+Use `let` para criar uma constante e `var` para criar uma variável. O valor de uma constante não precisa ser conhecida em tempo de compilação, mas você precisa atribuir um valor exatamente uma vez. Isso significa que você pode usar constantes para nomear um valor que você determina uma vez, mas que você vai usar em muitos lugares.
 
 ```swift
 var myVariable = 42
@@ -31,9 +31,9 @@ myVariable = 50
 let myConstant = 42
 ```
 
-A constant or variable must have the same type as the value you want to assign to it. However, you don’t always have to write the type explicitly. Providing a value when you create a constant or variable lets the compiler infer its type. In the example above, the compiler infers that `myVariable` is an integer because its initial value is an integer.
+Uma constante ou variável deve ser do mesmo tipo que o valor que você quer passar para ela. No entanto, você não precisa sempre escrever o tipo explicitamente. Dando um valor quando você cria uma constante ou variável permite com que o compilador infira o seu tipo. No exemplo acima, o compilador infere que `myVariable` é um inteiro porque o seu valor inicial é um inteiro.
 
-If the initial value doesn’t provide enough information (or if there is no initial value), specify the type by writing it after the variable, separated by a colon.
+Se o valor inicial do valor não der informação suficiente(ou se não tiver nenhum valor inicial), especifique o tipo escrevendo-o depois da variável, separado por uma virgula.
 
 ```swift
 let implicitInteger = 70
@@ -41,72 +41,72 @@ let implicitDouble = 70.0
 let explicitDouble: Double = 70
 ```
 
-**Experiment**
+**Experimente**
+> Crie uma constante com um tipo explícito `Float` e com um valor 4.
 
-> Create a constant with an explicit type of `Float` and a value of `4`.
-
-Values are never implicitly converted to another type. If you need to convert a value to a different type, explicitly make an instance of the desired type.
+Valores nunca são convertidos implicitamente para outro tipo. Se você precisa converter um valor para um tipo diferente, faça uma instância explícita do tipo desejado.
 
 ```swift
-let label = "The width is "
+let label = "A largura é "
 let width = 94
 let widthLabel = label + String(width)
 ```
 
-**Experiment**
+**Experimente**
 
-> Try removing the conversion to `String` from the last line. What error do you get?
+> Tente remover a conversão para o tipo `String` na última linha. Qual erro que aparece? 
 
-There’s an even simpler way to include values in strings: Write the value in parentheses, and write a backslash (`\`) before the parentheses. For example:
+Há uma maneira ainda mais simples para incluir valores em *strings*: Escreva o valor entre parênteses e escreva uma barra invertida(`\`) antes dos parênteses. Por exemplo:
 
 ```swift
 let apples = 3
 let oranges = 5
-let appleSummary = "I have \(apples) apples."
-let fruitSummary = "I have \(apples + oranges) pieces of fruit."
+let appleSummary = "Eu tenho \(apples) maçãs."
+let fruitSummary = "Eu tenho \(apples + oranges) pedaços de frutas."
 ```
 
-**Experiment**
+**Experimente**
 
-> Use `\()` to include a floating-point calculation in a string and to include someone’s name in a greeting.
+> Use `\()` para fazer um cálculo do tipo *Float* em uma *string* e coloque o nome de algúem em uma saudação.
 
-Use three double quotation marks (`"""`) for strings that take up multiple lines. Indentation at the start of each quoted line is removed, as long as it matches the indentation of the closing quotation marks. For example:
+Use três aspas duplas (`"""`) para *strings* que ocupem várias linhas. A indentação no começo de cada linha é removida, desde que corresponda à indentação das aspas finais.
+Por exemplo:
 
 ```swift
 let quotation = """
-    I said "I have \(apples) apples."
-    And then I said "I have \(apples + oranges) pieces of fruit."
+    Eu disse: "I tenho \(apples) maçãs."
+    E então eu disse: "Eu tenho \(apples + oranges) pedaços de frutas."
 """
 ```
 
-Create arrays and dictionaries using brackets (`[]`), and access their elements by writing the index or key in brackets. A comma is allowed after the last element.
+Crie *arrays* e dicionários que usem colchetes (`[]`), e acesse os seus elementos escrevendo o seu índice ou chave nos colchetes. Uma vírgula é permitida após o último elemento. 
 
 ```swift
-var shoppingList = ["catfish", "water", "tulips"]
-shoppingList[1] = "bottle of water"
+var shoppingList = ["peixe-gato", "água", "tulipas"]
+shoppingList[1] = "garrafa d'água"
 
 var occupations = [
-    "Malcolm": "Captain",
-    "Kaylee": "Mechanic",
+    "Malcolm": "Capitão",
+    "Kaylee": "Mecânico",
 ]
-occupations["Jayne"] = "Public Relations"
+occupations["Jayne"] = "Relações Públicas"
 ```
 
-Arrays automatically grow as you add elements.
+*Arrays* crescem automaticamente conforme você adiciona elementos.
 
 ```swift
-shoppingList.append("blue paint")
+shoppingList.append("tinta azul")
 print(shoppingList)
 ```
 
-To create an empty array or dictionary, use the initializer syntax.
+Para criar um *array* ou dicionário, use a sintaxe de inicialização.
 
 ```swift
 let emptyArray = [String]()
 let emptyDictionary = [String: Float]()
 ```
 
-If type information can be inferred, you can write an empty array as `[]` and an empty dictionary as `[:]`—for example, when you set a new value for a variable or pass an argument to a function.
+Se a informação do tipo pode ser inferida, você pode escrever um *array* vazio como `[]` e um dicionário vazio como `[:]`—por exemplo, quando você define um novo valor para uma variável ou passa um argumento para uma função.
 
 ```swift
 shoppingList = []
