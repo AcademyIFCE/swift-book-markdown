@@ -118,10 +118,10 @@ shoppingList = []
 occupations = [:]
 ```
 
-Control Flow
+Controle de Fluxo
 ------------
 
-Use `if` and `switch` to make conditionals, and use `for`\-`in`, `while`, and `repeat`\-`while` to make loops. Parentheses around the condition or loop variable are optional. Braces around the body are required.
+Use `if` e `switch` para fazer condicionais, e use `for`\-`in`, e `repeat`\-`while` para fazer laços. Parênteses ao redor da condicional ou da variável de laço são opcionais. Chaves ao redor do corpo é necessário.
 
 ```swift
 let individualScores = [75, 43, 103, 87, 12]
@@ -134,17 +134,17 @@ for score in individualScores {
     }
 }
 print(teamScore)
-// Prints "11"
+// Imprime "11"
 ```
 
-In an `if` statement, the conditional must be a Boolean expression—this means that code such as `if score { ... }` is an error, not an implicit comparison to zero.
+Em um declaração `if`, a condicional deve ser uma expressão Booleana, isso significa que código como `if score { ... }` é um erro, não uma comparação implícita a zero.
 
-You can use `if` and `let` together to work with values that might be missing. These values are represented as optionals. An optional value either contains a value or contains `nil` to indicate that a value is missing. Write a question mark (`?`) after the type of a value to mark the value as optional.
+Você pode usar `if` e `let` juntos para trabalhar com valores que podem não existir. Esses valores são representados como opcionais. Um valor opcional contem um valor ou contem `nil` para indicar que o valor não existe. Escreva uma interrogação (`?`) após o tipo do valor para indicar o valor como opcional.
 
 ```swift
 var optionalString: String? = "Hello"
 print(optionalString == nil)
-// Prints "false"
+// Imprime "false"
 
 var optionalName: String? = "John Appleseed"
 var greeting = "Hello!"
@@ -153,13 +153,13 @@ if let name = optionalName {
 }
 ```
 
-**Experiment**
+**Experimento**
 
-> Change `optionalName` to `nil`. What greeting do you get? Add an `else` clause that sets a different greeting if `optionalName` is `nil`.
+> Mudar `optionalName` para `nil`. Qual a saudação que você vai ter? Adicione uma condição `else` que mude a saudação se `optionalValue` for `nil`.
 
-If the optional value is `nil`, the conditional is `false` and the code in braces is skipped. Otherwise, the optional value is unwrapped and assigned to the constant after `let`, which makes the unwrapped value available inside the block of code.
+Se o valor opcional é `nil`, a condicional é `false` e o código nas chaves é pulado. Caso contrário, o valor opcional é desempacotado e atribuída para a constante após o `let`, que faz o valor desempacotado acessível dentro do bloco de código.
 
-Another way to handle optional values is to provide a default value using the `??` operator. If the optional value is missing, the default value is used instead.
+Outra maneira de manipular valores opcionais é prover um valor padrão usando o operador `??`. Se o valor do opcional estiver faltando, o valor padrão é usado.
 
 ```swift
 let nickName: String? = nil
@@ -167,7 +167,7 @@ let fullName: String = "John Appleseed"
 let informalGreeting = "Hi \(nickName ?? fullName)"
 ```
 
-Switches support any kind of data and a wide variety of comparison operations—they aren’t limited to integers and tests for equality.
+Switches suporta qualquer tipo de dado e uma grande variedade de operações de comparação, eles não são limitado a inteiros e testes de igualdade.
 
 ```swift
 let vegetable = "red pepper"
@@ -181,18 +181,20 @@ case let x where x.hasSuffix("pepper"):
 default:
     print("Everything tastes good in soup.")
 }
-// Prints "Is it a spicy red pepper?"
+// Imprime "Is it a spicy red pepper?"
 ```
 
-**Experiment**
+**Experimento**
 
-> Try removing the default case. What error do you get?
+> Tente remover o caso padrão. Qual o erro que você recebe?
 
-Notice how `let` can be used in a pattern to assign the value that matched the pattern to a constant.
+Perceba como `let` pode ser usado em um padrão para atribuir o valor que corresponde o padrão para uma constante.
 
-After executing the code inside the switch case that matched, the program exits from the switch statement. Execution doesn’t continue to the next case, so there is no need to explicitly break out of the switch at the end of each case’s code.
+Após executar o código dentro do switch case que coincidiu, o programa sai da declaração do switch. A execução não continua para o proximo case, então não há necessidade de usar break explicitamente no switch, no final de casa código dos cases.
 
 You use `for`\-`in` to iterate over items in a dictionary by providing a pair of names to use for each key-value pair. Dictionaries are an unordered collection, so their keys and values are iterated over in an arbitrary order.
+
+Você usa `for`\-`in` para iterar nos itens de um dicionário ao prover um par de nomes para usar para cada par chave-valor. Dicionários são uma coleção desordenada, então as chaves e valores são iterados em uma ordem arbitraria.
 
 ```swift
 let interestingNumbers = [
@@ -209,14 +211,14 @@ for (kind, numbers) in interestingNumbers {
     }
 }
 print(largest)
-// Prints "25"
+// Imprime "25"
 ```
 
-**Experiment**
+**Experimento**
 
-> Add another variable to keep track of which kind of number was the largest, as well as what that largest number was.
+> Adicione outra variável para observar do tipo do numero que foi o maior, assim como qual foi o maior numero.
 
-Use `while` to repeat a block of code until a condition changes. The condition of a loop can be at the end instead, ensuring that the loop is run at least once.
+Use `while` para repetir um bloco de código ate que uma condição mude. A condição do laço também pode ser no final, assegurantdo que o laço irá executar pelo menos uma vez.
 
 ```swift
 var n = 2
@@ -224,17 +226,17 @@ while n < 100 {
     n *= 2
 }
 print(n)
-// Prints "128"
+// Imprime "128"
 
 var m = 2
 repeat {
     m *= 2
 } while m < 100
 print(m)
-// Prints "128"
+// Imprime "128"
 ```
 
-You can keep an index in a loop by using `..<` to make a range of indexes.
+Você pode manter um índice em um laço ao usar `..<` para fazer uma coleção de indices.
 
 ```swift
 var total = 0
@@ -242,10 +244,10 @@ for i in 0..<4 {
     total += i
 }
 print(total)
-// Prints "6"
+// Imprime "6"
 ```
 
-Use `..<` to make a range that omits its upper value, and use `...` to make a range that includes both values.
+Use `..<`para fazer uma coleção que omite o maior final, e use `...`para fazer a coleção incluir os dois valores.
 
 Functions and Closures
 ----------------------

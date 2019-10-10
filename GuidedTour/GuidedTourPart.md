@@ -1,8 +1,8 @@
- Welcome to Swift
+ Bem-vindo(a) à Swift
 
-Welcome to Swift
+Bem-vindo(a) à Swift
 ================
 
-*   [About Swift](AboutSwift.md)
-*   [Version Compatibility](Compatibility.md)
-*   [A Swift Tour](SwiftTour.md)
+*   [Sobre Swift](AboutSwift.md)
+*   [Compatibilidade de Versão](Compatibility.md)
+*   [Uma Tour pela Swift](SwiftTour.md)

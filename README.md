@@ -11,7 +11,7 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
 - [ ] A Swift Tour
   - [x] Intro
   - [ ] Simple Values
-  - [ ] Control Flow
+  - [x] Control Flow
   - [ ] Functions and Clojures
   - [ ] Objects and Classes
   - [ ] Enumerations and Structures
