@@ -383,16 +383,16 @@ Use `class` seguido pelo nome da classe para criar uma classe. A declaração de
 class Shape {
     var numberOfSides = 0
     func simpleDescription() -> String {
-        return "A shape with \(numberOfSides) sides."
+        return "Uma forma com \(numberOfSides) lados."
     }
 }
 ```
 
-**Experiment**
+**Experimente**
 
-> Add a constant property with `let`, and add another method that takes an argument.
+> Adicione uma propriedade constante com `let`, e adicione outro método que recebe um argumento.
 
-Create an instance of a class by putting parentheses after the class name. Use dot syntax to access the properties and methods of the instance.
+Crie uma instância de uma classe colocando parênteses depois do nome da classe. Use a sintaxe de ponto para acessar propriedades e métodos da instância.
 
 ```swift
 var shape = Shape()
@@ -400,7 +400,7 @@ shape.numberOfSides = 7
 var shapeDescription = shape.simpleDescription()
 ```
  
-This version of the `Shape` class is missing something important: an initializer to set up the class when an instance is created. Use `init` to create one.
+Esta versão da classe `Shape` está faltando algo muito importane: um inicializador para configurar a classe quando uma instância é criada. Use `init` para criar uma.
 
 ```swift
 class NamedShape {
@@ -412,18 +412,18 @@ class NamedShape {
     }
 
     func simpleDescription() -> String {
-        return "A shape with \(numberOfSides) sides."
+        return "Uma forma com \(numberOfSides) lados."
     }
 }
 ```
 
-Notice how `self` is used to distinguish the `name` property from the `name` argument to the initializer. The arguments to the initializer are passed like a function call when you create an instance of the class. Every property needs a value assigned—either in its declaration (as with `numberOfSides`) or in the initializer (as with `name`).
+Perceba como `self` é usado para diferenciar a propriedade `name` do argumento `name` para o inicializador. Os argumentos para o inicializador são passados como uma chamada de uma funcão quando você cria uma instância da classe. Cada propriedade precisa de um valor designado -em sua declaração(como em `numberOfSides`) ou no inicializador(como em `name`).
 
-Use `deinit` to create a deinitializer if you need to perform some cleanup before the object is deallocated.
+Use `deinit` para criar um desinicializador se você precisa executar alguma limpeza antes que o objeto seja desalocado.
 
-Subclasses include their superclass name after their class name, separated by a colon. There is no requirement for classes to subclass any standard root class, so you can include or omit a superclass as needed.
+As subclasses incluem o nome da superclasse depois do nome da classe, separada por uma vírgula. Não há nenhum requisito para que classes herdem alguma classe raiz padrão, então você pode incluir ou omitir a superclasse quando necessário.
 
-Methods on a subclass that override the superclass’s implementation are marked with `override`—overriding a method by accident, without `override`, is detected by the compiler as an error. The compiler also detects methods with `override` that don’t actually override any method in the superclass.
+Métodos em uma subclasse que substituem a implementação da superclasse são marcados com `override` —a substituição de um método por acidente, sem `override`, é detectada pelo compilador como um erro. O compilador também detecta métodos com `override` que na verdade não substituem nenhum método na superclasse.
 
 ```swift
 class Square: NamedShape {
@@ -440,19 +440,19 @@ class Square: NamedShape {
     }
 
     override func simpleDescription() -> String {
-        return "A square with sides of length \(sideLength)."
+        return "Um quadrado com lados de tamanho \(sideLength)."
     }
 }
-let test = Square(sideLength: 5.2, name: "my test square")
+let test = Square(sideLength: 5.2, name: "meu quadrado teste")
 test.area()
 test.simpleDescription()
 ```
 
-**Experiment**
+**Experimente**
 
-> Make another subclass of `NamedShape` called `Circle` that takes a radius and a name as arguments to its initializer. Implement an `area()` and a `simpleDescription()` method on the `Circle` class.
+> Faça outra subclasse de `NamedShape` chamada `Circle` que recebe um raio e um nome como argumentos para o inicializador. Implemente os métodos `area()` e `simpleDescription()` na classe `Circle`.  
 
-In addition to simple properties that are stored, properties can have a getter and a setter.
+Além das propriedades simples que são armazenadas, propriedades podem ter um *getter* e um *setter*.
 
 ```swift
 class EquilateralTriangle: NamedShape {
@@ -474,28 +474,27 @@ class EquilateralTriangle: NamedShape {
      }
 
     override func simpleDescription() -> String {
-        return "An equilateral triangle with sides of length \(sideLength)."
+        return "Um triângulo equilátero com lados de tamanho \(sideLength)."
     }
 }
-var triangle = EquilateralTriangle(sideLength: 3.1, name: "a triangle")
+var triangle = EquilateralTriangle(sideLength: 3.1, name: "um triângulo")
 print(triangle.perimeter)
-// Prints "9.3"
+// Imprime "9.3"
 triangle.perimeter = 9.9
 print(triangle.sideLength)
-// Prints "3.3000000000000003"
+// Imprime "3.3000000000000003"
 ``` 
+No *setter* do `perimeter`, o novo valor tem o nome implícito `newValue`. Você pode definir um valor explícito entre parênteses depois de `set`.
 
-In the setter for `perimeter`, the new value has the implicit name `newValue`. You can provide an explicit name in parentheses after `set`.
+Note que o inicializador para a classe `EquilateralTriangle` tem três etapas distintas:
 
-Notice that the initializer for the `EquilateralTriangle` class has three different steps:
+1. Configurando o valor das propriedades que a subclasse declara.
 
-1. Setting the value of properties that the subclass declares.
-    
-2. Calling the superclass’s initializer.
-    
-3. Changing the value of properties defined by the superclass. Any additional setup work that uses methods, getters, or setters can also be done at this point.
-    
-If you don’t need to compute the property but still need to provide code that is run before and after setting a new value, use `willSet` and `didSet`. The code you provide is run any time the value changes outside of an initializer. For example, the class below ensures that the side length of its triangle is always the same as the side length of its square.
+2. Chamando o inicializador da superclasse.
+
+3. Mudando o valor das propriedades definida pela superclasse. Qualquer trabalho de configuração adicional que usa métodos, *getters* ou *setters* também podem ser feitas nesse momento.
+
+Se você não precisa calcular a propriedade mas ainda precisa fornecer o código que é executado antes e depois de definir um novo valor, use `willSet` e `didSet`. O código que você fornece é executado quando o valor é alterado fora do inicializador. Por exemplo, a classe abaixo garante que o tamanho do lado do triângulo é sempre o mesmo que o tamanho do lado do quadrado.
 
 ```swift
 class TriangleAndSquare {
@@ -514,17 +513,19 @@ class TriangleAndSquare {
         triangle = EquilateralTriangle(sideLength: size, name: name)
     }
  }
-var triangleAndSquare = TriangleAndSquare(size: 10, name: "another test shape")
+var triangleAndSquare = TriangleAndSquare(size: 10, name: "outro teste de forma")
 print(triangleAndSquare.square.sideLength)
-// Prints "10.0"
+// Imprime "10.0"
 print(triangleAndSquare.triangle.sideLength)
-// Prints "10.0"
-triangleAndSquare.square = Square(sideLength: 50, name: "larger square")
+// Imprime "10.0"
+triangleAndSquare.square = Square(sideLength: 50, name: "quadrado maior")
 print(triangleAndSquare.triangle.sideLength)
-// Prints "50.0"
+// Imprime "50.0"
 ``` 
+Enquanto estiver trabalhando com valores opcionais, você pode escrever `?` antes de operações como métodos, propriedades e assinaturas. Se o valor antes de `?` for `nil`, tudo depois de `?` é ignorado e o valor de toda a expressão é `nil`.
 
-When working with optional values, you can write `?` before operations like methods, properties, and subscripting. If the value before the `?` is `nil`, everything after the `?` is ignored and the value of the whole expression is `nil`. Otherwise, the optional value is unwrapped, and everything after the `?` acts on the unwrapped value. In both cases, the value of the whole expression is an optional value.
+Caso contrário, o valor opcional é desempacotado, e tudo depois de `?` age sobre o valor desempacotado. Em ambos os casos, o valor de toda a expressão é um valor opcional.
+
 
 ```swift
 let optionalSquare: Square? = Square(sideLength: 2.5, name: "optional square")
