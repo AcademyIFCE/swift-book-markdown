@@ -14,9 +14,9 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
   - [x] Control Flow
   - [ ] Functions and Clojures
   - [x] Objects and Classes
-  - [ ] Enumerations and Structures
+  - [x] Enumerations and Structures
   - [ ] Protocols and Extensions
-  - [ ] Error Handling
+  - [x] Error Handling
   - [ ] Generics
 - [ ] Language Guide
   - [ ] The Basics
