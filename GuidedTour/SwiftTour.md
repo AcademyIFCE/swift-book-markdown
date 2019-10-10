@@ -134,7 +134,7 @@ print(teamScore)
 
 Em um declaração `if`, a condicional deve ser uma expressão Booleana, isso significa que código como `if score { ... }` é um erro, não uma comparação implícita a zero.
 
-Você pode usar `if` e `let` juntos para trabalhar com valores que podem não existir. Esses valores são representados como opcionais. Um valor opcional contem um valor ou contem `nil` para indicar que o valor não existe. Escreva uma interrogação (`?`) após o tipo do valor para indicar o valor como opcional.
+Você pode usar `if` e `let` juntos para trabalhar com valores que podem não existir. Esses valores são representados como optionals. Um valor optional contem um valor ou contem `nil` para indicar que o valor não existe. Escreva uma interrogação (`?`) após o tipo do valor para indicar o valor como optional.
 
 ```swift
 var optionalString: String? = "Hello"
@@ -148,13 +148,13 @@ if let name = optionalName {
 }
 ```
 
-**Experimento**
+**Experimente**
 
 > Mudar `optionalName` para `nil`. Qual a saudação que você vai ter? Adicione uma condição `else` que mude a saudação se `optionalValue` for `nil`.
 
-Se o valor opcional é `nil`, a condicional é `false` e o código nas chaves é pulado. Caso contrário, o valor opcional é desempacotado e atribuída para a constante após o `let`, que faz o valor desempacotado acessível dentro do bloco de código.
+Se o valor optional é `nil`, a condicional é `false` e o código nas chaves é pulado. Caso contrário, o valor optional é desempacotado e atribuída para a constante após o `let`, que faz o valor desempacotado acessível dentro do bloco de código.
 
-Outra maneira de manipular valores opcionais é prover um valor padrão usando o operador `??`. Se o valor do opcional estiver faltando, o valor padrão é usado.
+Outra maneira de manipular valores optional é prover um valor padrão usando o operador `??`. Se o valor do optional estiver faltando, o valor padrão é usado.
 
 ```swift
 let nickName: String? = nil
@@ -162,7 +162,7 @@ let fullName: String = "John Appleseed"
 let informalGreeting = "Hi \(nickName ?? fullName)"
 ```
 
-Switches suporta qualquer tipo de dado e uma grande variedade de operações de comparação, eles não são limitado a inteiros e testes de igualdade.
+Switches suportam qualquer tipo de dado e uma grande variedade de operações de comparação, eles não são limitado a inteiros e testes de igualdade.
 
 ```swift
 let vegetable = "red pepper"
@@ -179,15 +179,13 @@ default:
 // Imprime "Is it a spicy red pepper?"
 ```
 
-**Experimento**
+**Experimente**
 
 > Tente remover o caso padrão. Qual o erro que você recebe?
 
 Perceba como `let` pode ser usado em um padrão para atribuir o valor que corresponde o padrão para uma constante.
 
 Após executar o código dentro do switch case que coincidiu, o programa sai da declaração do switch. A execução não continua para o proximo case, então não há necessidade de usar break explicitamente no switch, no final de casa código dos cases.
-
-You use `for`\-`in` to iterate over items in a dictionary by providing a pair of names to use for each key-value pair. Dictionaries are an unordered collection, so their keys and values are iterated over in an arbitrary order.
 
 Você usa `for`\-`in` para iterar nos itens de um dicionário ao prover um par de nomes para usar para cada par chave-valor. Dicionários são uma coleção desordenada, então as chaves e valores são iterados em uma ordem arbitraria.
 
@@ -209,7 +207,7 @@ print(largest)
 // Imprime "25"
 ```
 
-**Experimento**
+**Experimente**
 
 > Adicione outra variável para observar do tipo do numero que foi o maior, assim como qual foi o maior numero.
 
@@ -418,7 +416,7 @@ Use `deinit` para criar um desinicializador se você precisa executar alguma lim
 
 As subclasses incluem o nome da superclasse depois do nome da classe, separada por uma vírgula. Não há nenhum requisito para que classes herdem alguma classe raiz padrão, então você pode incluir ou omitir a superclasse quando necessário.
 
-Métodos em uma subclasse que substituem a implementação da superclasse são marcados com `override` —a substituição de um método por acidente, sem `override`, é detectada pelo compilador como um erro. O compilador também detecta métodos com `override` que na verdade não substituem nenhum método na superclasse.
+Métodos em uma subclasse que substituem a implementação da superclasse são marcados com `override` a substituição de um método por acidente, sem `override`, é detectada pelo compilador como um erro. O compilador também detecta métodos com `override` que na verdade não substituem nenhum método na superclasse.
 
 ```swift
 class Square: NamedShape {
@@ -517,9 +515,9 @@ triangleAndSquare.square = Square(sideLength: 50, name: "quadrado maior")
 print(triangleAndSquare.triangle.sideLength)
 // Imprime "50.0"
 ``` 
-Enquanto estiver trabalhando com valores opcionais, você pode escrever `?` antes de operações como métodos, propriedades e assinaturas. Se o valor antes de `?` for `nil`, tudo depois de `?` é ignorado e o valor de toda a expressão é `nil`.
+Enquanto estiver trabalhando com valores optional, você pode escrever `?` antes de operações como métodos, propriedades e assinaturas. Se o valor antes de `?` for `nil`, tudo depois de `?` é ignorado e o valor de toda a expressão é `nil`.
 
-Caso contrário, o valor opcional é desempacotado, e tudo depois de `?` age sobre o valor desempacotado. Em ambos os casos, o valor de toda a expressão é um valor opcional.
+Caso contrário, o valor optional é desempacotado, e tudo depois de `?` age sobre o valor desempacotado. Em ambos os casos, o valor de toda a expressão é um valor optional.
 
 
 ```swift
@@ -557,7 +555,7 @@ let ace = Rank.ace
 let aceRawValue = ace.rawValue
 ```
 
-**Experimento**
+**Experimente**
 
 > Escreva uma função que compare dois `Rank` através da comparação de seus raw values.
 
@@ -594,7 +592,7 @@ let hearts = Suit.hearts
 let heartsDescription = hearts.simpleDescription()
 ```
 
-**Experimento**
+**Experimente**
 
 > Adicione o metódo `color()` ao `Suit` que retorna "black" para spades e clubs, e retorna "red" para hearts e diamonds.
 
@@ -620,7 +618,7 @@ Se a enumeração tiver raw values, esses valores são determinados como parte d
  // Prints "Sunrise is at 6:00 am and sunset is at 8:09 pm."
 ```
 
-**Experimento**
+**Experimente**
 
 > Adicione um terceiro case ao `ServerResponse` e ao switch.
 
@@ -640,7 +638,7 @@ let threeOfSpades = Card(rank: .three, suit: .spades)
 let threeOfSpadesDescription = threeOfSpades.simpleDescription()
 ```
 
-**Experimento**
+**Experimente**
 
 > Escreva uma função que retorne um array contendo o deck completo de cartas, com uma carta de cada combinação de rank e suit.
 
@@ -751,7 +749,7 @@ do {
 // Prints "Job sent"
 ```
 
-**Experimento**
+**Experimente**
 
 > Mude o nome do printer para `"Never Has Toner"`, para que a função `send(job:toPrinter:)` dispare um error.
 
@@ -771,7 +769,7 @@ do {
 // Prints "Job sent"
 ```
 
-**Experimento**
+**Experimente**
 
 > Adicione um código para disparar um error dentro do bloco `do`. Que tipo de error você precisa disparar para que o error seja tratado dentro do primeiro bloco de `catch`? E o segundo e terceiro bloco?
 
