@@ -738,7 +738,7 @@ func send(job: Int, toPrinter printerName: String) throws -> String {
 }
 ```
 
-Existem diversars maneiras de se tratar errors. Uma das maneiras é utilizando o `do`\-`catch`. Dentro do bloco `do`, você assinala um código que pode disparar um error escrevendo `try` na frente dele. Dentro do bloco `catch`, o error é dado o nome de `error` automaticamente, a menos que você dê um nome diferente.
+Existem diversars maneiras de se tratar errors. Uma das maneiras é utilizando o `do`-`catch`. Dentro do bloco `do`, você assinala um código que pode disparar um error escrevendo `try` na frente dele. Dentro do bloco `catch`, o error é dado o nome de `error` automaticamente, a menos que você dê um nome diferente.
 
 ```swift
 do {
@@ -750,7 +750,7 @@ do {
 // Prints "Job sent"
 ```
 
-**Experiment**
+**Experimento**
 
 > Mude o nome do printer para `"Never Has Toner"`, para que a função `send(job:toPrinter:)` dispare um error.
 
