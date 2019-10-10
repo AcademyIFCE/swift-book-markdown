@@ -374,10 +374,10 @@ print(sortedNumbers)
 // Prints "[20, 19, 12, 7]"
 ```
 
-Objects and Classes
+Objetos e Classes
 -------------------
 
-Use `class` followed by the class’s name to create a class. A property declaration in a class is written the same way as a constant or variable declaration, except that it is in the context of a class. Likewise, method and function declarations are written the same way.
+Use `class` seguido pelo nome da classe para criar uma classe. A declaração de uma propriedade em uma classe é escrita do mesmo jeito que uma declaração de uma constante ou variável, exceto que está no contexto de uma classe. Da mesma forma, as declarações de métodos e funções são escritas da mesma forma.
 
 ```swift
 class Shape {
