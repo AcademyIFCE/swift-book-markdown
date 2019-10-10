@@ -56,9 +56,6 @@ let widthLabel = label + String(width)
 
 > Tente remover a conversão para o tipo `String` na última linha. Qual erro que aparece? 
 
-<!-- [//]: # (There’s an even simpler way to include values in strings: Write the value in parentheses, and write a backslash (`\`) before the parentheses. For example:) -->
-
-
 Há uma maneira ainda mais simples para incluir valores em *strings*: Escreva o valor entre parênteses e escreva uma barra invertida(`\`) antes dos parênteses. Por exemplo:
 
 ```swift
@@ -81,8 +78,6 @@ let quotation = """
     E então eu disse: "Eu tenho \(apples + oranges) pedaços de frutas."
 """
 ```
-
-<!-- Create arrays and dictionaries using brackets (`[]`), and access their elements by writing the index or key in brackets. A comma is allowed after the last element. -->
 
 Crie *arrays* e dicionários que usem colchetes (`[]`), e acesse os seus elementos escrevendo o seu índice ou chave nos colchetes. Uma vírgula é permitida após o último elemento. 
 
