@@ -817,7 +817,7 @@ func makeArray<Item>(repeating item: Item, numberOfTimes: Int) -> [Item] {
 Você pode criar formas genericas de funções e métodos, bem como classes, enums, and structs.
 
 ```swift
-// Reimplementando do tipo opcional da biblioteca padrão da Swift
+// Reimplementando o tipo opcional da biblioteca padrão da Swift
 enum OptionalValue<Wrapped> {
     case none
     case some(Wrapped)
@@ -826,7 +826,7 @@ var possibleInteger: OptionalValue<Int> = .none
 possibleInteger = .some(100)
 ```
 
-Use `where` logo antes do corpo para especificar uma lista de requisitos—por exemplo, para exigir que um tipo implemente um protocolo, para exigir que dois tipos sejam iguais, ou para exigir que uma classe tenha uma superclasse em particular.
+Use `where` logo antes do corpo para especificar uma lista de requisito, por exemplo, para exigir que um tipo implemente um protocolo, para exigir que dois tipos sejam iguais, ou para exigir que uma classe tenha uma superclasse em particular.
 
 ```swift
 func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool where T.Element: Equatable, T.Element == U.Element {
