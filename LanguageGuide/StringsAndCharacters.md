@@ -327,11 +327,10 @@ let decomposed: Character = "\u{1112}\u{1161}\u{11AB}"    // ᄒ, ᅡ, ᆫ
 
 Extended grapheme clusters enable scalars for enclosing marks (such as `COMBINING ENCLOSING CIRCLE`, or `U+20DD`) to enclose other Unicode scalars as part of a single `Character` value:
 
-// FIXME: Fix character circle
 
 ```swift
 let enclosedEAcute: Character = "\u{E9}\u{20DD}"
-// enclosedEAcute is &#8413;
+// enclosedEAcute is é⃝
 ```
 
 Unicode scalars for regional indicator symbols can be combined in pairs to make a single `Character` value, such as this combination of `REGIONAL INDICATOR SYMBOL LETTER U` (`U+1F1FA`) and `REGIONAL INDICATOR SYMBOL LETTER S` (`U+1F1F8`):
