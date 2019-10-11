@@ -56,9 +56,6 @@ let widthLabel = label + String(width)
 
 > Tente remover a conversão para o tipo `String` na última linha. Qual erro que aparece? 
 
-<!-- [//]: # (There’s an even simpler way to include values in strings: Write the value in parentheses, and write a backslash (`\`) before the parentheses. For example:) -->
-
-
 Há uma maneira ainda mais simples para incluir valores em *strings*: Escreva o valor entre parênteses e escreva uma barra invertida(`\`) antes dos parênteses. Por exemplo:
 
 ```swift
@@ -81,8 +78,6 @@ let quotation = """
     E então eu disse: "Eu tenho \(apples + oranges) pedaços de frutas."
 """
 ```
-
-<!-- Create arrays and dictionaries using brackets (`[]`), and access their elements by writing the index or key in brackets. A comma is allowed after the last element. -->
 
 Crie *arrays* e dicionários que usem colchetes (`[]`), e acesse os seus elementos escrevendo o seu índice ou chave nos colchetes. Uma vírgula é permitida após o último elemento. 
 
@@ -139,7 +134,7 @@ print(teamScore)
 
 Em um declaração `if`, a condicional deve ser uma expressão Booleana, isso significa que código como `if score { ... }` é um erro, não uma comparação implícita a zero.
 
-Você pode usar `if` e `let` juntos para trabalhar com valores que podem não existir. Esses valores são representados como opcionais. Um valor opcional contem um valor ou contem `nil` para indicar que o valor não existe. Escreva uma interrogação (`?`) após o tipo do valor para indicar o valor como opcional.
+Você pode usar `if` e `let` juntos para trabalhar com valores que podem não existir. Esses valores são representados como optionals. Um valor optional contem um valor ou contem `nil` para indicar que o valor não existe. Escreva uma interrogação (`?`) após o tipo do valor para indicar o valor como optional.
 
 ```swift
 var optionalString: String? = "Hello"
@@ -153,13 +148,13 @@ if let name = optionalName {
 }
 ```
 
-**Experimento**
+**Experimente**
 
 > Mudar `optionalName` para `nil`. Qual a saudação que você vai ter? Adicione uma condição `else` que mude a saudação se `optionalValue` for `nil`.
 
-Se o valor opcional é `nil`, a condicional é `false` e o código nas chaves é pulado. Caso contrário, o valor opcional é desempacotado e atribuída para a constante após o `let`, que faz o valor desempacotado acessível dentro do bloco de código.
+Se o valor optional é `nil`, a condicional é `false` e o código nas chaves é pulado. Caso contrário, o valor optional é desempacotado e atribuída para a constante após o `let`, que faz o valor desempacotado acessível dentro do bloco de código.
 
-Outra maneira de manipular valores opcionais é prover um valor padrão usando o operador `??`. Se o valor do opcional estiver faltando, o valor padrão é usado.
+Outra maneira de manipular valores optional é prover um valor padrão usando o operador `??`. Se o valor do optional estiver faltando, o valor padrão é usado.
 
 ```swift
 let nickName: String? = nil
@@ -167,7 +162,7 @@ let fullName: String = "John Appleseed"
 let informalGreeting = "Hi \(nickName ?? fullName)"
 ```
 
-Switches suporta qualquer tipo de dado e uma grande variedade de operações de comparação, eles não são limitado a inteiros e testes de igualdade.
+Switches suportam qualquer tipo de dado e uma grande variedade de operações de comparação, eles não são limitado a inteiros e testes de igualdade.
 
 ```swift
 let vegetable = "red pepper"
@@ -184,15 +179,13 @@ default:
 // Imprime "Is it a spicy red pepper?"
 ```
 
-**Experimento**
+**Experimente**
 
 > Tente remover o caso padrão. Qual o erro que você recebe?
 
 Perceba como `let` pode ser usado em um padrão para atribuir o valor que corresponde o padrão para uma constante.
 
 Após executar o código dentro do switch case que coincidiu, o programa sai da declaração do switch. A execução não continua para o proximo case, então não há necessidade de usar break explicitamente no switch, no final de casa código dos cases.
-
-You use `for`\-`in` to iterate over items in a dictionary by providing a pair of names to use for each key-value pair. Dictionaries are an unordered collection, so their keys and values are iterated over in an arbitrary order.
 
 Você usa `for`\-`in` para iterar nos itens de um dicionário ao prover um par de nomes para usar para cada par chave-valor. Dicionários são uma coleção desordenada, então as chaves e valores são iterados em uma ordem arbitraria.
 
@@ -214,7 +207,7 @@ print(largest)
 // Imprime "25"
 ```
 
-**Experimento**
+**Experimente**
 
 > Adicione outra variável para observar do tipo do numero que foi o maior, assim como qual foi o maior numero.
 
@@ -423,7 +416,7 @@ Use `deinit` para criar um desinicializador se você precisa executar alguma lim
 
 As subclasses incluem o nome da superclasse depois do nome da classe, separada por uma vírgula. Não há nenhum requisito para que classes herdem alguma classe raiz padrão, então você pode incluir ou omitir a superclasse quando necessário.
 
-Métodos em uma subclasse que substituem a implementação da superclasse são marcados com `override` —a substituição de um método por acidente, sem `override`, é detectada pelo compilador como um erro. O compilador também detecta métodos com `override` que na verdade não substituem nenhum método na superclasse.
+Métodos em uma subclasse que substituem a implementação da superclasse são marcados com `override` a substituição de um método por acidente, sem `override`, é detectada pelo compilador como um erro. O compilador também detecta métodos com `override` que na verdade não substituem nenhum método na superclasse.
 
 ```swift
 class Square: NamedShape {
@@ -522,9 +515,9 @@ triangleAndSquare.square = Square(sideLength: 50, name: "quadrado maior")
 print(triangleAndSquare.triangle.sideLength)
 // Imprime "50.0"
 ``` 
-Enquanto estiver trabalhando com valores opcionais, você pode escrever `?` antes de operações como métodos, propriedades e assinaturas. Se o valor antes de `?` for `nil`, tudo depois de `?` é ignorado e o valor de toda a expressão é `nil`.
+Enquanto estiver trabalhando com valores optional, você pode escrever `?` antes de operações como métodos, propriedades e assinaturas. Se o valor antes de `?` for `nil`, tudo depois de `?` é ignorado e o valor de toda a expressão é `nil`.
 
-Caso contrário, o valor opcional é desempacotado, e tudo depois de `?` age sobre o valor desempacotado. Em ambos os casos, o valor de toda a expressão é um valor opcional.
+Caso contrário, o valor optional é desempacotado, e tudo depois de `?` age sobre o valor desempacotado. Em ambos os casos, o valor de toda a expressão é um valor optional.
 
 
 ```swift
@@ -535,7 +528,7 @@ let sideLength = optionalSquare?.sideLength
 Enumerations and Structures
 ---------------------------
 
-Use `enum` to create an enumeration. Like classes and all other named types, enumerations can have methods associated with them.
+Use `enum` para criar uma enumeração, como classes e todos os outros tipos nomeados, enumerações podem ter metódos associados a eles.
 
 ```swift
 enum Rank: Int {
@@ -562,13 +555,13 @@ let ace = Rank.ace
 let aceRawValue = ace.rawValue
 ```
 
-**Experiment**
+**Experimente**
 
-> Write a function that compares two `Rank` values by comparing their raw values.
+> Escreva uma função que compare dois `Rank` através da comparação de seus raw values.
 
-By default, Swift assigns the raw values starting at zero and incrementing by one each time, but you can change this behavior by explicitly specifying values. In the example above, `Ace` is explicitly given a raw value of `1`, and the rest of the raw values are assigned in order. You can also use strings or floating-point numbers as the raw type of an enumeration. Use the `rawValue` property to access the raw value of an enumeration case.
+Por padrão, Swift atribui raw values começando do zero e incrementando um a cada vez, porém você pode modificar esse comportamento explicitando valores. No exemplo acima, `Ace` é explicitamente dado o valor de `1`, e o resto dos raw values são atribuidos em ordem. Você pode também utilizar strings ou floating-point numbers como o raw type de uma enumeração. Use a propriedade `rawValue` para acessar o raw value de um case de enumeração.
 
-Use the `init?(rawValue:)` initializer to make an instance of an enumeration from a raw value. It returns either the enumeration case matching the raw value or `nil` if there is no matching `Rank`.
+Use o inicializador `init?(rawValue:)` para construir uma instância de uma enumeração a partir de um raw value. Ele irá retornar o case que corresponde ao raw value ou `nil` se não houver um `Rank` correspondente.
 
 ```swift
 if let convertedRank = Rank(rawValue: 3) {
@@ -576,7 +569,7 @@ if let convertedRank = Rank(rawValue: 3) {
 }
 ```
 
-The case values of an enumeration are actual values, not just another way of writing their raw values. In fact, in cases where there isn’t a meaningful raw value, you don’t have to provide one.
+Os case values de uma enumeração são valores reais, não apenas outra maneira de escrever seus raw values. Na verdade, em cases onde não existem raw values significativos, você não precisa forncer um.
 
 ```swift
 enum Suit {
@@ -599,13 +592,13 @@ let hearts = Suit.hearts
 let heartsDescription = hearts.simpleDescription()
 ```
 
-**Experiment**
+**Experimente**
 
-> Add a `color()` method to `Suit` that returns “black” for spades and clubs, and returns “red” for hearts and diamonds.
+> Adicione o metódo `color()` ao `Suit` que retorna "black" para spades e clubs, e retorna "red" para hearts e diamonds.
 
-Notice the two ways that the `hearts` case of the enumeration is referred to above: When assigning a value to the `hearts` constant, the enumeration case `Suit.hearts` is referred to by its full name because the constant doesn’t have an explicit type specified. Inside the switch, the enumeration case is referred to by the abbreviated form `.hearts` because the value of `self` is already known to be a suit. You can use the abbreviated form anytime the value’s type is already known.
+Perceba as duas maneiras que o case `hearts` da enumeração é referido acima: Quando atribuímos um valor a constante `heart`, o case da enumeração `Suits.hearts` é referido pelo seu nome completo porque a constante não tem um tipo específico explicitado. Dentro do switch, o case da enumeração é referido através da sua forma abreviada `.hearts` pois o valor do `self` já é conhecido como um `Suit`. Você pode utilizar a forma abreviada toda vez que o tipo do valor já é conhecido.
 
-If an enumeration has raw values, those values are determined as part of the declaration, which means every instance of a particular enumeration case always has the same raw value. Another choice for enumeration cases is to have values associated with the case—these values are determined when you make the instance, and they can be different for each instance of an enumeration case. You can think of the associated values as behaving like stored properties of the enumeration case instance. For example, consider the case of requesting the sunrise and sunset times from a server. The server either responds with the requested information, or it responds with a description of what went wrong.
+Se a enumeração tiver raw values, esses valores são determinados como parte da declaração, o que significa que todas as instâncias de um case específico de uma enumeração sempre tem o mesmo raw value. Outra escolha para cases de uma enumeração é ter associated values com o case, esses valores são determinados quando você constrói uma instância, e eles podem ser diferentes para cada instância de um case da enumeração. Você pode pensar nos associated values se comportando como stored properties de uma instância do case de uma enumeração. Por exemplo, considere o caso de solicitar os tempos de pôr do sol(sunset) e nascer do sol (sunrise) de um servidor. O servidor vai responder com a informação solicitada ou com a descrição de o que deu errado.
 
 ```swift
  enum ServerResponse {
@@ -625,13 +618,13 @@ If an enumeration has raw values, those values are determined as part of the dec
  // Prints "Sunrise is at 6:00 am and sunset is at 8:09 pm."
 ```
 
-**Experiment**
+**Experimente**
 
-> Add a third case to `ServerResponse` and to the switch.
+> Adicione um terceiro case ao `ServerResponse` e ao switch.
 
-Notice how the sunrise and sunset times are extracted from the `ServerResponse` value as part of matching the value against the switch cases.
+Perceba como os tempos de pôr do sol(sunset) e nascer do sol (sunrise) são extraídos do valor do `ServerResponse` como parte do valor correspondente comparando os cases do switch.
 
-Use `struct` to create a structure. Structures support many of the same behaviors as classes, including methods and initializers. One of the most important differences between structures and classes is that structures are always copied when they are passed around in your code, but classes are passed by reference.
+Use `struct` para criar uma structure. Structures possuem muitos dos comportamentos de classes, incluíndo metódos e inicializadores. Uma das diferenças mais importantes entre structures e classes é que structures são sempre copiadas quando passadas no código, já classes são passadas por referência.
 
 ```swift
 struct Card {
@@ -645,9 +638,9 @@ let threeOfSpades = Card(rank: .three, suit: .spades)
 let threeOfSpadesDescription = threeOfSpades.simpleDescription()
 ```
 
-**Experiment**
+**Experimente**
 
-> Write a function that returns an array containing a full deck of cards, with one card of each combination of rank and suit.
+> Escreva uma função que retorne um array contendo o deck completo de cartas, com uma carta de cada combinação de rank e suit.
 
 Protocolos e Extensões
 ------------------------
@@ -724,7 +717,7 @@ Mesmo que a variável `protocolValue` tem um tipo *runtime* da `SimpleClass`, o 
 Error Handling
 --------------
 
-You represent errors using any type that adopts the `Error` protocol.
+Você apresenta erros usando qualquer tipo que assine o protocolo `Error`.
 
 ```swift
 enum PrinterError: Error {
@@ -734,7 +727,7 @@ enum PrinterError: Error {
 }
 ```
 
-Use `throw` to throw an error and `throws` to mark a function that can throw an error. If you throw an error in a function, the function returns immediately and the code that called the function handles the error.
+Use `throw` para disparar um erro e `throws` para marcar uma função que pode disparar um error. Se você disparar um error em uma função, a função retorna imediatamente e o código que chamou a função trata o error.
 
 ```swift
 func send(job: Int, toPrinter printerName: String) throws -> String {
@@ -745,7 +738,7 @@ func send(job: Int, toPrinter printerName: String) throws -> String {
 }
 ```
 
-There are several ways to handle errors. One way is to use `do`\-`catch`. Inside the `do` block, you mark code that can throw an error by writing `try` in front of it. Inside the `catch` block, the error is automatically given the name `error` unless you give it a different name.
+Existem diversars maneiras de se tratar errors. Uma das maneiras é utilizando o `do`-`catch`. Dentro do bloco `do`, você assinala um código que pode disparar um error escrevendo `try` na frente dele. Dentro do bloco `catch`, o error é dado o nome de `error` automaticamente, a menos que você dê um nome diferente.
 
 ```swift
 do {
@@ -757,11 +750,11 @@ do {
 // Prints "Job sent"
 ```
 
-**Experiment**
+**Experimente**
 
-> Change the printer name to `"Never Has Toner"`, so that the `send(job:toPrinter:)` function throws an error.
+> Mude o nome do printer para `"Never Has Toner"`, para que a função `send(job:toPrinter:)` dispare um error.
 
-You can provide multiple `catch` blocks that handle specific errors. You write a pattern after `catch` just as you do after `case` in a switch.
+Você pode fornecer múltiplos blocos de `catch` que tratam errors específicos. Você escreve um pattern após o `catch` da mesma maneira que você faz após o `case` em um switch.
 
 ```swift
 do {
@@ -777,17 +770,18 @@ do {
 // Prints "Job sent"
 ```
 
-**Experiment**
+**Experimente**
 
-> Add code to throw an error inside the `do` block. What kind of error do you need to throw so that the error is handled by the first `catch` block? What about the second and third blocks?
+> Adicione um código para disparar um error dentro do bloco `do`. Que tipo de error você precisa disparar para que o error seja tratado dentro do primeiro bloco de `catch`? E o segundo e terceiro bloco?
 
-Another way to handle errors is to use `try?` to convert the result to an optional. If the function throws an error, the specific error is discarded and the result is `nil`. Otherwise, the result is an optional containing the value that the function returned.
+Outra maneira de tratar errors é usando o `try?` para converter o resultado em um optional. Se a função disparar um error, o error específico é descartado e o resultado é `nil`. Se não, o resultado é um optional contendo o valor retornado pela função.
 
 ```swift
 let printerSuccess = try? send(job: 1884, toPrinter: "Mergenthaler")
 let printerFailure = try? send(job: 1885, toPrinter: "Never Has Toner")
 ```
-Use `defer` to write a block of code that is executed after all other code in the function, just before the function returns. The code is executed regardless of whether the function throws an error. You can use `defer` to write setup and cleanup code next to each other, even though they need to be executed at different times.
+
+Use `defer` para escrever um bloco de código que é executado após todos os outros códigos na função, logo antes da função retornar. O código é executado mesmo se a função disparar um error. Você pode usar `defer` para escrever o código setup e o cleanup próximo um ao outro, mesmo quando eles devem ser executados em momentos diferentes.
 
 ```swift
 var fridgeIsOpen = false
