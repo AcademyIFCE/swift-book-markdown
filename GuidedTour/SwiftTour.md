@@ -649,10 +649,10 @@ let threeOfSpadesDescription = threeOfSpades.simpleDescription()
 
 > Write a function that returns an array containing a full deck of cards, with one card of each combination of rank and suit.
 
-Protocols and Extensions
+Protocolos e Extensões
 ------------------------
 
-Use `protocol` to declare a protocol.
+Use `protocol` para declarar um protocolo.
 
 ```swift
 protocol ExampleProtocol {
@@ -661,14 +661,14 @@ protocol ExampleProtocol {
 }
 ``` 
 
-Classes, enumerations, and structs can all adopt protocols.
+Classes, *enums* e *structs* todos podem adotar protocolos.
 
 ```swift
 class SimpleClass: ExampleProtocol {
-    var simpleDescription: String = "A very simple class."
+    var simpleDescription: String = "Uma classe muito simples"
     var anotherProperty: Int = 69105
     func adjust() {
-        simpleDescription += " Now 100% adjusted."
+        simpleDescription += " Agora 100% ajustado."
     }
 }
 var a = SimpleClass()
@@ -676,9 +676,9 @@ a.adjust()
 let aDescription = a.simpleDescription
 
 struct SimpleStructure: ExampleProtocol {
-    var simpleDescription: String = "A simple structure"
+    var simpleDescription: String = "Uma simples estrutura"
     mutating func adjust() {
-        simpleDescription += " (adjusted)"
+        simpleDescription += " (ajustada)"
     }
 }
 var b = SimpleStructure()
@@ -686,39 +686,40 @@ b.adjust()
 let bDescription = b.simpleDescription
 ``` 
 
-**Experiment**
+**Experimente**
 
-> Add another requirement to `ExampleProtocol`. What changes do you need to make to `SimpleClass` and `SimpleStructure` so that they still conform to the protocol?
+> Adicione outro requisito ao `ExampleProtocol`. Qual mudanças que você precisa mudar na `SimpleClass` e na `SimpleStructure` para que elas ainda conforme com o protocolo?
 
-Notice the use of the `mutating` keyword in the declaration of `SimpleStructure` to mark a method that modifies the structure. The declaration of `SimpleClass` doesn’t need any of its methods marked as mutating because methods on a class can always modify the class.
+Note que o uso da *keyword* `mutating` na declaração de `SimpleStructure` é usado para marcar um método que modifica essa *struct*. A declaração de `SimpleClass` não precisa que nenhum de seus métodos sejam marcados como *mutating* porque os métodos de uma classe sempre podem  modificar a classe.
 
-Use `extension` to add functionality to an existing type, such as new methods and computed properties. You can use an extension to add protocol conformance to a type that is declared elsewhere, or even to a type that you imported from a library or framework.
+Use `extension` para adicionar funcionalidades para um tipo existente, como novos métodos e propriedades computadas. Você pode usar uma extensão para adicionar um protocolo que conforme com um tipo que é declarado em outro lugar, ou até mesmo para um tipo que você importa de uma biblioteca ou *framework*.
 
 ```swift
 extension Int: ExampleProtocol {
     var simpleDescription: String {
-        return "The number \(self)"
+        return "O número \(self)"
     }
     mutating func adjust() {
         self += 42
     }
  }
 print(7.simpleDescription)
-// Prints "The number 7"
+// Imprime "O número 7"
 ```
 
-**Experiment**
+**Experimente**
 
-> Write an extension for the `Double` type that adds an `absoluteValue` property.
+> Escreva uma *extension* para o tipo `Double` que adiciona uma propriedade  `absoluteValue`.
 
-You can use a protocol name just like any other named type—for example, to create a collection of objects that have different types but that all conform to a single protocol. When you work with values whose type is a protocol type, methods outside the protocol definition are not available.
+Você pode usar um nome de um protocolo apenas como qualquer outro tipo nomeado—por exemplo, para criar uma coleção de objetos que tenham tipos distintos, mas que todos conformam com um único protocolo. Quando você trabalha com valores cujo tipo é um tipo *protocol*, métodos fora da definição do protocolo não estão disponíveis.
 
+```swift
  let protocolValue: ExampleProtocol = a
  print(protocolValue.simpleDescription)
- // Prints "A very simple class. Now 100% adjusted."
- // print(protocolValue.anotherProperty) // Uncomment to see the error
-
-Even though the variable `protocolValue` has a runtime type of `SimpleClass`, the compiler treats it as the given type of `ExampleProtocol`. This means that you can’t accidentally access methods or properties that the class implements in addition to its protocol conformance.
+ // Imprime "Uma classe muito simples. Agora 100% ajustada."
+ // print(protocolValue.anotherProperty) // Descomente para ver o erro
+```
+Mesmo que a variável `protocolValue` tem um tipo *runtime* da `SimpleClass`, o compilador a trata como o tipo fornecido do `ExampleProtocol`. Isso signfica que você não pode acessar acidentalemente métodos ou propriedades que a classe implementa, além  da conformidade do protocolo.
 
 Error Handling
 --------------
