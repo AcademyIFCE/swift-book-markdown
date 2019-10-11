@@ -258,7 +258,7 @@ greet(person: "Bob", day: "Tuesday")
 
 > Remova o parâmetro `day`. Adicione um parâmetro para incluir o especial do almoço de hoje na saudação.
 
-Por padrão, funções usam os nomes dos seus parâmetros como rótulos para os seus argumentos. Escreva um rótulo de argumento customoizado antes do nome do parâmetro, ou escreva `_` para não usar um rótulo de argumento.
+Por padrão, funções usam os nomes dos seus parâmetros como rótulos para os seus argumentos. Escreva um rótulo de argumento customizado antes do nome do parâmetro, ou escreva `_` para não usar um rótulo de argumento.
 
 ```swift
 func greet(_ person: String, on day: String) -> String {
@@ -338,7 +338,9 @@ var numbers = [20, 19, 7, 12]
 hasAnyMatches(list: numbers, condition: lessThanTen)
 ```
 
-Funções são na verdade um tipo expecial de closures: blocos de código que podem ser chamados depois. O código dentro de uma closure tem acesso a coisas como variáveis e funções que estava disponíveis no escopo one a closure foi criada, mesmo se a closure está em um escopo diferente quando é executada—Você já viu um exemplo disso com funções aninhadas. Você pode escrever uma closure sem um nome ao circundando o código com (`{}`). Use `in` para separar os argumentos e o tipo de retorno do corpo.
+Funções são na verdade um tipo especial de closures: blocos de código que podem ser chamados depois. O código dentro de uma closure tem acesso a coisas como variáveis e funções que estava disponíveis no escopo onde a closure foi criada, mesmo se a closure está em um escopo diferente quando é executada.
+
+Você já viu um exemplo disso com funções aninhadas. Você pode escrever uma closure sem um nome ao circundar o código com (`{}`). Use `in` para separar os argumentos e o tipo de retorno do corpo.
 
 ```swift
 numbers.map({ (number: Int) -> Int in
@@ -351,7 +353,7 @@ numbers.map({ (number: Int) -> Int in
 
 > Reescreva a closure para retornar zero para todos os números ímpares.
 
-Você tem diversas opções para escrever closures de forma mais concisa. Quando o tipo de uma closure já é conhecido, como o callback para um delegate, você pode omitir o tipo dos seus parâmetros, seu tipo de retorno, ou ambos. Closures expressão única retornam implicitamente o valor de sua única expressão.
+Você tem diversas opções para escrever closures de forma mais concisa. Quando o tipo de uma closure já é conhecido, como o callback para um delegate, você pode omitir o tipo dos seus parâmetros, seu tipo de retorno, ou ambos. Closures de expressão única retornam implicitamente o valor de sua única expressão.
 
 ```swift
 let mappedNumbers = numbers.map({ number in 3 * number })
@@ -359,7 +361,7 @@ print(mappedNumbers)
 // Imprime "[60, 57, 21, 36]"
 ```
 
-Você pode se referir aos parâmteros por número ao invés do nome—essa abordagem é especialmente útil em closures muito curtas. Uma closure passada como o último argumento para uma função pode aparecer imediatamente depois do parênteses. Quando uma closure é o único argumento de uma função, você pode omitir os parênteses completamente.
+Você pode se referir aos parâmteros por número ao invés do nome, essa abordagem é especialmente útil em closures muito curtas. Uma closure passada como o último argumento para uma função pode aparecer imediatamente depois do parênteses. Quando uma closure é o único argumento de uma função, você pode omitir os parênteses completamente.
 
 ```swift
 let sortedNumbers = numbers.sorted { $0 > $1 }
