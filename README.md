@@ -12,7 +12,7 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
   - [x] Intro
   - [x] Simple Values
   - [x] Control Flow
-  - [ ] Functions and Clojures
+  - [ ] Functions and Closures
   - [x] Objects and Classes
   - [x] Enumerations and Structures
   - [ ] Protocols and Extensions
