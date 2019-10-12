@@ -714,10 +714,10 @@ Você pode usar um nome de um protocolo apenas como qualquer outro tipo nomeado�
 ```
 Mesmo que a variável `protocolValue` tem um tipo *runtime* da `SimpleClass`, o compilador a trata como o tipo fornecido do `ExampleProtocol`. Isso signfica que você não pode acessar acidentalemente métodos ou propriedades que a classe implementa, além  da conformidade do protocolo.
 
-Error Handling
+Tratamento de Erros
 --------------
 
-Você apresenta erros usando qualquer tipo que assine o protocolo `Error`.
+Você representa erros usando qualquer tipo que adota o protocolo `Error`.
 
 ```swift
 enum PrinterError: Error {
@@ -729,6 +729,7 @@ enum PrinterError: Error {
 
 Use `throw` para disparar um erro e `throws` para marcar uma função que pode disparar um error. Se você disparar um error em uma função, a função retorna imediatamente e o código que chamou a função trata o error.
 
+
 ```swift
 func send(job: Int, toPrinter printerName: String) throws -> String {
     if printerName == "Never Has Toner" {
@@ -737,8 +738,8 @@ func send(job: Int, toPrinter printerName: String) throws -> String {
     return "Job sent"
 }
 ```
+Existem várias maneiras de tratar erros. Uma maneira é usar `do`\-`catch`. Dentro do bloco `do`, você marca o código que pode lançar um error ao escrever `try` na frente dele. Dentro do bloco `catch`, o erro recebe automaticamente o nome `error` a não ser que você dê um nome diferente.
 
-Existem diversars maneiras de se tratar errors. Uma das maneiras é utilizando o `do`-`catch`. Dentro do bloco `do`, você assinala um código que pode disparar um error escrevendo `try` na frente dele. Dentro do bloco `catch`, o error é dado o nome de `error` automaticamente, a menos que você dê um nome diferente.
 
 ```swift
 do {
@@ -749,6 +750,7 @@ do {
 }
 // Prints "Job sent"
 ```
+
 
 **Experimente**
 
@@ -767,14 +769,16 @@ do {
 } catch {
     print(error)
 }
-// Prints "Job sent"
+// Imprime "Job sent"
 ```
+
 
 **Experimente**
 
 > Adicione um código para disparar um error dentro do bloco `do`. Que tipo de error você precisa disparar para que o error seja tratado dentro do primeiro bloco de `catch`? E o segundo e terceiro bloco?
 
 Outra maneira de tratar errors é usando o `try?` para converter o resultado em um optional. Se a função disparar um error, o error específico é descartado e o resultado é `nil`. Se não, o resultado é um optional contendo o valor retornado pela função.
+
 
 ```swift
 let printerSuccess = try? send(job: 1884, toPrinter: "Mergenthaler")
@@ -798,7 +802,7 @@ func fridgeContains(_ food: String) -> Bool {
 }
 fridgeContains("banana")
 print(fridgeIsOpen)
-// Prints "false"
+// Imprime "false"
 ```
 
 Generics
