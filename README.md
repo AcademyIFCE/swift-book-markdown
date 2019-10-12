@@ -15,7 +15,7 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
   - [ ] Functions and Closures
   - [x] Objects and Classes
   - [x] Enumerations and Structures
-  - [ ] Protocols and Extensions
+  - [x] Protocols and Extensions
   - [x] Error Handling
   - [ ] Generics
 - [ ] The Basics
