@@ -810,7 +810,7 @@ print(fridgeIsOpen)
 Generics
 --------
 
-Write a name inside angle brackets to make a generic function or type.
+Escreva um nome dentro de parênteses angulares para criar uma função ou tipo genérico.
 
 ```swift
 func makeArray<Item>(repeating item: Item, numberOfTimes: Int) -> [Item] {
@@ -823,10 +823,10 @@ func makeArray<Item>(repeating item: Item, numberOfTimes: Int) -> [Item] {
  makeArray(repeating: "knock", numberOfTimes: 4)
 ```
 
-You can make generic forms of functions and methods, as well as classes, enumerations, and structures.
+Você pode criar formas genericas de funções e métodos, bem como classes, enums, and structs.
 
 ```swift
-// Reimplement the Swift standard library's optional type
+// Reimplementando o tipo opcional da biblioteca padrão da Swift
 enum OptionalValue<Wrapped> {
     case none
     case some(Wrapped)
@@ -835,7 +835,7 @@ var possibleInteger: OptionalValue<Int> = .none
 possibleInteger = .some(100)
 ```
 
-Use `where` right before the body to specify a list of requirements—for example, to require the type to implement a protocol, to require two types to be the same, or to require a class to have a particular superclass.
+Use `where` logo antes do corpo para especificar uma lista de requisito, por exemplo, para exigir que um tipo implemente um protocolo, para exigir que dois tipos sejam iguais, ou para exigir que uma classe tenha uma superclasse em particular.
 
 ```swift
 func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool where T.Element: Equatable, T.Element == U.Element {
@@ -851,8 +851,8 @@ func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool whe
 anyCommonElements([1, 2, 3], [3])
 ```
 
-**Experiment**
+**Experimento**
 
-> Modify the `anyCommonElements(_:_:)` function to make a function that returns an array of the elements that any two sequences have in common.
+> Modifique a função `anyCommonElements(_:_:)` para criar uma função que retorne um array dos elementos que qualquer uma das duas sequências tenham em comun.
 
-Writing `<T: Equatable>` is the same as writing `<T> ... where T: Equatable`.
+Escrever `<T: Equatable>` é o mesmo que escrever  `<T> ... where T: Equatable`.
