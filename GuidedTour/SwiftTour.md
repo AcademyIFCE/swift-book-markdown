@@ -242,10 +242,10 @@ print(total)
 
 Use `..<`para fazer uma coleção que omite o maior final, e use `...`para fazer a coleção incluir os dois valores.
 
-Functions and Closures
+Funções e Closures
 ----------------------
 
-Use `func` to declare a function. Call a function by following its name with a list of arguments in parentheses. Use `->` to separate the parameter names and types from the function’s return type.
+Use `func` para declarar uma função. Chame uma função ao escrever seu nome seguido da lista de argumentos entre parênteses. Use `->` para separar os nomes e tipos dos parâmetros do tipo de retorno da função.
 
 ```swift
 func greet(person: String, day: String) -> String {
@@ -254,11 +254,11 @@ func greet(person: String, day: String) -> String {
 greet(person: "Bob", day: "Tuesday")
 ```
 
-**Experiment**
+**Experimento**
 
-> Remove the `day` parameter. Add a parameter to include today’s lunch special in the greeting.
+> Remova o parâmetro `day`. Adicione um parâmetro para incluir o especial do almoço de hoje na saudação.
 
-By default, functions use their parameter names as labels for their arguments. Write a custom argument label before the parameter name, or write `_` to use no argument label.
+Por padrão, funções usam os nomes dos seus parâmetros como rótulos para os seus argumentos. Escreva um rótulo de argumento customizado antes do nome do parâmetro, ou escreva `_` para não usar um rótulo de argumento.
 
 ```swift
 func greet(_ person: String, on day: String) -> String {
@@ -267,7 +267,7 @@ func greet(_ person: String, on day: String) -> String {
 greet("John", on: "Wednesday")
 ```
 
-Use a tuple to make a compound value—for example, to return multiple values from a function. The elements of a tuple can be referred to either by name or by number.
+Use uma tupla para criar um valor composto—por exemplo, para retornar múltiplos valores de uma função. Os elementos de uma tupla podem ser referenciados ou por nome ou por número.
 
 ```swift
 func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
@@ -288,12 +288,12 @@ func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
 }
 let statistics = calculateStatistics(scores: [5, 3, 100, 3, 9])
 print(statistics.sum)
-// Prints "120"
+// Imprime "120"
 print(statistics.2)
-// Prints "120"
+// Imprime "120"
 ```
 
-Functions can be nested. Nested functions have access to variables that were declared in the outer function. You can use nested functions to organize the code in a function that is long or complex.
+Funções podem ser aninhadas. Funções aninhadas tem acesso a variáveis que foram declaradas na função externa. Você pode usar funções aninhadas para organizar o código numa função que é longa ou complexa.
 
 ```swift
 func returnFifteen() -> Int {
@@ -307,7 +307,7 @@ func returnFifteen() -> Int {
 returnFifteen()
 ```
 
-Functions are a first-class type. This means that a function can return another function as its value.
+Funções são um tipo de primeira classe. Isso significa que uma função pode retornar outra função.
 
 ```swift
 func makeIncrementer() -> ((Int) -> Int) {
@@ -320,7 +320,7 @@ var increment = makeIncrementer()
 increment(7)
 ```
 
-A function can take another function as one of its arguments.
+Uma função pode receber outra função como um de seus argumentos.
 
 ```swift
 func hasAnyMatches(list: [Int], condition: (Int) -> Bool) -> Bool {
@@ -338,7 +338,9 @@ var numbers = [20, 19, 7, 12]
 hasAnyMatches(list: numbers, condition: lessThanTen)
 ```
 
-Functions are actually a special case of closures: blocks of code that can be called later. The code in a closure has access to things like variables and functions that were available in the scope where the closure was created, even if the closure is in a different scope when it is executed—you saw an example of this already with nested functions. You can write a closure without a name by surrounding code with braces (`{}`). Use `in` to separate the arguments and return type from the body.
+Funções são na verdade um tipo especial de closures: blocos de código que podem ser chamados depois. O código dentro de uma closure tem acesso a coisas como variáveis e funções que estava disponíveis no escopo onde a closure foi criada, mesmo se a closure está em um escopo diferente quando é executada.
+
+Você já viu um exemplo disso com funções aninhadas. Você pode escrever uma closure sem um nome ao circundar o código com (`{}`). Use `in` para separar os argumentos e o tipo de retorno do corpo.
 
 ```swift
 numbers.map({ (number: Int) -> Int in
@@ -347,24 +349,24 @@ numbers.map({ (number: Int) -> Int in
 })
 ```
 
-**Experiment**
+**Experimento**
 
-> Rewrite the closure to return zero for all odd numbers.
+> Reescreva a closure para retornar zero para todos os números ímpares.
 
-You have several options for writing closures more concisely. When a closure’s type is already known, such as the callback for a delegate, you can omit the type of its parameters, its return type, or both. Single statement closures implicitly return the value of their only statement.
+Você tem diversas opções para escrever closures de forma mais concisa. Quando o tipo de uma closure já é conhecido, como o callback para um delegate, você pode omitir o tipo dos seus parâmetros, seu tipo de retorno, ou ambos. Closures de expressão única retornam implicitamente o valor de sua única expressão.
 
 ```swift
 let mappedNumbers = numbers.map({ number in 3 * number })
 print(mappedNumbers)
-// Prints "[60, 57, 21, 36]"
+// Imprime "[60, 57, 21, 36]"
 ```
 
-You can refer to parameters by number instead of by name—this approach is especially useful in very short closures. A closure passed as the last argument to a function can appear immediately after the parentheses. When a closure is the only argument to a function, you can omit the parentheses entirely.
+Você pode se referir aos parâmteros por número ao invés do nome, essa abordagem é especialmente útil em closures muito curtas. Uma closure passada como o último argumento para uma função pode aparecer imediatamente depois do parênteses. Quando uma closure é o único argumento de uma função, você pode omitir os parênteses completamente.
 
 ```swift
 let sortedNumbers = numbers.sorted { $0 > $1 }
 print(sortedNumbers)
-// Prints "[20, 19, 12, 7]"
+// Imprime "[20, 19, 12, 7]"
 ```
 
 Objetos e Classes
@@ -642,10 +644,10 @@ let threeOfSpadesDescription = threeOfSpades.simpleDescription()
 
 > Escreva uma função que retorne um array contendo o deck completo de cartas, com uma carta de cada combinação de rank e suit.
 
-Protocols and Extensions
+Protocolos e Extensões
 ------------------------
 
-Use `protocol` to declare a protocol.
+Use `protocol` para declarar um protocolo.
 
 ```swift
 protocol ExampleProtocol {
@@ -654,14 +656,14 @@ protocol ExampleProtocol {
 }
 ``` 
 
-Classes, enumerations, and structs can all adopt protocols.
+Classes, *enums* e *structs* todos podem adotar protocolos.
 
 ```swift
 class SimpleClass: ExampleProtocol {
-    var simpleDescription: String = "A very simple class."
+    var simpleDescription: String = "Uma classe muito simples"
     var anotherProperty: Int = 69105
     func adjust() {
-        simpleDescription += " Now 100% adjusted."
+        simpleDescription += " Agora 100% ajustado."
     }
 }
 var a = SimpleClass()
@@ -669,9 +671,9 @@ a.adjust()
 let aDescription = a.simpleDescription
 
 struct SimpleStructure: ExampleProtocol {
-    var simpleDescription: String = "A simple structure"
+    var simpleDescription: String = "Uma simples estrutura"
     mutating func adjust() {
-        simpleDescription += " (adjusted)"
+        simpleDescription += " (ajustada)"
     }
 }
 var b = SimpleStructure()
@@ -679,44 +681,45 @@ b.adjust()
 let bDescription = b.simpleDescription
 ``` 
 
-**Experiment**
+**Experimente**
 
-> Add another requirement to `ExampleProtocol`. What changes do you need to make to `SimpleClass` and `SimpleStructure` so that they still conform to the protocol?
+> Adicione outro requisito ao `ExampleProtocol`. Qual mudanças que você precisa mudar na `SimpleClass` e na `SimpleStructure` para que elas ainda conforme com o protocolo?
 
-Notice the use of the `mutating` keyword in the declaration of `SimpleStructure` to mark a method that modifies the structure. The declaration of `SimpleClass` doesn’t need any of its methods marked as mutating because methods on a class can always modify the class.
+Note que o uso da *keyword* `mutating` na declaração de `SimpleStructure` é usado para marcar um método que modifica essa *struct*. A declaração de `SimpleClass` não precisa que nenhum de seus métodos sejam marcados como *mutating* porque os métodos de uma classe sempre podem  modificar a classe.
 
-Use `extension` to add functionality to an existing type, such as new methods and computed properties. You can use an extension to add protocol conformance to a type that is declared elsewhere, or even to a type that you imported from a library or framework.
+Use `extension` para adicionar funcionalidades para um tipo existente, como novos métodos e propriedades computadas. Você pode usar uma extensão para adicionar um protocolo que conforme com um tipo que é declarado em outro lugar, ou até mesmo para um tipo que você importa de uma biblioteca ou *framework*.
 
 ```swift
 extension Int: ExampleProtocol {
     var simpleDescription: String {
-        return "The number \(self)"
+        return "O número \(self)"
     }
     mutating func adjust() {
         self += 42
     }
  }
 print(7.simpleDescription)
-// Prints "The number 7"
+// Imprime "O número 7"
 ```
 
-**Experiment**
+**Experimente**
 
-> Write an extension for the `Double` type that adds an `absoluteValue` property.
+> Escreva uma *extension* para o tipo `Double` que adiciona uma propriedade  `absoluteValue`.
 
-You can use a protocol name just like any other named type—for example, to create a collection of objects that have different types but that all conform to a single protocol. When you work with values whose type is a protocol type, methods outside the protocol definition are not available.
+Você pode usar um nome de um protocolo apenas como qualquer outro tipo nomeado—por exemplo, para criar uma coleção de objetos que tenham tipos distintos, mas que todos conformam com um único protocolo. Quando você trabalha com valores cujo tipo é um tipo *protocol*, métodos fora da definição do protocolo não estão disponíveis.
 
+```swift
  let protocolValue: ExampleProtocol = a
  print(protocolValue.simpleDescription)
- // Prints "A very simple class. Now 100% adjusted."
- // print(protocolValue.anotherProperty) // Uncomment to see the error
+ // Imprime "Uma classe muito simples. Agora 100% ajustada."
+ // print(protocolValue.anotherProperty) // Descomente para ver o erro
+```
+Mesmo que a variável `protocolValue` tem um tipo *runtime* da `SimpleClass`, o compilador a trata como o tipo fornecido do `ExampleProtocol`. Isso signfica que você não pode acessar acidentalemente métodos ou propriedades que a classe implementa, além  da conformidade do protocolo.
 
-Even though the variable `protocolValue` has a runtime type of `SimpleClass`, the compiler treats it as the given type of `ExampleProtocol`. This means that you can’t accidentally access methods or properties that the class implements in addition to its protocol conformance.
-
-Error Handling
+Tratamento de Erros
 --------------
 
-Você apresenta erros usando qualquer tipo que assine o protocolo `Error`.
+Você representa erros usando qualquer tipo que adota o protocolo `Error`.
 
 ```swift
 enum PrinterError: Error {
@@ -728,6 +731,7 @@ enum PrinterError: Error {
 
 Use `throw` para disparar um erro e `throws` para marcar uma função que pode disparar um error. Se você disparar um error em uma função, a função retorna imediatamente e o código que chamou a função trata o error.
 
+
 ```swift
 func send(job: Int, toPrinter printerName: String) throws -> String {
     if printerName == "Never Has Toner" {
@@ -736,8 +740,8 @@ func send(job: Int, toPrinter printerName: String) throws -> String {
     return "Job sent"
 }
 ```
+Existem várias maneiras de tratar erros. Uma maneira é usar `do`\-`catch`. Dentro do bloco `do`, você marca o código que pode lançar um error ao escrever `try` na frente dele. Dentro do bloco `catch`, o erro recebe automaticamente o nome `error` a não ser que você dê um nome diferente.
 
-Existem diversars maneiras de se tratar errors. Uma das maneiras é utilizando o `do`-`catch`. Dentro do bloco `do`, você assinala um código que pode disparar um error escrevendo `try` na frente dele. Dentro do bloco `catch`, o error é dado o nome de `error` automaticamente, a menos que você dê um nome diferente.
 
 ```swift
 do {
@@ -748,6 +752,7 @@ do {
 }
 // Prints "Job sent"
 ```
+
 
 **Experimente**
 
@@ -766,14 +771,16 @@ do {
 } catch {
     print(error)
 }
-// Prints "Job sent"
+// Imprime "Job sent"
 ```
+
 
 **Experimente**
 
 > Adicione um código para disparar um error dentro do bloco `do`. Que tipo de error você precisa disparar para que o error seja tratado dentro do primeiro bloco de `catch`? E o segundo e terceiro bloco?
 
 Outra maneira de tratar errors é usando o `try?` para converter o resultado em um optional. Se a função disparar um error, o error específico é descartado e o resultado é `nil`. Se não, o resultado é um optional contendo o valor retornado pela função.
+
 
 ```swift
 let printerSuccess = try? send(job: 1884, toPrinter: "Mergenthaler")
@@ -797,13 +804,13 @@ func fridgeContains(_ food: String) -> Bool {
 }
 fridgeContains("banana")
 print(fridgeIsOpen)
-// Prints "false"
+// Imprime "false"
 ```
 
 Generics
 --------
 
-Write a name inside angle brackets to make a generic function or type.
+Escreva um nome dentro de parênteses angulares para criar uma função ou tipo genérico.
 
 ```swift
 func makeArray<Item>(repeating item: Item, numberOfTimes: Int) -> [Item] {
@@ -816,10 +823,10 @@ func makeArray<Item>(repeating item: Item, numberOfTimes: Int) -> [Item] {
  makeArray(repeating: "knock", numberOfTimes: 4)
 ```
 
-You can make generic forms of functions and methods, as well as classes, enumerations, and structures.
+Você pode criar formas genericas de funções e métodos, bem como classes, enums, and structs.
 
 ```swift
-// Reimplement the Swift standard library's optional type
+// Reimplementando o tipo opcional da biblioteca padrão da Swift
 enum OptionalValue<Wrapped> {
     case none
     case some(Wrapped)
@@ -828,7 +835,7 @@ var possibleInteger: OptionalValue<Int> = .none
 possibleInteger = .some(100)
 ```
 
-Use `where` right before the body to specify a list of requirements—for example, to require the type to implement a protocol, to require two types to be the same, or to require a class to have a particular superclass.
+Use `where` logo antes do corpo para especificar uma lista de requisito, por exemplo, para exigir que um tipo implemente um protocolo, para exigir que dois tipos sejam iguais, ou para exigir que uma classe tenha uma superclasse em particular.
 
 ```swift
 func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool where T.Element: Equatable, T.Element == U.Element {
@@ -844,8 +851,8 @@ func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool whe
 anyCommonElements([1, 2, 3], [3])
 ```
 
-**Experiment**
+**Experimento**
 
-> Modify the `anyCommonElements(_:_:)` function to make a function that returns an array of the elements that any two sequences have in common.
+> Modifique a função `anyCommonElements(_:_:)` para criar uma função que retorne um array dos elementos que qualquer uma das duas sequências tenham em comun.
 
-Writing `<T: Equatable>` is the same as writing `<T> ... where T: Equatable`.
+Escrever `<T: Equatable>` é o mesmo que escrever  `<T> ... where T: Equatable`.

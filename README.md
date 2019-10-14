@@ -12,15 +12,29 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
   - [x] Intro
   - [x] Simple Values
   - [x] Control Flow
-  - [ ] Functions and Clojures
+  - [ ] Functions and Closures
   - [x] Objects and Classes
   - [x] Enumerations and Structures
-  - [ ] Protocols and Extensions
+  - [x] Protocols and Extensions
   - [x] Error Handling
   - [ ] Generics
-- [ ] Language Guide
-  - [ ] The Basics
-  - [ ] Basic Operators
+- [ ] The Basics
+  - [ ] Intro
+  - [ ] Constants and Variables
+  - [ ] Floating-Point Numbers (Minusculo)
+  - [ ] Type Safety and Type Inference(Pequeno)
+  - [ ] Numeric Type Conversion (Gigante)
+  - [ ] Assertions and Preconditions
+- [X] Basic Operators
+  - [X] Operadores Básicos
+  - [X] Terminologia
+  - [X] Operador de Atribuição
+  - [X] Operadores Aritméticos
+  - [X] Operadores Compostos de Atribuição
+  - [X] Operador Ternário Condicional
+  - [X] Operador de Coalescência Nula
+  - [X] Operadores de Intervalo
+  - [X] Operadores Lógicos
 
 Cada item dessa lista terá uma Issue. **Antes de pegar um desses items para traduzir, verifique a Issue e descubra se alguém já não está traduzindo**. Quando alguém pegar uma dessas `sessao/topico` para traduzir, terá o nome atribuído a Issue.
 
