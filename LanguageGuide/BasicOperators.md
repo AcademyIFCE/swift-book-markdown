@@ -5,7 +5,7 @@ Operadores Básicos
 
 Um _operador_ é um símbolo ou frase especial que você utiliza para checar, mudar ou combinar valores. Por exemplo, o operador de adição (`+`) soma dois números, como em `let i = 1 + 2`, e o operador lógico AND (`&&`) combina dois valores Booleanos, como em `if enteredDoorCode && passedRetinaScan`.
 
-Swift suporta a maioria dos operadores padrão de C e melhora várias capabilities para eliminar erros comuns de código. O operador de atribuição (`=`) não retorna um valor, para previnir que seja usado erroneamente quando é previsto o uso do operador igual a (`==`). Operadores aritméticos (`+`, `-`, `*`, `/`, `%` e assim por diante) detectam e proibem o overflow de valores, para evitar resultados inesperados quado trabalhar com números que se tornam maiores ou menores que o intervalo de valores permitidos pelo tipo que os armazena. Você pode optar pelo overflow de valores utilizando os operadores de overflow do Swift, como descrito em [Overflow Operators](AdvancedOperators.xhtml#ID37).
+Swift suporta a maioria dos operadores padrão de C e melhora várias _capabilities_ para eliminar erros comuns de código. O operador de atribuição (`=`) não retorna um valor, para previnir que seja usado erroneamente quando é previsto o uso do operador igual a (`==`). Operadores aritméticos (`+`, `-`, `*`, `/`, `%` e assim por diante) detectam e proibem o _overflow_ de valores, para evitar resultados inesperados quando for trabalhar com números que se tornam maiores ou menores que o intervalo de valores permitidos pelo tipo que os armazena. Você pode optar pelo _overflow_ de valores utilizando os operadores de _overflow_ do Swift, como descrito em [Overflow Operators](AdvancedOperators.xhtml#ID37).
 
 Swift também provê operadores de intervalo que não são encontrados em C , como `a..<b` e `a...b`, como um atalho para expressar uma faixa de valores.
 
@@ -16,9 +16,9 @@ Terminologia
 
 Operadores podem ser unários, binários, ou ternários:
 
-*   Operadores _unários_ operam em um único objeto (como em `-a`). Operadores unários _prefixados_ aparecem imediatamente antes do seu objeto (como em `!b`), e operadores unários _sufixados_ aparecem imediatamente depois do objeto (como em `c!`).
+*   Operadores _unários_ operam em um único objeto (como em `-a`). Operadores unários _prefixados_ aparecem imediatamente antes do seu objeto (como em `!b`), e operadores unários _postfix_ aparecem imediatamente depois do objeto (como em `c!`).
 
-*   Operadores _binários_ operam em dois objetos (como em `2 + 3`) e são _infixados_ porque eles aparecem entre os objetos.
+*   Operadores _binários_ operam em dois objetos (como em `2 + 3`) e são _infix_ porque eles aparecem entre os objetos.
     
 *   Operadores _ternários_ operam em três objetos. Como em C, Swift possui apenas um operador ternário: o operador ternário de condição (`a ? b : c`).
     
@@ -74,7 +74,7 @@ Swift suporta os quatro _operadores aritméticos_ padrão para todos os tipos de
 10.0 / 2.5 // igual a 4.0
 ```
 
-Diferentemente dos operadores em C e Objective-C, os operadores aritméticos em Swift não permitem o overflow de valores por padrão. Você pode optar pelo overflow de valores utilizando os operadores de overflow do Swift (como em `a &+ b`). Veja [Overflow Operators](AdvancedOperators.xhtml#ID37).
+Diferentemente dos operadores em C e Objective-C, os operadores aritméticos em Swift não permitem o _overflow_ de valores por padrão. Você pode optar pelo _overflow_ de valores utilizando os operadores de _overflow_ do Swift (como em `a &+ b`). Veja [Overflow Operators](AdvancedOperators.xhtml#ID37).
 
 O operador de adição também é suportado para concatenação de `String`:
 
