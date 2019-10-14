@@ -90,7 +90,7 @@ O _operador resto_ (`a % b`) computa quantos múltiplos de `b` cabem em `a` e re
 
 > O operador resto (`%`) também é conhecido como o _operador módulo_ em outras linguagens. No entanto, seu comportamento em Swift para números negativos significa que, rigorosamente falando, é um resto em vez de uma operação módulo.
 
-O operador resto funciona da seguinte forma: Para calcular `9 % 4`, você primeiro descobre quantos `4` cabem dentro de `9`:
+Veja como o operador resto funciona: Para calcular `9 % 4`, você primeiro descobre quantos `4` cabem dentro de `9`:
 
 ![../_images/remainderInteger_2x.png](../_images/remainderInteger_2x.png)
 
@@ -102,7 +102,7 @@ Em Swift, isso seria escrito como:
 9 % 4 // igual a 1
 ```
 
-Para determinar a resposta para `a % b`, o operador `%` calcula a seguinte equação e retorna `resto` como sua saída:
+Para determinar a resposta para `a % b`, o operador `%` calcula a seguinte equação e retorna o `resto` como sua saída:
 
 `a` = (`b` x `algum multiplicador`) + `resto`
 
@@ -147,9 +147,9 @@ let minusSix = -6
 let alsoMinusSix = +minusSix // alsoMinusSix é igual a -6
 ```
 
-Apesar do operador unário mais não fazer nada, você pode usá-lo para dar simetria ao seu código para números positivos quando também estiver usando o operador unário menos para números negativos.
+Apesar do operador unário mais não fazer nada, você pode usá-lo para dar simetria ao seu código para números positivos quando também estiverem usando o operador unário menos para números negativos.
 
-Operadores Compostos de Atribuiçáo
+Operadores Compostos de Atribuição
 -----------------------------
 
 Como em C, Swift oferece _operadores compostos de atribuição_ que combinam atribuição (`=`) com outra operação. Um exemplo é o _operador aditivo de atribuição_ (`+=`):
@@ -166,7 +166,7 @@ A expressão `a += 2` é uma abreviação para `a = a + 2`. Efetivamente, a adi�
 
 > Os operadores compostos de atribuição não retornam um valor. Por exemplo, você não pode escrever`let b = a += 2`.
 
-Para mais informações sobre os operadores fornecidos pela biblioteca padrão do Swift, veja [Operator Declarations](https://developer.apple.com/documentation/swift/operator_declarations) \[https://developer.apple.com/documentation/swift/operator\_declarations\].
+Para mais informações sobre os operadores fornecidos pela biblioteca padrão do Swift, veja [Operator Declarations](https://developer.apple.com/documentation/swift/operator_declarations).
 
 Operadores de Comparação
 --------------------
@@ -239,7 +239,7 @@ Tuplas podem ser comparadas com um dado operador apenas se o operador pode ser a
 Operador Ternário Condicional
 ----------------------------
 
-O _operador ternário condicional_ é um operador especial com três partes, que toma a forma `question ? answer1 : answer2`. É um atalho para avaliar uma ou duas expressões baseado se `question` é verdadeiro e falso. Se `question` é verdadeiro, ele avalia `answer1` e retorna o seu valor; caso contrário, ele avalia `answer2` e retorna seu valor.
+O _operador ternário condicional_ é um operador especial com três partes, que toma a forma `question ? answer1 : answer2`. É um atalho para avaliar uma ou duas expressões baseado se `question` é verdadeiro ou falso. Se `question` é verdadeiro, ele avalia `answer1` e retorna o seu valor; caso contrário, ele avalia `answer2` e retorna seu valor.
 
 O operador ternário condicional é uma forma curta para o código abaixo:
 
@@ -278,24 +278,24 @@ O uso do operador ternário condicional no primeiro exemplo significa que `rowHe
 
 O operador ternário condicional fornece uma abreviação eficiente para decidir quais das duas expressões considerar. Use o operador ternário condicional com cuidado, no entanto. Sua concisão pode levar a um código díficil de ler caso usado em excesso. Evite combinar multiplas instâncias do operador ternário condicional em uma declaração composta.
 
-Operador de Coalescência Nula
+Operador Nil-Coalescing
 -----------------------
 
-O _operador de coalescência nula_ (`a ?? b`) desempacota um `a` opcional se ele conter um valor, ou retorna um valor padrão `b` se `a` for `nil`. A expressão `a` é sempre de um tipo opcional. A expressão `b` precisa corresponder ao tipo armazenado dentro de `a`.
+O _operador nil-coalescing_ (`a ?? b`) desempacota um `a` optional se ele conter um valor, ou retorna um valor padrão `b` se `a` for `nil`. A expressão `a` é sempre de um tipo optional. A expressão `b` precisa corresponder ao tipo armazenado dentro de `a`.
 
-O operador de coalescência nula é uma forma curta de escrever o código abaixo:
+O operador nil-coalescing é uma forma curta de escrever o código abaixo:
 
 ```swift
 a != nil ? a! : b
 ```
 
-O código acima usada um operador ternário condicional e desempacotamento forçado (`a!`) para acessar o valor empacotado dentro de `a` quando `a` não for `nil`, e, caso contrário, retornar `b`. O operador de coalescência nula fornece uma forma mais elegante de encapsular esta checagem condicional e desempacotá-la em uma forma concisa e legível.
+O código acima usada um operador ternário condicional e _forced unwrapping_ (`a!`) para acessar o valor empacotado dentro de `a` quando `a` não for `nil`, e, caso contrário, retornar `b`. O operador nil-coalescing fornece uma forma mais elegante de encapsular esta checagem condicional e desempacotá-la em uma forma concisa e legível.
 
 **Nota**
 
 > Se o valor de `a` é diferente de `nil`, o valor de `b` não é avaliado. Isto é conhecido como uma _avaliação curto-circuito_.
 
-O exemplo abaixo usa o operador de coalescência nula para escolher entre o nome de uma cor padrão e o nome de uma cor definida pelo usuário:
+O exemplo abaixo usa o operador nil-coalescing para escolher entre o nome de uma cor padrão e o nome de uma cor definida pelo usuário:
 
 ```swift
 let defaultColorName = "red"
@@ -305,9 +305,9 @@ var colorNameToUse = userDefinedColorName ?? defaultColorName
 // userDefinedColorName é nil, então colorNameToUse é definido para o padrão de "red"
 ```
 
-A variável `userDefinedColorName` é definida como uma `String` opcional, com um valor padrão de `nil`. Como `userDefinedColorName` é de um tipo opcional, você pode usar o operador de coalescência nula para levar em consideração o seu valor. No exemplo acima, o operador é usado para determinar um valor inicial para uma variável do tipo `String` chamada `colorNameToUse`. Como `userDefinedColorName` é `nil`, a expressão `userDefinedColorName ?? defaultColorName` retorna o valor de `defaultColorName`, ou `"red"`.
+A variável `userDefinedColorName` é definida como uma `String` optional, com um valor padrão de `nil`. Como `userDefinedColorName` é de um tipo optional, você pode usar o operador nil-coalescing para levar em consideração o seu valor. No exemplo acima, o operador é usado para determinar um valor inicial para uma variável do tipo `String` chamada `colorNameToUse`. Como `userDefinedColorName` é `nil`, a expressão `userDefinedColorName ?? defaultColorName` retorna o valor de `defaultColorName`, ou `"red"`.
 
-Se você atribuir um valor diferente de `nil` para `userDefinedColorName` e realizar novamente a checagem do operador de coalescência nula, o valor empacotado dentro de `userDefinedColorName` é utilizado ao invés do padrão:
+Se você atribuir um valor diferente de `nil` para `userDefinedColorName` e realizar novamente a checagem do operador nil-coalescing, o valor empacotado dentro de `userDefinedColorName` é utilizado ao invés do padrão:
 
 ```swift
 userDefinedColorName = "green"
@@ -337,13 +337,13 @@ for index in 1...5 {
 // 5 vezes 5 é 25
 ```
 
-Para mais sobre loops `for`\-`in`, veja [Control Flow](ControlFlow.xhtml).
+Para mais sobre loops `for`-`in`, veja [Control Flow](ControlFlow.xhtml).
 
 ### Operador de Intervalo Semiaberto
 
 O _operador de intervalo semiaberto_ (`a..<b`) define um alcance indo de `a` até `b`, mas não inclui `b`. Diz-se ser _semiaberto_ porque contêm o primeiro valor, mas não o seu valor final. Assim como o operador de intervalo fechado, o valor de `a` não pode ser maior que o de `b`. Se o valor de `a` for igual ao de `b`, então o intervalo resultante será vazio.
 
-Intervalos semiabertos são particulamente úteis quando se trabalha com listas baseadas em zero como arrays, onde é útil contar até (mas sem incluir) o tamanho da lista:
+Intervalos semiabertos são particulamente úteis quando se trabalha com listas baseadas em zero como _arrays_, onde é útil contar até (mas sem incluir) o tamanho da lista:
 
 ```swift
 let names = \["Anna", "Alex", "Brian", "Jack"\]
@@ -357,11 +357,11 @@ for i in 0..<count {
 // Pessoa 4 se chama Jack
 ```
 
-Note que o array contêm quatro itens, mas `0..<count` ´so conta até `3` (o índice do último item no array), porque é um intervalo semiaberto. Para mais sobre arrays, veja [Arrays](CollectionTypes.xhtml#ID107).
+Note que o _array_ contêm quatro itens, mas `0..<count` ´so conta até `3` (o índice do último item no _array_), porque é um intervalo semiaberto. Para mais sobre _arrays_, veja [Arrays](CollectionTypes.xhtml#ID107).
 
 ### Intervalo Unilateral
 
-O operador de intervalo fechado tem uma forma alternativa para intervalos que continuam o mais longe possível em uma direção—por exemplo, um intervalo que inclui todos os elementos de um array a partir do índice 2. Nesses casos, você pode omitir o valor de um lado do operador de intervalo. Este tipo de intervalo é chamado de _intervalo unilateral_ porque o operador possui um valor apenas em um lado. Por exemplo:
+O operador de intervalo fechado tem uma forma alternativa para intervalos que continuam o mais longe possível em uma direção—por exemplo, um intervalo que inclui todos os elementos de um _array_ a partir do índice 2. Nesses casos, você pode omitir o valor de um lado do operador de intervalo. Este tipo de intervalo é chamado de _intervalo unilateral_ porque o operador possui um valor apenas em um lado. Por exemplo:
 
 ```swift
 for name in names[2...] {
@@ -388,7 +388,7 @@ for name in names[..<2] {
 // Alex
 ```
 
-Intervalos unilaterais podem ser usados em outros contextos, não apenas em coleções, listas e sequências. Você não pode iterar sobre um intervalo unilateral que omita o primeiro valor, porque não se sabe por onde a iteração deve começar. Você _pode_ iterar sobre um intervalo unilateral que omite seu valor final; no entanto, devido ao intervalo continuar indefinidamente, tenha certeza que você adicione uma condição de termino para o loop. Você também pode checar se um intervalo unilateral contém um valor específico, como mostrado no código abaixo.
+Intervalos unilaterais podem ser usados em outros contextos, não apenas em coleções, listas e sequências. Você não pode iterar sobre um intervalo unilateral que omita o primeiro valor, porque não se sabe por onde a iteração deve começar. Você _pode_ iterar sobre um intervalo unilateral que omite seu valor final; no entanto, devido ao intervalo continuar indefinidamente, tenha certeza que você adicione uma condição de término para o loop. Você também pode checar se um intervalo unilateral contém um valor específico, como mostrado no código abaixo.
 
 ```swift
 let range = ...5
@@ -431,7 +431,7 @@ Como neste exemplo, uma escolha cuidadosa dos nomes das variáveis e constantes 
 
 O _operador E lógico_ (`a && b`) cria expressões lógicas onde ambos os valores devem ser `true` para a expressão como um todo também seja `true`.
 
-Se qualquer valor for `false`, a expressão como um todo também será `false`. Na verdade, se o _primeiro_ valor for `false`, o segundo valor nem será avaliado, porque ele não é capaz de fazer com que toda a expressão seja igual a `true`. Isso é conhecido como _avaliação curto-circuito_.
+Se qualquer valor for `false`, a expressão como um todo também será `false`. Na verdade, se o _primeiro_ valor for `false`, o segundo valor nem será avaliado, porque ele não é capaz de fazer com que toda a expressão seja igual a `true`. Isso é conhecido como _short-circuit evaluation_.
 
 Este exemplo considera dois valores do tipo `Bool` e só permite acesso se ambos os valores forem `true`:
 
@@ -448,9 +448,9 @@ if enteredDoorCode && passedRetinaScan {
 
 ### Operador OU Lógico
 
-O _operador OU lógico_ (`a || b`) é um operador inserido feito de duas barras verticais adjacentes. Você o utiliza para criar expressões lógicas nas quais apenas _um_ dos dois valores tem que ser `true` para a expressão como um todo ser `true`.
+O _operador OU lógico_ (`a || b`) é um operador _infix_ feito de duas barras verticais adjacentes. Você o utiliza para criar expressões lógicas nas quais apenas _um_ dos dois valores tem que ser `true` para a expressão como um todo ser `true`.
 
-Como o operador E lógico acima, o operador OU lógico usa a avaliação curto-circuito para considerar suas expressões. Se o lado esquerdo de uma expressão OU lógica for `true`, o lado direito não é avaliado, porque não pode mudar a saída da expressão como um todo.
+Como o operador E lógico acima, o operador OU lógico usa _short-circuit evaluation_ para considerar suas expressões. Se o lado esquerdo de uma expressão OU lógica for `true`, o lado direito não é avaliado, porque não pode mudar a saída da expressão como um todo.
 
 No exemplo abaixo, o primeiro valor do tipo `Bool` (`hasDoorKey`) é `false`, mas o segundo valor (`knowsOverridePassword`) é `true`. Porque um valor é `true`, a expressão como um todo também é avaliada como `true`, e o acesso é permitido:
 
@@ -480,7 +480,7 @@ if enteredDoorCode && passedRetinaScan || hasDoorKey || knowsOverridePassword {
 
 O exemplo acima usa múltiplos operadores `&&` e `||` para criar uma expressão composta mais longa. No entanto, os operadores `&&` e `||` ainda operam apenas dois valores, então isso realmente são três expressões menores encadeadas juntas: O exemplo pode ser lido como:
 
-Se nós entrarmos o código certo da porta (`enteredDoorCode`) e passarmos no scan de retina (`passedRetinaScan`), ou se nós tivermos uma chave da porta válida (`hasDoorKey`), ou se conhecermos a senha de acesso em caso de emergência (`knowsOverridePassword`), então permita o acesso.
+Se nós entrarmos o código certo da porta (`enteredDoorCode`) e passarmos no _scan_ de retina (`passedRetinaScan`), ou se nós tivermos uma chave da porta válida (`hasDoorKey`), ou se conhecermos a senha de acesso em caso de emergência (`knowsOverridePassword`), então permita o acesso.
 
 Baseado nos valores de `enteredDoorCode`, `passedRetinaScan`, e `hasDoorKey`, as duas primeiras subexpressões são `false`. No entanto a senha de acesso em caso de emergência é conhecida, então toda a expressão composta ainda é avaliada como `true`.
 
