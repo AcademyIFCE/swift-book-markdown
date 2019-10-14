@@ -35,6 +35,13 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
   - [X] Operador de Coalescência Nula
   - [X] Operadores de Intervalo
   - [X] Operadores Lógicos
+ - [ ] Collection Types
+  - [ ] Intro
+  - [ ] Mutability of Collections
+  - [ ] Arrays
+  - [ ] Sets
+  - [ ] Performing Set Operations
+  - [ ] Dictionaries
 
 Cada item dessa lista terá uma Issue. **Antes de pegar um desses items para traduzir, verifique a Issue e descubra se alguém já não está traduzindo**. Quando alguém pegar uma dessas `sessao/topico` para traduzir, terá o nome atribuído a Issue.
 
