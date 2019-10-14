@@ -8,16 +8,16 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
 
 - [x] About Swift
 - [x] Version Compatibility
-- [ ] A Swift Tour
+- [x] A Swift Tour
   - [x] Intro
   - [x] Simple Values
   - [x] Control Flow
-  - [ ] Functions and Closures
+  - [x] Functions and Closures
   - [x] Objects and Classes
   - [x] Enumerations and Structures
   - [x] Protocols and Extensions
   - [x] Error Handling
-  - [ ] Generics
+  - [x] Generics
 - [ ] The Basics
   - [ ] Intro
   - [ ] Constants and Variables
