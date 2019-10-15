@@ -66,6 +66,14 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
   - [ ] Closures Are Reference Types
   - [ ] Escaping Closures
   - [ ] Autoclosures
+- [ ] Enumerations
+  - [ ] Intro
+  - [ ] Enumeration Syntax
+  - [ ] Matching Enumeration Values with a Switch Statement
+  - [ ] Iterating over Enumeration Cases
+  - [ ] Associated Values
+  - [ ] Raw Values
+  - [ ] Recursive Enumerations
 - [ ] Methods
   - [ ] Intro
   - [ ] Instance Methods
