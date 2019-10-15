@@ -8,16 +8,16 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
 
 - [x] About Swift
 - [x] Version Compatibility
-- [ ] A Swift Tour
+- [x] A Swift Tour
   - [x] Intro
   - [x] Simple Values
   - [x] Control Flow
-  - [ ] Functions and Closures
+  - [x] Functions and Closures
   - [x] Objects and Classes
   - [x] Enumerations and Structures
   - [x] Protocols and Extensions
   - [x] Error Handling
-  - [ ] Generics
+  - [x] Generics
 - [ ] The Basics
   - [ ] Intro
   - [ ] Constants and Variables
@@ -35,13 +35,64 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
   - [X] Operador de Coalescência Nula
   - [X] Operadores de Intervalo
   - [X] Operadores Lógicos
- - [ ] Collection Types
+- [ ] Strings And Characters
+  - [ ] Intro
+  - [ ] String Literals
+  - [ ] Initializing an Empty String
+  - [ ] String Mutability
+  - [ ] Strings Are Value Types
+  - [ ] Working with Characters
+  - [ ] Concatenating Strings and Characters
+  - [ ] String Interpolation
+  - [ ] Unicode
+  - [ ] Counting Characters
+  - [ ] Accessing and Modifying a String
+  - [ ] Substrings
+  - [ ] Unicode
+  - [ ] Comparing Strings
+  - [ ] Unicode Representations of Strings
+- [ ] Collection Types
   - [ ] Intro
   - [ ] Mutability of Collections
   - [ ] Arrays
   - [ ] Sets
   - [ ] Performing Set Operations
   - [ ] Dictionaries
+- [ ] Methods
+  - [ ] Intro
+  - [ ] Instance Methods
+  - [ ] Type Methods
+- [ ] Nested Types
+  - [ ] Intro
+  - [ ] Nested Types in Action
+  - [ ] Referring to Nested Types
+- [ ] Generics
+  - [ ] Intro
+  - [ ] The Problem That Generics Solve
+  - [ ] Generic Functions
+  - [ ] Type Parameters
+  - [ ] Naming Type Parameters
+  - [ ] Generic Types
+  - [ ] Extending a Generic Type
+  - [ ] Type Constraints
+  - [ ] Associated Types
+  - [ ] Generic Where Clauses
+  - [ ] Extensions with a Generic Where Clause
+  - [ ] Associated Types with a Generic Where Clause 
+  - [ ] Generic Subscripts
+- [ ] Access Control
+  - [ ] Intro
+  - [ ] Modules and Source Files
+  - [ ] Access Levels
+  - [ ] Access Control Syntax
+  - [ ] Custom Types
+  - [ ] Subclassing
+  - [ ] Constants, Variables, Properties, and Subscripts 
+  - [ ] Initializers
+  - [ ] Protocols
+  - [ ] Extensions
+  - [ ] Generics
+  - [ ] Type Aliases
 
 Cada item dessa lista terá uma Issue. **Antes de pegar um desses items para traduzir, verifique a Issue e descubra se alguém já não está traduzindo**. Quando alguém pegar uma dessas `sessao/topico` para traduzir, terá o nome atribuído a Issue.
 
