@@ -1,34 +1,36 @@
-Closures  
 
-Closures
-========
+ Closures
 
-*Closures* are self-contained blocks of functionality that can be passed around and used in your code. Closures in Swift are similar to blocks in C and Objective-C and to lambdas in other programming languages.
+ Closures
+ ========
 
-Closures can capture and store references to any constants and variables from the context in which they are defined. This is known as *closing over* those constants and variables. Swift handles all of the memory management of capturing for you.
+ *Closures* são blocos auto-contidos de código que podem ser passadas e utlizadas no seu código. *Closures* em Swift são similares a blocos em C/Objective-C e a lambdas em outras linguagem de programação.
+ 
+*Closures* podem capturar e armazenar referencias de qualquer constante e variável do contexto no qual ele foi definido. Isto é conhecido como *closing over* de constantes e variáveis. Swift cuida de todo o gerenciamento de memória para você.
+ 
 
-**Note**
+ **Observação**
 
->Don’t worry if you are not familiar with the concept of capturing. It is explained in detail below in [Capturing Values](#capturing-values).
+ >Não se preocupe se você não está acostumado com o conceito de captura. Isto é explicado em detalhes mais abaixo em  [Capturando Valores](#capturing-values).
 
-Global and nested functions, as introduced in [Functions](Functions.md), are actually special cases of closures. Closures take one of three forms:
+ *Global* e *Nested functions* , como introduzido em [Funções](Functions.md), são na realidade um tipo especial de closures. Closures assumem três formas:
 
-*   Global functions are closures that have a name and do not capture any values.
-    
-*   Nested functions are closures that have a name and can capture values from their enclosing function.
-    
-*   Closure expressions are unnamed closures written in a lightweight syntax that can capture values from their surrounding context.
-    
+ *   *Global Function* são closures que possuem nome e não podem capturar nenhum valor.
+     
+ *   *Nested functions* são closures que possuem nome e podem capturar valores da função que a engloba.
+     
+ *   *Closure expressions* não possuem nome e escritas em sintaxe mais simplificada que pode capturar valores do contexto onde é declarada.
+     
 
-Swift’s closure expressions have a clean, clear style, with optimizations that encourage brief, clutter-free syntax in common scenarios. These optimizations include:
+ *Closure expressions* em Swift possuem uma escrita limpa e clara, com otimizações que incentivam uma sintaxe enxuta nos cenários mais comuns. Estas otimizações incluem:
 
-*   Inferring parameter and return value types from context
-    
-*   Implicit returns from single-expression closures
-    
-*   Shorthand argument names
-    
-*   Trailing closure syntax
+ *   Inferir parametros e tipos de retorno do contexto
+     
+ *   Tipo de retorno implícito quando o corpo da closure possui apenas uma linha
+     
+ *   Abreviação de nome dos argumentos
+     
+ *   Sintaxe *Trailing closure*
     
 
 Closure Expressions
