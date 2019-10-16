@@ -421,8 +421,10 @@ print("Result: \(mathFunction(2, 3))")
 
 As with any other type, you can leave it to Swift to infer the function type when you assign a function to a constant or variable:
 
+```swift
 let anotherMathFunction = addTwoInts
 // anotherMathFunction is inferred to be of type (Int, Int) -> Int
+```
 
 ### Function Types as Parameter Types
 
