@@ -38,7 +38,7 @@ You call the `greet(person:)` function by passing it a `String` value after the 
 
 **Note**
 
-The `print(_:separator:terminator:)` function doesn’t have a label for its first argument, and its other arguments are optional because they have a default value. These variations on function syntax are discussed below in [Function Argument Labels and Parameter Names](#ID166) and [Default Parameter Values](#ID169).
+> The `print(_:separator:terminator:)` function doesn’t have a label for its first argument, and its other arguments are optional because they have a default value. These variations on function syntax are discussed below in [Function Argument Labels and Parameter Names](#ID166) and [Default Parameter Values](#ID169).
 
 The body of the `greet(person:)` function starts by defining a new `String` constant called `greeting` and setting it to a simple greeting message. This greeting is then passed back out of the function using the `return` keyword. In the line of code that says `return greeting`, the function finishes its execution and returns the current value of `greeting`.
 
@@ -109,7 +109,7 @@ Because it does not need to return a value, the function's definition does not i
 
 **Note**
 
-Strictly speaking, this version of the `greet(person:)` function _does_ still return a value, even though no return value is defined. Functions without a defined return type return a special value of type `Void`. This is simply an empty tuple, which is written as `()`.
+> Strictly speaking, this version of the `greet(person:)` function _does_ still return a value, even though no return value is defined. Functions without a defined return type return a special value of type `Void`. This is simply an empty tuple, which is written as `()`.
 
 The return value of a function can be ignored when it is called:
 
@@ -131,7 +131,7 @@ The first function, `printAndCount(string:)`, prints a string, and then returns 
 
 **Note**
 
-Return values can be ignored, but a function that says it will return a value must always do so. A function with a defined return type cannot allow control to fall out of the bottom of the function without returning a value, and attempting to do so will result in a compile-time error.
+> Return values can be ignored, but a function that says it will return a value must always do so. A function with a defined return type cannot allow control to fall out of the bottom of the function without returning a value, and attempting to do so will result in a compile-time error.
 
 ### Functions with Multiple Return Values
 
@@ -174,7 +174,7 @@ If the tuple type to be returned from a function has the potential to have “no
 
 **Note**
 
-An optional tuple type such as `(Int, Int)?` is different from a tuple that contains optional types such as `(Int?, Int?)`. With an optional tuple type, the entire tuple is optional, not just each individual value within the tuple.
+> An optional tuple type such as `(Int, Int)?` is different from a tuple that contains optional types such as `(Int?, Int?)`. With an optional tuple type, the entire tuple is optional, not just each individual value within the tuple.
 
 The `minMax(array:)` function above returns a tuple containing two `Int` values. However, the function does not perform any safety checks on the array it is passed. If the `array` argument contains an empty array, the `minMax(array:)` function, as defined above, will trigger a runtime error when attempting to access `array[0]`.
 
@@ -318,7 +318,7 @@ arithmeticMean(3, 8.25, 18.75)
 
 **Note**
 
-A function may have at most one variadic parameter.
+> A function may have at most one variadic parameter.
 
 ### In-Out Parameters
 
@@ -330,7 +330,7 @@ You can only pass a variable as the argument for an in-out parameter. You cannot
 
 **Note**
 
-In-out parameters cannot have default values, and variadic parameters cannot be marked as `inout`.
+> In-out parameters cannot have default values, and variadic parameters cannot be marked as `inout`.
 
 Here's an example of a function called `swapTwoInts(_:_:)`, which has two in-out integer parameters called `a` and `b`:
 
@@ -358,7 +358,7 @@ The example above shows that the original values of `someInt` and `anotherInt` a
 
 **Note**
 
-In-out parameters are not the same as returning a value from a function. The `swapTwoInts` example above does not define a return type or return a value, but it still modifies the values of `someInt` and `anotherInt`. In-out parameters are an alternative way for a function to have an effect outside of the scope of its function body.
+> In-out parameters are not the same as returning a value from a function. The `swapTwoInts` example above does not define a return type or return a value, but it still modifies the values of `someInt` and `anotherInt`. In-out parameters are an alternative way for a function to have an effect outside of the scope of its function body.
 
 Function Types
 --------------
