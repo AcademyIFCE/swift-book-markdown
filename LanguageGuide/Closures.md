@@ -4,12 +4,12 @@
  Closures
  ========
 
- *Closures* são blocos auto-contidos de código que podem ser passadas e utlizadas no seu código. *Closures* em Swift são similares a blocos em C/Objective-C e a lambdas em outras linguagem de programação.
+ *Closures* são blocos auto-contidos de código que podem ser passadas e utlizadas no seu código. *Closures* em Swift são similares a blocos em C/Objective-C e a *lambdas* em outras linguagem de programação.
  
-*Closures* podem capturar e armazenar referencias de qualquer constante e variável do contexto no qual ele foi definido. Isto é conhecido como *closing over* de constantes e variáveis. Swift cuida de todo o gerenciamento de memória para você.
+*Closures* podem capturar e armazenar referências de qualquer constante e variável do contexto no qual ele foi definido. Isto é conhecido como *closing over* de constantes e variáveis. Swift cuida de todo o gerenciamento de memória para você.
  
 
- **Observação**
+ **Nota**
 
  >Não se preocupe se você não está acostumado com o conceito de captura. Isto é explicado em detalhes mais abaixo em  [Capturando Valores](#capturing-values).
 
