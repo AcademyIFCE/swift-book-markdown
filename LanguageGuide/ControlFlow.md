@@ -162,9 +162,7 @@ var diceRoll = 0
 while square < finalSquare {
     // roll the dice
     diceRoll += 1
-    if diceRoll == 7 { 
-        diceRoll = 1 
-    }
+    if diceRoll == 7 { diceRoll = 1 }
     // move by the rolled amount
     square += diceRoll
     if square < board.count {
