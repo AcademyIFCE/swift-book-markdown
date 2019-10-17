@@ -74,6 +74,11 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
   - [ ] Associated Values
   - [ ] Raw Values
   - [ ] Recursive Enumerations
+- [ ] Structures and Classes
+  - [ ] Intro
+  - [ ] Comparing Structures and Classes
+  - [ ] Structures and Enumerations Are Value Types
+  - [ ] Classes Are Reference Types
 - [ ] Methods
   - [ ] Intro
   - [ ] Instance Methods
