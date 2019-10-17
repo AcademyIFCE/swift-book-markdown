@@ -88,7 +88,7 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
   - [ ] Nested Types in Action
   - [ ] Referring to Nested Types
 - [ ] Generics
-  - [ ] Intro
+  - [x] Intro
   - [ ] The Problem That Generics Solve
   - [ ] Generic Functions
   - [ ] Type Parameters
