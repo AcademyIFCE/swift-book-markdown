@@ -5,7 +5,7 @@ Control Flow
 
 Swift provides a variety of control flow statements. These include `while` loops to perform a task multiple times; `if`, `guard`, and `switch` statements to execute different branches of code based on certain conditions; and statements such as `break` and `continue` to transfer the flow of execution to another point in your code.
 
-Swift also provides a `for`\-`in` loop that makes it easy to iterate over arrays, dictionaries, ranges, strings, and other sequences.
+Swift also provides a `for`-`in` loop that makes it easy to iterate over arrays, dictionaries, ranges, strings, and other sequences.
 
 Swift’s `switch` statement is considerably more powerful than its counterpart in many C-like languages. Cases can match many different patterns, including interval matches, tuples, and casts to a specific type. Matched values in a `switch` case can be bound to temporary constants or variables for use within the case’s body, and complex matching conditions can be expressed with a `where` clause for each case.
 
@@ -41,7 +41,7 @@ for (animalName, legCount) in numberOfLegs {
 
 The contents of a `Dictionary` are inherently unordered, and iterating over them does not guarantee the order in which they will be retrieved. In particular, the order you insert items into a `Dictionary` doesn’t define the order they are iterated. For more about arrays and dictionaries, see [Collection Types](CollectionTypes.xhtml).
 
-You can also use `for`\-`in` loops with numeric ranges. This example prints the first few entries in a five-times table:
+You can also use `for`-`in` loops with numeric ranges. This example prints the first few entries in a five-times table:
 
 ```swift
 for index in 1...5 {
@@ -167,7 +167,7 @@ while square < finalSquare {
     square += diceRoll
     if square < board.count {
         // if we're still on the board, move up or down for a snake or a ladder
-        1square += board[square]
+        square += board[square]
     }
 }
 print("Game over!")
@@ -187,7 +187,7 @@ A `while` loop is appropriate in this case, because the length of the game is no
 
 ### Repeat-While
 
-The other variation of the `while` loop, known as the `repeat`\-`while` loop, performs a single pass through the loop block first, _before_ considering the loop’s condition. It then continues to repeat the loop until the condition is `false`.
+The other variation of the `while` loop, known as the `repeat`-`while` loop, performs a single pass through the loop block first, _before_ considering the loop’s condition. It then continues to repeat the loop until the condition is `false`.
 
 **Note**
 
@@ -201,7 +201,7 @@ repeat {
 } while condition
 ```
 
-Here’s the _Snakes and Ladders_ example again, written as a `repeat`\-`while` loop rather than a `while` loop. The values of `finalSquare`, `board`, `square`, and `diceRoll` are initialized in exactly the same way as with a `while` loop.
+Here’s the _Snakes and Ladders_ example again, written as a `repeat`-`while` loop rather than a `while` loop. The values of `finalSquare`, `board`, `square`, and `diceRoll` are initialized in exactly the same way as with a `while` loop.
 
 ```swift
 let finalSquare = 25
@@ -231,7 +231,7 @@ print("Game over!")
 
 After the code checks for snakes and ladders, the dice is rolled and the player is moved forward by `diceRoll` squares. The current loop execution then ends.
 
-The loop’s condition (`while square < finalSquare`) is the same as before, but this time it’s not evaluated until the _end_ of the first run through the loop. The structure of the `repeat`\-`while` loop is better suited to this game than the `while` loop in the previous example. In the `repeat`\-`while` loop above, `square += board[square]` is always executed _immediately after_ the loop’s `while` condition confirms that `square` is still on the board. This behavior removes the need for the array bounds check seen in the `while` loop version of the game described earlier.
+The loop’s condition (`while square < finalSquare`) is the same as before, but this time it’s not evaluated until the _end_ of the first run through the loop. The structure of the `repeat`-`while` loop is better suited to this game than the `while` loop in the previous example. In the `repeat`-`while` loop above, `square += board[square]` is always executed _immediately after_ the loop’s `while` condition confirms that `square` is still on the board. This behavior removes the need for the array bounds check seen in the `while` loop version of the game described earlier.
 
 Conditional Statements
 ----------------------
