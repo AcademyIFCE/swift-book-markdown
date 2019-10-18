@@ -59,8 +59,8 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
   - [ ] Performing Set Operations
   - [ ] Dictionaries
 - [ ] Closures
-  - [ ] Intro
-  - [ ] Closure Expressions
+  - [X] Intro
+  - [X] Closure Expressions
   - [ ] Trailing Closures
   - [ ] Capturing Values
   - [ ] Closures Are Reference Types
