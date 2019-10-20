@@ -34,37 +34,37 @@ Closures
 Expressões Closure
 -------------------
 
-*Nested functions*, como introduzido em [Nested Functions](Functions.md#nested-functions), é um modo conveniente de nomear e definir blocos auto-contidos de código como parte de uma função maior. Entretanto, algumas vezes é útil escrever uma versão mais curta da estrutura similiar a funções sem a sua declaração completa e nome. Isto é bastante usado quando vc trabalha com funções ou métodos que recebem outras funções como parâmetro.
+*Nested functions*, como introduzido em [Nested Functions](Functions.md#nested-functions), é um modo conveniente de nomear e definir blocos auto-contidos de código como parte de uma função maior. Entretanto, algumas vezes é útil escrever uma versão mais curta da estrutura similiar a funções sem a sua declaração completa e nome. Isto é bastante usado quando vocˆ3 trabalha com funções ou métodos que recebem outras funções como parâmetro.
  
 *Expressões Closure* é uma maneira de escrever *closures* de modo enxuto e com sintaxe simples. *Expressões Closure* fornecem várias otimizações de sintaxe para a escrita de *closures*  de forma resumida sem perder clareza. Os exemplos abaixo ilustram estas otimizações utilizando o método `sorted(by:)`, onde em todos os casos realizam a mesmas ação, porém com escrita cada vez mais sucinta.
  
 ### O Método Sorted
 
-A biblioteca padrão do Swift fornece um método chamado `sorted(by:)`, o qual ordena os valores de um array baseado no retorno da *closure* de ordenação. Ao completar o processo de ordenação, o método `sorted(by:)` retorna um novo array do mesmo tipo e tamanho do antigo, porém com os elementos com a ordem de acordo com o requisitado. O array original não é modificado pelo método. 
+A biblioteca padrão do Swift fornece um método chamado `sorted(by:)`, o qual ordena os valores de um *array* baseado no retorno da *closure* de ordenação. Ao completar o processo de ordenação, o método `sorted(by:)` retorna um novo *array* do mesmo tipo e tamanho do antigo, porém com os elementos com a ordem de acordo com o requisitado. O *array* original não é modificado pelo método. 
 
-O exemplo abaixo usa o método `sorted(by:)` para ordenar um array de `String` na ordem contrária a alfabética. Este é o array inicial:
+O exemplo abaixo usa o método `sorted(by:)` para ordenar um *array* de `String` na ordem contrária a alfabética. Este é o *array* inicial:
 
 ```swift
 let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
 ```
 
-O método `sorted(by:)` recebe uma *closure* que possui dois argumentos do mesmo tipo do array e retorna um `Bool` que indica quando o primeiro valor deve ficar antes ou depois do segundo valor quando os array estiver reordenado. A *closure* deve retornar `true` se o primeiro valor deva ficar *antes* do segundo valor e `false` caso o contrário seja desejado.
+O método `sorted(by:)` recebe uma *closure* que possui dois argumentos do mesmo tipo do *array* e retorna um `Bool` que indica quando o primeiro valor deve ficar antes ou depois do segundo valor quando o *array* estiver reordenado. A *closure* deve retornar `true` se o primeiro valor deva ficar *antes* do segundo valor e `false` caso o contrário seja desejado.
 
-Este exemplo esta ordenando um array de `String` então a *closure* de ordenação precisa ser uma função do tipo `(String, String) -> Bool`.
+Este exemplo esta ordenando um *array* de `String` então a *closure* de ordenação precisa ser uma função do tipo `(String, String) -> Bool`.
 
-Um dos modo de fornecer uma *closure* é escrevendo uma função normal do tipo esperado pelo parâmetro e então passar como argumento do método `sorted(by:)`:
+Um dos modos de fornecer uma *closure* é escrevendo uma função normal do tipo esperado pelo parâmetro e então passar como argumento do método `sorted(by:)`:
 
 ```swift
 func backward(_ s: String, _ s2: String) -> Bool {
     return s > s2
 }
 var reversedNames = names.sorted(by: backward)
-// reversedNames é ["Ewa", "Daniella", "Chris", "Barry", "Alex"]
+// reversedNames é igual a ["Ewa", "Daniella", "Chris", "Barry", "Alex"]
 ```
 
-Se a primeira string (`s`) for maior que a segunda string (`s2`) a função `backward(_:_:)` irá retornar `true`, fazendo com que `s` fique antes de `s2` no array ordenado. Em relação a caracteres em uma string, "maior que" significa "estar a frente na ordem alfabética que". Isto significa que a letra `"B"` é "maior que" a letra `"A"`, logo `"Tom"` é maior que a string `"Tim"`. Por isso, em uma ordenação contrária da ordem alfabética `"Barry"` fica antes de `"Alex"`. 
+Se a primeira string (`s`) for maior que a segunda string (`s2`) a função `backward(_:_:)` irá retornar `true`, fazendo com que `s` fique antes de `s2` no *array* ordenado. Em relação a caracteres em uma string, "maior que" significa "estar a frente na ordem alfabética que". Isto significa que a letra `"B"` é "maior que" a letra `"A"`, logo `"Tom"` é maior que a string `"Tim"`. Por isso, em uma ordenação contrária da ordem alfabética `"Barry"` fica antes de `"Alex"`. 
 
-Entretanto, esta é um modo verboso de escrever uma simples expressão (`a > b`). Neste exemplo, seria mais adequado escrever uma expressão simplificada usando a sintaxe de Expressões *Closure*.
+Entretanto, este é um modo verboso de escrever uma simples expressão (`a > b`). Neste exemplo, seria mais adequado escrever uma expressão simplificada usando a sintaxe de Expressões *Closure*.
 
 ### Sintaxe de Expressões *Closure*
 
@@ -76,7 +76,7 @@ Sintaxe de Expressões *Closure* possui a seguinte forma:
 >
 >}
 
-Os *parâmetros* em uma expressão *closure* podem ser do tipo *in-out*, porém não podem possuir um valor padrão. Parâmetros *Variadic* podem ser utilizado caso vocês adicione um nome ao argumento. Tuplas também podem ser utilizadas como tipos de parâmetros e retorno.
+Os *parâmetros* em uma expressão *closure* podem ser do tipo *in-out*, porém não podem possuir um valor padrão. Parâmetros *variadic* podem ser utilizado caso você adicione um nome ao argumento. Tuplas também podem ser utilizadas como tipos de parâmetros e retorno.
 
 O exemplo abaixo mostra uma expressão *closure* que implementa o mesmo que a função `backward(_:_:)`, mostrada acima:
 
@@ -86,7 +86,7 @@ reversedNames = names.sorted(by: { (s: String, s2: String) -> Bool in
 })
 ```
 
-Perceba que a declaração dos parâmetros e tipo de returno para este tipo de *closure* é identica a declaração da função `backward(_:_:)`. Em ambos os casos, foi escrito como `(s: String, s2: String) -> Bool`. Entretanto, para a expressão *closure* mais simples, os tipos de parâmetros e retorno são escritos *dentro* das chaves.
+Perceba que a declaração dos parâmetros e tipo de retorno para este tipo de *closure* é idêntica a declaração da função `backward(_:_:)`. Em ambos os casos, foi escrito como `(s: String, s2: String) -> Bool`. Entretanto, para a expressão *closure* mais simples, os tipos de parâmetros e retorno são escritos *dentro* das chaves.
 
 O início do corpo da *closure* é iniciado pela palavra reservada `in`. Esta palavra reservada indica que a definição dos parâmetros e retorno da *closure* terminaram, e o que o corpo da *closure* esta prestes a começar.
 
@@ -100,7 +100,7 @@ Isto ilustra  que a chamada do método `sorted(by:)` continua a mesma. Um par de
 
 ### Inferindo Tipos do Contexto
 
-Em razão da *closure* ser passada como um argumento para o método, o Swift pode inferir os tipos de seus parâmetros e retorno. O método `sorted(by:)` é chamado de um array de strings, então o argumento deve ser uma função do tipo `(String, String) -> Bool`. Isto significa que os tipos `(String, String)` e `Bool` não precisam ser explicitamente escritos na definição de uma expressão closure. Todos os tipos podem ser inferidos, a seta de retorno (`->`) e os parenteses ao redor do nome dos parâmetros também pode ser omitido:
+Em razão da *closure* ser passada como um argumento para o método, o Swift pode inferir os tipos de seus parâmetros e retorno. O método `sorted(by:)` é chamado de um *array* de *strings*, então o argumento deve ser uma função do tipo `(String, String) -> Bool`. Isto significa que os tipos `(String, String)` e `Bool` não precisam ser explicitamente escritos na definição de uma expressão closure. Todos os tipos podem ser inferidos, a seta de retorno (`->`) e os parênteses ao redor do nome dos parâmetros também podem ser omitidos:
 
 ```swift
 reversedNames = names.sorted(by: { s, s2 in return s > s2 } )
@@ -108,11 +108,11 @@ reversedNames = names.sorted(by: { s, s2 in return s > s2 } )
 
 É sempre possível inferir os tipos dos parâmetros e do retorno quando passamos uma *closure* para uma função ou método. Por conta disto você nunca precisa escrever uma *closure* diretamente na função na sua forma completa quando ela é passada como função ou parâmetro de um método.
 
-No entanto, você ainda pode explicitar os tipos se você quiser, e é interessante fazê-lo se isto evitar ambiguidade para os leitores do código. No caso da *closure* do método `sorted(by:)` é claro que na sua implementação é onde a ordenação de fato acontece, e é seguro para o leitor assumir que os parâmetros da *closure* são do tipo `String` já que o array que esta sendo ordenado possui elementos do tipo `String`.
+No entanto, você ainda pode explicitar os tipos se você quiser, e é interessante fazê-lo se isto for evitar ambiguidade para os leitores do código. No caso da *closure* do método `sorted(by:)` é claro que na sua implementação é onde a ordenação de fato acontece, e é seguro para o leitor assumir que os parâmetros da *closure* são do tipo `String` já que o *array* que esta sendo ordenado possui elementos do tipo `String`.
 
-### Return Implícito de *Closures* de Única Expressão
+### Retorno Implícito de *Closures* de Única Expressão
 
-*Closures* de Única Expressão retorna o resultado da instrução omitingo a palavra reservada `return` na declaração, como está no exemplo abaixo:
+*Closures* de Única Expressão retorna o resultado da instrução omitindo a palavra reservada `return` na declaração, como está no exemplo abaixo:
 
 ```swift
 reversedNames = names.sorted(by: { s, s2 in s > s2 } )
