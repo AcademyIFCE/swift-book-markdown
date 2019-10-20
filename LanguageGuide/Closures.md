@@ -1,16 +1,17 @@
-Closures  
 
-Closures
-========
+ Closures
+ 
+ Closures
+ ========
 
- *Closures* são blocos auto-contidos de código que podem ser passadas e utilizadas no seu código. *Closures* em Swift são similares a blocos em C/Objective-C e a *lambdas* em outras linguagem de programação.
+*Closures* são blocos auto-contidos de código que podem ser passadas e utilizadas no seu código. *Closures* em Swift são similares a blocos em C/Objective-C e a *lambdas* em outras linguagem de programação.
  
 *Closures* podem capturar e armazenar referências de qualquer constante e variável do contexto no qual ele foi definido. Isto é conhecido como *closing over* de constantes e variáveis. Swift cuida de todo o gerenciamento de memória para você.
  
 
  **Nota**
 
- >Não se preocupe se você não está acostumado com o conceito de captura. Isto é explicado em detalhes mais abaixo em  [Capturando Valores](#capturing-values).
+ > Não se preocupe se você não está acostumado com o conceito de captura. Isto é explicado em detalhes mais abaixo em  [Capturando Valores](#capturing-values).
 
  *Global* e *Nested functions* , como introduzido em [Funções](Functions.md), são na realidade um tipo especial de *closures*. *Closures* assumem três formas:
 
@@ -26,13 +27,10 @@ Closures
  *   Inferir parâmetros e tipos de retorno do contexto
      
  *   Tipo de retorno implícito quando o corpo da *closure* possui apenas uma linha
-     
- *   Abreviação de nome dos argumentos
-     
- *   Sintaxe *Trailing closure*
-    
+ 
+ 
 Expressões Closure
--------------------
+=======
 
 *Nested functions*, como introduzido em [Nested Functions](Functions.md#nested-functions), é um modo conveniente de nomear e definir blocos auto-contidos de código como parte de uma função maior. Entretanto, algumas vezes é útil escrever uma versão mais curta da estrutura similiar a funções sem a sua declaração completa e nome. Isto é bastante usado quando vocˆ3 trabalha com funções ou métodos que recebem outras funções como parâmetro.
  

@@ -1,9 +1,9 @@
 Generics
 ========
 
-_Generic code_ enables you to write flexible, reusable functions and types that can work with any type, subject to requirements that you define. You can write code that avoids duplication and expresses its intent in a clear, abstracted manner.
+*Generic code* permite que você possa escrever funções e tipos, flexíveis e reusáveis, que possam funcionar com qualquer tipo, sujeito aos requisitos que você definir. Você pode escrever código que evita a duplicação e expressa o seu intuito de uma maneira clara e abstrata.
 
-Generics are one of the most powerful features of Swift, and much of the Swift standard library is built with generic code. In fact, you’ve been using generics throughout the _Language Guide_, even if you didn’t realize it. For example, Swift’s `Array` and `Dictionary` types are both generic collections. You can create an array that holds `Int` values, or an array that holds `String` values, or indeed an array for any other type that can be created in Swift. Similarly, you can create a dictionary to store values of any specified type, and there are no limitations on what that type can be.
+*Generics* é um dos recursos mais poderosos do Swift, e grande parte da biblioteca padrão do Swift é criado com *generic code*. Na verdade, você tem usado *generics* através do *Language Guide*, mesmo que você não tenha percebido. Por exemplo, os tipos `Array` e `Dictionary` do Swift são coleções *generics*. Você pode criar um *array* que contém valores `Int`, ou um *array* que contém valores `String`, ou mesmo um *array* para qualquer outro tipo que possa ser criado em Swift. Da mesma forma, você pode criar um *dictionary* para armazenar valores de qualquer tipo específico, e não há nenhuma limitação de qual aquele tipo possa ser.
 
 The Problem That Generics Solve
 -------------------------------
