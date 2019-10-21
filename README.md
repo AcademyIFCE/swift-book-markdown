@@ -21,20 +21,21 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
 - [ ] The Basics
   - [ ] Intro
   - [ ] Constants and Variables
-  - [ ] Floating-Point Numbers (Minusculo)
-  - [ ] Type Safety and Type Inference(Pequeno)
-  - [ ] Numeric Type Conversion (Gigante)
+  - [ ] Floating-Point Numbers
+  - [ ] Type Safety and Type Inference
+  - [ ] Numeric Type Conversion
   - [ ] Assertions and Preconditions
-- [X] Basic Operators
-  - [X] Operadores Básicos
-  - [X] Terminologia
-  - [X] Operador de Atribuição
-  - [X] Operadores Aritméticos
-  - [X] Operadores Compostos de Atribuição
-  - [X] Operador Ternário Condicional
-  - [X] Operador de Coalescência Nula
-  - [X] Operadores de Intervalo
-  - [X] Operadores Lógicos
+- [x] Basic Operators
+  - [x] Intro
+  - [x] Terminology
+  - [x] Assignment Operator
+  - [x] Arithmetic Operators
+  - [x] Compound Assignment Operators
+  - [x] Comparison Operators
+  - [x] Ternary Conditional Operator
+  - [x] Nil-Coalescing Operator
+  - [x] Range Operators
+  - [x] Logical Operators
 - [ ] Strings And Characters
   - [ ] Intro
   - [ ] String Literals
@@ -58,9 +59,17 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
   - [ ] Sets
   - [ ] Performing Set Operations
   - [ ] Dictionaries
-- [ ] Closures
+- [ ] Control Flow
   - [ ] Intro
-  - [ ] Closure Expressions
+  - [ ] For-In Loops
+  - [ ] While Loops
+  - [ ] Conditional Statements
+  - [ ] Control Transfer Statements
+  - [ ] Early Exit
+  - [ ] Checking API Availability
+- [ ] Closures
+  - [X] Intro
+  - [X] Closure Expressions
   - [ ] Trailing Closures
   - [ ] Capturing Values
   - [ ] Closures Are Reference Types
