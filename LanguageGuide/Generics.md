@@ -5,10 +5,10 @@ Generics
 
 *Generics* é um dos recursos mais poderosos do Swift, e grande parte da biblioteca padrão do Swift é criado com *generic code*. Na verdade, você tem usado *generics* através do *Language Guide*, mesmo que você não tenha percebido. Por exemplo, os tipos `Array` e `Dictionary` do Swift são coleções *generics*. Você pode criar um *array* que contém valores `Int`, ou um *array* que contém valores `String`, ou mesmo um *array* para qualquer outro tipo que possa ser criado em Swift. Da mesma forma, você pode criar um *dictionary* para armazenar valores de qualquer tipo específico, e não há nenhuma limitação de qual aquele tipo possa ser.
 
-The Problem That Generics Solve
--------------------------------
+O Problema Que *Generics* Resolve
+----------------------------------
 
-Here’s a standard, nongeneric function called `swapTwoInts(_:_:)`, which swaps two `Int` values:
+Aqui há uma função padrão não-genérica chamada `swapTwoInts(_:_:)`, que troca dois valores `Int`:
 
 ```swift
 func swapTwoInts(_ a: inout Int, _ b: inout Int) {
@@ -17,8 +17,11 @@ func swapTwoInts(_ a: inout Int, _ b: inout Int) {
   b = temporaryA
 }
 ```
+Essa função faz uso de parâmetros *in-out* para trocara os valores de `a` e `b`, como descritos em [In-Out Parameters](Functions.md#in-out-parameters).
 
-This function makes use of in-out parameters to swap the values of `a` and `b`, as described in [In-Out Parameters](Functions.xhtml#ID173).
+<!-- This function makes use of in-out parameters to swap the values of `a` and `b`, as described in [In-Out Parameters](Functions.xhtml#in-out-parameters). -->
+
+A funcão `swapTwoInts(_:_:)` troca o valor original de `b` pelo `a`
 
 The `swapTwoInts(_:_:)` function swaps the original value of `b` into `a`, and the original value of `a` into `b`. You can call this function to swap the values in two `Int` variables:
 
