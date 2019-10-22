@@ -92,6 +92,15 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
   - [ ] Intro
   - [ ] Instance Methods
   - [ ] Type Methods
+- [ ] Optional Chaining
+  - [ ] Intro
+  - [ ] Optional Chaining as an Alternative to Forced Unwrapping
+  - [ ] Defining Model Classes for Optional Chaining
+  - [ ] Accessing Properties Through Optional Chaining
+  - [ ] Calling Methods Through Optional Chaining
+  - [ ] Accessing Subscripts Through Optional Chaining
+  - [ ] Linking Multiple Levels of Chaining
+  - [ ] Chaining on Methods with Optional Return Values
 - [ ] Nested Types
   - [ ] Intro
   - [ ] Nested Types in Action
