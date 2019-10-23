@@ -67,6 +67,13 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
   - [ ] Control Transfer Statements
   - [ ] Early Exit
   - [ ] Checking API Availability
+- [ ] Functions
+  - [ ] Intro
+  - [ ] Defining and Calling Functions
+  - [ ] Function Parameters and Return Values
+  - [ ] Function Argument Labels and Parameter Names
+  - [ ] Function Types
+  - [ ] Nested Functions
 - [ ] Closures
   - [X] Intro
   - [X] Closure Expressions
@@ -88,6 +95,14 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
   - [ ] Comparing Structures and Classes
   - [ ] Structures and Enumerations Are Value Types
   - [ ] Classes Are Reference Types
+- [ ] Properties
+  - [ ] Intro
+  - [ ] Stored Properties
+  - [ ] Computed Properties
+  - [ ] Property Observers
+  - [ ] Property Wrappers
+  - [ ] Global and Local Variables
+  - [ ] Type Properties
 - [ ] Methods
   - [ ] Intro
   - [ ] Instance Methods
