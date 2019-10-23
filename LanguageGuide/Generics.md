@@ -5,10 +5,10 @@ Generics
 
 *Generics* é um dos recursos mais poderosos do Swift, e grande parte da biblioteca padrão do Swift é criado com *generic code*. Na verdade, você tem usado *generics* através do *Language Guide*, mesmo que você não tenha percebido. Por exemplo, os tipos `Array` e `Dictionary` do Swift são coleções *generics*. Você pode criar um *array* que contém valores `Int`, ou um *array* que contém valores `String`, ou mesmo um *array* para qualquer outro tipo que possa ser criado em Swift. Da mesma forma, você pode criar um *dictionary* para armazenar valores de qualquer tipo específico, e não há nenhuma limitação de qual aquele tipo possa ser.
 
-The Problem That Generics Solve
--------------------------------
+O Problema Que *Generics* Resolve
+----------------------------------
 
-Here’s a standard, nongeneric function called `swapTwoInts(_:_:)`, which swaps two `Int` values:
+Aqui há uma função padrão não-genérica chamada `swapTwoInts(_:_:)`, que troca dois valores `Int`:
 
 ```swift
 func swapTwoInts(_ a: inout Int, _ b: inout Int) {
@@ -17,20 +17,19 @@ func swapTwoInts(_ a: inout Int, _ b: inout Int) {
   b = temporaryA
 }
 ```
+Essa função faz uso de parâmetros *in-out* para trocar os valores de `a` e `b`, como descritos em [In-Out Parameters](Functions.md#in-out-parameters).
 
-This function makes use of in-out parameters to swap the values of `a` and `b`, as described in [In-Out Parameters](Functions.xhtml#ID173).
-
-The `swapTwoInts(_:_:)` function swaps the original value of `b` into `a`, and the original value of `a` into `b`. You can call this function to swap the values in two `Int` variables:
+A funcão `swapTwoInts(_:_:)` troca o valor original de `b` pelo `a`, e o valor original de `a` em `b`. Você pode chamar essa função para trocar os valores de duas variáveis `Int`:
 
 ```swift
 var someInt = 3
 var anotherInt = 107
 swapTwoInts(&someInt, &anotherInt)
-print("someInt is now \(someInt), and anotherInt is now \(anotherInt)")
-// Prints "someInt is now 107, and anotherInt is now 3"
+print("someInt é agora \(someInt), e anotherInt é agora \(anotherInt)")
+// Prints "someInt é agora 107, e anotherInt é agora 3"
 ```
 
-The `swapTwoInts(_:_:)` function is useful, but it can only be used with `Int` values. If you want to swap two `String` values, or two `Double` values, you have to write more functions, such as the `swapTwoStrings(_:_:)` and `swapTwoDoubles(_:_:)` functions shown below:
+A função `swapTwoInts(_:_:)` é útil, mas pode ser apenas usado com valores `Int`. Se você quer trocar dois valores `String`, ou dois valores `Double`, você tem que escrever mais funções, assim como as funções `swapTwoStrings(_:_:)` e `swapTwoDoubles(_:_:)` mostradas abaixo:
 
 ```swift
 func swapTwoStrings(_ a: inout String, _ b: inout String) {
@@ -45,14 +44,13 @@ func swapTwoDoubles(_ a: inout Double, _ b: inout Double) {
   b = temporaryA
 }
 ```
+Você pode ter notado que os corpos das funções `swapTwoInts(_:_:)`, `swapTwoStrings(_:_:)`, e `swapTwoDoubles(_:_:)` são idênticas. A única diferença é o tipo de valores que elas aceitam (`Int`, `String`, e `Double`).
 
-You may have noticed that the bodies of the `swapTwoInts(_:_:)`, `swapTwoStrings(_:_:)`, and `swapTwoDoubles(_:_:)` functions are identical. The only difference is the type of the values that they accept (`Int`, `String`, and `Double`).
+É mais útil e consideravelmente mais flexível, escrever uma única função que troca dois valores de *qualquer* tipo. Código *generic* permite que você escreva tal função.(Uma versão *generic* de tais funções é definida abaixo.)
 
-It’s more useful, and considerably more flexible, to write a single function that swaps two values of _any_ type. Generic code enables you to write such a function. (A generic version of these functions is defined below.)
+**Nota**
 
-**Note**
-
->In all three functions, the types of `a` and `b` must be the same. If `a` and `b` aren’t of the same type, it isn’t possible to swap their values. Swift is a type-safe language, and doesn’t allow (for example) a variable of type `String` and a variable of type `Double` to swap values with each other. Attempting to do so results in a compile-time error.
+>Em todas as três funções, os tipos de `a` e `b` tem que ser o mesmo. Se `a` e `b` não são do mesmo tipo, não é possível trocar os seus valores. Swift é uma linguagem fortemente tipada, e não permite(por exemplo) uma variável do tipo `String` e uma variável do tipo `Double` trocar valores entre si. Tentando fazer isso resulta erro em tempo de compilação.
 
 Generic Functions
 -----------------
