@@ -99,7 +99,7 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
 - [ ] Generics
   - [x] Intro
   - [x] The Problem That Generics Solve
-  - [ ] Generic Functions
+  - [x] Generic Functions
   - [ ] Type Parameters
   - [ ] Naming Type Parameters
   - [ ] Generic Types

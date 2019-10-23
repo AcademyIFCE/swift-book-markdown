@@ -52,10 +52,10 @@ Você pode ter notado que os corpos das funções `swapTwoInts(_:_:)`, `swapTwoS
 
 >Em todas as três funções, os tipos de `a` e `b` tem que ser o mesmo. Se `a` e `b` não são do mesmo tipo, não é possível trocar os seus valores. Swift é uma linguagem fortemente tipada, e não permite(por exemplo) uma variável do tipo `String` e uma variável do tipo `Double` trocar valores entre si. Tentando fazer isso resulta erro em tempo de compilação.
 
-Generic Functions
+Funções *Generic*
 -----------------
 
-_Generic functions_ can work with any type. Here’s a generic version of the `swapTwoInts(_:_:)` function from above, called `swapTwoValues(_:_:)`:
+Funções Generic podem ser usadas com qualquer tipo. Aqui há uma versão *generic* da função `swapTwoInts(_:_:)` de cima, chamada `swapTwoValues(_:_:)`: 
 
 ```swift
 func swapTwoValues<T>(_ a: inout T, _ b: inout T) {
@@ -65,36 +65,37 @@ func swapTwoValues<T>(_ a: inout T, _ b: inout T) {
 }
 ```
 
-The body of the `swapTwoValues(_:_:)` function is identical to the body of the `swapTwoInts(_:_:)` function. However, the first line of `swapTwoValues(_:_:)` is slightly different from `swapTwoInts(_:_:)`. Here’s how the first lines compare:
+O corpo da função `swapTwoValues(_:_:)` é idêntica ao corpo da função `swapTwoInts(_:_:)`. No entanto, a primeira linha da `swapTwoValues(_:_:)` é significantemente diferente da `swapTwoInts(_:_:)`. Veja 
+como as primeiras linhas se comparam:
 
 ```swift
 func swapTwoInts(_ a: inout Int, _ b: inout Int)
 func swapTwoValues<T>(_ a: inout T, _ b: inout T)
 ```
 
-The generic version of the function uses a _placeholder_ type name (called `T`, in this case) instead of an _actual_ type name (such as `Int`, `String`, or `Double`). The placeholder type name doesn’t say anything about what `T` must be, but it _does_ say that both `a` and `b` must be of the same type `T`, whatever `T` represents. The actual type to use in place of `T` is determined each time the `swapTwoValues(_:_:)` function is called.
+A versão *generic* da função que usa um nome do tipo *placeholder*  (chamado de `T`, nesse caso) ao invés de um tipo nome *real* (como `Int`, `String`, ou `Double`). O nome do tipo *placeholder* não diz nada sobre o que `T` deve ser, mas *diz* que `a` e `b` devem ser do mesmo tipo que `T`, o quer que seja `T`. O tipo real que vai ser usado no lugar de `T` é determinado cada vez que a função `swapTwoValues(_:_:)` é chamada.
 
-The other difference between a generic function and a nongeneric function is that the generic function’s name (`swapTwoValues(_:_:)`) is followed by the placeholder type name (`T`) inside angle brackets (`<T>`). The brackets tell Swift that `T` is a placeholder type name within the `swapTwoValues(_:_:)` function definition. Because `T` is a placeholder, Swift doesn’t look for an actual type called `T`.
+A outra diferença entre uma função *generic* e uma função não-*generic* é que o nome da função *generic* (`swapTwoValues(_:_:)`) é seguida de um nome do tipo *placeholder*(`T`) dentro dos *angle brackets* conhecido também como operador diamante,(`<T>`). O operador diamante diz para Swift que `T` é um nome do tipo *placeholder* dentro da definição da função `swapTwoValues(_:_:)`. Como `T` é um *placeholder*, Swift não olha para um tipo real chamado `T`.
 
-The `swapTwoValues(_:_:)` function can now be called in the same way as `swapTwoInts`, except that it can be passed two values of _any_ type, as long as both of those values are of the same type as each other. Each time `swapTwoValues(_:_:)` is called, the type to use for `T` is inferred from the types of values passed to the function.
+A função `swapTwoValues(_:_:)` agora pode ser chamada do mesmo jeito que `swapTwoInts`, exceto que pode ser passado dois valores de *qualquer* tipo, desde que esses dois valores sejam do mesmo tipo que o outro. Cada vez que `swapTwoValues(_:_:)` é chamada, o tipo que é usado para `T` é inferido dos tipos de valores passados para a função.
 
-In the two examples below, `T` is inferred to be `Int` and `String` respectively:
+Nos dois exemplos abaixo, `T` é inferido ser `Int` e `String`, respectivamente:
 
 ```swift
 var someInt = 3
 var anotherInt = 107
 swapTwoValues(&someInt, &anotherInt)
-// someInt is now 107, and anotherInt is now 3
+// someInt é agora 107, e anotherInt é agora 3
 
 var someString = "hello"
 var anotherString = "world"
 swapTwoValues(&someString, &anotherString)
-// someString is now "world", and anotherString is now "hello"
+// someString é agora "world", e anotherString é agora "hello"
 ```
 
-**Note**
+**Nota**
 
->The `swapTwoValues(_:_:)` function defined above is inspired by a generic function called `swap`, which is part of the Swift standard library, and is automatically made available for you to use in your apps. If you need the behavior of the `swapTwoValues(_:_:)` function in your own code, you can use Swift’s existing `swap(_:_:)` function rather than providing your own implementation.
+> A função `swapTwoValues(_:_:)` definida acima é inspirada pela função *generic* chamada `swap`, que faz parte da biblioteca padrão do Swift, e é disponibilizada automaticamente para que você possa usar nos seus apps. Se você precisa do comportamento da função `swapTwoValues(_:_:)`  no seu código, você pode usar a função `swap(_:_:)`  já existente em Swift ao invés de fornecer a sua própria implementação
 
 Type Parameters
 ---------------
