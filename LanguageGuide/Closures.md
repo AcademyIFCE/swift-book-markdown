@@ -143,7 +143,7 @@ Para mais sobre métodos operadores, veja [Métodos Operadores](AdvancedOperator
 *Trailing Closures*
 -----------------
 
-Se você precisa passar uma expressão *closure* como último argumento de uma função e esta expressão for grande, pode ser útil escrever ela como uma *trailing closure*. Uma *trailing closure* é escrita após os parênteses da chamada da função, apesar disso, a expressão continua pertencendo a função. Quando você utiliza a sintaxe *trailing closure*, você não escreve o nome externo que identifica a closure na chamada da função.
+Se você precisa passar uma expressão *closure* como último argumento de uma função e esta expressão for grande, pode ser útil escrever ela como uma *trailing closure*. Uma *trailing closure* é escrita após os parênteses da chamada da função, apesar disso, a expressão continua pertencendo a função. Quando você utiliza a sintaxe *trailing closure*, você não escreve o nome externo que identifica a *closure* na chamada da função.
 
 
 ```swift
@@ -164,13 +164,13 @@ someFunctionThatTakesAClosure() {
 }
 ```
 
-A closure do método `sorted(by:)` visto em [Sintaxe Expressão *Closure*](#closure-expression-syntax) pode ser escrita de modo *trailing closure*:
+A *closure* do método `sorted(by:)` visto em [Sintaxe Expressão *Closure*](#closure-expression-syntax) pode ser escrita de modo *trailing closure*:
 
 ```swift
 reversedNames = names.sorted() { $0 > $1 }
 ```
 
-Se a expressão *closure* é o único argumento do método e você utiliza *trailing closure*, você não precisa escrever os parênteses depois do nome do método/função:
+Se a expressão *closure* é o único argumento do método e você utiliza *trailing closure*, você não precisa escrever os parênteses depois do nome do método/função quando você chama a função:
 
 ```swift
 reversedNames = names.sorted { $0 > $1 }
@@ -178,7 +178,7 @@ reversedNames = names.sorted { $0 > $1 }
 
 *Trailing closures* é muito útil quando a *closure* é grande e não é possível escrever em uma única expressão. Por exemplo, O tipo `Array` em Swift possui o método `map(_:)`, o qual possui uma *closure* como único argumento. A *closure* é chamada uma vez para cada item dentro do *array* e retorna um novo valor (possivelmente até mesmo de outro tipo). As transformações e o tipo retornado é especificado pelo corpo da *closure*. 
 
-Depois de aplicar as transformações fornecidas pela *closure* em cada elemento do *array*, o método `map(_:)` retorna um novo *array* contendo novos elementos transformados na mesma ordem correspondente ao seus valores originais. 
+Depois de aplicar as transformações fornecidas pela *closure* em cada elemento do *array*, o método `map(_:)` retorna um novo *array* contendo todos os novos elementos transformados na mesma ordem correspondente ao seus valores originais. 
 
 Aqui está um exemplo de como usar o método `map(_:)` com uma *trailing closure* para converter uma *array* de `Int` em `String`. O *array* `[16,58,50]` é usado para a criação do novo *array* `["OneSix", "FiveEight", "FiveOneZero"]`:
 
@@ -190,39 +190,39 @@ let digitNames = [
 let numbers = [16, 58, 510]
 ```
 
-O código acima cria um dicionário que mapeia números inteiros e o número extenso em inglês. Também define um *array* de inteiros.
+O código acima cria um dicionário que mapeia números inteiros e o número extenso em inglês. Também define um *array* de inteiros preparado para ser convertido em *strings*.
 
 Agora você pode utilizar o *array* `numbers` para criar um outro *array* de `String` passando como parâmetro esta *trailing closure* para o método `map(_:)`:
 
 ```swift
 let strings = numbers.map { (number) -> String in
-    var currentNumber = number
+    var number = number
     var output = ""
     repeat {
-        output = digitNames[currentNumber % 10]! + output
-        currentNumber /= 10
-    } while currentNumber > 0
+        output = digitNames[number % 10]! + output
+        number /= 10
+    } while number > 0
         return output
 }
 // *strings* são inferidos para serem do tipo [String]
 // o *array* é ["OneSix", "FiveEight", "FiveOneZero"]
 ```
 
-O método `map(_:)` chama a *closure* uma vez para cada item do array. Você não precisa especificar o tipo do parâmetro da *closure*, `number`, pois o tipo pode ser inferido dos elementos do *array* a ser mapeado.
+O método `map(_:)` chama a *closure* uma vez para cada item do *array*. Você não precisa especificar o tipo do parâmetro da *closure*, `number`, pois o tipo pode ser inferido dos elementos do *array* a ser mapeado.
 
-Neste exemplo, a variável `currentNumber` é inicializada com o valor do parâmetro da *closure* `number`, só então este valor pode ser modificado dentro do corpo da *closure*. (Parâmetros de *closures* e funções são sempre constantes.) A expressão *closure* especifica o tipo de retorno `String` para indicar que o tipo que será armazenado no *array* retornado
+Neste exemplo, a variável `number` é inicializada com o valor do parâmetro da *closure* `number`, só então este valor pode ser modificado dentro do corpo da *closure*. (Parâmetros de *closures* e funções são sempre constantes.) A expressão *closure* especifica o tipo de retorno `String` para indicar que o tipo que será armazenado no *array* retornado
 
-A expressão *closure* constroi uma string chamada `output` cada vez que ela é chamada. Ele calcula o último digito de `currentNumber` usando o operador de resto (`currentNumber % 10`) e usar este valor para achar a *string* apropriada no dicionário `digitNames`. A *closure* ode ser usada para criar uma representação *string* de qualquer inteiro maior que zero.
+A expressão *closure* constrói uma *string* chamada `output` cada vez que ela é chamada. Ele calcula o último digito de `number` usando o operador de resto (`number % 10`) e usar este valor para achar a *string* apropriada no dicionário `digitNames`. A *closure* ode ser usada para criar uma representação *string* de qualquer inteiro maior que zero.
 
 **Nota**
 
->A chamada do *subscript* do dicionário `digitNames` possui um (`!`) porquê o *subscript* do dicionário retorna um valor opcional para indicar que o valor daquela chave pode não existir. No exemplo acima é garantido que `currentNumber % 10` sempre irá gerar uma chave válida para o dicionário `digitNames`, então o ponto de exclamação é utilizado para realizar um *force-unwrap* do valor daquela chave.
+>A chamada do *subscript* do dicionário `digitNames` possui um (`!`) porquê o *subscript* do dicionário retorna um valor *optional* para indicar que o valor daquela chave pode não existir. No exemplo acima é garantido que `number % 10` sempre irá gerar uma chave válida para o dicionário `digitNames`, então o ponto de exclamação é utilizado para realizar um *force-unwrap* do valor daquela chave.
 
-A *string* recebida do dicionário `digitNames` é adicionada no *início* de `output`, construindo a versão *string* do número ao contrário. (A expressão `currentNumber % 10` fornece os valores `6` para `16`, `8` para `58` e `0` para `50`).
+A *string* recebida do dicionário `digitNames` é adicionada no *início* de `output`, construindo a versão *string* do número ao contrário. (A expressão `number % 10` fornece os valores `6` para `16`, `8` para `58` e `0` para `50`).
 
-A variável `currentNumber` é então dividida por `10`. Como ela é do tipo inteiro será arredondada para baixo durante a divisão, então `16` se torna `1`, `58` se torna `5` e etc.
+A variável `number` é então dividida por `10`. Como ela é do tipo inteiro será arredondada para baixo durante a divisão, então `16` se torna `1`, `58` se torna `5` e etc.
 
-O processo é repetido até `currentNumber` ficar igual a `0`, neste ponto a *string* `output` é retornada pela closure e adicionada ao *array* retornado pelo método `map(_:)`.
+O processo é repetido até `number` ficar igual a `0`, neste ponto a *string* `output` é retornada pela *closure* e adicionada ao *array* retornado pelo método `map(_:)`.
 
 O uso da sintaxe *trailing closure* no exemplo citado encapsula a funcionalidade da *closure* imediatamente depois da função a qual a *closure* atua. 
 
