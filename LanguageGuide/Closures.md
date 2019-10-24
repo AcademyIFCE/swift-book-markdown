@@ -325,12 +325,12 @@ incrementByTen()
 
 The example above shows that calling `alsoIncrementByTen` is the same as calling `incrementByTen`. Because both of them refer to the same closure, they both increment and return the same running total.
 
-Escaping Closures
+*Escaping Closures*
 -----------------
 
-A closure is said to *escape* a function when the closure is passed as an argument to the function, but is called after the function returns. When you declare a function that takes a closure as one of its parameters, you can write `@escaping` before the parameter’s type to indicate that the closure is allowed to escape.
+Diz-se que uma *closure* *escape* uma função quando ela é passada como argumento para uma função, mas é chamada apenas depois do seu retorno. Quando você declara uma função que recebe uma *closure* como um dos seus parâmetros, você escrever `@escaping` antes do tipo do parâmetro para indicar que a *closure* pode ser *escape*.
 
-One way that a closure can escape is by being stored in a variable that is defined outside the function. As an example, many functions that start an asynchronous operation take a closure argument as a completion handler. The function returns after it starts the operation, but the closure isn’t called until the operation is completed—the closure needs to escape, to be called later. For example:
+Uma vez que uma *closure* pode ser *escape* ela é armazenada que é definida fora da função. Por exemplo, várias funções que iníciam uma operação assíncrona recebe uma closure como argumento para ser executada ao fim do processamento. A função retorna depois do início da operação, mas a *closure* não é executada até a operação ser completada. A *closure* precisa ser *escape* para ser chamada a posteriori. Por exemplo:
 
 ```swift
 var completionHandlers: [() -> Void] = []
@@ -339,9 +339,9 @@ func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
 }
 ```
 
-The `someFunctionWithEscapingClosure(_:)` function takes a closure as its argument and adds it to an array that’s declared outside the function. If you didn’t mark the parameter of this function with `@escaping`, you would get a compile-time error.
+A função `someFunctionWithEscapingClosure(_:)` recebe uma *closure* como seu argumento e adiciona a um *array* declarado fora da função. Se você não marcar o parâmetro desta função como `@escaping` você terá uma erro em tempo de compilação.
 
-Marking a closure with `@escaping` means you have to refer to `self` explicitly within the closure. For example, in the code below, the closure passed to `someFunctionWithEscapingClosure(_:)` is an escaping closure, which means it needs to refer to `self` explicitly. In contrast, the closure passed to `someFunctionWithNonescapingClosure(_:)` is a nonescaping closure, which means it can refer to `self` implicitly.
+Marcar uma *closure* como `@escaping` significa que você tem que se referir a `self` de maneira explícita dentro da closure. Por exemplo, no código abaixo, a *closure* passada para `someFunctionWithEscapingClosure(_:)` é uma *escaping closure*, o que significa que precisa se referir a `self` explicitamente. Por outro lado, a *closure* passada para `someFunctionWithNonescapingClosure(_:)` é uma *nonescaping closure*, o que siginfica que ela pode se referir a `self` de maneira implícita.
 
 ```swift
 func someFunctionWithNonescapingClosure(closure: () -> Void) {
