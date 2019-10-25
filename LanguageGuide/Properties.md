@@ -9,7 +9,7 @@ Propriedades armazenadas e computadas são usualmente associadas com instâncias
 
 Além disso, você pode definir *property observers* para observar mudanças no valor de uma propriedade, que podem responder com ações personalizadas. *Property observers* podem ser adicionados a propriedades armazenadas que você definiu, e também propriedades que uma subclasse herdou da sua superclasse.
 
-Você também pode usar um *property wrapper* para reusar código no *getter* e *setter* de multiplas propriedades.
+Você também pode usar um *property wrapper* para reusar código no *getter* e *setter* de múltiplas propriedades.
 
 Stored Properties
 -----------------
