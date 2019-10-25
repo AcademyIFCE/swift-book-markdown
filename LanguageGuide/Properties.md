@@ -1,15 +1,15 @@
-Properties  
+Propriedades
 
-Properties
+Propriedades
 ==========
 
-*Properties* associate values with a particular class, structure, or enumeration. Stored properties store constant and variable values as part of an instance, whereas computed properties calculate (rather than store) a value. Computed properties are provided by classes, structures, and enumerations. Stored properties are provided only by classes and structures.
+Propriedades associam valores com uma classe, estrutura, ou enumeração em particular. Propriedades armazenadas guardam constantes e valores variáveis como parte de uma instância, enquanto propriedades computadas calculam (ao invés de armazenar) um valor. Propriedades computadas estão disponíveis em classes, estruturas e enumerações. Propriedades armazenadas estão disponíveis somente em classes e estruturas.
 
-Stored and computed properties are usually associated with instances of a particular type. However, properties can also be associated with the type itself. Such properties are known as type properties.
+Propriedades armazenadas e computadas são usualmente associadas com instâncias de um tipo em particular. No entanto, propriedades também podem ser associadas com o próprio tipo. Essas propriedades são conhecidas como propriedades de tipo.
 
-In addition, you can define property observers to monitor changes in a property’s value, which you can respond to with custom actions. Property observers can be added to stored properties you define yourself, and also to properties that a subclass inherits from its superclass.
+Além disso, você pode definir *property observers* para observar mudanças no valor de uma propriedade, que podem responder com ações personalizadas. *Property observers* podem ser adicionados a propriedades armazenadas que você definiu, e também propriedades que uma subclasse herdou da sua superclasse.
 
-You can also use a property wrapper to reuse code in the getter and setter of multiple properties.
+Você também pode usar um *property wrapper* para reusar código no *getter* e *setter* de múltiplas propriedades.
 
 Stored Properties
 -----------------

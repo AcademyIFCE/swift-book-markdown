@@ -97,7 +97,7 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Structures and Enumerations Are Value Types
     - [ ] Classes Are Reference Types
   - [ ] Properties
-    - [ ] Intro
+    - [x] Intro
     - [ ] Stored Properties
     - [ ] Computed Properties
     - [ ] Property Observers
