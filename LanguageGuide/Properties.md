@@ -3,11 +3,11 @@ Propriedades
 Propriedades
 ==========
 
-Propriedades associam valores com uma classe, estrutura, ou enumeração em particular. Propriedades armazenadas guardam constantes e valores variáveis como parte de uma instância, enquanto propriedades computadas calculam (ao invés de armazenar) um valor. Propriedades computados estão disponíveis em classes, estruturas e enumerações. Propriedades armazenadas estão disponíveis somente em classes e estruturas.
+Propriedades associam valores com uma classe, estrutura, ou enumeração em particular. Propriedades armazenadas guardam constantes e valores variáveis como parte de uma instância, enquanto propriedades computadas calculam (ao invés de armazenar) um valor. Propriedades computadas estão disponíveis em classes, estruturas e enumerações. Propriedades armazenadas estão disponíveis somente em classes e estruturas.
 
-Propriedades armazenadas e computadas são usualmente associadas com instâncias de um tipo em particular. No entanto, propriedades também podem ser associados com o próprio tipo. Essas propriedades são conhecidas como propriedades de tipo.
+Propriedades armazenadas e computadas são usualmente associadas com instâncias de um tipo em particular. No entanto, propriedades também podem ser associadas com o próprio tipo. Essas propriedades são conhecidas como propriedades de tipo.
 
-Além disso, você pode definir *property observers* para monitorar mudanças no valor de uma propriedade, que podem responder com ações personalizadas. *Property observers* podem ser adicionados a propriedades armazenadas que você definiu, e também propriedades que uma subclasse herdou da sua superclasse.
+Além disso, você pode definir *property observers* para observar mudanças no valor de uma propriedade, que podem responder com ações personalizadas. *Property observers* podem ser adicionados a propriedades armazenadas que você definiu, e também propriedades que uma subclasse herdou da sua superclasse.
 
 Você também pode usar um *property wrapper* para reusar código no *getter* e *setter* de multiplas propriedades.
 
