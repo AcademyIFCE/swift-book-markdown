@@ -148,6 +148,14 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Intro
     - [ ] Nested Types in Action
     - [ ] Referring to Nested Types
+  - [ ] Extensions
+    - [ ] Intro
+    - [ ] Extension Syntax
+    - [ ] Computed Properties
+    - [ ] Initializers
+    - [ ] Methods
+    - [ ] Subscripts
+    - [ ] Nested Types
   - [ ] Generics
     - [x] Intro
     - [x] The Problem That Generics Solve
