@@ -114,6 +114,12 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Subscript Usage
     - [ ] Subscript Options
     - [ ] Type Subscripts
+  - [ ] Inheritance
+    - [ ] Intro
+    - [ ] Defining a Base Class
+    - [ ] Subclassing
+    - [ ] Overriding
+    - [ ] Preventing Overrides
   - [ ] Optional Chaining
     - [ ] Intro
     - [ ] Optional Chaining as an Alternative to Forced Unwrapping
