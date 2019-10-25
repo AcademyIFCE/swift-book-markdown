@@ -174,7 +174,7 @@ The following example defines a new class called `Car`, which is a subclass of `
 class Car: Vehicle {
     var gear = 1
     override var description: String {
-        return super.description + " in gear \\(gear)"
+        return super.description + " in gear \(gear)"
     }
 }
 ```
