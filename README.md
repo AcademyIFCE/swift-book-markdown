@@ -123,6 +123,11 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Accessing Subscripts Through Optional Chaining
     - [ ] Linking Multiple Levels of Chaining
     - [ ] Chaining on Methods with Optional Return Values
+  - [ ] Enumerations
+    - [ ] Intro
+    - [ ] Representing and Throwing Errors
+    - [ ] Handling Errors
+    - [ ] Specifying Cleanup Actions
   - [ ] Nested Types
     - [ ] Intro
     - [ ] Nested Types in Action
