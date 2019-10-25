@@ -330,7 +330,7 @@ The example above shows that calling `alsoIncrementByTen` is the same as calling
 
 Diz-se que uma *closure* *escape* uma função quando ela é passada como argumento para uma função, mas é chamada apenas depois do seu retorno. Quando você declara uma função que recebe uma *closure* como um dos seus parâmetros, você escrever `@escaping` antes do tipo do parâmetro para indicar que a *closure* pode ser *escape*.
 
-Uma vez que uma *closure* pode ser *escape* ela é armazenada que é definida fora da função. Por exemplo, várias funções que iníciam uma operação assíncrona recebe uma closure como argumento para ser executada ao fim do processamento. A função retorna depois do início da operação, mas a *closure* não é executada até a operação ser completada. A *closure* precisa ser *escape* para ser chamada a posteriori. Por exemplo:
+Uma vez que uma *closure* pode ser *escape* ela é armazenada que é definida fora da função. Por exemplo, várias funções que iniciam uma operação assíncrona recebe uma closure como argumento para ser executada ao fim do processamento. A função retorna depois do início da operação, mas a *closure* não é executada até a operação ser completada. A *closure* precisa ser *escape* para ser chamada posteriormente. Por exemplo:
 
 ```swift
 var completionHandlers: [() -> Void] = []
@@ -341,7 +341,7 @@ func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
 
 A função `someFunctionWithEscapingClosure(_:)` recebe uma *closure* como seu argumento e adiciona a um *array* declarado fora da função. Se você não marcar o parâmetro desta função como `@escaping` você terá uma erro em tempo de compilação.
 
-Marcar uma *closure* como `@escaping` significa que você tem que se referir a `self` de maneira explícita dentro da closure. Por exemplo, no código abaixo, a *closure* passada para `someFunctionWithEscapingClosure(_:)` é uma *escaping closure*, o que significa que precisa se referir a `self` explicitamente. Por outro lado, a *closure* passada para `someFunctionWithNonescapingClosure(_:)` é uma *nonescaping closure*, o que siginfica que ela pode se referir a `self` de maneira implícita.
+Marcar uma *closure* como `@escaping` significa que você tem que se referir a `self` de maneira explícita dentro da *closure*. Por exemplo, no código abaixo, a *closure* passada para `someFunctionWithEscapingClosure(_:)` é uma *escaping closure*, o que significa que precisa se referir a `self` explicitamente. Por outro lado, a *closure* passada para `someFunctionWithNonescapingClosure(_:)` é uma *nonescaping closure*, o que siginfica que ela pode se referir a `self` de maneira implícita.
 
 ```swift
 func someFunctionWithNonescapingClosure(closure: () -> Void) {
