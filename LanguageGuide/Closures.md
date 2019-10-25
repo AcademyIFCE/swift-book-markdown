@@ -312,7 +312,7 @@ No exemplo acima, `incrementBySeven` e `incrementByTen` são constantes, mas a *
 
 Sempre quando você assinalar uma função ou *closure* para uma constante ou variável, vocês está na verdade fazendo com que a constante ou variável seja uma referência para a função/*closure*. No exemplo acima, a *closure* `incrementByTen` aponta para a constante e não para o conteúdo da *closure* em si.
 
-Isto também significa que se você assinalar uma *closure* para duas constante ou variável diferentes, ambas vão apontar para a mesma *closure*.
+Isto também significa que se você assinalar uma *closure* para duas constantes ou variáveis diferentes, ambas vão apontar para a mesma *closure*.
 
 ```swift
 let alsoIncrementByTen = incrementByTen
@@ -323,7 +323,7 @@ incrementByTen()
 // retorna o valor 60
 ```
 
-O exemplo acima mostra a chamada de `alsoIncrementByTen` é o mesmo que chamar `incrementByTen`. Ambas se referem a mesma *closure*, as duas incrementa e retornam o mesmo valor total.
+O exemplo acima mostra a chamada de `alsoIncrementByTen` é o mesmo que chamar `incrementByTen`. Ambas se referem a mesma *closure*, as duas incrementam e retornam o mesmo valor total.
 
 Escaping Closures
 -----------------
