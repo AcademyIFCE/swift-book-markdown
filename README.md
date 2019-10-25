@@ -18,147 +18,154 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
   - [x] Protocols and Extensions
   - [x] Error Handling
   - [x] Generics
-- [ ] The Basics
-  - [ ] Intro
-  - [ ] Constants and Variables
-  - [ ] Floating-Point Numbers
-  - [ ] Type Safety and Type Inference
-  - [ ] Numeric Type Conversion
-  - [ ] Assertions and Preconditions
-- [x] Basic Operators
-  - [x] Intro
-  - [x] Terminology
-  - [x] Assignment Operator
-  - [x] Arithmetic Operators
-  - [x] Compound Assignment Operators
-  - [x] Comparison Operators
-  - [x] Ternary Conditional Operator
-  - [x] Nil-Coalescing Operator
-  - [x] Range Operators
-  - [x] Logical Operators
-- [ ] Strings And Characters
-  - [ ] Intro
-  - [ ] String Literals
-  - [ ] Initializing an Empty String
-  - [ ] String Mutability
-  - [ ] Strings Are Value Types
-  - [ ] Working with Characters
-  - [ ] Concatenating Strings and Characters
-  - [ ] String Interpolation
-  - [ ] Unicode
-  - [ ] Counting Characters
-  - [ ] Accessing and Modifying a String
-  - [ ] Substrings
-  - [ ] Unicode
-  - [ ] Comparing Strings
-  - [ ] Unicode Representations of Strings
-- [ ] Collection Types
-  - [ ] Intro
-  - [ ] Mutability of Collections
-  - [ ] Arrays
-  - [ ] Sets
-  - [ ] Performing Set Operations
-  - [ ] Dictionaries
-- [ ] Control Flow
-  - [ ] Intro
-  - [ ] For-In Loops
-  - [ ] While Loops
-  - [ ] Conditional Statements
-  - [ ] Control Transfer Statements
-  - [ ] Early Exit
-  - [ ] Checking API Availability
-- [ ] Functions
-  - [ ] Intro
-  - [ ] Defining and Calling Functions
-  - [ ] Function Parameters and Return Values
-  - [ ] Function Argument Labels and Parameter Names
-  - [ ] Function Types
-  - [ ] Nested Functions
-- [ ] Closures
-  - [X] Intro
-  - [X] Closure Expressions
-  - [ ] Trailing Closures
-  - [ ] Capturing Values
-  - [ ] Closures Are Reference Types
-  - [ ] Escaping Closures
-  - [ ] Autoclosures
-- [ ] Enumerations
-  - [ ] Intro
-  - [ ] Enumeration Syntax
-  - [ ] Matching Enumeration Values with a Switch Statement
-  - [ ] Iterating over Enumeration Cases
-  - [ ] Associated Values
-  - [ ] Raw Values
-  - [ ] Recursive Enumerations
-- [ ] Structures and Classes
-  - [ ] Intro
-  - [ ] Comparing Structures and Classes
-  - [ ] Structures and Enumerations Are Value Types
-  - [ ] Classes Are Reference Types
-- [ ] Properties
-  - [ ] Intro
-  - [ ] Stored Properties
-  - [ ] Computed Properties
-  - [ ] Property Observers
-  - [ ] Property Wrappers
-  - [ ] Global and Local Variables
-  - [ ] Type Properties
-- [ ] Methods
-  - [ ] Intro
-  - [ ] Instance Methods
-  - [ ] Type Methods
-- [ ] Optional Chaining
-  - [ ] Intro
-  - [ ] Optional Chaining as an Alternative to Forced Unwrapping
-  - [ ] Defining Model Classes for Optional Chaining
-  - [ ] Accessing Properties Through Optional Chaining
-  - [ ] Calling Methods Through Optional Chaining
-  - [ ] Accessing Subscripts Through Optional Chaining
-  - [ ] Linking Multiple Levels of Chaining
-  - [ ] Chaining on Methods with Optional Return Values
-- [ ] Error Handling
-  - [ ] Intro
-  - [ ] Representing and Throwing Errors
-  - [ ] Handling Errors
-  - [ ] Specifying Cleanup Actions
-- [ ] Nested Types
-  - [ ] Intro
-  - [ ] Nested Types in Action
-  - [ ] Referring to Nested Types
-- [ ] Generics
-  - [x] Intro
-  - [x] The Problem That Generics Solve
-  - [x] Generic Functions
-  - [ ] Type Parameters
-  - [ ] Naming Type Parameters
-  - [ ] Generic Types
-  - [ ] Extending a Generic Type
-  - [ ] Type Constraints
-  - [ ] Associated Types
-  - [ ] Generic Where Clauses
-  - [ ] Extensions with a Generic Where Clause
-  - [ ] Associated Types with a Generic Where Clause 
-  - [ ] Generic Subscripts
-- [ ] Access Control
-  - [ ] Intro
-  - [ ] Modules and Source Files
-  - [ ] Access Levels
-  - [ ] Access Control Syntax
-  - [ ] Custom Types
-  - [ ] Subclassing
-  - [ ] Constants, Variables, Properties, and Subscripts 
-  - [ ] Initializers
-  - [ ] Protocols
-  - [ ] Extensions
+- [ ] Language Guide
+  - [ ] The Basics
+    - [ ] Intro
+    - [ ] Constants and Variables
+    - [ ] Floating-Point Numbers
+    - [ ] Type Safety and Type Inference
+    - [ ] Numeric Type Conversion
+    - [ ] Assertions and Preconditions
+  - [x] Basic Operators
+    - [x] Intro
+    - [x] Terminology
+    - [x] Assignment Operator
+    - [x] Arithmetic Operators
+    - [x] Compound Assignment Operators
+    - [x] Comparison Operators
+    - [x] Ternary Conditional Operator
+    - [x] Nil-Coalescing Operator
+    - [x] Range Operators
+    - [x] Logical Operators
+  - [ ] Strings And Characters
+    - [ ] Intro
+    - [ ] String Literals
+    - [ ] Initializing an Empty String
+    - [ ] String Mutability
+    - [ ] Strings Are Value Types
+    - [ ] Working with Characters
+    - [ ] Concatenating Strings and Characters
+    - [ ] String Interpolation
+    - [ ] Unicode
+    - [ ] Counting Characters
+    - [ ] Accessing and Modifying a String
+    - [ ] Substrings
+    - [ ] Unicode
+    - [ ] Comparing Strings
+    - [ ] Unicode Representations of Strings
+  - [ ] Collection Types
+    - [ ] Intro
+    - [ ] Mutability of Collections
+    - [ ] Arrays
+    - [ ] Sets
+    - [ ] Performing Set Operations
+    - [ ] Dictionaries
+  - [ ] Control Flow
+    - [ ] Intro
+    - [ ] For-In Loops
+    - [ ] While Loops
+    - [ ] Conditional Statements
+    - [ ] Control Transfer Statements
+    - [ ] Early Exit
+    - [ ] Checking API Availability
+  - [ ] Functions
+    - [ ] Intro
+    - [ ] Defining and Calling Functions
+    - [ ] Function Parameters and Return Values
+    - [ ] Function Argument Labels and Parameter Names
+    - [ ] Function Types
+    - [ ] Nested Functions
+  - [ ] Closures
+    - [X] Intro
+    - [X] Closure Expressions
+    - [ ] Trailing Closures
+    - [ ] Capturing Values
+    - [ ] Closures Are Reference Types
+    - [ ] Escaping Closures
+    - [ ] Autoclosures
+  - [ ] Enumerations
+    - [ ] Intro
+    - [ ] Enumeration Syntax
+    - [ ] Matching Enumeration Values with a Switch Statement
+    - [ ] Iterating over Enumeration Cases
+    - [ ] Associated Values
+    - [ ] Raw Values
+    - [ ] Recursive Enumerations
+  - [ ] Structures and Classes
+    - [ ] Intro
+    - [ ] Comparing Structures and Classes
+    - [ ] Structures and Enumerations Are Value Types
+    - [ ] Classes Are Reference Types
+  - [ ] Properties
+    - [ ] Intro
+    - [ ] Stored Properties
+    - [ ] Computed Properties
+    - [ ] Property Observers
+    - [ ] Property Wrappers
+    - [ ] Global and Local Variables
+    - [ ] Type Properties
+  - [ ] Methods
+    - [ ] Intro
+    - [ ] Instance Methods
+    - [ ] Type Methods
+  - [ ] Subscripts
+    - [ ] Intro
+    - [ ] Subscript Syntax
+    - [ ] Subscript Usage
+    - [ ] Subscript Options
+    - [ ] Type Subscripts
+  - [ ] Optional Chaining
+    - [ ] Intro
+    - [ ] Optional Chaining as an Alternative to Forced Unwrapping
+    - [ ] Defining Model Classes for Optional Chaining
+    - [ ] Accessing Properties Through Optional Chaining
+    - [ ] Calling Methods Through Optional Chaining
+    - [ ] Accessing Subscripts Through Optional Chaining
+    - [ ] Linking Multiple Levels of Chaining
+    - [ ] Chaining on Methods with Optional Return Values
+  - [ ] Enumerations
+    - [ ] Intro
+    - [ ] Representing and Throwing Errors
+    - [ ] Handling Errors
+    - [ ] Specifying Cleanup Actions
+  - [ ] Nested Types
+    - [ ] Intro
+    - [ ] Nested Types in Action
+    - [ ] Referring to Nested Types
   - [ ] Generics
-  - [ ] Type Aliases
-- [ ] Adavanced Operators
-  - [ ] Intro
-  - [ ] Bitwise Operators
-  - [ ] Overflow Operators
-  - [ ] Precedence and Associativity
-  - [ ] Operator Methods
-  - [ ] Custom Operators
+    - [x] Intro
+    - [x] The Problem That Generics Solve
+    - [x] Generic Functions
+    - [ ] Type Parameters
+    - [ ] Naming Type Parameters
+    - [ ] Generic Types
+    - [ ] Extending a Generic Type
+    - [ ] Type Constraints
+    - [ ] Associated Types
+    - [ ] Generic Where Clauses
+    - [ ] Extensions with a Generic Where Clause
+    - [ ] Associated Types with a Generic Where Clause 
+    - [ ] Generic Subscripts
+  - [ ] Access Control
+    - [ ] Intro
+    - [ ] Modules and Source Files
+    - [ ] Access Levels
+    - [ ] Access Control Syntax
+    - [ ] Custom Types
+    - [ ] Subclassing
+    - [ ] Constants, Variables, Properties, and Subscripts 
+    - [ ] Initializers
+    - [ ] Protocols
+    - [ ] Extensions
+    - [ ] Generics
+    - [ ] Type Aliases
+  - [ ] Advanced Operators
+    - [ ] Intro
+    - [ ] Bitwise Operators
+    - [ ] Overflow Operators
+    - [ ] Precedence and Associativity
+    - [ ] Operator Methods
+    - [ ] Custom Operators
 
 Cada item dessa lista terá uma Issue. **Antes de pegar um desses items para traduzir, verifique a Issue e descubra se alguém já não está traduzindo**. Quando alguém pegar uma dessas `sessao/topico` para traduzir, terá o nome atribuído a Issue.
 
