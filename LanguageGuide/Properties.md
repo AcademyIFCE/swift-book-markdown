@@ -11,14 +11,14 @@ Além disso, você pode definir *property observers* para observar mudanças no 
 
 Você também pode usar um *property wrapper* para reusar código no *getter* e *setter* de multiplas propriedades.
 
-Stored Properties
+Propriedades Armazenadas
 -----------------
 
-In its simplest form, a stored property is a constant or variable that is stored as part of an instance of a particular class or structure. Stored properties can be either *variable stored properties* (introduced by the `var` keyword) or *constant stored properties* (introduced by the `let` keyword).
+Na sua forma mais simples, uma propriedade armazenada é uma constante ou variável que é armazenada como parte de uma instância de uma classe, ou estrutura. Propriedades armazenadas podem ser *propriedades armazenadas variáveis* (indicadas pela palavra-chave `var`) ou *propriedades armazenadas constantes* (indicadas pela palavra-chave `let`).
 
-You can provide a default value for a stored property as part of its definition, as described in [Default Property Values](Initialization.xhtml#default-property-values). You can also set and modify the initial value for a stored property during initialization. This is true even for constant stored properties, as described in [Assigning Constant Properties During Initialization](Initialization.xhtml#assigning-constant-properties-during-initialization).
+Você pode fornecer um valor *default* para uma propriedade armazenada como parte da sua definição, como descrito em [Default Property Values](Initialization.xhtml#default-property-values). Você também pode definir e modificar o valor inicial de uma propriedade armazenada durante a inicialização. Isso é verdade até mesmo para propriedades armazenadas constantes, como descrito em [Assigning Constant Properties During Initialization](Initialization.xhtml#assigning-constant-properties-during-initialization).
 
-The example below defines a structure called `FixedLengthRange`, which describes a range of integers whose range length cannot be changed after it is created:
+O exemplo abaixo define uma estrutura chamada 'FixedLengthRange', que descreve um intervalo de números inteiros cujo comprimento do intervalo não pode ser alterado após a criação:
 
 ```swift
 struct FixedLengthRange {
@@ -26,87 +26,87 @@ struct FixedLengthRange {
     let length: Int
 }
 var rangeOfThreeItems = FixedLengthRange(firstValue: 0, length: 3)
-// the range represents integer values 0, 1, and 2
+// o intervalo representa os valores inteiros 0, 1, e 2
 rangeOfThreeItems.firstValue = 6
-// the range now represents integer values 6, 7, and 8
+// o intervalo agora representa os valores inteiros 6, 7 e 8
 ```
 
-Instances of `FixedLengthRange` have a variable stored property called `firstValue` and a constant stored property called `length`. In the example above, `length` is initialized when the new range is created and cannot be changed thereafter, because it is a constant property.
+Instâncias de `FixedLengthRange` possuem uma propriedade armazenada variável chamada `firstValue` e uma propriedade armazenada constante chamada `length`. No exemplo acima, `length` é inicializada quando o novo intervalo é criado e não pode ser mudada depois, porque é uma propriedade constante.
 
-### Stored Properties of Constant Structure Instances
+### Propriedades Armazenadas de Instâncias de Estrutura Constante
 
-If you create an instance of a structure and assign that instance to a constant, you cannot modify the instance’s properties, even if they were declared as variable properties:
+Se você criar uma instância de uma estrutura e atribuir essa instância a uma constante, não poderá modificar as propriedades da instância, mesmo que elas tenham sido declaradas como propriedades variáveis:
 
 ```swift
 let rangeOfFourItems = FixedLengthRange(firstValue: 0, length: 4)
-// this range represents integer values 0, 1, 2, and 3
+// esse intervalo representa os valores inteiro 0, 1, 2 e 3
 rangeOfFourItems.firstValue = 6
-// this will report an error, even though firstValue is a variable property
+// isso vai reportar um erro, mesmo firstValue sendo uma propriedade variável
 ```
 
-Because `rangeOfFourItems` is declared as a constant (with the `let` keyword), it is not possible to change its `firstValue` property, even though `firstValue` is a variable property.
+Por causa `rangeOfFourItems` é declarada como uma constante (com a palavra-chave `let`), não é possível alterar a sua propriedade `firstValue`, mesmo `firstValue` sendo uma propriedade variável.
 
-This behavior is due to structures being *value types*. When an instance of a value type is marked as a constant, so are all of its properties.
+Esse comportamento é devido a estruturas serem *value types*. Quando uma instância de um *value type* é indicada como constante, todas as suas propriedades também são.
 
-The same is not true for classes, which are *reference types*. If you assign an instance of a reference type to a constant, you can still change that instance’s variable properties.
+O mesmo não é verdade para classes, que são *reference types*. Se você atribuir uma instância de um *reference type* a uma constante, ainda poderá alterar as propriedades variáveis dessa instância.
 
-### Lazy Stored Properties
+### Propriedades Computadas *Lazy*
 
-A *lazy stored property* is a property whose initial value is not calculated until the first time it is used. You indicate a lazy stored property by writing the `lazy` modifier before its declaration.
+Uma propriedade computada *lazy* é uma propriedade cujo valor inicial não é calculado até o seu primeiro uso. Uma propriedade computada é indicada como *lazy* escrevendo o modificador `lazy` antes da sua declaração.
 
-**Note**
+**Nota**
 
->You must always declare a lazy property as a variable (with the `var` keyword), because its initial value might not be retrieved until after instance initialization completes. Constant properties must always have a value *before* initialization completes, and therefore cannot be declared as lazy.
+> Você deve sempre declarar uma propriedade *lazy* como variável (com a palavra-chave `var`), porque o seu valor inicial pode não ser recuperado até depois que a inicialização da instância seja concluída. As propriedades constantes devem sempre ter um valor antes que a inicialização seja concluída e, portanto, não podem ser declaradas como *lazy*.
 
-Lazy properties are useful when the initial value for a property is dependent on outside factors whose values are not known until after an instance’s initialization is complete. Lazy properties are also useful when the initial value for a property requires complex or computationally expensive setup that should not be performed unless or until it is needed.
+Propriedades *lazy* são úteis quando o valor inicial de uma propriedade é dependente de fatores externos cujos valores não são conhecidos até depois que a inicialização da instância seja concluída. Propriedades *lazy* também são úteis quando o valor inicial de uma propriedade requer um *setup* inicial complexo ou computacionalmente custoso que não deve ser executado a menos, ou até que seja necessário.
 
-The example below uses a lazy stored property to avoid unnecessary initialization of a complex class. This example defines two classes called `DataImporter` and `DataManager`, neither of which is shown in full:
+O exemplo abaixo usa uma propriedade armazenada *lazy* para evitar a inicialização desnecessária de uma classe complexa. O exemplo define duas classes chamadas `DataImporter` e `DataManager`, nenhuma das quais é mostrada na íntegra:
 
 ```swift
 class DataImporter {
     /*
-    DataImporter is a class to import data from an external file.
-    The class is assumed to take a nontrivial amount of time to initialize.
+    DataImporter é uma classe para importar dados de um arquivo externo.
+    Presume-se que a classe leve um tempo não trivial para inicializar.
     */
     var filename = "data.txt"
-    // the DataImporter class would provide data importing functionality here
+    // a classe DataImporter forneceria a funcionalidade de importação de dados aqui.
 }
 
 class DataManager {
     lazy var importer = DataImporter()
     var data = [String]()
-    // the DataManager class would provide data management functionality here
+    // a classe DataManager forneceria a funcionalidade de importação de dados aqui.
 }
 
 let manager = DataManager()
 manager.data.append("Some data")
 manager.data.append("Some more data")
-// the DataImporter instance for the importer property has not yet been created
+// a instância de DataImporter para a propriedade importer ainda não foi criada.
 ```
 
-The `DataManager` class has a stored property called `data`, which is initialized with a new, empty array of `String` values. Although the rest of its functionality is not shown, the purpose of this `DataManager` class is to manage and provide access to this array of `String` data.
+A classe `DataManager` possui uma propriedade armazenada chamada `data`, que é inicializada com uma *array* vazia de valores `String`. Embora o restante da sua funcionalidade não seja mostrado, o propósito dessa classe `DataManager` é generenciar e fornecer acesso a essa *array* de `String`. 
 
-Part of the functionality of the `DataManager` class is the ability to import data from a file. This functionality is provided by the `DataImporter` class, which is assumed to take a nontrivial amount of time to initialize. This might be because a `DataImporter` instance needs to open a file and read its contents into memory when the `DataImporter` instance is initialized.
+Parte da funcionalidade da classe `DataManager` é a habilidade de importar dados de um arquivo. Essa funcionalidade é fornecida pela classe `DataImporter`, e presume-se que leva um tempo não trivial para inicializar. Isso pode ser porque a instância de `DataImporter` precisa abrir um arquivo e ler o conteúdo para a memória quando a instância de `DataImporter` é inicializada.
 
-It is possible for a `DataManager` instance to manage its data without ever importing data from a file, so there is no need to create a new `DataImporter` instance when the `DataManager` itself is created. Instead, it makes more sense to create the `DataImporter` instance if and when it is first used.
+É possível para uma instância de `DataManager` gerenciar os seus dados sem nunca importar dados de um arquivo, logo não é necessário criar uma nova instância de `DataImporter` quando o próprio `DataManager` é criado. Em vez disso, faz mais sentido criar a instância de `DataImporter` se e quando for usada pela primeira vez.
 
-Because it is marked with the `lazy` modifier, the `DataImporter` instance for the `importer` property is only created when the `importer` property is first accessed, such as when its `filename` property is queried:
+Como está marcada com o modificador `lazy`, a instância` DataImporter` da propriedade `importer` é criada apenas quando a propriedade` importer` é acessada pela primeira vez, como quando a propriedade `filename` é consultada:
 
 ```swift
 print(manager.importer.filename)
-// the DataImporter instance for the importer property has now been created
-// Prints "data.txt"
+// a instância de DataImporter para a propriedade importer agora foi criada.
+// Imprime "data.txt".
 ```
 
-**Note**
+**Nota**
 
->If a property marked with the `lazy` modifier is accessed by multiple threads simultaneously and the property has not yet been initialized, there is no guarantee that the property will be initialized only once.
+> Se uma propriedade indicada com o modificador `lazy` é acessada por múltiplas *threads* simultaneamente e a propriedade ainda não foi inicializada, não há garantia de que ela será inicializada apenas uma vez.
 
-### Stored Properties and Instance Variables
+### Propriedades Armazenadas e Variáveis de Instância
 
-If you have experience with Objective-C, you may know that it provides *two* ways to store values and references as part of a class instance. In addition to properties, you can use instance variables as a backing store for the values stored in a property.
+Se você tem experiência com a linguaguem Objective-C, pode saber que ela  fornece duas maneiras de armazenar valores e referências como parte de uma instância de classe. Além das propriedades, você pode usar variáveis de instância como um *backup* para os valores armazenados em uma propriedade.
 
-Swift unifies these concepts into a single property declaration. A Swift property does not have a corresponding instance variable, and the backing store for a property is not accessed directly. This approach avoids confusion about how the value is accessed in different contexts and simplifies the property’s declaration into a single, definitive statement. All information about the property—including its name, type, and memory management characteristics—is defined in a single location as part of the type’s definition.
+Swift unifica esses conceitos em uma única declaração de propriedade. Uma propriedade em Swift não possui uma variável de instância correspondente e o armazenamento de *backup* de uma propriedade não é acessado diretamente. Essa abordagem evita confusão sobre como o valor é acessado em diferentes contextos e simplifica a declaração da propriedade em uma única declaração definitiva. Todas as informações sobre a propriedade, incluindo nome, tipo e características de gerenciamento de memória, são definidas em um único local como parte da definição do tipo.
 
 Computed Properties
 -------------------
