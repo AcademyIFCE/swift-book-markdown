@@ -9,8 +9,6 @@ Swift fornece sua própria versão de todos os tipos fundamentais de C e Objecti
 
 Como C, Swift usa variáveis para guardar e referenciar valores com um nome identificador. Swift também faz uso extensivo de variáveis cujos valores não podem ser mudados. Estas são conhecidas como constantes, e são muito mais poderosas do que as constantes em C. Constantes são usadas em Swift para fazer o código mais seguro e de objetivo mais claro quando você trabalha com valores que não precisam mudar.
 
-In addition to familiar types, Swift introduces advanced types not found in Objective-C, such as tuples. Tuples enable you to create and pass around groupings of values. You can use a tuple to return multiple values from a function as a single compound value.
-
 Em adição aos tipos familiares, Swift introduz tipos avançados não contidos em Objective-C, como túplas. Túplas possibilita você a criar e repassar grupos de valores. Você pode usar uma túpla para retornar múltiplos valores de uma função como um único valor composto.
 
 Swift também introduz tipos opcionais, os quais podem lidar com a falta de valor. Opcionais quer dizer que "_tem_ um valor aqui e é igual a _x_" ou "_não tem_ um valor aqui". Usar opcionais é parecido com usar `nil` com ponteiros em Objective-C, mas eles funcionam para muitos tipos, não so classes. Opcionais não são apenas mais seguros quanto também são mais expressivos do que ponteiros para `nil` em Objective-C, eles estão a fonte de muitas das características mais poderosas da Swift.
