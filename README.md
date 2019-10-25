@@ -120,6 +120,16 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Subclassing
     - [ ] Overriding
     - [ ] Preventing Overrides
+  - [ ] Initialization
+    - [ ] Intro
+    - [ ] Setting Initial Values for Stored Properties
+    - [ ] Customizing Initialization
+    - [ ] Default Initializers
+    - [ ] Initializer Delegation for Value Types
+    - [ ] Class Inheritance and Initialization
+    - [ ] Failable Initializers
+    - [ ] Required Initializers
+    - [ ] Setting a Default Property Value with a Closure or Function
   - [ ] Optional Chaining
     - [ ] Intro
     - [ ] Optional Chaining as an Alternative to Forced Unwrapping
