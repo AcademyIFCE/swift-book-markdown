@@ -20,7 +20,7 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
   - [x] Generics
 - [ ] Language Guide
   - [ ] The Basics
-    - [ ] Intro
+    - [x] Intro
     - [ ] Constants and Variables
     - [ ] Floating-Point Numbers
     - [ ] Type Safety and Type Inference
