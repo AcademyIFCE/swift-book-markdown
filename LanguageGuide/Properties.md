@@ -18,7 +18,7 @@ Na sua forma mais simples, uma propriedade armazenada é uma constante ou variá
 
 Você pode fornecer um valor *default* para uma propriedade armazenada como parte da sua definição, como descrito em [Default Property Values](Initialization.xhtml#default-property-values). Você também pode definir e modificar o valor inicial de uma propriedade armazenada durante a inicialização. Isso é verdade até mesmo para propriedades armazenadas constantes, como descrito em [Assigning Constant Properties During Initialization](Initialization.xhtml#assigning-constant-properties-during-initialization).
 
-O exemplo abaixo define uma estrutura chamada 'FixedLengthRange', que descreve um intervalo de números inteiros cujo comprimento do intervalo não pode ser alterado após a criação:
+O exemplo abaixo define uma estrutura chamada `FixedLengthRange`, que descreve um intervalo de números inteiros cujo comprimento do intervalo não pode ser alterado após a criação:
 
 ```swift
 struct FixedLengthRange {
@@ -44,7 +44,7 @@ rangeOfFourItems.firstValue = 6
 // isso vai reportar um erro, mesmo firstValue sendo uma propriedade variável
 ```
 
-Por causa `rangeOfFourItems` é declarada como uma constante (com a palavra-chave `let`), não é possível alterar a sua propriedade `firstValue`, mesmo `firstValue` sendo uma propriedade variável.
+Por `rangeOfFourItems` ser declarada como uma constante (com a palavra-chave `let`), não é possível alterar a sua propriedade `firstValue`, mesmo `firstValue` sendo uma propriedade variável.
 
 Esse comportamento é devido a estruturas serem *value types*. Quando uma instância de um *value type* é indicada como constante, todas as suas propriedades também são.
 
@@ -58,7 +58,7 @@ Uma propriedade computada *lazy* é uma propriedade cujo valor inicial não é c
 
 > Você deve sempre declarar uma propriedade *lazy* como variável (com a palavra-chave `var`), porque o seu valor inicial pode não ser recuperado até depois que a inicialização da instância seja concluída. As propriedades constantes devem sempre ter um valor antes que a inicialização seja concluída e, portanto, não podem ser declaradas como *lazy*.
 
-Propriedades *lazy* são úteis quando o valor inicial de uma propriedade é dependente de fatores externos cujos valores não são conhecidos até depois que a inicialização da instância seja concluída. Propriedades *lazy* também são úteis quando o valor inicial de uma propriedade requer um *setup* inicial complexo ou computacionalmente custoso que não deve ser executado a menos, ou até que seja necessário.
+Propriedades *lazy* são úteis quando o valor inicial de uma propriedade é dependente de fatores externos cujos valores não são conhecidos até depois que a inicialização da instância seja concluída. Propriedades *lazy* também são úteis quando o valor inicial de uma propriedade requer um *setup* inicial complexo ou computacionalmente custoso que não deve ser executado a menos, ou até, que seja necessário.
 
 O exemplo abaixo usa uma propriedade armazenada *lazy* para evitar a inicialização desnecessária de uma classe complexa. O exemplo define duas classes chamadas `DataImporter` e `DataManager`, nenhuma das quais é mostrada na íntegra:
 
@@ -90,12 +90,12 @@ Parte da funcionalidade da classe `DataManager` é a habilidade de importar dado
 
 É possível para uma instância de `DataManager` gerenciar os seus dados sem nunca importar dados de um arquivo, logo não é necessário criar uma nova instância de `DataImporter` quando o próprio `DataManager` é criado. Em vez disso, faz mais sentido criar a instância de `DataImporter` se e quando for usada pela primeira vez.
 
-Como está marcada com o modificador `lazy`, a instância` DataImporter` da propriedade `importer` é criada apenas quando a propriedade` importer` é acessada pela primeira vez, como quando a propriedade `filename` é consultada:
+Como está marcada com o modificador `lazy`, a instância` DataImporter` da propriedade `importer` é criada apenas quando a propriedade ` importer` é acessada pela primeira vez, como quando a propriedade `filename` é consultada:
 
 ```swift
 print(manager.importer.filename)
-// a instância de DataImporter para a propriedade importer agora foi criada.
-// Imprime "data.txt".
+// a instância de DataImporter para a propriedade importer agora foi criada
+// Imprime "data.txt"
 ```
 
 **Nota**
