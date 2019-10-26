@@ -170,8 +170,8 @@ The `repetitions(task:)` method takes a single argument of type `() -> Void`, wh
 After defining this extension, you can call the `repetitions(task:)` method on any integer to perform a task that many number of times:
 
 ```swift 
-3.repetitions {
-print("Hello!")
+repetitions {
+    print("Hello!")
 }
 // Hello!
 // Hello!
