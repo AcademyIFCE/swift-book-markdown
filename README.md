@@ -189,6 +189,12 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Resolving Strong Reference Cycles Between Class Instances
     - [ ] Strong Reference Cycles for Closures
     - [ ] Resolving Strong Reference Cycles for Closures
+  - [ ] Memory Safety
+    - [ ] Intro
+    - [ ] Understanding Conflicting Access to Memory
+    - [ ] Conflicting Access to In-Out Parameters
+    - [ ] Conflicting Access to self in Methods
+    - [ ] Conflicting Access to Properties
   - [ ] Access Control
     - [ ] Intro
     - [ ] Modules and Source Files
