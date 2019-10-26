@@ -130,6 +130,10 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Failable Initializers
     - [ ] Required Initializers
     - [ ] Setting a Default Property Value with a Closure or Function
+  - [ ] Deinitialization
+    - [ ] Intro
+    - [ ] How Deinitialization Works
+    - [ ] Deinitializers in Action
   - [ ] Optional Chaining
     - [ ] Intro
     - [ ] Optional Chaining as an Alternative to Forced Unwrapping
