@@ -181,6 +181,11 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Extensions with a Generic Where Clause
     - [ ] Associated Types with a Generic Where Clause 
     - [ ] Generic Subscripts
+  - [ ] Opaque Types
+    - [ ] Intro
+    - [ ] The Problem That Opaque Types Solve
+    - [ ] Returning an Opaque Type
+    - [ ] Differences Between Opaque Types and Protocol Types
   - [ ] Automatic Reference Counting
     - [ ] Intro
     - [ ] How ARC Works
