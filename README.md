@@ -181,7 +181,6 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Resolving Strong Reference Cycles Between Class Instances
     - [ ] Strong Reference Cycles for Closures
     - [ ] Resolving Strong Reference Cycles for Closures
-
   - [ ] Access Control
     - [ ] Intro
     - [ ] Modules and Source Files
