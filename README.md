@@ -159,7 +159,6 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Intro
     - [ ] Nested Types in Action
     - [ ] Referring to Nested Types
->>>>>>> master
   - [ ] Extensions
     - [ ] Intro
     - [ ] Extension Syntax
