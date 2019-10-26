@@ -143,11 +143,18 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Accessing Subscripts Through Optional Chaining
     - [ ] Linking Multiple Levels of Chaining
     - [ ] Chaining on Methods with Optional Return Values
-  - [ ] Enumerations
+  - [ ] Error Handling
     - [ ] Intro
     - [ ] Representing and Throwing Errors
     - [ ] Handling Errors
     - [ ] Specifying Cleanup Actions
+  - [ ] Type Casting
+    - [ ] Intro
+    - [ ] Defining a Class Hierarchy for Type Casting
+    - [ ] Checking Type
+    - [ ] Downcasting
+    - [ ] Type Casting for Any and AnyObject
+    - [ ] Downcasting
   - [ ] Nested Types
     - [ ] Intro
     - [ ] Nested Types in Action
@@ -174,7 +181,6 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Resolving Strong Reference Cycles Between Class Instances
     - [ ] Strong Reference Cycles for Closures
     - [ ] Resolving Strong Reference Cycles for Closures
-
   - [ ] Access Control
     - [ ] Intro
     - [ ] Modules and Source Files
