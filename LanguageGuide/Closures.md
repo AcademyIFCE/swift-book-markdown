@@ -305,25 +305,25 @@ incrementByTen()
 
 >If you assign a closure to a property of a class instance, and the closure captures that instance by referring to the instance or its members, you will create a strong reference cycle between the closure and the instance. Swift uses *capture lists* to break these strong reference cycles. For more information, see [Strong Reference Cycles for Closures](AutomaticReferenceCounting.xhtml#strong-reference-cycles-for-closures).
 
-Closures Are Reference Types
+*Closures* São *Reference Types*
 ----------------------------
 
-In the example above, `incrementBySeven` and `incrementByTen` are constants, but the closures these constants refer to are still able to increment the `runningTotal` variables that they have captured. This is because functions and closures are *reference types*.
+No exemplo acima, `incrementBySeven` e `incrementByTen` são constantes, mas a *closure* para qual estas constantes apontam ainda podem incrementar a variável `runningTotal` que elas capturaram. Isto ocorre porque *closures* e funções são *reference types*. 
 
-Whenever you assign a function or a closure to a constant or a variable, you are actually setting that constant or variable to be a *reference* to the function or closure. In the example above, it is the choice of closure that `incrementByTen` *refers to* that is constant, and not the contents of the closure itself.
+Sempre quando você assinalar uma função ou *closure* para uma constante ou variável, vocês está na verdade fazendo com que a constante ou variável seja uma referência para a função/*closure*. No exemplo acima, a *closure* `incrementByTen` aponta para a constante e não para o conteúdo da *closure* em si.
 
-This also means that if you assign a closure to two different constants or variables, both of those constants or variables refer to the same closure.
+Isto também significa que se você assinalar uma *closure* para duas constantes ou variáveis diferentes, ambas vão apontar para a mesma *closure*.
 
 ```swift
 let alsoIncrementByTen = incrementByTen
 alsoIncrementByTen()
-// returns a value of 50
+// retorna o valor 50 
 
 incrementByTen()
-// returns a value of 60
+// retorna o valor 60
 ```
 
-The example above shows that calling `alsoIncrementByTen` is the same as calling `incrementByTen`. Because both of them refer to the same closure, they both increment and return the same running total.
+O exemplo acima mostra a chamada de `alsoIncrementByTen` é o mesmo que chamar `incrementByTen`. Ambas se referem a mesma *closure*, as duas incrementam e retornam o mesmo valor total.
 
 *Escaping Closures*
 -----------------
