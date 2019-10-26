@@ -305,32 +305,32 @@ incrementByTen()
 
 >If you assign a closure to a property of a class instance, and the closure captures that instance by referring to the instance or its members, you will create a strong reference cycle between the closure and the instance. Swift uses *capture lists* to break these strong reference cycles. For more information, see [Strong Reference Cycles for Closures](AutomaticReferenceCounting.xhtml#strong-reference-cycles-for-closures).
 
-Closures Are Reference Types
+*Closures* São *Reference Types*
 ----------------------------
 
-In the example above, `incrementBySeven` and `incrementByTen` are constants, but the closures these constants refer to are still able to increment the `runningTotal` variables that they have captured. This is because functions and closures are *reference types*.
+No exemplo acima, `incrementBySeven` e `incrementByTen` são constantes, mas a *closure* para qual estas constantes apontam ainda podem incrementar a variável `runningTotal` que elas capturaram. Isto ocorre porque *closures* e funções são *reference types*. 
 
-Whenever you assign a function or a closure to a constant or a variable, you are actually setting that constant or variable to be a *reference* to the function or closure. In the example above, it is the choice of closure that `incrementByTen` *refers to* that is constant, and not the contents of the closure itself.
+Sempre quando você assinalar uma função ou *closure* para uma constante ou variável, vocês está na verdade fazendo com que a constante ou variável seja uma referência para a função/*closure*. No exemplo acima, a *closure* `incrementByTen` aponta para a constante e não para o conteúdo da *closure* em si.
 
-This also means that if you assign a closure to two different constants or variables, both of those constants or variables refer to the same closure.
+Isto também significa que se você assinalar uma *closure* para duas constantes ou variáveis diferentes, ambas vão apontar para a mesma *closure*.
 
 ```swift
 let alsoIncrementByTen = incrementByTen
 alsoIncrementByTen()
-// returns a value of 50
+// retorna o valor 50 
 
 incrementByTen()
-// returns a value of 60
+// retorna o valor 60
 ```
 
-The example above shows that calling `alsoIncrementByTen` is the same as calling `incrementByTen`. Because both of them refer to the same closure, they both increment and return the same running total.
+O exemplo acima mostra a chamada de `alsoIncrementByTen` é o mesmo que chamar `incrementByTen`. Ambas se referem a mesma *closure*, as duas incrementam e retornam o mesmo valor total.
 
-Escaping Closures
+*Escaping Closures*
 -----------------
 
-A closure is said to *escape* a function when the closure is passed as an argument to the function, but is called after the function returns. When you declare a function that takes a closure as one of its parameters, you can write `@escaping` before the parameter’s type to indicate that the closure is allowed to escape.
+Diz-se que uma *closure* *escape* uma função quando ela é passada como argumento para uma função, mas é chamada apenas depois do seu retorno. Quando você declara uma função que recebe uma *closure* como um dos seus parâmetros, você escrever `@escaping` antes do tipo do parâmetro para indicar que a *closure* pode ser *escape*.
 
-One way that a closure can escape is by being stored in a variable that is defined outside the function. As an example, many functions that start an asynchronous operation take a closure argument as a completion handler. The function returns after it starts the operation, but the closure isn’t called until the operation is completed—the closure needs to escape, to be called later. For example:
+Uma vez que uma *closure* pode ser *escape* ela é armazenada que é definida fora da função. Por exemplo, várias funções que iniciam uma operação assíncrona recebe uma closure como argumento para ser executada ao fim do processamento. A função retorna depois do início da operação, mas a *closure* não é executada até a operação ser completada. A *closure* precisa ser *escape* para ser chamada posteriormente. Por exemplo:
 
 ```swift
 var completionHandlers: [() -> Void] = []
@@ -339,9 +339,9 @@ func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
 }
 ```
 
-The `someFunctionWithEscapingClosure(_:)` function takes a closure as its argument and adds it to an array that’s declared outside the function. If you didn’t mark the parameter of this function with `@escaping`, you would get a compile-time error.
+A função `someFunctionWithEscapingClosure(_:)` recebe uma *closure* como seu argumento e adiciona a um *array* declarado fora da função. Se você não marcar o parâmetro desta função como `@escaping` você terá uma erro em tempo de compilação.
 
-Marking a closure with `@escaping` means you have to refer to `self` explicitly within the closure. For example, in the code below, the closure passed to `someFunctionWithEscapingClosure(_:)` is an escaping closure, which means it needs to refer to `self` explicitly. In contrast, the closure passed to `someFunctionWithNonescapingClosure(_:)` is a nonescaping closure, which means it can refer to `self` implicitly.
+Marcar uma *closure* como `@escaping` significa que você tem que se referir a `self` de maneira explícita dentro da *closure*. Por exemplo, no código abaixo, a *closure* passada para `someFunctionWithEscapingClosure(_:)` é uma *escaping closure*, o que significa que precisa se referir a `self` explicitamente. Por outro lado, a *closure* passada para `someFunctionWithNonescapingClosure(_:)` é uma *nonescaping closure*, o que siginfica que ela pode se referir a `self` de maneira implícita.
 
 ```swift
 func someFunctionWithNonescapingClosure(closure: () -> Void) {

@@ -114,6 +114,26 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Subscript Usage
     - [ ] Subscript Options
     - [ ] Type Subscripts
+  - [ ] Inheritance
+    - [ ] Intro
+    - [ ] Defining a Base Class
+    - [ ] Subclassing
+    - [ ] Overriding
+    - [ ] Preventing Overrides
+  - [ ] Initialization
+    - [ ] Intro
+    - [ ] Setting Initial Values for Stored Properties
+    - [ ] Customizing Initialization
+    - [ ] Default Initializers
+    - [ ] Initializer Delegation for Value Types
+    - [ ] Class Inheritance and Initialization
+    - [ ] Failable Initializers
+    - [ ] Required Initializers
+    - [ ] Setting a Default Property Value with a Closure or Function
+  - [ ] Deinitialization
+    - [ ] Intro
+    - [ ] How Deinitialization Works
+    - [ ] Deinitializers in Action
   - [ ] Optional Chaining
     - [ ] Intro
     - [ ] Optional Chaining as an Alternative to Forced Unwrapping
@@ -123,6 +143,11 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Accessing Subscripts Through Optional Chaining
     - [ ] Linking Multiple Levels of Chaining
     - [ ] Chaining on Methods with Optional Return Values
+  - [ ] Enumerations
+    - [ ] Intro
+    - [ ] Representing and Throwing Errors
+    - [ ] Handling Errors
+    - [ ] Specifying Cleanup Actions
   - [ ] Nested Types
     - [ ] Intro
     - [ ] Nested Types in Action
