@@ -130,6 +130,10 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Failable Initializers
     - [ ] Required Initializers
     - [ ] Setting a Default Property Value with a Closure or Function
+  - [ ] Deinitialization
+    - [ ] Intro
+    - [ ] How Deinitialization Works
+    - [ ] Deinitializers in Action
   - [ ] Optional Chaining
     - [ ] Intro
     - [ ] Optional Chaining as an Alternative to Forced Unwrapping
@@ -167,6 +171,14 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] The Problem That Opaque Types Solve
     - [ ] Returning an Opaque Type
     - [ ] Differences Between Opaque Types and Protocol Types
+  - [ ] Automatic Reference Counting
+    - [ ] Intro
+    - [ ] How ARC Works
+    - [ ] ARC in Action
+    - [ ] Strong Reference Cycles Between Class Instances
+    - [ ] Resolving Strong Reference Cycles Between Class Instances
+    - [ ] Strong Reference Cycles for Closures
+    - [ ] Resolving Strong Reference Cycles for Closures
   - [ ] Access Control
     - [ ] Intro
     - [ ] Modules and Source Files
