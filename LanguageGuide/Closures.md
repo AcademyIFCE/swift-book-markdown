@@ -330,7 +330,7 @@ The example above shows that calling `alsoIncrementByTen` is the same as calling
 
 Diz-se que uma *closure* *escape* uma função quando ela é passada como argumento para uma função, mas é chamada apenas depois do seu retorno. Quando você declara uma função que recebe uma *closure* como um dos seus parâmetros, você escrever `@escaping` antes do tipo do parâmetro para indicar que a *closure* pode ser *escape*.
 
-Uma vez que uma *closure* pode ser *escape* ela é armazenada que é definida fora da função. Por exemplo, várias funções que iniciam uma operação assíncrona recebe uma closure como argumento para ser executada ao fim do processamento. A função retorna depois do início da operação, mas a *closure* não é executada até a operação ser completada. A *closure* precisa ser *escape* para ser chamada posteriormente. Por exemplo:
+Uma vez que uma *closure* pode ser *escape* ela é armazenada em uma variável que é definida fora da função. Por exemplo, várias funções que iniciam uma operação assíncrona recebe uma closure como argumento para ser executada ao fim do processamento. A função retorna depois do início da operação, mas a *closure* não é executada até a operação ser completada. A *closure* precisa ser *escape* para ser chamada posteriormente. Por exemplo:
 
 ```swift
 var completionHandlers: [() -> Void] = []
