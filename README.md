@@ -80,8 +80,8 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [X] Closure Expressions
     - [ ] Trailing Closures
     - [ ] Capturing Values
-    - [ ] Closures Are Reference Types
-    - [ ] Escaping Closures
+    - [X] Closures Are Reference Types
+    - [X] Escaping Closures
     - [ ] Autoclosures
   - [ ] Enumerations
     - [ ] Intro
@@ -143,15 +143,30 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Accessing Subscripts Through Optional Chaining
     - [ ] Linking Multiple Levels of Chaining
     - [ ] Chaining on Methods with Optional Return Values
-  - [ ] Enumerations
+  - [ ] Error Handling
     - [ ] Intro
     - [ ] Representing and Throwing Errors
     - [ ] Handling Errors
     - [ ] Specifying Cleanup Actions
+  - [ ] Type Casting
+    - [ ] Intro
+    - [ ] Defining a Class Hierarchy for Type Casting
+    - [ ] Checking Type
+    - [ ] Downcasting
+    - [ ] Type Casting for Any and AnyObject
+    - [ ] Downcasting
   - [ ] Nested Types
     - [ ] Intro
     - [ ] Nested Types in Action
     - [ ] Referring to Nested Types
+  - [ ] Extensions
+    - [ ] Intro
+    - [ ] Extension Syntax
+    - [ ] Computed Properties
+    - [ ] Initializers
+    - [ ] Methods
+    - [ ] Subscripts
+    - [ ] Nested Types
   - [ ] Generics
     - [x] Intro
     - [x] The Problem That Generics Solve
@@ -166,6 +181,11 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Extensions with a Generic Where Clause
     - [ ] Associated Types with a Generic Where Clause 
     - [ ] Generic Subscripts
+  - [ ] Opaque Types
+    - [ ] Intro
+    - [ ] The Problem That Opaque Types Solve
+    - [ ] Returning an Opaque Type
+    - [ ] Differences Between Opaque Types and Protocol Types
   - [ ] Automatic Reference Counting
     - [ ] Intro
     - [ ] How ARC Works
@@ -174,7 +194,12 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Resolving Strong Reference Cycles Between Class Instances
     - [ ] Strong Reference Cycles for Closures
     - [ ] Resolving Strong Reference Cycles for Closures
-
+  - [ ] Memory Safety
+    - [ ] Intro
+    - [ ] Understanding Conflicting Access to Memory
+    - [ ] Conflicting Access to In-Out Parameters
+    - [ ] Conflicting Access to self in Methods
+    - [ ] Conflicting Access to Properties
   - [ ] Access Control
     - [ ] Intro
     - [ ] Modules and Source Files
