@@ -80,8 +80,8 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [X] Closure Expressions
     - [ ] Trailing Closures
     - [ ] Capturing Values
-    - [ ] Closures Are Reference Types
-    - [ ] Escaping Closures
+    - [X] Closures Are Reference Types
+    - [X] Escaping Closures
     - [ ] Autoclosures
   - [ ] Enumerations
     - [ ] Intro
