@@ -354,7 +354,7 @@ class SnakesAndLadders: DiceGame {
                 continue gameLoop
             default:
                 square += diceRoll
-                square += board\[square\]
+                square += board[square]
             }
         }
     delegate?.gameDidEnd(self)
