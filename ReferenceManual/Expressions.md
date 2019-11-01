@@ -679,7 +679,7 @@ let interestingNumbers = ["prime": [2, 3, 5, 7, 11, 13, 17],
                           "triangular": [1, 3, 6, 10, 15, 21, 28],
                           "hexagonal": [1, 6, 15, 28, 45, 66, 91]]
 print(interestingNumbers[keyPath: \[String: [Int]].["prime"]] as Any)
-// Prints "Optional(\[2, 3, 5, 7, 11, 13, 17\])"
+// Prints "Optional([2, 3, 5, 7, 11, 13, 17])"
 print(interestingNumbers[keyPath: \[String: [Int]].["prime"]![0]])
 // Prints "2"
 print(interestingNumbers[keyPath: \[String: [Int]].["hexagonal"]!.count])
@@ -1100,7 +1100,7 @@ someDictionary["not here"]?[0] = someFunctionWithSideEffects()
 
 someDictionary["a"]?[0] = someFunctionWithSideEffects()
 // someFunctionWithSideEffects is evaluated and returns 42
-// someDictionary is now \["a": \[42, 2, 3\], "b": [10, 20]]
+// someDictionary is now ["a": [42, 2, 3], "b": [10, 20]]
 ```
 
 >**Grammar of an optional-chaining expression**
