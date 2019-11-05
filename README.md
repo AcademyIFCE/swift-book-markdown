@@ -262,6 +262,12 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Self Type
     - [ ] Type Inheritance Clause
     - [ ] Type Inference
+  - [ ] Expressions
+    - [ ] Intro
+    - [ ] Prefix Expressions
+    - [ ] Binary Expressions
+    - [ ] Primary Expressions
+    - [ ] Postfix Expressions 
 
 Cada item dessa lista terá uma Issue. **Antes de pegar um desses items para traduzir, verifique a Issue e descubra se alguém já não está traduzindo**. Quando alguém pegar uma dessas `sessao/topico` para traduzir, terá o nome atribuído a Issue.
 
