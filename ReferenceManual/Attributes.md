@@ -61,7 +61,7 @@ The remaining arguments can appear in any order and specify additional informati
 *   The `deprecated` argument indicates the first version of the specified platform or language in which the declaration was deprecated. It has the following form:
     
     ```swift
-    deprecated: version number
+    deprecated: (version number)
     ```
     
     The optional *version number* consists of one to three positive integers, separated by periods. Omitting the version number indicates that the declaration is currently deprecated, without giving any information about when the deprecation occurred. If you omit the version number, omit the colon (`:`) as well.
@@ -69,7 +69,7 @@ The remaining arguments can appear in any order and specify additional informati
 *   The `obsoleted` argument indicates the first version of the specified platform or language in which the declaration was obsoleted. When a declaration is obsoleted, it’s removed from the specified platform or language and can no longer be used. It has the following form:
     
     ```swift
-    obsoleted: version number
+    obsoleted: (version number)
     ```
     
     The *version number* consists of one to three positive integers, separated by periods.
@@ -77,7 +77,7 @@ The remaining arguments can appear in any order and specify additional informati
 *   The `message` argument provides a textual message that the compiler displays when emitting a warning or error about the use of a deprecated or obsoleted declaration. It has the following form:
     
     ```swift
-    message: message
+    message: (message)
     ```
     
     The *message* consists of a string literal.
@@ -85,7 +85,7 @@ The remaining arguments can appear in any order and specify additional informati
 *   The `renamed` argument provides a textual message that indicates the new name for a declaration that’s been renamed. The compiler displays the new name when emitting an error about the use of a renamed declaration. It has the following form:
     
     ```swift
-    renamed: new name
+    renamed: (new name)
     ```
     
     The *new name* consists of a string literal.
@@ -103,7 +103,7 @@ The remaining arguments can appear in any order and specify additional informati
         // protocol definition
     }
     
-    @available(\*, unavailable, renamed: "MyRenamedProtocol")
+    @available(*, unavailable, renamed: "MyRenamedProtocol")
     typealias MyProtocol = MyRenamedProtocol
     ```
     
@@ -112,15 +112,15 @@ You can apply multiple `available` attributes on a single declaration to specify
 
 If an `available` attribute only specifies an `introduced` argument in addition to a platform or language name argument, you can use the following shorthand syntax instead:
 
-```
-@available(platform name version number, \*)
-@available(swift version number)
+```swift
+@available((platform name) (version number), *)
+@available(swift (version number))
 ```
 
 The shorthand syntax for `available` attributes concisely expresses availability for multiple platforms. Although the two forms are functionally equivalent, the shorthand form is preferred whenever possible.
 
 ```swift
-@available(iOS 10.0, macOS 10.12, \*)
+@available(iOS 10.0, macOS 10.12, *)
 class MyClass {
     // class definition
 }
@@ -130,7 +130,7 @@ An `available` attribute that specifies availability using a Swift version numbe
 
 ```swift
 @available(swift 3.0.2)
-@available(macOS 10.12, \*)
+@available(macOS 10.12, *)
 struct MyStruct {
     // struct definition
 }
@@ -149,7 +149,7 @@ You can call an instance of a dynamically callable type as if it’s a function 
 ```swift
 @dynamicCallable
 struct TelephoneExchange {
-    func dynamicallyCall(withArguments phoneNumber: \[Int]) {
+    func dynamicallyCall(withArguments phoneNumber: [Int]) {
         if phoneNumber == [4, 1, 1] {
             print("Get Swift help on forums.swift.org")
         } else {
