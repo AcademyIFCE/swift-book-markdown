@@ -268,6 +268,16 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Binary Expressions
     - [ ] Primary Expressions
     - [ ] Postfix Expressions 
+  - [ ] Statements
+    - [ ] Intro
+    - [ ] Loop Statements
+    - [ ] Branch Statements
+    - [ ] Labeled Statement
+    - [ ] Control Transfer Statements
+    - [ ] Defer Statement
+    - [ ] Do Statement
+    - [ ] Compiler Control Statements
+    - [ ] Availability Condition
 
 Cada item dessa lista terá uma Issue. **Antes de pegar um desses items para traduzir, verifique a Issue e descubra se alguém já não está traduzindo**. Quando alguém pegar uma dessas `sessao/topico` para traduzir, terá o nome atribuído a Issue.
 
