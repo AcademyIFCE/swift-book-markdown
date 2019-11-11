@@ -278,6 +278,41 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Do Statement
     - [ ] Compiler Control Statements
     - [ ] Availability Condition
+  - [ ] Declarations
+    - [ ] Intro
+    - [ ] Top-Level Code
+    - [ ] Code Blocks
+    - [ ] Import Declaration
+    - [ ] Constant Declaration
+    - [ ] Variable Declaration
+    - [ ] Type Alias Declaration
+    - [ ] Function Declaration
+    - [ ] Enumeration Declaration
+    - [ ] Structure Declaration
+    - [ ] Class Declaration
+    - [ ] Protocol Declaration
+    - [ ] Initializer Declaration
+    - [ ] Deinitializer Declaration
+    - [ ] Extension Declaration
+    - [ ] Subscript Declaration
+    - [ ] Operator Declaration
+    - [ ] Precedence Group Declaration
+    - [ ] Declaration Modifiers
+  - [ ] Attributes
+    - [ ] Intro
+    - [ ] Declaration Attributes
+    - [ ] Type Attributes
+    - [ ] Switch Case Attributes
+  - [ ] Patterns
+    - [ ] Intro
+    - [ ] Wildcard Pattern
+    - [ ] Identifier Pattern
+    - [ ] Value-Binding Pattern
+    - [ ] Tuple Pattern
+    - [ ] Enumeration Case Pattern
+    - [ ] Optional Pattern
+    - [ ] Type-Casting Patterns
+    - [ ] Expression Pattern
 
 Cada item dessa lista terá uma Issue. **Antes de pegar um desses items para traduzir, verifique a Issue e descubra se alguém já não está traduzindo**. Quando alguém pegar uma dessas `sessao/topico` para traduzir, terá o nome atribuído a Issue.
 
