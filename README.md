@@ -268,6 +268,16 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Binary Expressions
     - [ ] Primary Expressions
     - [ ] Postfix Expressions 
+  - [ ] Statements
+    - [ ] Intro
+    - [ ] Loop Statements
+    - [ ] Branch Statements
+    - [ ] Labeled Statement
+    - [ ] Control Transfer Statements
+    - [ ] Defer Statement
+    - [ ] Do Statement
+    - [ ] Compiler Control Statements
+    - [ ] Availability Condition
   - [ ] Declarations
     - [ ] Intro
     - [ ] Top-Level Code
