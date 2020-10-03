@@ -108,10 +108,10 @@ Se você tem experiência com a linguaguem Objective-C, pode saber que ela  forn
 
 Swift unifica esses conceitos em uma única declaração de propriedade. Uma propriedade em Swift não possui uma variável de instância correspondente e o armazenamento de *backup* de uma propriedade não é acessado diretamente. Essa abordagem evita confusão sobre como o valor é acessado em diferentes contextos e simplifica a declaração da propriedade em uma única declaração definitiva. Todas as informações sobre a propriedade, incluindo nome, tipo e características de gerenciamento de memória, são definidas em um único local como parte da definição do tipo.
 
-Computed Properties
+Propriedades Computadas
 -------------------
 
-In addition to stored properties, classes, structures, and enumerations can define *computed properties*, which do not actually store a value. Instead, they provide a getter and an optional setter to retrieve and set other properties and values indirectly.
+Além de propriedades armazenadas as classes, structures e enumerados podem definir *propriedades computadas*, as quais não armazenam um valor. Ao invés disso, elas fornecem um `getter` e um `setter` opcional para recuperar e atributir valores para outras propriedades indiretamente.  
 
 ```swift
 struct Point {
@@ -139,26 +139,26 @@ var square = Rect(origin: Point(x: 0.0, y: 0.0),
 size: Size(width: 10.0, height: 10.0))
 let initialSquareCenter = square.center
 square.center = Point(x: 15.0, y: 15.0)
-print("square.origin is now at (\(square.origin.x), \(square.origin.y))")
-// Prints "square.origin is now at (10.0, 10.0)"
+print("square.origin mudou para (\(square.origin.x), \(square.origin.y))")
+// Prints "square.origin mudou para (10.0, 10.0)"
 ```
 
-This example defines three structures for working with geometric shapes:
+Este exemplo define três  estruturas que manipulam formas geométricas:
 
-*   `Point` encapsulates the x- and y-coordinate of a point.
+*   `Point` encapsula a coordenada x e y de um objeto `Point`.
     
-*   `Size` encapsulates a `width` and a `height`.
+*   `Size` encapsula `width` e `height`.
     
-*   `Rect` defines a rectangle by an origin point and a size.
+*   `Rect` define uma retangulo usando um ponto de origem e o tamanho.
     
 
-The `Rect` structure also provides a computed property called `center`. The current center position of a `Rect` can always be determined from its `origin` and `size`, and so you don’t need to store the center point as an explicit `Point` value. Instead, `Rect` defines a custom getter and setter for a computed variable called `center`, to enable you to work with the rectangle’s `center` as if it were a real stored property.
+A estrutura `Rect` também fornece uma propriedade computada chamada `center`. O centro de um `Rect` é determinado usando os valores do seu `origin` e `size`, por conta disto você não precisa armazenar um `Point` como valor. Ao invés disto, o `Rect` define um `getter` e `setter` customizado de uma variável computada chamada `center`, desta forma você pode utilizar o valor de `center` de um retangulo como se ela fosse uma propriedade armazenada.   
 
-The example above creates a new `Rect` variable called `square`. The `square` variable is initialized with an origin point of `(0, 0)`, and a width and height of `10`. This square is represented by the blue square in the diagram below.
+No exemplo acima, cria-se uma nova variável chamada `square` do time `Rect`. A variável `square` é inicializada com um ponto de origem com o valor de `(0, 0)` e largura e altura de `10`. Este quadrado é representado pelo quadrado azul no diagrama abaixo.
 
-The `square` variable’s `center` property is then accessed through dot syntax (`square.center`), which causes the getter for `center` to be called, to retrieve the current property value. Rather than returning an existing value, the getter actually calculates and returns a new `Point` to represent the center of the square. As can be seen above, the getter correctly returns a center point of `(5, 5)`.
+A propriedade `center` da variável `square` é acessada através da sintaxe de ponto (`square.center`), isto faz com que o `getter` do `center` seja chamada para retornar o valor atual da propriedade. Apesar de returnar um valor existente, o `getter` na verdade calcula e retorna um novo `Point` para representar o centro do quadrado. Como pode ser visto no exemplo acima, o `getter` retorna corretamente o o valor do centro como `(5, 5).`
 
-The `center` property is then set to a new value of `(15, 15)`, which moves the square up and to the right, to the new position shown by the orange square in the diagram below. Setting the `center` property calls the setter for `center`, which modifies the `x` and `y` values of the stored `origin` property, and moves the square to its new position.
+Então é atribuido um novo valor de `(15, 15)` para a propriedade `center` e isto move o quadrado para direita e para cima , a nova posição é representada pelo quadrado laranja no diagram abaixo. A atribuição de um valor para `center` chama o `setter` de `center`, o qual modifica os valores de `x` e `y` da propriedade amarzenada `origin` e move o quadrado para sua nova posição. 
 
 ![../_images/computedProperties_2x.png](../_images/computedProperties_2x.png)
 
