@@ -177,6 +177,7 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Protocols as Types
     - [ ] Delegation
     - [ ] Adding Protocol Conformance with an Extension
+    - [ ] Adopting a Protocol Using a Synthesized Implementation
     - [ ] Collections of Protocol Types
     - [ ] Protocol Inheritance
     - [ ] Class-Only Protocols
