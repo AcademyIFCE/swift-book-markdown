@@ -162,9 +162,9 @@ Então é atribuido um novo valor de `(15, 15)` para a propriedade `center` e is
 
 ![../_images/computedProperties_2x.png](../_images/computedProperties_2x.png)
 
-### Shorthand Setter Declaration
+### Declaração Abreviada de `Setter`
 
-If a computed property’s setter doesn’t define a name for the new value to be set, a default name of `newValue` is used. Here’s an alternative version of the `Rect` structure that takes advantage of this shorthand notation:
+Se um `setter` de uma propriedade computada não definir o nome para o novo valor que será atribuido o nome `newValue` será usado como padrão. Aqui temos uma versão alternativa da estrutura `Rect` que utiliza essa notação abreviada: 
 
 ```swift
 struct AlternativeRect {
