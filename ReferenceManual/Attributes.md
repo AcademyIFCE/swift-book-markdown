@@ -284,6 +284,27 @@ Inlinable code can interact with `public` symbols declared in any module, and it
 
 This attribute can’t be applied to declarations that are nested inside functions or to `fileprivate` or `private` declarations. Functions and closures that are defined inside an inlinable function are implicitly inlinable, even though they can’t be marked with this attribute.
 
+### main
+
+Apply this attribute to a structure, class, or enumeration declaration to indicate that it contains the top-level entry point for program flow. The type must provide a `main` type function that doesn’t take any arguments and returns `Void`. For example:
+
+```swift
+@main
+struct MyTopLevel {
+    static func main() {
+        // Top-level code goes here
+    }
+}
+```
+
+Another way to describe the requirements of the `main` attribute is that the type you write this attribute on must satisfy the same requirements as types that conform to the following hypothetical protocol:`
+
+```swift
+protocol ProvidesMain {
+    static func main() throws
+}
+```
+
 ### nonobjc
 
 Apply this attribute to a method, property, subscript, or initializer declaration to suppress an implicit `objc` attribute. The `nonobjc` attribute tells the compiler to make the declaration unavailable in Objective-C code, even though it’s possible to represent it in Objective-C.
