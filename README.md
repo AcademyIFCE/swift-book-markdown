@@ -197,6 +197,7 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [ ] Associated Types
     - [ ] Generic Where Clauses
     - [ ] Extensions with a Generic Where Clause
+    - [ ] Contextual Where Clauses
     - [ ] Associated Types with a Generic Where Clause 
     - [ ] Generic Subscripts
   - [ ] Opaque Types
