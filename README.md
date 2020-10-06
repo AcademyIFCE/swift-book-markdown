@@ -22,7 +22,7 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
   - [ ] The Basics
     - [x] Intro
     - [x] Constants and Variables
-    - [ ] Floating-Point Numbers
+    - [x] Floating-Point Numbers
     - [ ] Type Safety and Type Inference
     - [ ] Numeric Type Conversion
     - [ ] Assertions and Preconditions

@@ -172,61 +172,58 @@ let cat = "🐱"; print(cat)
 
 Integers
 --------
+_Intengers_ são números inteiros sem componentes fracionais, tais como `42` e `-23`. Integers são do tipo _signed_ (positivo, zero ou negativo) ou _unsigned_ (positivo ou zero).
 
-_Integers_ are whole numbers with no fractional component, such as `42` and `-23`. Integers are either _signed_ (positive, zero, or negative) or _unsigned_ (positive or zero).
+Swift fornece intengers _signed_ e _unsigned_ em formato de 8, 16, 32 e 64 bits. Esses integers seguem uma convenção de nome similar ao C, na qual o integer _unsigned_ de 8-bits é do tipo `UInt8`, e um integer _signed_ de 32-bits é do tipo `UInt32`. Como todos os tipos em Swift, esses tipos de integers tem seus nomes capitalizados. 
 
-Swift provides signed and unsigned integers in 8, 16, 32, and 64 bit forms. These integers follow a naming convention similar to C, in that an 8-bit unsigned integer is of type `UInt8`, and a 32-bit signed integer is of type `Int32`. Like all types in Swift, these integer types have capitalized names.
+### Limites dos Integer
 
-### Integer Bounds
-
-You can access the minimum and maximum values of each integer type with its `min` and `max` properties:
+Você pode acessar o valor mínimo e máximo de cada tipo de intenger através das propriedades `min` e `max` dele:
 
 ```swift
 let minValue = UInt8.min // minValue is equal to 0, and is of type UInt8
 let maxValue = UInt8.max // maxValue is equal to 255, and is of type UInt8
 ```
 
-The values of these properties are of the appropriate-sized number type (such as `UInt8` in the example above) and can therefore be used in expressions alongside other values of the same type.
+Os valores dessas propriedades são do tamanho apropriado do tipo de número(tal como `UInt8`no exemplo acima) e por isso podem ser usadas em expressões juntos com valores do mesmo tipo.
 
 ### Int
 
-In most cases, you don’t need to pick a specific size of integer to use in your code. Swift provides an additional integer type, `Int`, which has the same size as the current platform’s native word size:
+Na maioria dos casos, você não precisa pegar um tipo especifíco de tamanho de inteiro no seu código. Swift fornece um tipo adicional de integer o `Int`, que tem o mesmo tamanho nativo da palavra da plataforma atual:
 
-*   On a 32-bit platform, `Int` is the same size as `Int32`.
+*   Em uma plataforma 32-bit, `Int` tem o mesmo tamanho que o `Int32`.
     
-*   On a 64-bit platform, `Int` is the same size as `Int64`.
+*   Em uma plataforma 64-bit, `Int` tem o mesmo tamanho que o `Int64`.
     
 
-Unless you need to work with a specific size of integer, always use `Int` for integer values in your code. This aids code consistency and interoperability. Even on 32-bit platforms, `Int` can store any value between `-2,147,483,648` and `2,147,483,647`, and is large enough for many integer ranges.
+A não ser que você precise trabalhar com um tipo específico de intenger, sempre use `Int`para valores integers no seu código. Isso adiciona consistência e interoperabilidade. Até mesmo em plataformas 32-bit, `Int`consegue armazenar valores entre `-2,147,483,648` e `2,147,483,647`, e é grande o suficiente para um grande intervalo de inteiros. 
 
 ### UInt
 
-Swift also provides an unsigned integer type, `UInt`, which has the same size as the current platform’s native word size:
+Swift também fornece um tipo intenger _unsigned_, `UInt`, que tem o mesmo tamanho nativo da palavra da plataforma atual:
 
-*   On a 32-bit platform, `UInt` is the same size as `UInt32`.
+*   Em uma plataforma 32-bit, `Int` tem o mesmo tamanho que o `UInt32`.
     
-*   On a 64-bit platform, `UInt` is the same size as `UInt64`.
-    
+*   Em uma plataforma 64-bit, `Int` tem o mesmo tamanho que o `UInt64`.    
 
-**Note**
+**Nota**
 
-> Use `UInt` only when you specifically need an unsigned integer type with the same size as the platform’s native word size. If this isn’t the case, `Int` is preferred, even when the values to be stored are known to be nonnegative. A consistent use of `Int` for integer values aids code interoperability, avoids the need to convert between different number types, and matches integer type inference, as described in [Type Safety and Type Inference](#ID322).
+> Use `UInt` apenas quando você precisa especificamente de um tipo integer unsigned que tenha o mesmo tamanho nativo da palavra da plataforma atual. Se esse não for o caso `Int` é preferido, mesmo quando os valores a serem armazenados são não negativos. O uso consistente de `Int` para valores inteiros ajuda na interoperabilidade do código, evita a necessidade de conversão entre diferentes tipos de números, e combina com a inferência de tipo de inteiros, como descrito em   [Segurança e Inferência de Tipo](#ID322).
 
-Floating-Point Numbers
+Números de Ponto Flutuante
 ----------------------
+Números de ponto flutuante são números com um componente fracional, tais como `3.14159`, `0.1`, e `-273.15`. 
 
-_Floating-point numbers_ are numbers with a fractional component, such as `3.14159`, `0.1`, and `-273.15`.
+tipos de ponto flutuante podem representar um intervalo bem maior do que tipos integer, e podem aramazenar valores muito maiores ou menores do que o que pode ser armazenado em um `Int`. Swift fornece dois tipos de números de ponto flutuante _signed_. 
 
-Floating-point types can represent a much wider range of values than integer types, and can store numbers that are much larger or smaller than can be stored in an `Int`. Swift provides two signed floating-point number types:
-
-*   `Double` represents a 64-bit floating-point number.
+*   `Double` representa um número de ponto flutuante de  64-bit.
     
-*   `Float` represents a 32-bit floating-point number.
+*   `Float` representa um número de ponto flutuante de  32-bit.
     
 
-Note
+Nota
 
-`Double` has a precision of at least 15 decimal digits, whereas the precision of `Float` can be as little as 6 decimal digits. The appropriate floating-point type to use depends on the nature and range of values you need to work with in your code. In situations where either type would be appropriate, `Double` is preferred.
+`Double` possuí uma precisão ed 15 dígitos decimais, enquanto a precisão de `Float` pode ser tão pequena quanto 6 dígitos decimais. O tipo apropriado de ponto flutuante depende da natureza do intervalo de valores que você precisa trabalhar no seu código. Em situações nas quais qualquer um dos tipos é apropriado `Double`é preferido.
 
 Type Safety and Type Inference
 ------------------------------
