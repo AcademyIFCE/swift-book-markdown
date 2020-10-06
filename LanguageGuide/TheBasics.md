@@ -18,11 +18,11 @@ Swift é uma linguagem de _tipo-seguro_, o que quer dizer que a linguagem ajuda 
 Constants and Variables
 -----------------------
 
-Constantes e variáveis associam um nome ( tal qual `maximumNumberOfLoginAttempts` or `welcomeMessage` ) com um valor de um tipo específico ( tal qual o número `10` ou a string `"Hello"`). O valor de uma _constant_ não pode ser modificado uma vez que é atribuído, enquanto uma _variável_ pode ter um valor diferente atribuído no futuro.
+Constantes e variáveis associam um nome ( tal qual `maximumNumberOfLoginAttempts` ou `welcomeMessage` ) com um valor de um tipo específico ( tal qual o número `10` ou a string `"Hello"`). O valor de uma _constant_ não pode ser modificado uma vez que é atribuído, enquanto uma _variável_ pode ter um valor diferente atribuído no futuro.
 
 ### Declarando Constantes e Variáveis
 
-Constantes e variáveis devem ser declaradas antes de serem utilizadas. Você declara constantes com a palavra chave `let` e variáveis com a palavra chave `var`. Aqui um exemplo de como constantes e variáveis pode ser utilizadas para guardar o número de tentativas de login que um usuário realizou:
+Constantes e variáveis devem ser declaradas antes de serem utilizadas. Você declara constantes com a palavra chave `let` e variáveis com a palavra chave `var`. Aqui um exemplo de como constantes e variáveis podem ser utilizadas para guardar o número de tentativas de login que um usuário realizou:
 
 ```swift
 let maximumNumberOfLoginAttempts = 10
@@ -32,7 +32,7 @@ Esse código pode ser lido como:
 
 "Declara uma nova constante chamada `maximumNumberOfLoginAttempts`, atribuindo a ela o valor de `10`. Então, declara uma nova variável chamada `currentLoginAttempt`, atribuindo a ela um valor inicial de `0`."
 
-Nesse exemplo, o número máximo de tentivas de login é declarado como uma constante, porque o valor máximo nunca muda. O número atual de tentaivas de login é declarado como uma váriavel, porque esse valor deve ser incrementado toda vez após uma tentativa falha de login.
+Nesse exemplo, o número máximo de tentativas de login é declarado como uma constante, porque o valor máximo nunca muda. O número atual de tentaivas de login é declarado como uma váriavel, porque esse valor deve ser incrementado toda vez após uma tentativa falha de login.
 
 Você pode declarar múltiplas constantes ou múltiplas variáveis em uma única linha, separada por vírgulas:
 
@@ -42,7 +42,7 @@ var x = 0.0, y = 0.0, z = 0.0
 
 **Nota**
 
-> Se um valor armazenado no seu código não for ser modificado, sempre declare ele como uma constante, com a palavra chave `let`. Use variáveis apenas para armazena valores que precisam ter a capacidade de mudar.
+> Se um valor armazenado no seu código não for ser modificado, sempre declare ele como uma constante, com a palavra chave `let`. Use variáveis apenas para armazenar valores que precisam ter a capacidade de mudar.
 
 ### Anotação de tipos
 
@@ -78,7 +78,7 @@ var red, green, blue: Double
 
 ### Nomeando Constantes e Variáveis
 
-Nomes de constates e variávels pode conter quase todos os caracteres possíveis, incluindo caracteres Unicode:
+Nomes de constantes e variávels pode conter quase todos os caracteres possíveis, incluindo caracteres Unicode:
 
 ```swift
 let π = 3.14159
@@ -92,7 +92,7 @@ Uma vez que você declara uma constante ou variável de um certo tipo, você nã
 
 **Nota**
 
-> Se você precisar dar a uma constante ou variável o mesmo nome de uma palavra reservad do Swift, encapsule o nome com backticks (`` ` ``) quando utilizar ela como nome. Porém, evite usar palavras chaves como nome a não ser que você absolutamente não tenha outra escolha.
+> Se você precisar dar a uma constante ou variável o mesmo nome de uma palavra reservada do Swift, encapsule o nome com backticks (`` ` ``) quando utilizar ela como nome. Porém, evite usar palavras chaves como nome a não ser que você absolutamente não tenha outra escolha.
 
 Você pode modificar os valores de uma variável existente para um outro valor de um tipo compatível. Nesse exemplo, o valor de `friendlyWelcome`é modificado de  `"Hello!"` para `"Bonjour!"`:  
 
