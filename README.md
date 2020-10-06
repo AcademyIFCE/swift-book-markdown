@@ -21,7 +21,7 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
 - [ ] Language Guide
   - [ ] The Basics
     - [x] Intro
-    - [ ] Constants and Variables
+    - [x] Constants and Variables
     - [ ] Floating-Point Numbers
     - [ ] Type Safety and Type Inference
     - [ ] Numeric Type Conversion
