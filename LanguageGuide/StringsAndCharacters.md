@@ -1,16 +1,15 @@
-Strings and Characters
+Strings e Caracteres
 ======================
+Uma _string_ é uma sequência de caracteres, como por exemplo: `"hello, world"` ou `"albatross"`. Strings no Swift são representadas pelo tipo `String`. Os conteúdos de uma `String` podem ser acessados de várias maneiras, inclusive como uma lista de valores do tipo `Character`.
 
-A _string_ is a series of characters, such as `"hello, world"` or `"albatross"`. Swift strings are represented by the `String` type. The contents of a `String` can be accessed in various ways, including as a collection of `Character` values.
+Os tipos `String` e `Character` do Swift fornecem uma maneira rápida, compatível com Unicode de trabalhar com textos no seu código. A sintax para criação e manipulação de uma string é descomplicada e legível, com uma sintax literal de string que é similar à do C. Concatenação de strings é tão simples quanto combinar duas strings com o operador `+`, e a mutabilidade de uma string é gerenciada pela escolha entre constante ou variável, assim como qualquer outro valor em Swift. Você também pode usar strings para a inserção de constantes, variáveis, literais e expressões formando strings maiores, em um processo conhecido como interpolação de strings. Isso facilita a criação de valores de string personalizados para exibição, armazenamento e "prints".
 
-Swift’s `String` and `Character` types provide a fast, Unicode-compliant way to work with text in your code. The syntax for string creation and manipulation is lightweight and readable, with a string literal syntax that is similar to C. String concatenation is as simple as combining two strings with the `+` operator, and string mutability is managed by choosing between a constant or a variable, just like any other value in Swift. You can also use strings to insert constants, variables, literals, and expressions into longer strings, in a process known as string interpolation. This makes it easy to create custom string values for display, storage, and printing.
+Apesar da simplicidade da sintax, o tipo `String` do Swift é uma implementação rápida e moderna de string. Toda string é composta por caracteres Unicode de codificação independente e fornece suporte para acessar esses caracteres com várias representações Unicode.
 
-Despite this simplicity of syntax, Swift’s `String` type is a fast, modern string implementation. Every string is composed of encoding-independent Unicode characters, and provides support for accessing those characters in various Unicode representations.
+**Nota**
 
-**Note**
-
-> Swift’s `String` type is bridged with Foundation’s `NSString` class. Foundation also extends `String` to expose methods defined by `NSString`. This means, if you import Foundation, you can access those `NSString` methods on `String` without casting. <br/>
-For more information about using `String` with Foundation and Cocoa, see [Bridging Between String and NSString](https://developer.apple.com/documentation/swift/string#2919514).
+> O tipo `String` do swift é ligado com a classe `NSString` do Foundation. Foundation também estende `String` para expor métodos definidos pelo `NSString`. Isso significa, se você importar o Foundation, poderá acessar esses métodos de `NSString` com `String` sem "casting".
+Para mais informações sobre o uso de `String` com Foundation e Cocoa, veja [Bridging Between String and NSString](https://developer.apple.com/documentation/swift/string#2919514).
 
 String Literals
 ---------------
