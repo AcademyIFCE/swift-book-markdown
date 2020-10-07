@@ -38,7 +38,7 @@ O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  
     - [x] Range Operators
     - [x] Logical Operators
   - [ ] Strings And Characters
-    - [ ] Intro
+    - [x] Intro
     - [ ] String Literals
     - [ ] Initializing an Empty String
     - [ ] String Mutability
