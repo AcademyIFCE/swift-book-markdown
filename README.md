@@ -6,37 +6,40 @@ Esse projeto tem como objetivo traduzir e disponibilizar gratuitamente em portug
 
 O livro em inglês está lentamente sendo migrado para o formato de *Markdown*  antes de ser traduzido. A seguintes *Sessões* já estão em formato *Markdown* e já podem ser traduzidas através de Pull Requests:
 
-- [x] About Swift
-- [x] Version Compatibility
-- [x] A Swift Tour
-  - [x] Intro
-  - [x] Simple Values
-  - [x] Control Flow
-  - [x] Functions and Closures
-  - [x] Objects and Classes
-  - [x] Enumerations and Structures
-  - [x] Protocols and Extensions
-  - [x] Error Handling
-  - [x] Generics
+- [x] [About Swift](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/AboutSwift.md)
+- [x] [Version Compatibility](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/Compatibility.md)
+- [x] [A Swift Tour](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/SwiftTour.md)
+  - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/SwiftTour.md#uma-tour-pela-swift)
+  - [x] [Simple Values](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/SwiftTour.md#valores-simples)
+  - [x] [Control Flow](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/SwiftTour.md#controle-de-fluxo)
+  - [x] [Functions and Closures](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/SwiftTour.md#fun%C3%A7%C3%B5es-e-closures)
+  - [x] [Objects and Classes](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/SwiftTour.md#objetos-e-classes)
+  - [x] [Enumerations and Structures](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/SwiftTour.md#enumerations-and-structures)
+  - [x] [Protocols and Extensions](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/SwiftTour.md#protocolos-e-extens%C3%B5es)
+  - [x] [Error Handling](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/SwiftTour.md#tratamento-de-erros)
+  - [x] [Generics](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/SwiftTour.md#generics)
 - [ ] Language Guide
-  - [ ] The Basics
-    - [x] Intro
-    - [x] Constants and Variables
-    - [x] Floating-Point Numbers
+  - [ ] [The Basics](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#the-basics)
+    - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#the-basics)
+    - [x] [Constants and Variables](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#constants-and-variables)
+    - [x] [Comments](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#coment%C3%A1rios)
+    - [x] [Semicolons](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#ponto-e-v%C3%ADrgula)
+    - [x] [Integers](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#integers)
+    - [x] [Floating-Point Numbers](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#n%C3%BAmeros-de-ponto-flutuante)
     - [ ] Type Safety and Type Inference
     - [ ] Numeric Type Conversion
     - [ ] Assertions and Preconditions
-  - [x] Basic Operators
-    - [x] Intro
-    - [x] Terminology
-    - [x] Assignment Operator
-    - [x] Arithmetic Operators
-    - [x] Compound Assignment Operators
-    - [x] Comparison Operators
-    - [x] Ternary Conditional Operator
-    - [x] Nil-Coalescing Operator
-    - [x] Range Operators
-    - [x] Logical Operators
+  - [x] [Basic Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md)
+    - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operadores-b%C3%A1sicos)
+    - [x] [Terminology](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#terminologia)
+    - [x] [Assignment Operator](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operador-de-atribui%C3%A7%C3%A3o)
+    - [x] [Arithmetic Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operadores-aritm%C3%A9ticos)
+    - [x] [Compound Assignment Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operadores-compostos-de-atribui%C3%A7%C3%A3o)
+    - [x] [Comparison Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operadores-de-compara%C3%A7%C3%A3o)
+    - [x] [Ternary Conditional Operator](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operador-tern%C3%A1rio-condicional)
+    - [x] [Nil-Coalescing Operator](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operador-nil-coalescing)
+    - [x] [Range Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operadores-de-intervalo)
+    - [x] [Logical Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operadores-l%C3%B3gicos)
   - [ ] Strings And Characters
     - [x] Intro
     - [ ] String Literals
