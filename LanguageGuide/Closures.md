@@ -143,7 +143,7 @@ Para mais sobre métodos operadores, veja [Métodos Operadores](AdvancedOperator
 *Trailing Closures*
 -----------------
 
-Se você precisa passar uma expressão *closure* como último argumento de uma função e esta expressão for grande, pode ser útil escrever ela como uma *trailing closure*. Uma *trailing closure* é escrita após os parênteses da chamada da função, apesar disso, a expressão continua pertencendo a função. Quando você utiliza a sintaxe *trailing closure*, você não escreve o nome externo que identifica a *closure* na chamada da função.
+Se você precisa passar uma expressão *closure* como último argumento de uma função e esta expressão for grande, pode ser útil escrever ela como uma *trailing closure*. Uma *trailing closure* é escrita após os parênteses da chamada da função, apesar disso, a expressão continua pertencendo a função. Quando você utiliza a sintaxe *trailing closure*, você não escreve o nome externo que identifica a *closure* na chamada da função. Uma chamada de função pode incluir vários *trailing closures*; no entanto, os primeiros exemplos abaixo usam uma única *trailing closure*
 
 
 ```swift
@@ -176,7 +176,7 @@ Se a expressão *closure* é o único argumento do método e você utiliza *trai
 reversedNames = names.sorted { $0 > $1 }
 ```
 
-*Trailing closures* é muito útil quando a *closure* é grande e não é possível escrever em uma única expressão. Por exemplo, O tipo `Array` em Swift possui o método `map(_:)`, o qual possui uma *closure* como único argumento. A *closure* é chamada uma vez para cada item dentro do *array* e retorna um novo valor (possivelmente até mesmo de outro tipo). As transformações e o tipo retornado é especificado pelo corpo da *closure*. 
+*Trailing closures* é muito útil quando a *closure* é grande e não é possível escrever em uma única expressão. Por exemplo, O tipo `Array` em Swift possui o método `map(_:)`, o qual possui uma *closure* como único argumento. A *closure* é chamada uma vez para cada item dentro do *array* e retorna um novo valor (possivelmente até mesmo de outro tipo). Você especifica a natureza do mapeamento e o tipo do valor que será retornado escrevendo o código na *closure* que você for passar no método `map(_:)`.
 
 Depois de aplicar as transformações fornecidas pela *closure* em cada elemento do *array*, o método `map(_:)` retorna um novo *array* contendo todos os novos elementos transformados na mesma ordem correspondente ao seus valores originais. 
 
@@ -218,13 +218,39 @@ A expressão *closure* constrói uma *string* chamada `output` cada vez que ela 
 
 >A chamada do *subscript* do dicionário `digitNames` possui um (`!`) porquê o *subscript* do dicionário retorna um valor *optional* para indicar que o valor daquela chave pode não existir. No exemplo acima é garantido que `number % 10` sempre irá gerar uma chave válida para o dicionário `digitNames`, então o ponto de exclamação é utilizado para realizar um *force-unwrap* do valor daquela chave.
 
-A *string* recebida do dicionário `digitNames` é adicionada no *início* de `output`, construindo a versão *string* do número ao contrário. (A expressão `number % 10` fornece os valores `6` para `16`, `8` para `58` e `0` para `50`).
+A *string* recebida do dicionário `digitNames` é adicionada no *início* de `output`, construindo a versão *string* do número ao contrário. (A expressão `number % 10` fornece os valores `6` para `16`, `8` para `58` e `0` para `510`).
 
-A variável `number` é então dividida por `10`. Como ela é do tipo inteiro será arredondada para baixo durante a divisão, então `16` se torna `1`, `58` se torna `5` e etc.
+A variável `number` é então dividida por `10`. Como ela é do tipo inteiro será arredondada para baixo durante a divisão, então `16` se torna `1`, `58` se torna `5` e `510` se torna `51`.
 
 O processo é repetido até `number` ficar igual a `0`, neste ponto a *string* `output` é retornada pela *closure* e adicionada ao *array* retornado pelo método `map(_:)`.
 
 O uso da sintaxe *trailing closure* no exemplo citado encapsula a funcionalidade da *closure* imediatamente depois da função a qual a *closure* atua. 
+
+Se uma função aceita várias *closures*,   if a function takes multiple closures, you omit the argument label for the first trailing closure and you label the remaining trailing closures. For example, the function below loads a picture for a photo gallery:,você omite a *label* do argumento da primeira *closure* mais à direita e deixa a *label* das *closures* à direita restantes. Por exemplo, a função abaixo carrega uma imagem para uma galeria de fotos:
+
+```swift
+func loadPicture(from server: Server, completion: (Picture) -> Void, onFailure: () -> Void) {
+    if let picture = download("photo.jpg", from: server) {
+        completion(picture)
+    } else {
+        onFailure()
+    }
+}
+```
+
+Quando você chama essa função para carregar uma imagem, você precisa fornecer duas *closures*. A primeira *closure*  é uma *completion handler* que exibe uma imagem após um download bem-sucedido. A segunda *closure* é um *error handler* que exibe um erro para o usuário.
+
+```swift
+loadPicture(from: someServer) { picture in
+    someView.currentPicture = picture
+} onFailure: {
+    print("Não foi possível baixar a próxima imagem.")
+}
+```
+
+In this example, the `loadPicture(from:completion:onFailure:)` function dispatches its network task into the background, and calls one of the two completion handlers when the network task finishes. Writing the function this way lets you cleanly separate the code that’s responsible for handling a network failure from the code that updates the user interface after a successful download, instead of using just one closure that handles both circumstances.
+
+Neste exemplo, a função `loadPicture (from: completed: onFailure:)` despacha sua tarefa de *network* para o *background* e chama uma das duas *completion handlers* essa tarefa de *network* termina. Escrever a função dessa forma permite separar claramente o código responsável por lidar com uma falha de *network* do código que atualiza a interface do usuário após um *download* bem-sucedido, em vez de usar apenas uma *closure* para lidar com essas duas situações.
 
 Capturing Values
 ----------------
