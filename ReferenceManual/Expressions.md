@@ -852,12 +852,16 @@ If the function definition includes names for its parameters, the function call 
 function name(argument name 1: argument value 1, argument name 2: argument value 2)
 ```
 
-A function call expression can include a trailing closure in the form of a closure expression immediately after the closing parenthesis. The trailing closure is understood as an argument to the function, added after the last parenthesized argument. The following function calls are equivalent:
+A function call expression can include trailing closures in the form of closure expressions immediately after the closing parenthesis. The trailing closures are understood as arguments to the function, added after the last parenthesized argument. The first closure expression is unlabeled; any additional closure expressions are preceded by their argument labels. The example below shows the equivalent version of function calls that do and don’t use trailing closure syntax:
 
 ```swift
 // someFunction takes an integer and a closure as its arguments
 someFunction(x: x, f: {$0 == 13})
 someFunction(x: x) {$0 == 13}
+
+// anotherFunction takes an integer and two closures as its arguments
+anotherFunction(x: x, f: { $0 == 13 }, g: { print(99) })
+anotherFunction(x: x) { $0 == 13 } g: { print(99) }
 ```
 
 If the trailing closure is the function’s only argument, the parentheses can be omitted.
@@ -867,6 +871,46 @@ If the trailing closure is the function’s only argument, the parentheses can b
 myData.someMethod() {$0 == 13}
 myData.someMethod {$0 == 13}
 ```
+
+To include the trailing closures in the arguments, the compiler examines the function’s parameters from left to right as follows:
+
+| Trailing  Closure      | Parameter     | Action     |
+| :-------------: | :----------: | :-----------: |
+|  Labeled | Labeled   | If the labels are the same, the closure matches the parameter; otherwise, the parameter is skipped.    |
+| Labeled   | Unlabeled | The parameter is skipped.|
+| Unlabeled   | Labeled or unlabeled | If the parameter structurally resembles a function type, as defined below, the closure matches the parameter; otherwise, the parameter is skipped.|
+
+The trailing closure is passed as the argument for the parameter that it matches. Parameters that were skipped during the scanning process don’t have an argument passed to them—for example, they can use a default parameter. After finding a match, scanning continues with the next trailing closure and the next parameter. At the end of the matching process, all trailing closures must have a match.
+
+A parameter *structurally* resembles a function type if the parameter isn’t an in-out parameter, and the parameter is one of the following:
+
+* A parameter whose type is a function type, like `(Bool) -> Int`
+* An autoclosure parameter whose wrapped expression’s type is a function type, like `@autoclosure () -> ((Bool) -> Int)`
+* A variadic parameter whose array element type is a function type, like `((Bool) -> Int)...`
+* A parameter whose type is wrapped in one or more layers of optional, like `Optional<(Bool) -> Int>`
+* A parameter whose type combines these allowed types, like `(Optional<(Bool) -> Int>)...`
+
+When a trailing closure is matched to a parameter whose type structurally resembles a function type, but isn’t a function, the closure is wrapped as needed. For example, if the parameter’s type is an optional type, the closure is wrapped in `Optional` automatically.
+
+To ease migration of code from versions of Swift prior to 5.3—which performed this matching from right to left—the compiler checks both the left-to-right and right-to-left orderings. If the scan directions produce different results, the old right-to-left ordering is used and the compiler generates a warning. A future version of Swift will always use the left-to-right ordering.
+
+```swift
+typealias Callback = (Int) -> Int
+func someFunction(firstClosure: Callback? = nil,
+                  secondClosure: Callback? = nil) {
+    let first = firstClosure?(10)
+    let second = secondClosure?(20)
+    print(first ?? "-", second ?? "-")
+}
+
+someFunction()  // Prints "- -"
+someFunction { return $0 + 100 }  // Ambiguous
+someFunction { return $0 } secondClosure: { return $0 }  // Prints "10 20"
+```
+
+In the example above, the function call marked “Ambiguous” prints “- 120” and produces a compiler warning on Swift 5.3. A future version of Swift will print “110 -”.
+
+A class, structure, or enumeration type can enable syntactic sugar for function call syntax by declaring one of several methods, as described in [Methods with Special Names](../ReferenceManual/Declarations.html#methods-with-special-names)
 
 >**Grammar of a function call expression**
 >
