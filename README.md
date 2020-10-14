@@ -114,9 +114,9 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [x] Escaping Closures
     - [ ] Autoclosures
   - [ ] Enumerations
-    - [ ] Intro
-    - [ ] Enumeration Syntax
-    - [ ] Matching Enumeration Values with a Switch Statement
+    - [X] Intro
+    - [X] Enumeration Syntax
+    - [X] Matching Enumeration Values with a Switch Statement
     - [ ] Iterating over Enumeration Cases
     - [ ] Associated Values
     - [ ] Raw Values
