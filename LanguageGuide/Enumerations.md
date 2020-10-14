@@ -3,7 +3,7 @@ Enumerações
 
 Uma *enumeração* define um tipo comum para um grupo de valores relacionados e habilita você a trabalhar com esses valores de modo a assegurar o tipo no seu código.
 
-Se você está familiarizado com o C, vai saber que enumerações em C atribuem nomes realacionados a uma série de valores inteiros. Enumerações em Swift são muito mais flexíveis, e não precisam fornecer um valor para cada caso das enumerações. Se um valor (conhecido como valor *raw*) é fornecido para cada caso da enumeração, o valor pode ser uma string, um caractere, ou qualquer valor de tipo inteiro ou ponto flutuante.
+Se você está familiarizado com o C, vai saber que enumerações em C atribuem nomes relacionados a uma série de valores inteiros. Enumerações em Swift são muito mais flexíveis, e não precisam fornecer um valor para cada caso das enumerações. Se um valor (conhecido como valor *raw*) é fornecido para cada caso da enumeração, o valor pode ser uma string, um caractere, ou qualquer valor de tipo inteiro ou ponto flutuante.
 
 Alternativamente, casos de uma enumeração podem específicar valores associados de tipo *any* para serem armazenados ao longo de cada diferente valor de caso, assim como uniões ou variantes fazem em outras linguagens. Você pode definir um conjunto comum de casos relacionados como parte de uma enumeração, cada um deles possui um conjunto de valores de tipo associado apropriado a ele.
 
@@ -11,13 +11,13 @@ Enumerações em Swift são tipos de primeira classe por direito próprio. Elas 
 
 Para mais informações sobre essas capacidades veja [Propriedades](Properties.md), [Métodos](Methods.md), [Inicialização](Initialization.md), [Extensões](Extensions.md), e [Protocolos](Protocols.md).
 
-Sintax de Enumerações
+Sintaxe de Enumerações
 ------------------
 
 Você inicia enumerações com a palavra chave `enum` e coloca sua definição inteira dentro de um par de chaves:
 
 ```swift
-enum AlgumaEnumeracao {
+enum SomeEnumeration {
 // definição da enumeração vai aqui
 }
 ```
@@ -25,41 +25,41 @@ enum AlgumaEnumeracao {
 Aqui está um exemplo para os quatro pontos principais de uma bússola:
 
 ```swift
-enum PontoBussola {
-    case norte
-    case sul
-    case leste
-    case oeste
+enum CompassPoint {
+    case north
+    case south
+    case east
+    case west
 }
 ```
 
-Os valores definidos em uma enumeraçãos (assim como `norte`, `sul`, `leste` e `oeste`) são seus *casos de enumeração*. Você usa a palavra chave `case` para iniciar novos casos na enumeração.
+Os valores definidos em uma enumeraçãos (assim como `north`, `south`, `east` e `west`) são seus *casos de enumeração*. Você usa a palavra chave `case` para iniciar novos casos na enumeração.
 
 **Nota**
 
->Casos de enumeração em Swift não possuem valores inteiros definidos por padrão, diferentemente de linguagens como C e Objective-C. No exemplo `PontoBussola` acima, `norte`, `sul`, `leste` e `oeste` não são implicitamente iguais a `0`, `1`, `2` e `3`. Invés disso, os diferentes casos de enumeração são valores por si próprio, com um tipo explicito definido de `PontoBussola`.
+>Casos de enumeração em Swift não possuem valores inteiros definidos por padrão, diferentemente de linguagens como C e Objective-C. No exemplo `CompassPoint` acima, `north`, `south`, `east` e `west` não são implicitamente iguais a `0`, `1`, `2` e `3`. Invés disso, os diferentes casos de enumeração são valores por si próprio, com um tipo explicito definido de `CompassPoint`.
 
 Múltiplos casos podem aparecer uma única linha, separados por vírgulas:
 
 ```swift
-enum Planeta {
-    case mercúrio, venus, terra, marte, jupiter, saturno, urano, netuno
+enum Planet {
+    case mercury, venus, earth, mars, jupiter, saturn, uranus, neptune
 }
 ```
 
-Cada definição de enumeração define um novo tipo. Assim como outros tipos em Swift, seus nome (assim como `PontoBussola` e `Planeta`) começam com letra maiúscula. Forneça para enumerações nomes preferencialmente no singular do que no plural. assim serão lidas de forma auto explicativa:
+Cada definição de enumeração define um novo tipo. Assim como outros tipos em Swift, seus nome (assim como `CompassPoint` e `Planet`) começam com letra maiúscula. Forneça para enumerações nomes preferencialmente no singular do que no plural. assim serão lidas de forma auto explicativa:
 
 ```swift
-var direcaoDaCabeca = PontoBussola.oeste
+var directionToHead = CompassPoint.west
 ```
 
-O tipo de `direcaoDaCabeca` é inferido quando esta é inicializada com um dos possíveis valores de `PontoBussola`. Uma vez que `direcaoDaCabeca` é declarado como um `PontoBussola`, você pode defini-la para um diferente valor de `PontoBussola` usando uma sintaxe mais curta:
+O tipo de `directionToHead` é inferido quando esta é inicializada com um dos possíveis valores de `CompassPoint`. Uma vez que `directionToHead` é declarado como um `CompassPoint`, você pode defini-la para um diferente valor de `CompassPoint` usando uma sintaxe mais curta:
 
 ```swift
-direcaoDaCabeca = .oeste
+directionToHead = .east
 ```
 
-O tipo de `direcaoDaCabeca` já é conhecido, então você pode dispensar o tipo ao definir seu valor. Isso torna o código altamente legível quando se trabalha com valores de enumeração explicitamente típados.
+O tipo de `directionToHead` já é conhecido, então você pode dispensar o tipo ao definir seu valor. Isso torna o código altamente legível quando se trabalha com valores de enumeração explicitamente típados.
 
 Correspondendo valores de Enumerações com blocos *Switch*
 ---------------------------------------------------
@@ -67,35 +67,35 @@ Correspondendo valores de Enumerações com blocos *Switch*
 Você pode corresponder valores individuais de enumerações com blocos `switch`: 
 
 ```swift
-direcaoDaCabeca = .sul
-switch direcaoDaCabeca {
-    case .norte:
+directionToHead = .south
+switch directionToHead {
+    case .north:
         print("Muitos planetas possuem um norte")
-    case .sul:
+    case .south:
         print("Cuidado com os pinguins")
-    case .leste:
+    case .east:
         print("Onde o sol se põe")
-    case .oeste:
+    case .west:
         print("Onde o céu é azul")
 }
 // Exibe "Cuidado com os pinguins"
 ```
 
 Você pode ler esse código como sendo:
-“Considere o valor de `direcaoDaCabeca`. No caso aonde é igual a `.norte`, exiba `"Muitos planetas possuem um norte"`. No caso aonde é igual a `.sul`, exiba `"Watch out for penguins"`.”
+“Considere o valor de `directionToHead`. No caso aonde é igual a `.north`, exiba `"Muitos planetas possuem um norte"`. No caso aonde é igual a `.south`, exiba `"Cuidado com os pinguins"`.”
 
 “Consider the value of `directionToHead`. In the case where it equals `.north`, print `"Lots of planets have a north"`. In the case where it equals `.south`, print `"Cuidado com os pinguins"`.”
 
 …e assim sucessivamente.
 
-Como é descrito em [Controle de fluxo](ControlFlow.md), um bloco `switch` precisa ser exaustivo quando considera casos de enumerações. Se o caso para `.oeste` for omitido, esse código não compila, pois ele não considera a lista completa de casos de `PontoBussola`. Exigindo exaustividade assegura-se que casos de enumerações não sejam acidentalmente omitidos.
+Como é descrito em [Controle de fluxo](ControlFlow.md), um bloco `switch` precisa ser exaustivo quando considera casos de enumerações. Se o caso para `.west` for omitido, esse código não compila, pois ele não considera a lista completa de casos de `CompassPoint`. Exigindo exaustividade assegura-se que casos de enumerações não sejam acidentalmente omitidos.
 
 Quando não é apropriado fornecer um `case` para todo caso da enumeração, você pode fornecer um caso `default` para cobrir quaisquer casos que não estejam explicitamente endereçados:
 
 ```swift
-let algumPlaneta = Planeta.terra
-switch algumPlaneta {
-    case .terra:
+let somePlanet = Planet.earth
+switch somePlanet {
+    case .earth:
         print("Lugar inofensivo")
     default:
         print("Não é um lugar seguro para humanos")
