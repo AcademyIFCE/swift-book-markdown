@@ -53,7 +53,8 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [x] [Semicolons](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#ponto-e-v%C3%ADrgula)
     - [x] [Integers](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#integers)
     - [x] [Floating-Point Numbers](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#n%C3%BAmeros-de-ponto-flutuante)
-    - [ ] Type Safety and Type Inference
+    - [x] [Type Safety and Type Inference](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#type-safety-e-inferência-de-tipo)
+    - [ ] Numeric Literals
     - [ ] Numeric Type Conversion
     - [ ] Assertions and Preconditions
   - [x] [Basic Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md)
