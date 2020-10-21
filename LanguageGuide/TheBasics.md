@@ -225,43 +225,43 @@ Nota
 
 `Double` possuí uma precisão ed 15 dígitos decimais, enquanto a precisão de `Float` pode ser tão pequena quanto 6 dígitos decimais. O tipo apropriado de ponto flutuante depende da natureza do intervalo de valores que você precisa trabalhar no seu código. Em situações nas quais qualquer um dos tipos é apropriado `Double`é preferido.
 
-Type Safety and Type Inference
+*Type Safety* e Inferência de Tipo
 ------------------------------
 
-Swift is a _type-safe_ language. A type safe language encourages you to be clear about the types of values your code can work with. If part of your code requires a `String`, you can’t pass it an `Int` by mistake.
+Swift é uma linguagem *type-safe*. Uma linguagem *type safe* encoraja que você seja claro em relação aos tipos dos valores com que seu código trabalha. Se uma parte do código requer uma `String`, você não pode passar um `Int` por engano.
 
-Because Swift is type safe, it performs _type checks_ when compiling your code and flags any mismatched types as errors. This enables you to catch and fix errors as early as possible in the development process.
+Por ser *type-safe*, Swift executa checagens de tipo quando compila seu código e sinaliza quaisquer tipos incompatíveis como erros. Isso permite que você detecte e corrija erros o mais cedo possível no processo de desenvolvimento.
 
-Type-checking helps you avoid errors when you’re working with different types of values. However, this doesn’t mean that you have to specify the type of every constant and variable that you declare. If you don’t specify the type of value you need, Swift uses _type inference_ to work out the appropriate type. Type inference enables a compiler to deduce the type of a particular expression automatically when it compiles your code, simply by examining the values you provide.
+A checagem de tipo ajuda a evitar erros ao trabalhar com diferentes tipos de valores. No entanto, isso não significa que você precisa especificar o tipo de cada constante e variável que você declara. Se você não especificar o tipo do valor de que precisa, Swift usa _inferência de tipo_ para descobrir o tipo apropriado. Inferência de tipo permite que um compilador deduza o tipo de uma expressão específica automaticamente ao compilar seu código, simplesmente examinando os valores fornecidos.
 
-Because of type inference, Swift requires far fewer type declarations than languages such as C or Objective-C. Constants and variables are still explicitly typed, but much of the work of specifying their type is done for you.
+Por causa da inferência de tipo, Swift requer muito menos declarações de tipo do que linguagens como C ou Objective-C. Constantes e variáveis ainda são explicitamente digitadas, mas muito do trabalho de especificação de tipo é feito para você.
 
-Type inference is particularly useful when you declare a constant or variable with an initial value. This is often done by assigning a _literal value_ (or _literal_) to the constant or variable at the point that you declare it. (A literal value is a value that appears directly in your source code, such as `42` and `3.14159` in the examples below.)
+A inferência de tipo é particularmente útil quando você declara uma constante ou variável com um valor inicial. Isso geralmente é feito atribuindo um _valor literal_ (ou _literal_) à constante ou variável no momento em que você a declara. (Um valor literal é um valor que aparece diretamente em seu código-fonte, como `42` e` 3.14159` nos exemplos abaixo.)
 
-For example, if you assign a literal value of `42` to a new constant without saying what type it is, Swift infers that you want the constant to be an `Int`, because you have initialized it with a number that looks like an integer:
+Por exemplo, se você atribuir um valor literal de `42` a uma nova constante sem dizer de que tipo ela é, Swift infere que você deseja que a constante seja um ʻInt`, porque você a inicializou com um número que se parece com um inteiro:
 
 ```swift
 let meaningOfLife = 42
-// meaningOfLife is inferred to be of type Int
+// meaningOfLife é inferido como sendo do tipo Int
 ```
 
-Likewise, if you don’t specify a type for a floating-point literal, Swift infers that you want to create a `Double`:
+Da mesma forma, se você não especificar um tipo para um literal de ponto flutuante, Swift infere que você deseja criar um `Double`:
 
 ```swift
 let pi = 3.14159
-// pi is inferred to be of type Double
+// pi é inferido como sendo do tipo Double
 ```
 
-Swift always chooses `Double` (rather than `Float`) when inferring the type of floating-point numbers.
+O Swift sempre escolhe `Double` (em vez de` Float`) ao inferir o tipo de números de ponto flutuante.
 
-If you combine integer and floating-point literals in an expression, a type of `Double` will be inferred from the context:
+Se você combinar literais inteiros e de ponto flutuante em uma expressão, um tipo de `Double` será inferido a partir do contexto:
 
 ```swift
 let anotherPi = 3 + 0.14159
-// anotherPi is also inferred to be of type Double
+// anotherPi é também inferido como sendo do tipo Double
 ```
 
-The literal value of `3` has no explicit type in and of itself, and so an appropriate output type of `Double` is inferred from the presence of a floating-point literal as part of the addition.
+O valor literal de `3` não tem nenhum tipo explícito por si só e, portanto, um tipo de saída apropriado de `Double` é inferido da presença de um literal de ponto flutuante como parte da adição.
 
 Numeric Literals
 ----------------
