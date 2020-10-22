@@ -69,7 +69,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [x] [Logical Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operadores-l%C3%B3gicos)
   - [ ] Strings And Characters
     - [x] Intro
-    - [ ] String Literals
+    - [x] String Literals
     - [ ] Initializing an Empty String
     - [ ] String Mutability
     - [ ] Strings Are Value Types
