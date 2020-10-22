@@ -129,7 +129,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
   - [ ] Properties
     - [x] Intro
     - [x] Stored Properties
-    - [ ] Computed Properties
+    - [x] Computed Properties
     - [ ] Property Observers
     - [ ] Property Wrappers
     - [ ] Global and Local Variables
