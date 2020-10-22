@@ -184,9 +184,9 @@ struct AlternativeRect {
 }
 ```
 
-### Shorthand Getter Declaration
+### Declaração Abreviada de `Getter`
 
-If the entire body of a getter is a single expression, the getter implicitly returns that expression. Here’s an another version of the `Rect` structure that takes advantage of this shorthand notation and the shorthand notation for setters:
+Se toda a implementação do `getter` possuir apenas uma única expressão, é possivel omitir a palavra reservada `return`. No exemplo, temos uma nova versão da estrutura `Rect` que utiliza essa implementação abreaviada tanto para o `getter` como para o `setter`:
 
 ```swift
 struct CompactRect {
@@ -204,17 +204,17 @@ struct CompactRect {
 }
 ```
 
-Omitting the `return` from a getter follows the same rules as omitting `return` from a function, as described in [Functions With an Implicit Return](Functions.md#functions-with-an-implicit-return).
+A omissão da palavra `return` de uma `getter` segue as mesmas regras deste uso em funções, como descrito em [Funções com Retorno Implícito](Functions.md#functions-with-an-implicit-return). 
 
-### Read-Only Computed Properties
+### Variáveis Computadas `Read-Only`
 
-A computed property with a getter but no setter is known as a *read-only computed property*. A read-only computed property always returns a value, and can be accessed through dot syntax, but cannot be set to a different value.
+Variável computada que possui apenas `getter`, ou seja, não possui um `setter` é conhecida como `read-only`. Um propriedade computada `read-only` sempre tem que returnar um valor e pode ser acessada através da sintaxe de pontos, porém não pode receber nenhum valor como atribuição.
 
-**Note**
+**Nota**
 
->You must declare computed properties—including read-only computed properties—as variable properties with the `var` keyword, because their value is not fixed. The `let` keyword is only used for constant properties, to indicate that their values cannot be changed once they are set as part of instance initialization.
+>Você deve declarar todas a variáveis computadas—incluindo as `read-only`—usando a palavra reservada `var`, pois o valor retornado não será fixo. A palavra reservarda `let` só é utilizada para propriedades constantes, indicando que ela não poderá mudar após sua atribuição em tempo de inicialização.
 
-You can simplify the declaration of a read-only computed property by removing the `get` keyword and its braces:
+Você pode simplificar a declaração de uma propriedade computada `read-only` removendo a palavra reservada `get` e suas chaves:
 
 ```swift
 struct Cuboid {
@@ -225,10 +225,10 @@ struct Cuboid {
 }
 let fourByFiveByTwo = Cuboid(width: 4.0, height: 5.0, depth: 2.0)
 print("the volume of fourByFiveByTwo is \(fourByFiveByTwo.volume)")
-// Prints "the volume of fourByFiveByTwo is 40.0"
+// Imprime "the volume of fourByFiveByTwo is 40.0"
 ```
 
-This example defines a new structure called `Cuboid`, which represents a 3D rectangular box with `width`, `height`, and `depth` properties. This structure also has a read-only computed property called `volume`, which calculates and returns the current volume of the cuboid. It doesn’t make sense for `volume` to be settable, because it would be ambiguous as to which values of `width`, `height`, and `depth` should be used for a particular `volume` value. Nonetheless, it is useful for a `Cuboid` to provide a read-only computed property to enable external users to discover its current calculated volume.
+Esse exemplo define uma nova estrutura chamada `Cuboid`, o qual representa uma caixa retangular 3D que possui as propriedades `width`, `height` e `depth`. Essa estrutura também possui uma propriedade computada `read-only` chamada `volume` a qual retorna o volume atual do cuboid. Não faz sentido que seja possivel atribuir valores a propriedade `volume`, pois poderia causar ambiguidade em relação aos valores das propriedades `width`, `height` e `depth` deveriam possuir para um valor específico de `volume`. Entretanto, é muito útil para o `Cuboid` fornecer uma variável computada `read-only` que permita que seja possível verificar o valor atual do volume. 
 
 Property Observers
 ------------------
