@@ -11,22 +11,22 @@ Apesar da simplicidade da sintaxe, o tipo `String` do Swift é uma implementaç�
 > O tipo `String` do Swift é ligado com a classe `NSString` do Foundation. Foundation também estende `String` para expor métodos definidos pelo `NSString`. Isso significa, se você importar o Foundation, poderá acessar esses métodos de `NSString` com `String` sem "casting".
 Para mais informações sobre o uso de `String` com Foundation e Cocoa, veja [Bridging Between String and NSString](https://developer.apple.com/documentation/swift/string#2919514).
 
-String Literals
+Literais de String
 ---------------
 
-You can include predefined `String` values within your code as _string literals_. A string literal is a sequence of characters surrounded by double quotation marks (`"`).
+Você pode incluir valores `String` predefinidos em seu código como _literais de string_. Um literal de string é uma sequência de caracteres entre aspas duplas (`"`).
 
-Use a string literal as an initial value for a constant or variable:
+Use um literal de string como valor inicial para uma constante ou variável:
 
 ```swift
 let someString = "Some string literal value"
 ```
 
-Note that Swift infers a type of `String` for the `someString` constant because it’s initialized with a string literal value.
+Note que Swift infere um tipo de `String` para a constante `someString` porque ela é inicializada com um valor literal de string.
 
-### Multiline String Literals
+### Literais de String Multilinha
 
-If you need a string that spans several lines, use a multiline string literal—a sequence of characters surrounded by three double quotation marks:
+Se você precisar de uma string que se estenda por várias linhas, use um literal de string multilinha—uma sequência de caracteres entre três aspas duplas:
 
 ```swift
 let quotation = """
@@ -39,7 +39,7 @@ till you come to the end; then stop."
 """
 ```
 
-A multiline string literal includes all of the lines between its opening and closing quotation marks. The string begins on the first line after the opening quotation marks (`"""`) and ends on the line before the closing quotation marks, which means that neither of the strings below start or end with a line break:
+Um literal de string multilinha inclui todas as linhas entre as aspas de abertura e fechamento. A string começa na primeira linha após as aspas de abertura (`"""`) e termina na linha antes das aspas de fechamento, o que significa que nenhuma das strings abaixo começa ou termina com uma quebra de linha:
 
 ```swift
 let singleLineString = "These are the same."
@@ -48,7 +48,7 @@ These are the same.
 """
 ```
 
-When your source code includes a line break inside of a multiline string literal, that line break also appears in the string’s value. If you want to use line breaks to make your source code easier to read, but you don’t want the line breaks to be part of the string’s value, write a backslash (`\`) at the end of those lines:
+Quando seu código-fonte inclui uma quebra de linha dentro de um literal de string multilinha, essa quebra de linha também aparece no valor da string. Se você quer usar quebras de linha para tornar seu código-fonte mais fácil de ler, mas não quer que elas façam parte do valor da string, escreva uma barra invertida (`\`) no final dessas linhas:
 
 ```swift  
 let softWrappedQuotation = """
@@ -63,7 +63,7 @@ till you come to the end; then
 """
 ```
 
-To make a multiline string literal that begins or ends with a line feed, write a blank line as the first or last line. For example:
+Para fazer uma string literal multilinha que começa ou termina com uma quebra de linha, escreva uma linha em branco como a primeira ou a última linha. Por exemplo:
 
 ```swift  
 let lineBreaks = """
@@ -74,22 +74,22 @@ It also ends with a line break.
 """
 ```
 
-A multiline string can be indented to match the surrounding code. The whitespace before the closing quotation marks (`"""`) tells Swift what whitespace to ignore before all of the other lines. However, if you write whitespace at the beginning of a line in addition to what’s before the closing quotation marks, that whitespace _is_ included.
+Uma string multilinha pode ser identada para corresponder ao código ao redor. O espaço em branco antes das aspas de fechamento (`"""`) informa qual espaço deve ser ignorado antes de todas as outras linhas. No entanto, se você escrever um espaço em branco no início de uma linha além do que está antes das aspas de fechamento, esse espaço em branco _é_ incluído.
 
 ![../_images/multilineStringWhitespace_2x.png](../_images/multilineStringWhitespace_2x.png)
 
-In the example above, even though the entire multiline string literal is indented, the first and last lines in the string don’t begin with any whitespace. The middle line has more indentation than the closing quotation marks, so it starts with that extra four-space indentation.
+No exemplo acima, embora todo o literal de string multilinha esteja identado, a primeira e a última linhas não começam com espaço em branco. A linha do meio tem mais identação do que as aspas de fechamento, portanto, ela começa com esse recuo extra de quatro espaços.
 
-### Special Characters in String Literals
+### Caracteres Especiais em Literais de String
 
-String literals can include the following special characters:
+Literais de string podem incluir os seguintes caracteres especiais:
 
-*   The escaped special characters `\0` (null character), `\\` (backslash), `\t` (horizontal tab), `\n` (line feed), `\r` (carriage return), `\"` (double quotation mark) and `\'` (single quotation mark)
+* Os caracteres especiais de escape `\0` (caractere nulo), `\\` (barra invertida), `\t` (tab horizontal), `\n` (quebra de linha), `\r` (carriage return), `\"` (aspas duplas) e `\'` (aspas simples)
 
-*   An arbitrary Unicode scalar value, written as `\u{`_n_`}`, where _n_ is a 1–8 digit hexadecimal number (Unicode is discussed in [Unicode](#ID293) below)
+* Um valor escalar Unicode arbitrário, escrito como `\u{`_n_`}`, onde _n_ é um número hexadecimal de 1–8 dígitos (Unicode é discutido em [Unicode](#ID293) abaixo)
 
 
-The code below shows four examples of these special characters. The `wiseWords` constant contains two escaped double quotation marks. The `dollarSign`, `blackHeart`, and `sparklingHeart` constants demonstrate the Unicode scalar format:
+O código a seguir mostra quatro exemplos desses caracteres especiais. A constante `wiseWords` contém duas aspas duplas escapadas. As constantes `dollarSign`,` blackHeart` e `sparklingHeart` demonstram o formato escalar Unicode:
 
 ```swift  
 let wiseWords = "\"Imagination is more important than knowledge\" - Einstein"
@@ -98,7 +98,7 @@ let dollarSign = "\u{24}" // $, Unicode scalar U+0024
 let blackHeart = "\u{2665}" // ♥, Unicode scalar U+2665
 let sparklingHeart = "\u{1F496}" // 💖, Unicode scalar U+1F496
 ```
-Because multiline string literals use three double quotation marks instead of just one, you can include a double quotation mark (`"`) inside of a multiline string literal without escaping it. To include the text `"""` in a multiline string, escape at least one of the quotation marks. For example:
+Como os literais de string multilinha usam três aspas duplas em vez de apenas uma, você pode inserir aspa dupla (`"`) dentro da string sem escapá-la. Para incluir o texto `"""` em uma string multilinha, escape pelo menos uma das aspas. Por exemplo:
 
 ```swift  
 let threeDoubleQuotationMarks = """
@@ -106,13 +106,13 @@ Escaping the first quotation mark \"""
 Escaping all three quotation marks \"\"\"
 """
 ```
-### Extended String Delimiters
+### Delimitadores Estendidos de String
 
-You can place a string literal within _extended delimiters_ to include special characters in a string without invoking their effect. You place your string within quotation marks (`"`) and surround that with number signs (`#`). For example, printing the string literal `#"Line 1\nLine 2"#` prints the line feed escape sequence (`\n`) rather than printing the string across two lines.
+Você pode colocar um literal de string dentro de _delimitadores estendidos_ para incluir caracteres especiais em uma string sem invocar seu efeito. Você coloca sua string entre aspas (`"`) e envolve-a com sinais numéricos (`#`). Por exemplo, imprimir a string literal `#"Linha 1\nLinha 2"#` imprime a sequência de caracteres da quebra de linha (`\n`) em vez de imprimir a string em duas linhas.
 
-If you need the special effects of a character in a string literal, match the number of number signs within the string following the escape character (`\`). For example, if your string is `#"Line 1\nLine 2"#` and you want to break the line, you can use `#"Line 1\#nLine 2"#` instead. Similarly, `###"Line1\###nLine2"###` also breaks the line.
+Se você precisar dos efeitos especiais de um caractere em uma literal de string, adicione sinais numéricos depois do caractere de escape (`\`), de forma que a quantidade seja a mesma que a de dentro da string. Por exemplo, se sua string é `#"Linha 1\nLinha 2"#` e você deseja quebrar a linha, você pode usar `#"Linha 1\#nLinha 2"#` em seu lugar. Da mesma forma, `###"Line1\###nLine2"###` também quebra a linha.
 
-String literals created using extended delimiters can also be multiline string literals. You can use extended delimiters to include the text `"""` in a multiline string, overriding the default behavior that ends the literal. For example:
+Literais de string criadas usando delimitadores estendidos também podem ser literais de string multilinha. Você pode usar delimitadores estendidos para incluir o texto `"""` em uma string multilinha, substituindo o comportamento padrão que termina o literal. Por exemplo:
 
 ```swift  
 let threeMoreDoubleQuotationMarks = #"""
