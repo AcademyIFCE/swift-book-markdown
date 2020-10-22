@@ -128,7 +128,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [ ] Classes Are Reference Types
   - [ ] Properties
     - [x] Intro
-    - [ ] Stored Properties
+    - [x] Stored Properties
     - [ ] Computed Properties
     - [ ] Property Observers
     - [ ] Property Wrappers
