@@ -54,7 +54,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [x] [Integers](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#integers)
     - [x] [Floating-Point Numbers](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#n%C3%BAmeros-de-ponto-flutuante)
     - [ ] Type Safety and Type Inference
-    - [ ] Numeric Type Conversion
+    - [x] [Numeric Type Conversion](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#numeric-type-conversion)
     - [ ] Assertions and Preconditions
   - [x] [Basic Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md)
     - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operadores-b%C3%A1sicos)
@@ -68,7 +68,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [x] [Range Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operadores-de-intervalo)
     - [x] [Logical Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operadores-l%C3%B3gicos)
   - [ ] Strings And Characters
-    - [x] Intro
+    - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#strings-e-caracteres)
     - [ ] String Literals
     - [ ] Initializing an Empty String
     - [ ] String Mutability
