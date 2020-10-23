@@ -53,7 +53,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [x] [Semicolons](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#ponto-e-v%C3%ADrgula)
     - [x] [Integers](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#integers)
     - [x] [Floating-Point Numbers](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#n%C3%BAmeros-de-ponto-flutuante)
-    - [ ] Type Safety and Type Inference
+    - [x] [Type Safety and Type Inference](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#type-safety-e-inferência-de-tipo)
     - [x] [Numeric Type Conversion](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#numeric-type-conversion)
     - [ ] Assertions and Preconditions
   - [x] [Basic Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md)
@@ -69,7 +69,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [x] [Logical Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operadores-l%C3%B3gicos)
   - [ ] Strings And Characters
     - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#strings-e-caracteres)
-    - [ ] String Literals
+    - [x] String Literals
     - [ ] Initializing an Empty String
     - [ ] String Mutability
     - [ ] Strings Are Value Types
@@ -129,7 +129,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
   - [ ] Properties
     - [x] Intro
     - [x] Stored Properties
-    - [ ] Computed Properties
+    - [x] Computed Properties
     - [ ] Property Observers
     - [ ] Property Wrappers
     - [ ] Global and Local Variables
