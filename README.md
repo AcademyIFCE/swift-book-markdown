@@ -72,7 +72,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#strings-e-caracteres)
     - [x] [String Literals](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#literais-de-string)
     - [ ] Initializing an Empty String
-    - [ ] String Mutability
+    - [x] [String Mutability](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#string-mutability)
     - [ ] Strings Are Value Types
     - [ ] Working with Characters
     - [ ] Concatenating Strings and Characters
