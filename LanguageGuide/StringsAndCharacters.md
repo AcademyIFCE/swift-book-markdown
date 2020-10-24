@@ -119,23 +119,23 @@ let threeMoreDoubleQuotationMarks = #"""
 Here are three more double quotes: """
 """#
 ```
-Initializing an Empty String
+Inicializando uma String Vazia
 ----------------------------
 
-To create an empty `String` value as the starting point for building a longer string, either assign an empty string literal to a variable, or initialize a new `String` instance with initializer syntax:
+Para criar uma `String` vazia como ponto de partida para construir uma string mais longa, atribua um literal de string vazia a uma variável ou inicialize uma nova instância de `String` com a sintaxe do inicializador:
 
 ```swift  
-var emptyString = ""        // empty string literal
-var anotherEmptyString = String()     // initializer syntax
-// these two strings are both empty, and are equivalent to each other
+var emptyString = ""        // literal de string vazia
+var anotherEmptyString = String()     // sintaxe do inicializador
+// essas duas strings estão vazias e são equivalentes uma à outra
 ```
-Find out whether a `String` value is empty by checking its Boolean `isEmpty` property:
+Descubra se um valor `String` está vazio verificando sua propriedade booleana `isEmpty`:
 
 ```swift  
 if emptyString.isEmpty {
-  print("Nothing to see here")
+  print("Nada para ver aqui")
 }
-// Prints "Nothing to see here"
+// Prints "Nada para ver aqui"
 ```
 
 String Mutability
