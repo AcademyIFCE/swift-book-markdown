@@ -71,8 +71,9 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
   - [ ] Strings And Characters
     - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#strings-e-caracteres)
     - [x] [String Literals](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#literais-de-string)
-    - [ ] Initializing an Empty String
+    - [x] [Initializing an Empty String](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#initializing-an-empty-string)
     - [x] [String Mutability](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#string-mutability)
+    - [ ] String Mutability
     - [ ] Strings Are Value Types
     - [ ] Working with Characters
     - [ ] Concatenating Strings and Characters
@@ -107,17 +108,17 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [ ] Function Types
     - [ ] Nested Functions
   - [ ] Closures
-    - [x] Intro
-    - [x] Closure Expressions
+    - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Closures.md#closures)
+    - [x] [Closure Expressions](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Closures.md#express%C3%B5es-closure)
     - [ ] Trailing Closures
     - [ ] Capturing Values
-    - [x] Closures Are Reference Types
-    - [x] Escaping Closures
+    - [x] [Closures Are Reference Types](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Closures.md#closures-s%C3%A3o-reference-types)
+    - [x] [Escaping Closures](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Closures.md#escaping-closures)
     - [ ] Autoclosures
   - [ ] Enumerations
-    - [X] Intro
-    - [X] Enumeration Syntax
-    - [X] Matching Enumeration Values with a Switch Statement
+    - [X] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Enumerations.md#enumera%C3%A7%C3%B5es)
+    - [X] [Enumeration Syntax](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Enumerations.md#sintaxe-de-enumera%C3%A7%C3%B5es)
+    - [X] [Matching Enumeration Values with a Switch Statement](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Enumerations.md#correspondendo-valores-de-enumera%C3%A7%C3%B5es-com-blocos-switch)
     - [ ] Iterating over Enumeration Cases
     - [ ] Associated Values
     - [ ] Raw Values
@@ -128,9 +129,9 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [ ] Structures and Enumerations Are Value Types
     - [ ] Classes Are Reference Types
   - [ ] Properties
-    - [x] Intro
-    - [x] Stored Properties
-    - [x] Computed Properties
+    - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Properties.md#propriedades)
+    - [x] [Stored Properties](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Properties.md#propriedades-armazenadas)
+    - [x] [Computed Properties](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Properties.md#propriedades-computadas)
     - [ ] Property Observers
     - [ ] Property Wrappers
     - [ ] Global and Local Variables
@@ -217,9 +218,9 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [ ] Optional Protocol Requirements
     - [ ] Protocol Extensions
   - [ ] Generics
-    - [x] Intro
-    - [x] The Problem That Generics Solve
-    - [x] Generic Functions
+    - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Generics.md#generics)
+    - [x] [The Problem That Generics Solve](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Generics.md#o-problema-que-generics-resolve)
+    - [x] [Generic Functions](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Generics.md#fun%C3%A7%C3%B5es-generic)
     - [ ] Type Parameters
     - [ ] Naming Type Parameters
     - [ ] Generic Types
