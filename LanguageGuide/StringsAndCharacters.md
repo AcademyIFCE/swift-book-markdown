@@ -138,24 +138,24 @@ if emptyString.isEmpty {
 // Prints "Nada para ver aqui"
 ```
 
-String Mutability
+Mutabilidade da String
 -----------------
 
-You indicate whether a particular `String` can be modified (or _mutated_) by assigning it to a variable (in which case it can be modified), or to a constant (in which case it can’t be modified):
+Você indica se uma determinada `String` pode ser modificada (ou _mutada_) atribuindo-a a uma variável (nesse caso, ela pode ser modificada) ou a uma constante (neste caso, não pode ser modificada):
 
 ```swift
 var variableString = "Horse"
 variableString += " and carriage"
-// variableString is now "Horse and carriage"
+// variableString agora é "Horse and carriage"
 
 let constantString = "Highlander"
 constantString += " and another Highlander"
-// this reports a compile-time error - a constant string cannot be modified
+// isso reporta um erro em tempo de compilação - uma string constante não pode ser modificada
 ```
 
-**Note**
+**Nota**
 
->This approach is different from string mutation in Objective-C and Cocoa, where you choose between two classes (`NSString` and `NSMutableString`) to indicate whether a string can be mutated.
+> Esta abordagem é diferente da mutação de string em Objective-C e Cocoa, onde você escolhe entre duas classes (`NSString` e `NSMutableString`) para indicar se uma string pode sofrer mutação.
 
 Strings Are Value Types
 -----------------------
