@@ -157,14 +157,14 @@ constantString += " and another Highlander"
 
 > Esta abordagem é diferente da mutação de string em Objective-C e Cocoa, onde você escolhe entre duas classes (`NSString` e `NSMutableString`) para indicar se uma string pode sofrer mutação.
 
-Strings Are Value Types
+Strings São *Value Types*
 -----------------------
 
-Swift’s `String` type is a _value type_. If you create a new `String` value, that `String` value is _copied_ when it’s passed to a function or method, or when it’s assigned to a constant or variable. In each case, a new copy of the existing `String` value is created, and the new copy is passed or assigned, not the original version. Value types are described in [Structures and Enumerations Are Value Types](ClassesAndStructures.xhtml#ID88).
+O tipo `String` é um _value type_. Se você criar um novo valor `String`, esse valor `String` será _copiado_ quando for passado para uma função ou método, ou quando for atribuído a uma constante ou variável. Em cada caso, uma nova cópia do valor `String` existente é criada e a nova cópia é passada ou atribuída, não a versão original. Os *value types*  são descritos em [Struturas e Enumerações são Value Types](ClassesAndStructures.xhtml#ID88).
 
-Swift’s copy-by-default `String` behavior ensures that when a function or method passes you a `String` value, it’s clear that you own that exact `String` value, regardless of where it came from. You can be confident that the string you are passed won’t be modified unless you modify it yourself.
+O comportamento *copy-by-default* da `String` no Swift garante que quando uma função ou método passa um valor `String`, fica claro que você possui aquele valor `String` exato, independentemente de onde ele veio. Você pode ter certeza de que a string passada não será modificada, a menos que você mesmo a modifique.
 
-Behind the scenes, Swift’s compiler optimizes string usage so that actual copying takes place only when absolutely necessary. This means you always get great performance when working with strings as value types.
+Nos bastidores, o compilador do Swift otimiza o uso de string para que a cópia real ocorra apenas quando for absolutamente necessário. Isso significa que você sempre obtém um ótimo desempenho ao trabalhar com strings como *value types*.
 
 Working with Characters
 -----------------------
