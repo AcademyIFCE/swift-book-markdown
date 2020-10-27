@@ -55,7 +55,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [x] [Floating-Point Numbers](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#n%C3%BAmeros-de-ponto-flutuante)
     - [x] [Type Safety and Type Inference](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#type-safety-e-inferência-de-tipo)
     - [ ] Numeric Literals
-    - [x] [Numeric Type Conversion](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#numeric-type-conversion)
+    - [x] [Numeric Type Conversion](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#convers%C3%A3o-de-tipo-num%C3%A9rico)
     - [ ] Assertions and Preconditions
   - [x] [Basic Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md)
     - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operadores-b%C3%A1sicos)
@@ -71,10 +71,9 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
   - [ ] Strings And Characters
     - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#strings-e-caracteres)
     - [x] [String Literals](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#literais-de-string)
-    - [x] [Initializing an Empty String](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#initializing-an-empty-string)
-    - [x] [String Mutability](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#string-mutability)
-    - [ ] String Mutability
-    - [ ] Strings Are Value Types
+    - [x] [Initializing an Empty String](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#inicializando-uma-string-vazia)
+    - [x] [String Mutability](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#mutabilidade-da-string)
+    - [x] [Strings Are Value Types](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#strings-são-value-types)
     - [ ] Working with Characters
     - [ ] Concatenating Strings and Characters
     - [ ] String Interpolation
