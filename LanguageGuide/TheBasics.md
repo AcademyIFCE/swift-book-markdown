@@ -410,9 +410,9 @@ let orangesAreOrange = true
 let turnipsAreDelicious = false
 ```
 
-Os tipos de `orangesAreOrange` e `turnipsAreDelicious` foram inferidos como `Bool`pelo fato de que foram inciados como valores literais booleanos. Como `Int` e `Double` acima, você não precisa declarar variáveis ou constantes como `Bool` se você definir elas como `true` ou `false` assim que forem criadas. A inferência de tipo ajuda o código em Swift ser mais conciso e legível quando inicializamos constantes ou variáveis com outros valores cujo o tipo já é conhecido. 
+Os tipos de `orangesAreOrange` e `turnipsAreDelicious` foram inferidos como `Bool`pelo fato de que foram iniciados como valores literais booleanos. Como `Int` e `Double` acima, você não precisa declarar variáveis ou constantes como `Bool` se você definir elas como `true` ou `false` assim que forem criadas. A inferência de tipo ajuda o código em Swift ser mais conciso e legível quando inicializamos constantes ou variáveis com outros valores cujo o tipo já é conhecido. 
 
-Valores booleanos são particulamente utéis quando você trabalha com declaraçõe condicionais como a declaração `if`:
+Valores booleanos são particulamente utéis quando você trabalha com declarações condicionais como a declaração `if`:
 
 ```swift
 if turnipsAreDelicious {
@@ -425,7 +425,7 @@ if turnipsAreDelicious {
 
 Declarações condicionais tais quais a declaração `if` são exploradas em mais detalhes em [Controle de fluxo](ControlFlow.xhtml). 
 
-A segurança de tipo do Swift impede valores não booleanos de serem substituidos por `Bool`. O exempo a seguir vai informar um erro em tempo de compilação: 
+A segurança de tipo do Swift impede valores não booleanos de serem substituidos por `Bool`. O exemplo a seguir vai informar um erro em tempo de compilação: 
 
 ```swift
 let i = 1
