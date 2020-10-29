@@ -448,64 +448,64 @@ As with other examples of type safety in Swift, this approach avoids accidental 
 Tuples
 ------
 
-_Tuples_ group multiple values into a single compound value. The values within a tuple can be of any type and don’t have to be of the same type as each other.
+_Tuplas_ agrupam múltiplos valores em um único valor composto. Os valores dentro de uma tupla podem ser de qualquer tipo e não precisam ser do mesmo tipo entre si.
 
-In this example, `(404, "Not Found")` is a tuple that describes an _HTTP status code_. An HTTP status code is a special value returned by a web server whenever you request a web page. A status code of `404 Not Found` is returned if you request a webpage that doesn’t exist.
+Nesse exemplo `(404, "Not Found")` é uma tupla que descreve um _HTTP status code_. O código de status HTTP é um valor especial que é retornado por um servidor toda vez que você faz uma requisição web. Um código de status `404 Not Found` é retornando quando a página pedida não existe.
 
 let http404Error = (404, "Not Found")
-// http404Error is of type (Int, String), and equals (404, "Not Found")
+// http404Error é do tipo  (Int, String), e igual (404, "Not Found")
 
-The `(404, "Not Found")` tuple groups together an `Int` and a `String` to give the HTTP status code two separate values: a number and a human-readable description. It can be described as “a tuple of type `(Int, String)`”.
+A tupla  `(404, "Not Found")` agrupa um `Int` e uma `String`  para fornecer um código de status HTTP com dois valores separados: um número e uma descrição legível por humanos. Pode ser descrita como "uma tupla de tipo `(Int, String)`"
 
-You can create tuples from any permutation of types, and they can contain as many different types as you like. There’s nothing stopping you from having a tuple of type `(Int, Int, Int)`, or `(String, Bool)`, or indeed any other permutation you require.
+Você pode criar tuplas com a permutação de qualquer tipos, elas podem conter quantos tipos diferentes você quiser. Não há nada que impeça você de ter uma tupla de tipo `(Int, Int, Int)`, ou `(String, Bool)`, ou qualquer outra permutação que você desejar. 
 
-You can _decompose_ a tuple’s contents into separate constants or variables, which you then access as usual:
+Você pode _decompor_ o contéudo de uma tupla em variáveis e constantes separadas, que você pode acessar normalmente:
 
 ```swift
 let (statusCode, statusMessage) = http404Error
 print("The status code is \(statusCode)")
-// Prints "The status code is 404"
+// Imprime "The status code is 404"
 print("The status message is \(statusMessage)")
-// Prints "The status message is Not Found"
+// Imprime "The status message is Not Found"
 ````
 
-If you only need some of the tuple’s values, ignore parts of the tuple with an underscore (`_`) when you decompose the tuple:
+Se você precisar apenas de alguns dos tipos da tupla, você pode ignorar parte dela com um underscore(`_`) quando você for decompor a tupla:
 
 ```swift
 let (justTheStatusCode, _) = http404Error
 print("The status code is \(justTheStatusCode)")
-// Prints "The status code is 404"
+// Imprime "The status code is 404"
 ```
 
-Alternatively, access the individual element values in a tuple using index numbers starting at zero:
+Alternativamente, acesse os elementos individuais em uma tupla usando index começando do zero:
 
 ```swift
 print("The status code is \(http404Error.0)")
-// Prints "The status code is 404"
+// Imprime "The status code is 404"
 print("The status message is \(http404Error.1)")
-// Prints "The status message is Not Found"
+// Imprime "The status message is Not Found"
 ```
 
-You can name the individual elements in a tuple when the tuple is defined:
+Você pode nomear individualmente elementos em uma tupla quando a tupla é definida:
 
 ```swift
 let http200Status = (statusCode: 200, description: "OK")
 ```
 
-If you name the elements in a tuple, you can use the element names to access the values of those elements:
+Se você nomear os elementos em uma tupla, você pode usar os nomes dos elementos para acessar o valor desses elementos:
 
 ```swift
 print("The status code is \(http200Status.statusCode)")
-// Prints "The status code is 200"
+// Imprime "The status code is 200"
 print("The status message is \(http200Status.description)")
-// Prints "The status message is OK"
+// Imprime "The status message is OK"
 ```
 
-Tuples are particularly useful as the return values of functions. A function that tries to retrieve a web page might return the `(Int, String)` tuple type to describe the success or failure of the page retrieval. By returning a tuple with two distinct values, each of a different type, the function provides more useful information about its outcome than if it could only return a single value of a single type. For more information, see [Functions with Multiple Return Values](Functions.xhtml#ID164).
+Tuplas são particulamente utéis como retorno de valores de funções. A função que tenta requerir uma página web pode retornar a tupla do tipo `(Int, String)`  para descrever um sucesso ou uma falha na requisição da página. Retornando uma tupla com dois valores distintos, cada um de um tipo diferente, a função provê informações mais utéis sobre o seu resultado, do que se retornasse apenas um único valor, de um único tipo. Para mais informações, leia [Funções com múltiplos valores de retorno](Functions.xhtml#ID164)
 
-**Note**
+**Nota**
 
-> Tuples are useful for simple groups of related values. They’re not suited to the creation of complex data structures. If your data structure is likely to be more complex, model it as a class or structure, rather than as a tuple. For more information, see [Structures and Classes](ClassesAndStructures.xhtml).
+> Tuplas são utéis para um grupo simples de valores relacionados. Elas não são recomendadas para a criação de estrutras complexas de dados. Se sua estrutra de dados é provável de ser mais complexa, modele isso como uma classe ou uma struct, ao invés de uma tupla. Para mais informações, veja [Structures e Classes](ClassesAndStructures.xhtml) 
 
 Optionals
 ---------
