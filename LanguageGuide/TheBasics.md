@@ -383,36 +383,36 @@ Floating-point values are always truncated when used to initialize a new integer
 Type Aliases
 ------------
 
-_Type aliases_ define an alternative name for an existing type. You define type aliases with the `typealias` keyword.
+_Type aliases_(apelidos) definem um nome alternativo para um tipo existente. Você pode definir apelidos para os seus tipos com a palavra chave `typealias`.
 
-Type aliases are useful when you want to refer to an existing type by a name that is contextually more appropriate, such as when working with data of a specific size from an external source:
+_Type aliases_ são utéis quando você quer referir um tipo existente por um nome que é contextualmente mais apropriado, tal como quando trabalhando com um dado de um tamanho específico de uma fonte externa:
 
 ```swift
 typealias AudioSample = UInt16
 ```
 
-Once you define a type alias, you can use the alias anywhere you might use the original name:
+Uma vez definido um _type alias_, você pode usar ele em qualquer canto que você usaria o nome origianal:
 
 ```swift
 var maxAmplitudeFound = AudioSample.min
 // maxAmplitudeFound is now 0
 ```
 
-Here, `AudioSample` is defined as an alias for `UInt16`. Because it’s an alias, the call to `AudioSample.min` actually calls `UInt16.min`, which provides an initial value of `0` for the `maxAmplitudeFound` variable.
+Aqui `AudioSample` é definido como um _alias_(apelido) para `UInt16`. Por ser um _alias_, a chamada para o `AudioSample.min` na verdade chamará o `UInt16.min`, que provê um valor inicial de zero para a variável `maxAmplitudeFound`. 
 
-Booleans
+Booleanos
 --------
 
-Swift has a basic _Boolean_ type, called `Bool`. Boolean values are referred to as _logical_, because they can only ever be true or false. Swift provides two Boolean constant values, `true` and `false`:
+Swift tem um tipo básico booleano chamado de `Bool`. Valores booleanos são referidos como _lógicos_, pois eles podem ser apenas verdadeiro ou falso. Swift provê dois valores constantes de booleano, `true` e `false`:
 
 ```swift
 let orangesAreOrange = true
 let turnipsAreDelicious = false
 ```
 
-The types of `orangesAreOrange` and `turnipsAreDelicious` have been inferred as `Bool` from the fact that they were initialized with Boolean literal values. As with `Int` and `Double` above, you don’t need to declare constants or variables as `Bool` if you set them to `true` or `false` as soon as you create them. Type inference helps make Swift code more concise and readable when it initializes constants or variables with other values whose type is already known.
+Os tipos de `orangesAreOrange` e `turnipsAreDelicious` foram inferidos como `Bool`pelo fato de que foram inciados como valores literais booleanos. Como `Int` e `Double` acima, você não precisa declarar variáveis ou constantes como `Bool` se você definir elas como `true` ou `false` assim que forem criadas. A inferência de tipo ajuda o código em Swift ser mais conciso e legível quando inicializamos constantes ou variáveis com outros valores cujo o tipo já é conhecido. 
 
-Boolean values are particularly useful when you work with conditional statements such as the `if` statement:
+Valores booleanos são particulamente utéis quando você trabalha com declaraçõe condicionais como a declaração `if`:
 
 ```swift
 if turnipsAreDelicious {
@@ -423,9 +423,9 @@ if turnipsAreDelicious {
 // Prints "Eww, turnips are horrible."
 ```
 
-Conditional statements such as the `if` statement are covered in more detail in [Control Flow](ControlFlow.xhtml).
+Declarações condicionais tais quais a declaração `if` são exploradas em mais detalhes em [Controle de fluxo](ControlFlow.xhtml). 
 
-Swift’s type safety prevents non-Boolean values from being substituted for `Bool`. The following example reports a compile-time error:
+A segurança de tipo do Swift impede valores não booleanos de serem substituidos por `Bool`. O exempo a seguir vai informar um erro em tempo de compilação: 
 
 ```swift
 let i = 1
@@ -434,7 +434,7 @@ if i {
 }
 ```
 
-However, the alternative example below is valid:
+Porém, a alternativa abaixo é válida:
 
 ```swift
 let i = 1
@@ -443,9 +443,9 @@ if i == 1 {
 }
 ```
 
-The result of the `i == 1` comparison is of type `Bool`, and so this second example passes the type-check. Comparisons like `i == 1` are discussed in [Basic Operators](BasicOperators.xhtml).
+O resultado da comparação  `i == 1` é do tipo `Bool`, então esse segundo exemplo vai passar na checagem de tipo. Comparações como  `i == 1` são discutidas em [Operadores básicos](BasicOperators.xhtml). 
 
-As with other examples of type safety in Swift, this approach avoids accidental errors and ensures that the intention of a particular section of code is always clear.
+Como com outros exemplos de segurança de tipo em Swift, essa abordagem evita erros acidentais e garante que a intenção de uma parte específica do código é sempre clara.
 
 Tuples
 ------
