@@ -395,11 +395,11 @@ print(instance.x)
 Autoclosures
 ------------
 
-An *autoclosure* is a closure that is automatically created to wrap an expression that’s being passed as an argument to a function. It doesn’t take any arguments, and when it’s called, it returns the value of the expression that’s wrapped inside of it. This syntactic convenience lets you omit braces around a function’s parameter by writing a normal expression instead of an explicit closure.
+Uma *autoclosure* é uma closure que é automaticamente criada para embrulhar uma expressão que está sendo passada como argumento para a função. Ela não requer qualquer argumento, e quando é chamada, retorna o valor da expressão que está embrulhada dentro de si. Essa conveniência sintática permite omitir as chaves ao redor do parâmetro da função, escrevendo uma expressão normal ao invés de uma closure explicita.
 
-It’s common to *call* functions that take autoclosures, but it’s not common to *implement* that kind of function. For example, the `assert(condition:message:file:line:)` function takes an autoclosure for its `condition` and `message` parameters; its `condition` parameter is evaluated only in debug builds and its `message` parameter is evaluated only if `condition` is `false`.
+É comum *fazer a chamada* de funções que recebem *autoclosures*, mas não é comum *implementar* esse tipo de função. Por exemplo, a função `assert(condition:message:file:line)` recebe uma autoclosure para os parâmetros `condition` e `message`; o parâmetro `condition` é executado somente em debug builds e o parâmetro `message` é executado somente se `condition` é `false`.
 
-An autoclosure lets you delay evaluation, because the code inside isn’t run until you call the closure. Delaying evaluation is useful for code that has side effects or is computationally expensive, because it lets you control when that code is evaluated. The code below shows how a closure delays evaluation.
+Uma autoclosure permite que você atrase sua execução, porque o código dentro dele não é executado até que você faça a chamada da closure. Atrasar a execução é útil para códigos que tem efeitos colaterais ou demandam muito poder computacional, porque permite que você controle quando este código é executado. O código abaixo mostra como uma closure atrasa a execução.
 
 ```swift
 var customersInLine = \["Chris", "Alex", "Ewa", "Barry", "Daniella"\]
@@ -416,9 +416,9 @@ print(customersInLine.count)
 // Prints "4"
 ```
 
-Even though the first element of the `customersInLine` array is removed by the code inside the closure, the array element isn’t removed until the closure is actually called. If the closure is never called, the expression inside the closure is never evaluated, which means the array element is never removed. Note that the type of `customerProvider` is not `String` but `() -> String`—a function with no parameters that returns a string.
+Apesar de o primeiro elemento do array `customersInLine` ser removido pelo código dentro da closure, o elemento do array não é removido até que a closure seja realmente chamada. Se a closure nunca é chamada, a expressão dentro da closure nunca é executada, o que significa que o elemento do array nunca é removido. Note que o tipo de `customerProvider` não é `String` mas `( ) -> String`- uma função sem parâmetros que retorna uma string.
 
-You get the same behavior of delayed evaluation when you pass a closure as an argument to a function.
+Você tem o mesmo comportamento da execução atrasada quando você passa a closure como um argumento para a função.
 
 ```swift
 // customersInLine is ["Alex", "Ewa", "Barry", "Daniella"]
@@ -429,7 +429,7 @@ serve(customer: { customersInLine.remove(at: 0) } )
 // Prints "Now serving Alex!"
 ```
 
-The `serve(customer:)` function in the listing above takes an explicit closure that returns a customer’s name. The version of `serve(customer:)` below performs the same operation but, instead of taking an explicit closure, it takes an autoclosure by marking its parameter’s type with the `@autoclosure` attribute. Now you can call the function as if it took a `String` argument instead of a closure. The argument is automatically converted to a closure, because the `customerProvider` parameter’s type is marked with the `@autoclosure` attribute.
+A função `serve(customer:)` na listagem acima recebe uma closure explícita que retorna o nome do cliente. A versão de `serve(customer:)` abaixo executa a mesma operação mas, ao invés de receber uma closure explícita, ela recebe uma autoclosure marcando o tipo desse parâmetro com o atributo `@autoclosure`. Agora você pode chamar a função como se ela recebesse um parâmetro `String` ao invés de uma closure. O argumento é automaticamente convertido para uma closure, porque o tipo do parâmetro `customerProvider` está marcado com o atributo `@autoclosure`.
 
 ```swift
 // customersInLine is ["Ewa", "Barry", "Daniella"]
@@ -440,11 +440,11 @@ serve(customer: customersInLine.remove(at: 0))
 // Prints "Now serving Ewa!"
 ```
 
-**Note**
+**Nota**
 
->Overusing autoclosures can make your code hard to understand. The context and function name should make it clear that evaluation is being deferred.
+>Usar muitas autoclosures pode fazer seu código difícil de entender. O contexto e o nome da função devem deixar claros que sua execução está sendo adiada.
 
-If you want an autoclosure that is allowed to escape, use both the `@autoclosure` and `@escaping` attributes. The `@escaping` attribute is described above in [Escaping Closures](#escaping-closures).
+Se você quiser uma autoclosure que o escape é permitido, use os atributos `@autoclosure` e `@escaping`. O atributo `@escaping` é descrito acima em [Escaping Closures](#escaping-closures).
 
 ```swift
 // customersInLine is ["Barry", "Daniella"]
@@ -464,4 +464,4 @@ for customerProvider in customerProviders {
 // Prints "Now serving Daniella!"
 ```
 
-In the code above, instead of calling the closure passed to it as its `customerProvider` argument, the `collectCustomerProviders(_:)` function appends the closure to the `customerProviders` array. The array is declared outside the scope of the function, which means the closures in the array can be executed after the function returns. As a result, the value of the `customerProvider` argument must be allowed to escape the function’s scope.
+No código acima, ao invés de chamar a closure passada para ela como o argumento `customerProvider`, a função `collectCustomProviders` adiciona a closure no array `customerProviders`. O array é declarado fora do escopo da função, o que significa que as closures no array podem ser executadas após o retorno da função. Como resultado, o valor do argumento `customerProvider` deve ser permitido de escapar do escopo da função.
