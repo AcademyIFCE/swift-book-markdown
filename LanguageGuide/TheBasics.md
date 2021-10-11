@@ -742,7 +742,7 @@ Asserções e pré-condições são verificações que ocorrem em tempo de execu
 
 Asserções e pré-condições são usadas para expressar premissas que surgem enquanto você escreve seu código, assim você pode incluí-las como parte do seu código. Asserções ajudam você a encontrar erros e premissas incorretas durante o desenvolvimento, e pré-condições ajudam você a detectar problemas em produção.
 
-Além de verificar as expectativas em tempo de execução, asserções e pré-condições também se tornam uma forma de documentação dentro do código. Diferentemente das condições de erro discutidas em [Error Handling](#ID515) acima, asserções e pré-condições não são usadas para erros esperados ou recuperáveis. Como uma asserção ou pré-condição que falha indica um estado inválido do programa, não é possível capturar uma asserção que falhou.
+Além de verificar as expectativas em tempo de execução, asserções e pré-condições também se tornam uma forma de documentação dentro do código. Diferentemente das condições de erro discutidas em [Error Handling](#error-handling) acima, asserções e pré-condições não são usadas para erros esperados ou recuperáveis. Como uma asserção ou pré-condição que falha indica um estado inválido do programa, não é possível capturar uma asserção que falhou.
 
 O uso de asserções e pré-condições não é uma substitição para projetar seu código de uma forma que condições inválidas não aconteçam. De qualquer forma, usá-las para forçar dados e estados válidos fazem seu app terminar de maneira mais previsível se um estádo inválido ocorrer, e ajuda a tornar os problemas mais fáceis de depurar. Encerrar a execução assim que um estado inválido ocorre também ajuda a limitar o dano causado por esse estado inválido.
 
@@ -758,7 +758,7 @@ assert(age >= 0, "A idade de uma pessoa não pode ser menor que zero.")
 // Essa asserção falha porque -3 não é >= 0.
 ```
 
-Nesse exemplo, a execução do código irá continuar se `age >= 0` for `true`, isto é, se o valor de `age` não for negativo. Se o valor de `age` for negativo, como no código acima, então `age >= 0` será `false` e asserção irá falhar, terminando a aplicação.
+Nesse exemplo, a execução do código irá continuar se `age >= 0` for `true`, isto é, se o valor de `age` não for negativo. Se o valor de `age` for negativo, como no código acima, então `age >= 0` será `false` e a asserção irá falhar, terminando a aplicação.
 
 Você pode omitir a mensagem de asserção, por exemplo, quando ela apenas repete a condição.
 
