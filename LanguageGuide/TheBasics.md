@@ -220,7 +220,6 @@ tipos de ponto flutuante podem representar um intervalo bem maior do que tipos i
     
 *   `Float` representa um número de ponto flutuante de  32-bit.
     
-
 Nota
 
 `Double` possuí uma precisão ed 15 dígitos decimais, enquanto a precisão de `Float` pode ser tão pequena quanto 6 dígitos decimais. O tipo apropriado de ponto flutuante depende da natureza do intervalo de valores que você precisa trabalhar no seu código. Em situações nas quais qualquer um dos tipos é apropriado `Double`é preferido.
@@ -263,46 +262,43 @@ let anotherPi = 3 + 0.14159
 
 O valor literal de `3` não tem nenhum tipo explícito por si só e, portanto, um tipo de saída apropriado de `Double` é inferido da presença de um literal de ponto flutuante como parte da adição.
 
-Numeric Literals
+Literais Numéricos
 ----------------
 
-Integer literals can be written as:
+Literais numéricos podem ser escritos como:
 
-*   A _decimal_ number, with no prefix
+*   Um número _decimal_ , sem prefixo
     
-*   A _binary_ number, with a `0b` prefix
+*   Um número _binário_ , com um prefixo `0b`
     
-*   An _octal_ number, with a `0o` prefix
+*   Um número _octal_, com um prefixo `0o`
     
-*   A _hexadecimal_ number, with a `0x` prefix
-    
+*   Um número _hexadecimal_, com um prefixo `0x`
 
-All of these integer literals have a decimal value of `17`:
+Todos os inteiros literais abaixo tem um valor decimal `17`:
 
 ```swift
 let decimalInteger = 17
-let binaryInteger = 0b10001 // 17 in binary notation
-let octalInteger = 0o21 // 17 in octal notation
-let hexadecimalInteger = 0x11 // 17 in hexadecimal notation
+let binaryInteger = 0b10001 // 17 em notação binária
+let octalInteger = 0o21 // 17 em notação octal
+let hexadecimalInteger = 0x11 // 17 em notação octal
 ```
 
-Floating-point literals can be decimal (with no prefix), or hexadecimal (with a `0x` prefix). They must always have a number (or hexadecimal number) on both sides of the decimal point. Decimal floats can also have an optional _exponent_, indicated by an uppercase or lowercase `e`; hexadecimal floats must have an exponent, indicated by an uppercase or lowercase `p`.
+Literais de Ponto-flutuante podem ser decimais(sem prefixo) ou hexadecimais(com um prefixo `0x`). Elas sempre devem ter um número (ou um número hexadecimal) em ambos os lados do ponto decimal. Decimais flutuantes também podem ter um _expoente_ opcional indicado por um `e` maiúsculo ou minúsculo; hexadecimais flutuantes devem ter um expoente, indicado por um `p` maiúsculo ou minúsculo.
 
-For decimal numbers with an exponent of `exp`, the base number is multiplied by 10exp:
+Para números decimais com um expoente `exp`, o número base é multiplicado por 10ˆexp:
 
-*   `1.25e2` means 1.25 x 10ˆ2, or `125.0`.
+*   `1.25e2` significa 1.25 x 10ˆ2, ou `125.0`.
     
-*   `1.25e-2` means 1.25 x 10ˆ2, or `0.0125`.
+*   `1.25e-2` significa 1.25 x 10ˆ-2, ou `0.0125`.
     
+Para números hexadecimais com um expoente `exp`, o número base é multiplicado por 2ˆexp:
 
-For hexadecimal numbers with an exponent of `exp`, the base number is multiplied by 2exp:
-
-*   `0xFp2` means 15 x 22, or `60.0`.
+*   `0xFp2` significa 15 x 2ˆ2, ou `60.0`.
     
-*   `0xFp-2` means 15 x 2ˆ2, or `3.75`.
+*   `0xFp-2` significa 15 x 2ˆ-2, ou `3.75`.
     
-
-All of these floating-point literals have a decimal value of `12.1875`:
+Todos os literais de ponto flutuante abaixo tem um valor decimal de `12.1875`:
 
 ```swift
 let decimalDouble = 12.1875
@@ -310,7 +306,7 @@ let exponentDouble = 1.21875e1
 let hexadecimalDouble = 0xC.3p0
 ```
 
-Numeric literals can contain extra formatting to make them easier to read. Both integers and floats can be padded with extra zeros and can contain underscores to help with readability. Neither type of formatting affects the underlying value of the literal:
+Literais numéricos podem conter formatação extra para facilitar sua leitura. Ambos inteiros e pontos-flutuantes podem ser preenchidos com zeros extras e conter underscores(`_`) para ajudar na legibilidade. Nem a formatação nem o tipo afetam o valor subjacente do literal:
 
 ```swift
 let paddedDouble = 000123.456
