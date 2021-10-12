@@ -56,7 +56,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [x] [Type Safety and Type Inference](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#type-safety-e-inferência-de-tipo)
     - [ ] Numeric Literals
     - [x] [Numeric Type Conversion](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#convers%C3%A3o-de-tipo-num%C3%A9rico)
-    - [ ] Assertions and Preconditions
+    - [x] [Assertions and Preconditions](LanguageGuide/TheBasics.md#asserções-e-pré-condições)
   - [x] [Basic Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md)
     - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operadores-b%C3%A1sicos)
     - [x] [Terminology](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#terminologia)
