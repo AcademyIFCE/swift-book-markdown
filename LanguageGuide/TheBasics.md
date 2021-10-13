@@ -731,64 +731,64 @@ If no error is thrown, the `eatASandwich()` function is called. If an error is t
 
 Throwing, catching, and propagating errors is covered in greater detail in [Error Handling](ErrorHandling.xhtml).
 
-Assertions and Preconditions
+Asserções e pré-condições
 ----------------------------
 
-_Assertions_ and _preconditions_ are checks that happen at runtime. You use them to make sure an essential condition is satisfied before executing any further code. If the Boolean condition in the assertion or precondition evaluates to `true`, code execution continues as usual. If the condition evaluates to `false`, the current state of the program is invalid; code execution ends, and your app is terminated.
+Asserções e pré-condições são verificações que ocorrem em tempo de execução. Você as usa para garantir que uma condição essencial é satisfeita antes de executar o código seguinte. Se a condição booleana na asserção ou pré-condição for avaliada como `true`, a execução do código seguirá normalmente. Se a condição for avaliada como `false`, o estado atual do programa é inválido; a execução do código termina e o _app_ é finalizado.
 
-You use assertions and preconditions to express the assumptions you make and the expectations you have while coding, so you can include them as part of your code. Assertions help you find mistakes and incorrect assumptions during development, and preconditions help you detect issues in production.
+Asserções e pré-condições são usadas para expressar premissas que surgem enquanto você escreve seu código, assim você pode incluí-las como parte do seu código. Asserções ajudam você a encontrar erros e premissas incorretas durante o desenvolvimento, e pré-condições ajudam você a detectar problemas em produção.
 
-In addition to verifying your expectations at runtime, assertions and preconditions also become a useful form of documentation within the code. Unlike the error conditions discussed in [Error Handling](#ID515) above, assertions and preconditions aren’t used for recoverable or expected errors. Because a failed assertion or precondition indicates an invalid program state, there’s no way to catch a failed assertion.
+Além de verificar as expectativas em tempo de execução, asserções e pré-condições também se tornam uma forma de documentação dentro do código. Diferentemente das condições de erro discutidas em [Error Handling](#error-handling) acima, asserções e pré-condições não são usadas para erros esperados ou recuperáveis. Como uma asserção ou pré-condição que falha indica um estado inválido do programa, não é possível capturar uma asserção que falhou.
 
-Using assertions and preconditions isn’t a substitute for designing your code in such a way that invalid conditions are unlikely to arise. However, using them to enforce valid data and state causes your app to terminate more predictably if an invalid state occurs, and helps make the problem easier to debug. Stopping execution as soon as an invalid state is detected also helps limit the damage caused by that invalid state.
+O uso de asserções e pré-condições não é uma substitição para projetar seu código de uma forma que condições inválidas não aconteçam. De qualquer forma, usá-las para forçar dados e estados válidos fazem seu app terminar de maneira mais previsível se um estádo inválido ocorrer, e ajuda a tornar os problemas mais fáceis de depurar. Encerrar a execução assim que um estado inválido ocorre também ajuda a limitar o dano causado por esse estado inválido.
 
-The difference between assertions and preconditions is in when they’re checked: Assertions are checked only in debug builds, but preconditions are checked in both debug and production builds. In production builds, the condition inside an assertion isn’t evaluated. This means you can use as many assertions as you want during your development process, without impacting performance in production.
+A diferença entre asserções e pré-condições está em quando elas são verificadas: Asserções são verificadas apenas em _builds_ para depuração, e pré-condições são verificadas em ambas, _builds_ para produção e depuração. Nas _builds_ para produção, as condições em uma asserção não são avaliadas. Isso significa que você pode usar quantas asserções quiser enquanto estiver desenvolvendo, sem impactar a performance em produção. 
 
-### Debugging with Assertions
+### Depurando com Asserções
 
-You write an assertion by calling the [`assert(_:_:file:line:)`](https://developer.apple.com/documentation/swift/1541112-assert) \[https://developer.apple.com/documentation/swift/1541112-assert\] function from the Swift standard library. You pass this function an expression that evaluates to `true` or `false` and a message to display if the result of the condition is `false`. For example:
+Você escreve uma asserção chamando a função [`assert(_:_:file:line:)`](https://developer.apple.com/documentation/swift/1541112-assert) da biblioteca padrão de Swift. Você passa para essa função uma expressão que resulta em verdadeiro ou falso, e uma mensagem para ser exibida se o resultado da condição for `false`. Por exemplo:
 
 ```swift
-let age = \-3
-assert(age >= 0, "A person's age can't be less than zero.")
-// This assertion fails because -3 is not >= 0.
+let age = -3
+assert(age >= 0, "A idade de uma pessoa não pode ser menor que zero.")
+// Essa asserção falha porque -3 não é >= 0.
 ```
 
-In this example, code execution continues if `age >= 0` evaluates to `true`, that is, if the value of `age` is nonnegative. If the value of `age` is negative, as in the code above, then `age >= 0` evaluates to `false`, and the assertion fails, terminating the application.
+Nesse exemplo, a execução do código irá continuar se `age >= 0` for `true`, isto é, se o valor de `age` não for negativo. Se o valor de `age` for negativo, como no código acima, então `age >= 0` será `false` e a asserção irá falhar, terminando a aplicação.
 
-You can omit the assertion message—for example, when it would just repeat the condition as prose.
+Você pode omitir a mensagem de asserção, por exemplo, quando ela apenas repete a condição.
 
 ```swift
 assert(age >= 0)
 ```
 
-If the code already checks the condition, you use the [`assertionFailure(_:file:line:)`](https://developer.apple.com/documentation/swift/1539616-assertionfailure) \[https://developer.apple.com/documentation/swift/1539616-assertionfailure\] function to indicate that an assertion has failed. For example:
+Se o código já verifica a condição, você usa a função [`assertionFailure(_:file:line:)`](https://developer.apple.com/documentation/swift/1539616-assertionfailure) para indicar que uma asserção falhou. Por exemplo:
 
 ```swift
 if age > 10 {
-    print("You can ride the roller-coaster or the ferris wheel.")
+    print("Você pode ir na montanha-russa ou na roda gigante.")
 } else if age >= 0 {
-    print("You can ride the ferris wheel.")
+    print("Você pode ir na roda gigante.")
 } else {
-    assertionFailure("A person's age can't be less than zero.")
+    assertionFailure("A idade de uma pessoa não pode ser menor que zero.")
 }
 ```
 
-### Enforcing Preconditions
+### Forçando pré-condições
 
-Use a precondition whenever a condition has the potential to be false, but must _definitely_ be true for your code to continue execution. For example, use a precondition to check that a subscript is not out of bounds, or to check that a function has been passed a valid value.
+Use uma pré-condição sempre que uma condição tenha potencial para ser falsa, mas _definitivamente_ precise ser verdadeira para seu código continuar a execução. Por exemplo, use uma pré-condição para verificar que uma subscrição não está fora dos limites, ou para verificar que uma função recebeu um valor válido.
 
-You write a precondition by calling the [`precondition(_:_:file:line:)`](https://developer.apple.com/documentation/swift/1540960-precondition) \[https://developer.apple.com/documentation/swift/1540960-precondition\] function. You pass this function an expression that evaluates to `true` or `false` and a message to display if the result of the condition is `false`. For example:
+Você escreve uma pré-condição chamando a função [`precondition(_:_:file:line:)`](https://developer.apple.com/documentation/swift/1540960-precondition). Você passa para essa função uma expressão que resulta em `true` ou `false` e a mensagem a ser exibida caso o resultado da condição seja `false`. Por exemplo:
 
 ```swift
-// In the implementation of a subscript...
-precondition(index > 0, "Index must be greater than zero.")
+// A implementação de uma subscrição...
+precondition(index > 0, "O índice deve ser maior que zero.")
 ```
 
-You can also call the [`preconditionFailure(_:file:line:)`](https://developer.apple.com/documentation/swift/1539374-preconditionfailure) \[https://developer.apple.com/documentation/swift/1539374-preconditionfailure\] function to indicate that a failure has occurred—for example, if the default case of a switch was taken, but all valid input data should have been handled by one of the switch’s other cases.
+Você também pode chamar a função [`preconditionFailure(_:file:line:)`](https://developer.apple.com/documentation/swift/1539374-preconditionfailure) para indicar que um erro ocorreu, por exemplo, se o caso padrão de um `switch` foi capturado, mas todos os dados de entrada válidos deveriam ser manipulados por um dos outros casos do `switch`.
 
-**Note**
+**Nota**
 
-> If you compile in unchecked mode (`-Ounchecked`), preconditions aren’t checked. The compiler assumes that preconditions are always true, and it optimizes your code accordingly. However, the `fatalError(_:file:line:)` function always halts execution, regardless of optimization settings.
+> Se você compilar no modo não-verificado (`-Ounchecked`), as pré-condições não são verificadas. O compilador assume que as pré-condições são sempre verdadeiras, e ele otimiza seu código de maneira adequada. De qualquer forma, a função `fatalError(_:file:line:)` sempre para a execução, apesar das configurações de otimização.
 
-You can use the `fatalError(_:file:line:)` function during prototyping and early development to create stubs for functionality that hasn’t been implemented yet, by writing `fatalError("Unimplemented")` as the stub implementation. Because fatal errors are never optimized out, unlike assertions or preconditions, you can be sure that execution always halts if it encounters a stub implementation.
+Você pode usar a função `fatalError(_:file:line:)` durante a prototipação e desenvolvimento inicial para criar stubs para funcionalidades que ainda não foram implementadas, escrevendo `fatalError(_:file:line:)` como o stub da implementação. Como erros fatais nunca são otimizados, diferentemente das asserções e pré-condições, vocÊ pode ter certeza de que a execução sempre irá parar caso encontre alguma implementação de stub.
