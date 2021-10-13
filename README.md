@@ -46,7 +46,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
   - [x] [Error Handling](GuidedTour/SwiftTour.md#tratamento-de-erros)
   - [x] [Generics](GuidedTour/SwiftTour.md#generics)
 - [ ] Language Guide
-  - [ ] [The Basics](LanguageGuide/TheBasics.md#the-basics)
+  - [x] [The Basics](LanguageGuide/TheBasics.md#the-basics)
     - [x] [Intro](LanguageGuide/TheBasics.md#the-basics)
     - [x] [Constants and Variables](LanguageGuide/TheBasics.md#constants-and-variables)
     - [x] [Comments](LanguageGuide/TheBasics.md#coment%C3%A1rios)
