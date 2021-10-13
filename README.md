@@ -33,47 +33,47 @@ Os Pull Requests devem ser feitos diretamente para a branch `master`, e marcar a
 
 O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ antes de ser traduzido. A seguintes _Sessões_ já estão em formato _Markdown_ e já podem ser traduzidas através de Pull Requests:
 
-- [x] [About Swift](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/AboutSwift.md)
-- [x] [Version Compatibility](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/Compatibility.md)
-- [x] [A Swift Tour](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/SwiftTour.md)
-  - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/SwiftTour.md#uma-tour-pela-swift)
-  - [x] [Simple Values](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/SwiftTour.md#valores-simples)
-  - [x] [Control Flow](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/SwiftTour.md#controle-de-fluxo)
-  - [x] [Functions and Closures](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/SwiftTour.md#fun%C3%A7%C3%B5es-e-closures)
-  - [x] [Objects and Classes](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/SwiftTour.md#objetos-e-classes)
-  - [x] [Enumerations and Structures](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/SwiftTour.md#enumerations-and-structures)
-  - [x] [Protocols and Extensions](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/SwiftTour.md#protocolos-e-extens%C3%B5es)
-  - [x] [Error Handling](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/SwiftTour.md#tratamento-de-erros)
-  - [x] [Generics](https://github.com/AcademyIFCE/Swift-Book/blob/master/GuidedTour/SwiftTour.md#generics)
+- [x] [About Swift](GuidedTour/AboutSwift.md)
+- [x] [Version Compatibility](GuidedTour/Compatibility.md)
+- [x] [A Swift Tour](GuidedTour/SwiftTour.md)
+  - [x] [Intro](GuidedTour/SwiftTour.md#uma-tour-pela-swift)
+  - [x] [Simple Values](GuidedTour/SwiftTour.md#valores-simples)
+  - [x] [Control Flow](GuidedTour/SwiftTour.md#controle-de-fluxo)
+  - [x] [Functions and Closures](GuidedTour/SwiftTour.md#fun%C3%A7%C3%B5es-e-closures)
+  - [x] [Objects and Classes](GuidedTour/SwiftTour.md#objetos-e-classes)
+  - [x] [Enumerations and Structures](GuidedTour/SwiftTour.md#enumerations-and-structures)
+  - [x] [Protocols and Extensions](GuidedTour/SwiftTour.md#protocolos-e-extens%C3%B5es)
+  - [x] [Error Handling](GuidedTour/SwiftTour.md#tratamento-de-erros)
+  - [x] [Generics](GuidedTour/SwiftTour.md#generics)
 - [ ] Language Guide
-  - [ ] [The Basics](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#the-basics)
-    - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#the-basics)
-    - [x] [Constants and Variables](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#constants-and-variables)
-    - [x] [Comments](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#coment%C3%A1rios)
-    - [x] [Semicolons](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#ponto-e-v%C3%ADrgula)
-    - [x] [Integers](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#integers)
-    - [x] [Floating-Point Numbers](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#n%C3%BAmeros-de-ponto-flutuante)
-    - [x] [Type Safety and Type Inference](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#type-safety-e-inferência-de-tipo)
+  - [x] [The Basics](LanguageGuide/TheBasics.md#the-basics)
+    - [x] [Intro](LanguageGuide/TheBasics.md#the-basics)
+    - [x] [Constants and Variables](LanguageGuide/TheBasics.md#constants-and-variables)
+    - [x] [Comments](LanguageGuide/TheBasics.md#coment%C3%A1rios)
+    - [x] [Semicolons](LanguageGuide/TheBasics.md#ponto-e-v%C3%ADrgula)
+    - [x] [Integers](LanguageGuide/TheBasics.md#integers)
+    - [x] [Floating-Point Numbers](LanguageGuide/TheBasics.md#n%C3%BAmeros-de-ponto-flutuante)
+    - [x] [Type Safety and Type Inference](LanguageGuide/TheBasics.md#type-safety-e-inferência-de-tipo)
     - [x] [Numeric Literals](LanguageGuide/TheBasics.md#literais-num%C3%A9ricos)
-    - [x] [Numeric Type Conversion](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/TheBasics.md#convers%C3%A3o-de-tipo-num%C3%A9rico)
+    - [x] [Numeric Type Conversion](LanguageGuide/TheBasics.md#convers%C3%A3o-de-tipo-num%C3%A9rico)
     - [x] [Assertions and Preconditions](LanguageGuide/TheBasics.md#asserções-e-pré-condições)
-  - [x] [Basic Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md)
-    - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operadores-b%C3%A1sicos)
-    - [x] [Terminology](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#terminologia)
-    - [x] [Assignment Operator](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operador-de-atribui%C3%A7%C3%A3o)
-    - [x] [Arithmetic Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operadores-aritm%C3%A9ticos)
-    - [x] [Compound Assignment Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operadores-compostos-de-atribui%C3%A7%C3%A3o)
-    - [x] [Comparison Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operadores-de-compara%C3%A7%C3%A3o)
-    - [x] [Ternary Conditional Operator](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operador-tern%C3%A1rio-condicional)
-    - [x] [Nil-Coalescing Operator](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operador-nil-coalescing)
-    - [x] [Range Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operadores-de-intervalo)
-    - [x] [Logical Operators](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/BasicOperators.md#operadores-l%C3%B3gicos)
+  - [x] [Basic Operators](LanguageGuide/BasicOperators.md)
+    - [x] [Intro](LanguageGuide/BasicOperators.md#operadores-b%C3%A1sicos)
+    - [x] [Terminology](LanguageGuide/BasicOperators.md#terminologia)
+    - [x] [Assignment Operator](LanguageGuide/BasicOperators.md#operador-de-atribui%C3%A7%C3%A3o)
+    - [x] [Arithmetic Operators](LanguageGuide/BasicOperators.md#operadores-aritm%C3%A9ticos)
+    - [x] [Compound Assignment Operators](LanguageGuide/BasicOperators.md#operadores-compostos-de-atribui%C3%A7%C3%A3o)
+    - [x] [Comparison Operators](LanguageGuide/BasicOperators.md#operadores-de-compara%C3%A7%C3%A3o)
+    - [x] [Ternary Conditional Operator](LanguageGuide/BasicOperators.md#operador-tern%C3%A1rio-condicional)
+    - [x] [Nil-Coalescing Operator](LanguageGuide/BasicOperators.md#operador-nil-coalescing)
+    - [x] [Range Operators](LanguageGuide/BasicOperators.md#operadores-de-intervalo)
+    - [x] [Logical Operators](LanguageGuide/BasicOperators.md#operadores-l%C3%B3gicos)
   - [ ] Strings And Characters
-    - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#strings-e-caracteres)
-    - [x] [String Literals](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#literais-de-string)
-    - [x] [Initializing an Empty String](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#inicializando-uma-string-vazia)
-    - [x] [String Mutability](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#mutabilidade-da-string)
-    - [x] [Strings Are Value Types](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/StringsAndCharacters.md#strings-são-value-types)
+    - [x] [Intro](LanguageGuide/StringsAndCharacters.md#strings-e-caracteres)
+    - [x] [String Literals](LanguageGuide/StringsAndCharacters.md#literais-de-string)
+    - [x] [Initializing an Empty String](LanguageGuide/StringsAndCharacters.md#inicializando-uma-string-vazia)
+    - [x] [String Mutability](LanguageGuide/StringsAndCharacters.md#mutabilidade-da-string)
+    - [x] [Strings Are Value Types](LanguageGuide/StringsAndCharacters.md#strings-são-value-types)
     - [ ] Working with Characters
     - [ ] Concatenating Strings and Characters
     - [ ] String Interpolation
@@ -107,17 +107,17 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [ ] Function Types
     - [ ] Nested Functions
   - [ ] Closures
-    - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Closures.md#closures)
-    - [x] [Closure Expressions](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Closures.md#express%C3%B5es-closure)
+    - [x] [Intro](LanguageGuide/Closures.md#closures)
+    - [x] [Closure Expressions](LanguageGuide/Closures.md#express%C3%B5es-closure)
     - [ ] Trailing Closures
     - [ ] Capturing Values
-    - [x] [Closures Are Reference Types](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Closures.md#closures-s%C3%A3o-reference-types)
-    - [x] [Escaping Closures](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Closures.md#escaping-closures)
+    - [x] [Closures Are Reference Types](LanguageGuide/Closures.md#closures-s%C3%A3o-reference-types)
+    - [x] [Escaping Closures](LanguageGuide/Closures.md#escaping-closures)
     - [ ] Autoclosures
   - [ ] Enumerations
-    - [X] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Enumerations.md#enumera%C3%A7%C3%B5es)
-    - [X] [Enumeration Syntax](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Enumerations.md#sintaxe-de-enumera%C3%A7%C3%B5es)
-    - [X] [Matching Enumeration Values with a Switch Statement](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Enumerations.md#correspondendo-valores-de-enumera%C3%A7%C3%B5es-com-blocos-switch)
+    - [X] [Intro](LanguageGuide/Enumerations.md#enumera%C3%A7%C3%B5es)
+    - [X] [Enumeration Syntax](LanguageGuide/Enumerations.md#sintaxe-de-enumera%C3%A7%C3%B5es)
+    - [X] [Matching Enumeration Values with a Switch Statement](LanguageGuide/Enumerations.md#correspondendo-valores-de-enumera%C3%A7%C3%B5es-com-blocos-switch)
     - [ ] Iterating over Enumeration Cases
     - [ ] Associated Values
     - [ ] Raw Values
@@ -128,9 +128,9 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [ ] Structures and Enumerations Are Value Types
     - [ ] Classes Are Reference Types
   - [ ] Properties
-    - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Properties.md#propriedades)
-    - [x] [Stored Properties](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Properties.md#propriedades-armazenadas)
-    - [x] [Computed Properties](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Properties.md#propriedades-computadas)
+    - [x] [Intro](LanguageGuide/Properties.md#propriedades)
+    - [x] [Stored Properties](LanguageGuide/Properties.md#propriedades-armazenadas)
+    - [x] [Computed Properties](LanguageGuide/Properties.md#propriedades-computadas)
     - [ ] Property Observers
     - [ ] Property Wrappers
     - [ ] Global and Local Variables
@@ -217,9 +217,9 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [ ] Optional Protocol Requirements
     - [ ] Protocol Extensions
   - [ ] Generics
-    - [x] [Intro](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Generics.md#generics)
-    - [x] [The Problem That Generics Solve](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Generics.md#o-problema-que-generics-resolve)
-    - [x] [Generic Functions](https://github.com/AcademyIFCE/Swift-Book/blob/master/LanguageGuide/Generics.md#fun%C3%A7%C3%B5es-generic)
+    - [x] [Intro](LanguageGuide/Generics.md#generics)
+    - [x] [The Problem That Generics Solve](LanguageGuide/Generics.md#o-problema-que-generics-resolve)
+    - [x] [Generic Functions](LanguageGuide/Generics.md#fun%C3%A7%C3%B5es-generic)
     - [ ] Type Parameters
     - [ ] Naming Type Parameters
     - [ ] Generic Types
