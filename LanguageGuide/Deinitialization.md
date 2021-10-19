@@ -3,14 +3,14 @@ Deinitialization
 Deinitialization
 ================
 
-A *deinitializer* is called immediately before a class instance is deallocated. You write deinitializers with the `deinit` keyword, similar to how initializers are written with the `init` keyword. Deinitializers are only available on class types.
+Um *deinitializer* é chamado imediatamente antes de uma instância de classe ser desalocada. Você escreve os desinicializadores com a palavra-chave `deinit`, semelhante a como os inicializadores são escritos com a palavra-chave` init`. Os desinicializadores estão disponíveis apenas em tipos de classes.
 
-How Deinitialization Works
+Como Deinitialization funcionam
 --------------------------
 
-Swift automatically deallocates your instances when they are no longer needed, to free up resources. Swift handles the memory management of instances through *automatic reference counting* (*ARC*), as described in [Automatic Reference Counting](AutomaticReferenceCounting.md). Typically you don’t need to perform manual cleanup when your instances are deallocated. However, when you are working with your own resources, you might need to perform some additional cleanup yourself. For example, if you create a custom class to open a file and write some data to it, you might need to close the file before the class instance is deallocated.
+O Swift desaloca automaticamente suas instâncias quando elas não são mais necessárias para liberar recursos. O Swift lida com o gerenciamento de memória de instâncias por meio de *automatic reference counting* (* ARC *), conforme descrito em [Automatic Reference Counting] (AutomaticReferenceCounting.md). Normalmente, você não precisa realizar uma limpeza manual quando suas instâncias são desalocadas. No entanto, quando estiver trabalhando com suas próprias referências, pode ser necessário realizar alguma limpeza adicional. Por exemplo, se você criar uma classe personalizada para abrir um arquivo e gravar alguns dados nele, pode ser necessário fechar o arquivo antes que a instância da classe seja desalocada.
 
-Class definitions can have at most one deinitializer per class. The deinitializer does not take any parameters and is written without parentheses:
+As definições de classe podem ter no máximo um desinicializador por classe. O desinicializador não assume nenhum parâmetro e é escrito sem parênteses:
 
 ```swift
 deinit {
@@ -18,9 +18,9 @@ deinit {
 }
 ```
 
-Deinitializers are called automatically, just before instance deallocation takes place. You are not allowed to call a deinitializer yourself. Superclass deinitializers are inherited by their subclasses, and the superclass deinitializer is called automatically at the end of a subclass deinitializer implementation. Superclass deinitializers are always called, even if a subclass does not provide its own deinitializer.
+Os desinicializadores são chamados automaticamente, pouco antes de ocorrer a desalocação da instância. Você não tem permissão para chamar um desinicializador. Os desinicializadores da superclasse são herdados por suas subclasses, e o desinicializador da superclasse é chamado automaticamente no final de uma implementação do desinicializador da subclasse. Os desinicializadores de superclasse são sempre chamados, mesmo se uma subclasse não fornecer seu próprio desinicializador.
 
-Because an instance is not deallocated until after its deinitializer is called, a deinitializer can access all properties of the instance it is called on and can modify its behavior based on those properties (such as looking up the name of a file that needs to be closed).
+Como uma instância não é desalocada até que seu desinicializador seja chamado, um desinicializador pode acessar todas as propriedades da instância em que é chamado e pode modificar seu comportamento com base nessas propriedades (como procurar o nome de um arquivo que precisa ser fechado).
 
 Deinitializers in Action
 ------------------------
