@@ -35,19 +35,19 @@ Um *array* armazena valores do mesmo tipo em uma lista ordenada. O mesmo valor p
 
 ### Sintaxe Abreviada do Tipo Array
 
-The type of a Swift array is written in full as `Array<Element>`, where `Element` is the type of values the array is allowed to store. You can also write the type of an array in shorthand form as `[Element]`. Although the two forms are functionally identical, the shorthand form is preferred and is used throughout this guide when referring to the type of an array.
+A notação completa do tipo do array em Swift é `Array<Element>`, onde `Element` é o tipo do valor que o array é permitir armazenar. Você pode também escrever o tipo de um array de forma abreviada usando `[Element]`. Embora as duas formas funcionam de maneira identica, a forma abreviada é preferida e é usada em todo este guia quando se refere ao tipo de um array.
 
-### Creating an Empty Array
+### Criando um Array Vazio
 
-You can create an empty array of a certain type using initializer syntax:
+Você pode criar um array vazio de um certo tipo usando a sintaxe de inicialização: 
 
 ```swift
 var someInts = [Int]()
 print("someInts is of type [Int] with \(someInts.count) items.")
-// Prints "someInts is of type \[Int] with 0 items."
+// Imprime "someInts is of type \[Int] with 0 items."
 ```
+Note que o tipo da variável `someInts` é inferido como sendo `[Int]` a partir do tipo do inicializador.
 
-Note that the type of the `someInts` variable is inferred to be `[Int]` from the type of the initializer.
 
 Alternatively, if the context already provides type information, such as a function argument or an already typed variable or constant, you can create an empty array with an empty array literal, which is written as `[]` (an empty pair of square brackets):
 
