@@ -222,7 +222,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [x] [Generic Functions](LanguageGuide/Generics.md#fun%C3%A7%C3%B5es-generic)
     - [ ] Type Parameters
     - [ ] Naming Type Parameters
-    - [ ] Generic Types
+    - [x] [Generic Types](LanguageGuide/Generics.md#Tipos%20Gen%C3%A9ricos)
     - [ ] Extending a Generic Type
     - [ ] Type Constraints
     - [ ] Associated Types
