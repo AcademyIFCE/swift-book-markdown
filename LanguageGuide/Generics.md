@@ -115,34 +115,33 @@ In most cases, type parameters have descriptive names, such as `Key` and `Value`
 
 >Always give type parameters upper camel case names (such as `T` and `MyTypeParameter`) to indicate that they’re a placeholder for a _type_, not a value.
 
-Generic Types
+Tipos Genéricos
 -------------
 
-In addition to generic functions, Swift enables you to define your own _generic types_. These are custom classes, structures, and enumerations that can work with _any_ type, in a similar way to `Array` and `Dictionary`.
+Em adição a funções genéricas, em Swift você pode definir seus próprios _generic types_, ou _tipos genéricos_. _Tipos genéricos_ são classes, structs e enums que podem trabalhar com _qualquer_ tipo, de maneira similar a `Array` e `Dictionary`.
 
-This section shows you how to write a generic collection type called `Stack`. A stack is an ordered set of values, similar to an array, but with a more restricted set of operations than Swift’s `Array` type. An array allows new items to be inserted and removed at any location in the array. A stack, however, allows new items to be appended only to the end of the collection (known as _pushing_ a new value on to the stack). Similarly, a stack allows items to be removed only from the end of the collection (known as _popping_ a value off the stack).
+Essa sessão irá mostrar como escrever uma coleção genérica chamada `Stack`, ou `Pilha`. Uma `Pilha` é conjunto ordenado de valores, parecido com um array, mas com operações mais restritas. Um array permite que novos items sejam inseridos e removidos em qualquer lugar no array. Uma Pilha, entretanto, só permite que novos itens sejam adicionados após o último elemento, ou seja, no fim da coleção (essa operação é conhecida como _push_). Similarmente, uma Pilha só permite que itens sejam removidos no fim da coleção, ou seja, só é possível remover o último item da coleção (essa operação é conhecida como _pop_).
 
-**Note**
+**Nota**
 
->The concept of a stack is used by the `UINavigationController` class to model the view controllers in its navigation hierarchy. You call the `UINavigationController` class `pushViewController(_:animated:)` method to add (or push) a view controller on to the navigation stack, and its `popViewControllerAnimated(_:)` method to remove (or pop) a view controller from the navigation stack. A stack is a useful collection model whenever you need a strict “last in, first out” approach to managing a collection.
+>O conceito de uma pilha é usada pela classe `UINavigationController` para modelar as view controllers na sua hierarquia de navegação. Você pode chamar o método `pushViewController(_:animated:)` da classe `UINavigationController` para adicionar (push) uma view controller na pilha da navigationController, ou você pode chamar o método `popViewControllerAnimated(_ :)` para remover (pop) uma view controller da pilha de navegação da navigationController. Uma pilha é um modelo de coleção útil sempre que você precisa de um comportamento estritamente _last in, first out_ (último a entrar, primeiro a sair) para gerenciá-la.
 
-The illustration below shows the push and pop behavior for a stack:
+A ilustração abaixo mostra o comportamento de push e pop de uma pilha:
 
 ![../_images/stackPushPop_2x.png](../_images/stackPushPop_2x.png)
 
 
-1. There are currently three values on the stack.
+1. Existem inicialmente 3 valores na pilha.
 
-2. A fourth value is pushed onto the top of the stack.
+2. Um quarto value é inserido no topo da pilha. (push)
 
-3. The stack now holds four values, with the most recent one at the top.
+3. A pilha agora tem 4 valores, com o mais recente no topo.
 
-4. The top item in the stack is popped.
+4. O valor que está no topo é removido. (pop)
 
-5. After popping a value, the stack once again holds three values.
+5. Depois de remover esse valor, a pilha tem os 3 valores originais novamente.
 
-
-Here’s how to write a nongeneric version of a stack, in this case for a stack of `Int` values:
+Aqui está uma implementação não genérica de uma pilha, nesse caso uma pilha que tem valores do tipo `Int`:
 
 ```swift
 struct IntStack {
@@ -156,11 +155,11 @@ struct IntStack {
 }
 ```
 
-This structure uses an `Array` property called `items` to store the values in the stack. `Stack` provides two methods, `push` and `pop`, to push and pop values on and off the stack. These methods are marked as `mutating`, because they need to modify (or _mutate_) the structure’s `items` array.
+Essa estrutura usa uma propriedade do tipo `Array` chamado `items` para armazenar valores na pilha, e implementa dois métodos, `push` e `pop`, para adicionar e remover valores da pilha. Esses métodos estão marcados como `mutating` porque eles precisam modificar (ou _mutar_) os valores originais da própria struct, que são, no caso, os elementos do array _items_.
 
-The `IntStack` type shown above can only be used with `Int` values, however. It would be much more useful to define a _generic_ `Stack` class, that can manage a stack of _any_ type of value.
+O tipo `IntStack` mostrado acima só pode ser usado com valores do tipo `Int`. Seria muito mais útil definir uma classe _genérica_ `Stack`, que pode gerenciar uma pilha contendo elementos de _qualquer_ tipo.
 
-Here’s a generic version of the same code:
+Aqui está uma versão genérica do mesmo cóigo:
 
 ```swift
 struct Stack<Element> {
@@ -174,20 +173,19 @@ struct Stack<Element> {
 }
 ```
 
-Note how the generic version of `Stack` is essentially the same as the nongeneric version, but with a type parameter called `Element` instead of an actual type of `Int`. This type parameter is written within a pair of angle brackets (`<Element>`) immediately after the structure’s name.
+Note como a versão genérica da `Stack` é essencialmente a mesma que a da versão não genérica, mas contendo um type parameter chamado `Element`, em vez de um tipo `Int`. Esse type parameter está escrito entre sinais de maior ou menor que, ou _angle brackets_ em inglês (`<Element>`) logo após o nome da struct.
 
-`Element` defines a placeholder name for a type to be provided later. This future type can be referred to as `Element` anywhere within the structure’s definition. In this case, `Element` is used as a placeholder in three places:
+`Element` define um placeholder para um tipo ser provido depois. Esse tipo futuro pode ser referido como `Element` em qualquer lugar dentro da definição do strcut. Nesse caso, `Element` é usado como um placeholder em três lugares:
 
-*   To create a property called `items`, which is initialized with an empty array of values of type `Element`
+*   Para criar uma propriedade chamada `items`, que é inicializada com um array vazio de valores do tipo `Element`
 
-*   To specify that the `push(_:)` method has a single parameter called `item`, which must be of type `Element`
+*   Para especificar que o método `push(_:)` tem um único parametro chamado `item`, que deve ser do tipo `Element`
 
-*   To specify that the value returned by the `pop()` method will be a value of type `Element`
+*   Para especificar que o valor retornado pelo método `pop()` será um valor do tipo `Element`
 
+Porque é um tipo genérico, `Stack` pode ser usada para criar uma pilha de _qualquer_ tipo válido em Swift, de maneira semelhante a um `Array` ou `Dictionary`.
 
-Because it’s a generic type, `Stack` can be used to create a stack of _any_ valid type in Swift, in a similar manner to `Array` and `Dictionary`.
-
-You create a new `Stack` instance by writing the type to be stored in the stack within angle brackets. For example, to create a new stack of strings, you write `Stack<String>()`:
+Você pode criar uma nova instancia de `Stack` escrevendo o tipo a ser armazenado na pilha dentro de _angle brackets_. Por exemplo, para criar uma nova pilha de Strings, você escreve `Stack<String>()`:
 
 ```swift
 var stackOfStrings = Stack<String\>()
@@ -198,18 +196,19 @@ stackOfStrings.push("cuatro")
 // the stack now contains 4 strings
 ```
 
-Here’s how `stackOfStrings` looks after pushing these four values on to the stack:
+É assim que `stackOfStrings` fica depois de inserir (push) esses 4 valores na pilha:
 
 ![../_images/stackPushedFourStrings_2x.png](../_images/stackPushedFourStrings_2x.png)
 
-Popping a value from the stack removes and returns the top value, `"cuatro"`:
+
+Remover o valor de uma pilha também o retorna. Por exemplo, se removermos um valor da pilha atual, o valor retornado será `cuatro`.
 
 ```swift
 let fromTheTop = stackOfStrings.pop()
 // fromTheTop is equal to "cuatro", and the stack now contains 3 strings
 ```
 
-Here’s how the stack looks after popping its top value:
+É assim que a pilha fica depois de uma operação pop remover o valor em seu topo.
 
 ![../_images/stackPoppedOneString_2x.png](../_images/stackPoppedOneString_2x.png)
 
