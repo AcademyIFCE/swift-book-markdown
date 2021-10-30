@@ -176,7 +176,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [ ] Chaining on Methods with Optional Return Values
   - [ ] Error Handling
     - [ ] Intro
-    - [ ] Representing and Throwing Errors
+    - [x] Representing and Throwing Errors
     - [ ] Handling Errors
     - [ ] Specifying Cleanup Actions
   - [ ] Type Casting
