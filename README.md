@@ -74,7 +74,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [x] [Initializing an Empty String](LanguageGuide/StringsAndCharacters.md#inicializando-uma-string-vazia)
     - [x] [String Mutability](LanguageGuide/StringsAndCharacters.md#mutabilidade-da-string)
     - [x] [Strings Are Value Types](LanguageGuide/StringsAndCharacters.md#strings-são-value-types)
-    - [ ] Working with Characters
+    - [x] [Working with Characters](LanguageGuide/StringsAndCharacters.md#trabalhando-com-caracteres)
     - [ ] Concatenating Strings and Characters
     - [ ] String Interpolation
     - [ ] Unicode
