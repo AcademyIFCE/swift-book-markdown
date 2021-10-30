@@ -13,12 +13,12 @@ As an example, consider the task of reading and processing data from a file on d
 
 >Error handling in Swift interoperates with error handling patterns that use the `NSError` class in Cocoa and Objective-C. For more information about this class, see [Handling Cocoa Errors in Swift](https://developer.apple.com/documentation/swift/cocoa_design_patterns/handling_cocoa_errors_in_swift).
 
-Representing and Throwing Errors
+Representando e Lançando Erros
 --------------------------------
 
-In Swift, errors are represented by values of types that conform to the `Error` protocol. This empty protocol indicates that a type can be used for error handling.
+Em Swift, erros são representados por valores em que o tipo estão conformes o protocolo `Error`. Esse protocolo indica que um tipo pode ser usado para tratamento de erros.
 
-Swift enumerations are particularly well suited to modeling a group of related error conditions, with associated values allowing for additional information about the nature of an error to be communicated. For example, here’s how you might represent the error conditions of operating a vending machine inside a game:
+Enums são a melhor estrutura para modelar um grupo de erros semelhantes, ou relacionados a uma mesma operação, com valores associados que fornecem uma informação adicional sobre a natureza do erro comunicado. Por exemplo, podemos representar as condições de erro de uma maquina de vendas dentro de um jogo:
 
 ```swift
 enum VendingMachineError: Error {
@@ -28,7 +28,7 @@ enum VendingMachineError: Error {
 }
 ```
 
-Throwing an error lets you indicate that something unexpected happened and the normal flow of execution can’t continue. You use a `throw` statement to throw an error. For example, the following code throws an error to indicate that five additional coins are needed by the vending machine:
+Lançar (em inglês, throw) um erro permite que o programa indique que algo inesperado aconteceu e que o fluxo normal foi interrompido. O termo `throw` é usado em Swift para lançar um erro. Por exemplo, o seguinte código lança um erro para indicar que é necessário inserir 5 moedas na maquina de vendas:
 
 ```swift
 throw VendingMachineError.insufficientFunds(coinsNeeded: 5)
