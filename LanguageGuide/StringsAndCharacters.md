@@ -166,10 +166,10 @@ O comportamento *copy-by-default* da `String` no Swift garante que quando uma fu
 
 Nos bastidores, o compilador do Swift otimiza o uso de string para que a cópia real ocorra apenas quando for absolutamente necessário. Isso significa que você sempre obtém um ótimo desempenho ao trabalhar com strings como *value types*.
 
-Working with Characters
+Trabalhando com Caracteres
 -----------------------
 
-You can access the individual `Character` values for a `String` by iterating over the string with a `for`\-`in` loop:
+Você pode acessar os valores individuais do tipo `Character` de um tipo `String` iterando sobre a string com um laço `for`\-`in`:
 
 ```swift  
 for character in "Dog!🐶" {
@@ -181,15 +181,14 @@ print(character)
 // !
 // 🐶
 ```
-The `for`\-`in` loop is described in [For-In Loops](ControlFlow.xhtml#ID121).
+O laço `for`\-`in` é descrito em [For-In Loops](LanguageGuide/ControlFlow.md#for-in-loops).
 
-Alternatively, you can create a stand-alone `Character` constant or variable from a single-character string literal by providing a `Character` type annotation:
+Como alternativa, você pode criar uma constante ou variável `Character` independente a partir de um literal de string de caractere único, fornecendo uma anotação do tipo `Character`:
 
 ```swift  
 let exclamationMark: Character = "!"
 ```
-
-`String` values can be constructed by passing an array of `Character` values as an argument to its initializer:
+Os valores `String` podem ser construídos passando uma _array_ de valores `Character` como um argumento para seu inicializador:
 
 ```swift  
 let catCharacters: [Character] = \["C", "a", "t", "!", "🐱"]
