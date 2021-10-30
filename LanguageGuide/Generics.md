@@ -106,14 +106,14 @@ Type Parameters
 
  Você pode provê mais de um type parameter escrevendo múltiplos nomes como type parameter dentro de _angle brackets_, separado por vírgulas. (<T, U, V, X>)
 
-Naming Type Parameters
+ Nomeando Type Parameters
 ----------------------
 
-In most cases, type parameters have descriptive names, such as `Key` and `Value` in `Dictionary<Key, Value>` and `Element` in `Array<Element>`, which tells the reader about the relationship between the type parameter and the generic type or function it’s used in. However, when there isn’t a meaningful relationship between them, it’s traditional to name them using single letters such as `T`, `U`, and `V`, such as `T` in the `swapTwoValues(_:_:)` function above.
+ Na maioria dos casos, type parameters tem nomes descritivos, como `Key` e `Value` no `Dictionary<Key, Value>` e `Element` no `Array<Element>`, que nos comunica qual a relação entre os type parameters e a função genérica em que eles são usados. Entretanto, quando não é uma relação significativa entre eles, tradicionalmente eles são nomeados usando uma única letra como `T`, `U`, e `V`, como` T` na função `swapTwoValues (_: _ :)` acima.
 
-**Note**
+**Nota**
 
->Always give type parameters upper camel case names (such as `T` and `MyTypeParameter`) to indicate that they’re a placeholder for a _type_, not a value.
+ >Sempre nomeie type parameters com CamelCase (começando com letra maiúscula `T` e `MyTypeParameter`) para indicar que eles são um placeholder para um _tipo_, e não um valor.
 
 Generic Types
 -------------
