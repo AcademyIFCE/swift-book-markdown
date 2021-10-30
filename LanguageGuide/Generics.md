@@ -99,12 +99,12 @@ swapTwoValues(&someString, &anotherString)
 
 Type Parameters
 ---------------
+ 
+ No exemplo `swapTwoValues(_:_:)` acima, o tipo placeholder `T` é um exemplo de _type parameter_. Type Parameters especificam e nomeiam um tipo _placeholder_, e são escritos imediatamente após o nome da função genérica, entre _angle brackets_ (como em <T>).
 
-In the `swapTwoValues(_:_:)` example above, the placeholder type `T` is an example of a _type parameter_. Type parameters specify and name a placeholder type, and are written immediately after the function’s name, between a pair of matching angle brackets (such as `<T>`).
+ Quando você especificar um type parameter, você pode usar isso para definir o tipo dos parametros de uma função (como os parametros `a` e `b` no exemplo anterior), ou como o tipo de retorno da função, como a notação de tipo no corpo da função. Em cada caso, o type parameter é substituído pelo tipo de fato que é inferido quando a função quando é chamada. (No exemplo `swapTwoValues (_: _ :)` acima, `T` foi substituído por` Int` na primeira vez que a função foi chamada e foi substituído por `String` na segunda vez que foi chamada.)
 
-Once you specify a type parameter, you can use it to define the type of a function’s parameters (such as the `a` and `b` parameters of the `swapTwoValues(_:_:)` function), or as the function’s return type, or as a type annotation within the body of the function. In each case, the type parameter is replaced with an _actual_ type whenever the function is called. (In the `swapTwoValues(_:_:)` example above, `T` was replaced with `Int` the first time the function was called, and was replaced with `String` the second time it was called.)
-
-You can provide more than one type parameter by writing multiple type parameter names within the angle brackets, separated by commas.
+ Você pode provê mais de um type parameter escrevendo múltiplos nomes como type parameter dentro de _angle brackets_, separado por vírgulas. (<T, U, V, X>)
 
 Naming Type Parameters
 ----------------------
