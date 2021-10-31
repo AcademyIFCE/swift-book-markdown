@@ -197,10 +197,10 @@ print(catString)
 // Prints "Cat!🐱"
 ```
 
-Concatenating Strings and Characters
+Concatenando Strings e Caracteres
 ------------------------------------
 
-`String` values can be added together (or _concatenated_) with the addition operator (`+`) to create a new `String` value:
+Valores `String` podem ser somados (ou _concatenados_) com o operador de adição (`+`) para criar um novo valor `String`:
 
 ```swift  
 let string1 = "hello"
@@ -208,16 +208,14 @@ let string2 = " there"
 var welcome = string1 + string2
 // welcome now equals "hello there"
 ```
-
-You can also append a `String` value to an existing `String` variable with the addition assignment operator (`+=`):
+Você também pode acrescentar um valor `String` à uma variável `String` existente com o operador de atribuição de adição (`+=`):
 
 ```swift  
 var instruction = "look over"
 instruction += string2
 // instruction now equals "look over there"
 ```
-
-You can append a `Character` value to a `String` variable with the `String` type’s `append()` method:
+Você pode adicionar um valor `Character` à uma variável `String` com o método `append()` do tipo `String`:
 
 ```swift  
 let exclamationMark: Character = "!"
@@ -225,11 +223,11 @@ welcome.append(exclamationMark)
 // welcome now equals "hello there!"
 ```
 
-**Note**
+**Nota**
 
->You can’t append a `String` or `Character` to an existing `Character` variable, because a `Character` value must contain a single character only.
+>Você não pode anexar um `String` ou` Character` a uma variável `Character` existente, porque um valor `Character` deve conter apenas um único caractere.
 
-If you’re using multiline string literals to build up the lines of a longer string, you want every line in the string to end with a line break, including the last line. For example:
+Se você estiver usando literais de string de múltiplas linhas para construir as linhas de uma string mais longa, você quer que cada linha da string termine com uma quebra de linha, incluindo a última linha. Por exemplo:
 
 ```swift  
 let badStart = """
@@ -256,7 +254,7 @@ print(goodStart + end)
 // three
 ```
 
-In the code above, concatenating `badStart` with `end` produces a two-line string, which isn’t the desired result. Because the last line of `badStart` doesn’t end with a line break, that line gets combined with the first line of `end`. In contrast, both lines of `goodStart` end with a line break, so when it’s combined with `end` the result has three lines, as expected.
+No código acima, concatenar `badStart` com` end` produz uma string de duas linhas, que não é o resultado desejado. Como a última linha de `badStart` não termina com uma quebra de linha, essa linha é combinada com a primeira linha de` end`. Em contraste, ambas as linhas de `goodStart` terminam com uma quebra de linha, então, quando combinado com `end`, o resultado tem três linhas, como esperado.
 
 String Interpolation
 --------------------
