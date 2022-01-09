@@ -106,18 +106,17 @@ var shoppingList = ["Eggs", "Milk"]
 ```
 Portanto, como todos os valores em um array literao são do mesmo tipo, Swift pode inferir que `[String]` [e o tipo correto para usar para a variável `shoppingList`.
 
-### Accessing and Modifying an Array
+### Acessar e modificar um Array
 
-You access and modify an array through its methods and properties, or by using subscript syntax.
+Acesse e modifique um array através de seus métodos e propriedades, ou usando sintaxe subscript.
 
-To find out the number of items in an array, check its read-only `count` property:
+Para saber o número de items de um array, verifique sua propriedade read-only (somente leitura) `count`: 
 
 ```swift
 print("The shopping list contains \(shoppingList.count) items.")
-// Prints "The shopping list contains 2 items."
+// Imprimirá "The shopping list contains 2 items."
 ```
-
-Use the Boolean `isEmpty` property as a shortcut for checking whether the `count` property is equal to `0`:
+USe a propriedade Booleana `isEmpty` do array como um modo rápido para verificar que a propriedade `count` é igual a `0` (zero).
 
 ```swift
 if shoppingList.isEmpty {
@@ -125,89 +124,85 @@ if shoppingList.isEmpty {
 } else {
     print("The shopping list is not empty.")
 }
-// Prints "The shopping list is not empty."
+// Imprimirá "The shopping list is not empty."
 ```
-
-You can add a new item to the end of an array by calling the array’s `append(_:)` method:
+Voce pode adicionar um novo item no fim de um array, chamando o método `append(_:)` do array:
 
 ```swift
 shoppingList.append("Flour")
-// shoppingList now contains 3 items, and someone is making pancakes
+// shoppingList agora contém 3 items, e now contains 3 items, e algém está fazendo panquecas
 ```
-
-Alternatively, append an array of one or more compatible items with the addition assignment operator (`+=`):
+Alternativamente, acrescente um array de um ou mais items compatíveis com o operador de adição e atribuição (`+=`): 
 
 ```swift
 shoppingList += ["Baking Powder"]
-// shoppingList now contains 4 items
+// shoppingList agora contém 4 items
 shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
-// shoppingList now contains 7 items
+// shoppingList agora contém 7 items
 ```
-
-Retrieve a value from the array by using *subscript syntax*, passing the index of the value you want to retrieve within square brackets immediately after the name of the array:
+Recupere um valor de um array usando *sintaxe subscript*, passando o íncide do valor que você deseja recuperar, entre colchetes imediatamente depois do nome do array: 
 
 ```swift
 var firstItem = shoppingList[0]
-// firstItem is equal to "Eggs"
+// firstItem é igual a "Eggs"
 ```
 
 **Nota**
+>O primeiro item em um array possui um índice de `0`, e não `1`. Arrays em Swift são sempre indexado por zero.
 
->The first item in the array has an index of `0`, not `1`. Arrays in Swift are always zero-indexed.
-
-You can use subscript syntax to change an existing value at a given index:
+Você pode usar subscript para alterar um valor existente em um dado índice: 
 
 ```swift
 shoppingList[0] = "Six eggs"
-// the first item in the list is now equal to "Six eggs" rather than "Eggs"
+// O primeiro item na lista é agora "Six eggs" em vez de "Eggs"
 ```
 
-When you use subscript syntax, the index you specify needs to be valid. For example, writing `shoppingList[shoppingList.count] = "Salt"` to try to append an item to the end of the array results in a runtime error.
+Quando você usa subscript, o índice que você especificar precisa ser válido. Por exemplo, escrever `shoppingList[shoppingList.count] = "Salt"` tentando adicionar um item no final do array resultará em um erro em tempo de execução (runtime error).
 
-You can also use subscript syntax to change a range of values at once, even if the replacement set of values has a different length than the range you are replacing. The following example replaces `"Chocolate Spread"`, `"Cheese"`, and `"Butter"` with `"Bananas"` and `"Apples"`:
+Você também pode usar subscript para alterar um intervalo de valores de uma única vez, mesmo se o conjunto de valores na substituição possuem um tamanho diferente do intervalo daqueles que você está substituindo. O seguinte exemplo substitui `"Chocolate Spread"`, `"Cheese"`, e `"Butter"` com `"Bananas"` e `"Apples"`: 
 
 ```swift
 shoppingList[4...6] = ["Bananas", "Apples"]
-// shoppingList now contains 6 items
+// shoppingList agora contém 6 items
 ```
 
-To insert an item into the array at a specified index, call the array’s `insert(_:at:)` method:
+Para inserir um item no array em um índice específico, use o método `insert(_:at:)` do array:
 
 ```swift
 shoppingList.insert("Maple Syrup", at: 0)
-// shoppingList now contains 7 items
-// "Maple Syrup" is now the first item in the list
+// shoppingList agora contém 7 items
+// "Maple Syrup" é agora o primeiro item na lista
 ```
 
-This call to the `insert(_:at:)` method inserts a new item with a value of `"Maple Syrup"` at the very beginning of the shopping list, indicated by an index of `0`.
+Esta chamada ao método `insert (_: at:)` insere um novo item com um valor de `"Maple Syrup"` no início da lista de compras, indicado por um índice de `0`.
 
-Similarly, you remove an item from the array with the `remove(at:)` method. This method removes the item at the specified index and returns the removed item (although you can ignore the returned value if you do not need it):
+Similarmente, você remove um item do array com o método `remove(at:)`. Este método remove um item no índice específico, e retorna o item removido (Embora, você possa ignorar o valor retornado se você não precisa dele):
 
 ```swift
 let mapleSyrup = shoppingList.remove(at: 0)
-// the item that was at index 0 has just been removed
-// shoppingList now contains 6 items, and no Maple Syrup
-// the mapleSyrup constant is now equal to the removed "Maple Syrup" string
+// o item que estava no índice 0 acabou de ser removido
+// shoppingList agora contém 6 items, e não Maple Syrup
+// a constante mapleSyrup é agora igual a string removida "Mapple Syrup"
 ```
 
 **Nota**
 
->If you try to access or modify a value for an index that is outside of an array’s existing bounds, you will trigger a runtime error. You can check that an index is valid before using it by comparing it to the array’s `count` property. The largest valid index in an array is `count - 1` because arrays are indexed from zero—however, when `count` is `0` (meaning the array is empty), there are no valid indexes.
+>Se você tentar acessar ou modificar o valor em um índice que está além do limite do array, você irá disparar um erro em tempo de execução. Você pode verificar se um índice é válido antes de usá-lo comparando ele com o valor da propriedade `count`. O maior índice válido de um array é `count - 1` por que arrays são indexados a partir de zero, quando `count` é `0` (significa qeu o array está vazio), não sendo um índice válido.
 
-Any gaps in an array are closed when an item is removed, and so the value at index `0` is once again equal to `"Six eggs"`:
+Qualquer lacuna em um array é encerrado quando um item é removido, e então o valor no índice `0` é mais uma vez igual a `"Six eggs"`: 
 
 ```swift
 firstItem = shoppingList[0]
-// firstItem is now equal to "Six eggs"
+// firstItem é  is now equal to "Six eggs"
 ```
 
-If you want to remove the final item from an array, use the `removeLast()` method rather than the `remove(at:)` method to avoid the need to query the array’s `count` property. Like the `remove(at:)` method, `removeLast()` returns the removed item:
+Se você quer remover o item do final de um array, use o método `removeLast()` em vez do método `remove(at:)` para anular a necessidade de consultat a propriedade `count` do array. Assim como o método `remove(at:)`, `removeList()` retorna o item removido:
 
 ```swift
 let apples = shoppingList.removeLast()
-// the last item in the array has just been removed
-// shoppingList now contains 5 items, and no apples
-// the apples constant is now equal to the removed "Apples" string
+// o último item em um array acaba de ser removido
+// shoppingList agora possui 5 items, e não apples
+// a constante apples é agora igual a string removida "Apples"
 ```
 
 ### Iterating Over an Array
