@@ -58,25 +58,24 @@ someInts = []
 // someInts agora é um array vazio, mas ainda é do tipo [Int]. Ou seja, ele não está nil (equivalente a nulo), no entanto não possuem valores armazenados, e somente aceita valores do tipo Int em seu armazenamento.
 ```
 
-### Creating an Array with a Default Value
+### Criando um Array com Valor Padrão
 
-Swift’s `Array` type also provides an initializer for creating an array of a certain size with all of its values set to the same default value. You pass this initializer a default value of the appropriate type (called `repeating`): and the number of times that value is repeated in the new array (called `count`):
+O tipo `Array` do Swift também fornece um inicializador para riar um array de um certo tamanho, com todos os seus valores definidos para o mesmo valor padrão. Você pode passar para este inicializador o valor padrão o tipo apropriado ( chamado `repeating`): e o numero de vezes que o valor é repetido no novo array (chamado `count`):
 
 ```swift
 var threeDoubles = Array(repeating: 0.0, count: 3)
-// threeDoubles is of type \[Double], and equals [0.0, 0.0, 0.0]
+// threeDoubles é do tipo [Double], e igual a [0.0, 0.0, 0.0]
 ```
+### Criando um array por Adicionar Dois Arrays Juntos
 
-### Creating an Array by Adding Two Arrays Together
-
-You can create a new array by adding together two existing arrays with compatible types with the addition operator (`+`). The new array’s type is inferred from the type of the two arrays you add together:
+Voce pode criar um novo array unindo dois outros já existentes arrays, com tipos compatíveis, usando o operador de adição (`+`). O tipo do novo array é inferido a partir do tipo dos dois arrays que você uniu.
 
 ```swift 
 var anotherThreeDoubles = Array(repeating: 2.5, count: 3)
-// anotherThreeDoubles is of type [Double], and equals [2.5, 2.5, 2.5]
+// anotherThreeDoubles é do tipo [Double], e igual a [2.5, 2.5, 2.5]
 
 var sixDoubles = threeDoubles + anotherThreeDoubles
-// sixDoubles is inferred as [Double], and equals [0.0, 0.0, 0.0, 2.5, 2.5, 2.5]
+// sixDoubles é inferido como [Double], e igual a [0.0, 0.0, 0.0, 2.5, 2.5, 2.5]
 ```
 
 ### Creating an Array with an Array Literal
