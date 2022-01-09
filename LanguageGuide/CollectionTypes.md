@@ -205,9 +205,10 @@ let apples = shoppingList.removeLast()
 // a constante apples é agora igual a string removida "Apples"
 ```
 
-### Iterating Over an Array
+### Iterando Sobre um Array
 
-You can iterate over the entire set of values in an array with the `for`-`in` loop:
+Você pode iterar sobre todo um conjunto de valores em um array com o laço de repetição `for`-`in`:
+
 
 ```swift
 for item in shoppingList {
@@ -220,7 +221,7 @@ for item in shoppingList {
 // Bananas
 ```
 
-If you need the integer index of each item as well as its value, use the `enumerated()` method to iterate over the array instead. For each item in the array, the `enumerated()` method returns a tuple composed of an integer and the item. The integers start at zero and count up by one for each item; if you enumerate over a whole array, these integers match the items’ indices. You can decompose the tuple into temporary constants or variables as part of the iteration:
+Se você precisar do índice, do tipo Int, de cada item assim como o próprio valor, use o método `enumerated()` para iterar sobre o array. Para cada item no array, o método `enumarated()` retornará uma tupla composta de um inteiro e um item. O inteiro começará no zero e contará para cima para cada item; Se você enumerar sobre todo um array, esses inteiros corresponderão com os índices dos items. Você pode decompor a tupla em constantes temporárias ou variáveis como parte da iteração:  
 
 ```swift
 for (index, value) in shoppingList.enumerated() {
@@ -233,7 +234,7 @@ for (index, value) in shoppingList.enumerated() {
 // Item 5: Bananas
 ```
 
-For more about the `for`\-`in` loop, see [For-In Loops](ControlFlow.xhtml#ID121).
+Para mais informações sobre laço de repetição `for`\-`in`, veja [For-In Loops](ControlFlow.xhtml#ID121).
 
 Sets
 ----
