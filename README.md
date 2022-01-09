@@ -85,8 +85,8 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [ ] Comparing Strings
     - [ ] Unicode Representations of Strings
   - [ ] Collection Types
-    - [ ] Intro
-    - [ ] Mutability of Collections
+    - [x] Intro
+    - [x] Mutability of Collections
     - [ ] Arrays
     - [ ] Sets
     - [ ] Performing Set Operations

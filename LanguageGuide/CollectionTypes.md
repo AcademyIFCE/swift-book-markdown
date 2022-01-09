@@ -1,6 +1,6 @@
 Collection Types  
 
-Collection Types
+Tipos de Coleções (Collection Types)
 ================
 
 Swift fornece três tipos primários de coleções, conhecidos como arrays, sets (conjuntos), e dicionários, para armazenar coleções de valores. Arrays são coleções ordenadas de valores. Sets são coleções não ordenadas e valores únicos. Dicionários são coleções não ordenadas com associações de key-value (chave-valor).
