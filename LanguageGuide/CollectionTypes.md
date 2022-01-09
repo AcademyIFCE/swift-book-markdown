@@ -25,7 +25,7 @@ Se você já criou um array, um set, ou um dicionário, e o atribuiu a uma vari�
 Arrays
 ------
 
-Um *array* armazena valores do mesmo tipo em uma lista ordenada. O mesmo valor pode aparecer e mum array multiplas vezes em posições diferentes.
+Um *array* armazena valores do mesmo tipo em uma lista ordenada. O mesmo valor pode aparecer em um array multiplas vezes em posições diferentes.
 
 **Nota**
 
@@ -35,7 +35,7 @@ Um *array* armazena valores do mesmo tipo em uma lista ordenada. O mesmo valor p
 
 ### Sintaxe Abreviada do Tipo Array
 
-A notação completa do tipo do array em Swift é `Array<Element>`, onde `Element` é o tipo do valor que o array é permitir armazenar. Você pode também escrever o tipo de um array de forma abreviada usando `[Element]`. Embora as duas formas funcionam de maneira identica, a forma abreviada é preferida e é usada em todo este guia quando se refere ao tipo de um array.
+A notação completa do tipo do array em Swift é `Array<Element>`, onde `Element` é o tipo do valor que o array é permitido armazenar. Você pode também escrever o tipo de um array de forma abreviada usando `[Element]`. Embora as duas formas funcionam de maneira identica, a forma abreviada é preferida e é usada em todo este guia quando se refere ao tipo de um array.
 
 ### Criando um Array Vazio
 
@@ -49,13 +49,13 @@ print("someInts is of type [Int] with \(someInts.count) items.")
 Note que o tipo da variável `someInts` é inferido como sendo `[Int]` a partir do tipo do inicializador.
 
 
-Alternatively, if the context already provides type information, such as a function argument or an already typed variable or constant, you can create an empty array with an empty array literal, which is written as `[]` (an empty pair of square brackets):
+Alternativamente, se o contexto já provê informação do tipo, tal como um argumento de função ou um variável ou constante já tipada, você pode instanciar um array vazio com um array literal vazio, escrevendo `[]` (um par de colchetes vazios):
 
 ```swift
 someInts.append(3)
-// someInts now contains 1 value of type Int
+// someInts agora contem um valor do tipo Int
 someInts = []
-// someInts is now an empty array, but is still of type [Int]
+// someInts agora é um array vazio, mas ainda é do tipo [Int]. Ou seja, ele não está nil (equivalente a nulo), no entanto não possuem valores armazenados, e somente aceita valores do tipo Int em seu armazenamento.
 ```
 
 ### Creating an Array with a Default Value

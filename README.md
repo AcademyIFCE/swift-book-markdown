@@ -87,7 +87,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
   - [ ] Collection Types
     - [x] Intro
     - [x] Mutability of Collections
-    - [ ] Arrays
+    - [x] Arrays
     - [ ] Sets
     - [ ] Performing Set Operations
     - [ ] Dictionaries
