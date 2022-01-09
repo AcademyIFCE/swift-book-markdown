@@ -78,34 +78,33 @@ var sixDoubles = threeDoubles + anotherThreeDoubles
 // sixDoubles é inferido como [Double], e igual a [0.0, 0.0, 0.0, 2.5, 2.5, 2.5]
 ```
 
-### Creating an Array with an Array Literal
+#### Criando um Array com um Array Literal
 
-You can also initialize an array with an *array literal*, which is a shorthand way to write one or more values as an array collection. An array literal is written as a list of values, separated by commas, surrounded by a pair of square brackets:
+Você também pode inicializar um array com um *array literal*, que é um jeito curto para escrever um ou mais valores como uma coleção array. Um array literal é escrito como uma lista de valores, separados por vírgula, e cercado por um par de colchetes:
 
 > [value 1, value 2, value 3]
 
-The example below creates an array called `shoppingList` to store `String` values:
+O exemplo abaixo criará um array chamado `shoopingList` para armazenar valores do tipo `String`:
 
 ```swift
 var shoppingList: [String] = ["Eggs", "Milk"]
-// shoppingList has been initialized with two initial items
+// shoppingList foi inicializado com dois items iniciais
 ```
 
-The `shoppingList` variable is declared as “an array of string values”, written as `[String]`. Because this particular array has specified a value type of `String`, it is allowed to store `String` values only. Here, the `shoppingList` array is initialized with two `String` values (`"Eggs"` and `"Milk"`), written within an array literal.
+A variável `shoppingList` é declarada como "um array de valores string", escrito como `[String]`. Portanto este array em particular possui especificamente um valor do tipo `String`, é permitido a ele armazenar somente valores `String`. Aqui, o array `shoppingList`é iniciado com dois valores `String` (`Eggs` e `Milk`), escrito como um array literal.
 
 **Nota**
 
->The `shoppingList` array is declared as a variable (with the `var` introducer) and not a constant (with the `let` introducer) because more items are added to the shopping list in the examples below.
+> O array `shoppingList` é declarado como uma variável (com a introdução de `var`) e não como uma constante (com a introdução de `let`) porque mais items são adicionados para a lista do shopping, como no exemplo abaixo.
 
-In this case, the array literal contains two `String` values and nothing else. This matches the type of the `shoppingList` variable’s declaration (an array that can only contain `String` values), and so the assignment of the array literal is permitted as a way to initialize `shoppingList` with two initial items.
+Neste caso, o array literal contém dois valores `String`e nada mais.  Correspondendo ao tipo da declaração da variável `shoppingList` (um array que somente pode conter valores `String`), e então a atribuição do array literal é permitida como uma forma de inicializar `shoppingList` com dois items iniciais.
 
-Thanks to Swift’s type inference, you don’t have to write the type of the array if you’re initializing it with an array literal containing values of the same type. The initialization of `shoppingList` could have been written in a shorter form instead:
+Agradeça a inferencia de tipo do Swift, você não precisa escrever o tipo do array se você não está inicializando com um array literal, contendo valores do mesmo tipo. A inicialização de `shoppingList`deverá ser escrita de forma curta: 
 
 ```swift
-var shoppingList = \["Eggs", "Milk"\]
+var shoppingList = ["Eggs", "Milk"]
 ```
-
-Because all values in the array literal are of the same type, Swift can infer that `[String]` is the correct type to use for the `shoppingList` variable.
+Portanto, como todos os valores em um array literao são do mesmo tipo, Swift pode inferir que `[String]` [e o tipo correto para usar para a variável `shoppingList`.
 
 ### Accessing and Modifying an Array
 
