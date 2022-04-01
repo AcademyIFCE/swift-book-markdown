@@ -60,13 +60,13 @@ someInts = []
 
 ### Criando um Array com Valor Padrão
 
-O tipo `Array` do Swift também fornece um inicializador para riar um array de um certo tamanho, com todos os seus valores definidos para o mesmo valor padrão. Você pode passar para este inicializador o valor padrão o tipo apropriado ( chamado `repeating`): e o numero de vezes que o valor é repetido no novo array (chamado `count`):
+O tipo `Array` do Swift também fornece um inicializador para criar um array de um certo tamanho, com todos os seus valores definidos para o mesmo valor padrão. Você pode passar para este inicializador o valor padrão do tipo apropriado ( chamado `repeating`): e o numero de vezes que o valor é repetido no novo array (chamado `count`):
 
 ```swift
 var threeDoubles = Array(repeating: 0.0, count: 3)
 // threeDoubles é do tipo [Double], e igual a [0.0, 0.0, 0.0]
 ```
-### Criando um array por Adicionar Dois Arrays Juntos
+### Criando um array unindo dois arrays
 
 Voce pode criar um novo array unindo dois outros já existentes arrays, com tipos compatíveis, usando o operador de adição (`+`). O tipo do novo array é inferido a partir do tipo dos dois arrays que você uniu.
 
@@ -91,24 +91,24 @@ var shoppingList: [String] = ["Eggs", "Milk"]
 // shoppingList foi inicializado com dois items iniciais
 ```
 
-A variável `shoppingList` é declarada como "um array de valores string", escrito como `[String]`. Portanto este array em particular possui especificamente um valor do tipo `String`, é permitido a ele armazenar somente valores `String`. Aqui, o array `shoppingList`é iniciado com dois valores `String` (`Eggs` e `Milk`), escrito como um array literal.
+A variável `shoppingList` é declarada como "um array de valores string", escrito como `[String]`. Como especificamente esse array possui um tipo de valor String, ele só pode armazenar valores String. Aqui, o array `shoppingList`é iniciado com dois valores `String` (`Eggs` e `Milk`), escrito como um array literal.
 
 **Nota**
 
 > O array `shoppingList` é declarado como uma variável (com a introdução de `var`) e não como uma constante (com a introdução de `let`) porque mais items são adicionados para a lista do shopping, como no exemplo abaixo.
 
-Neste caso, o array literal contém dois valores `String`e nada mais.  Correspondendo ao tipo da declaração da variável `shoppingList` (um array que somente pode conter valores `String`), e então a atribuição do array literal é permitida como uma forma de inicializar `shoppingList` com dois items iniciais.
+Neste caso, o array literal contém dois valores `String`e nada mais.  Correspondendo ao tipo da declaração da variável `shoppingList` (um array que somente pode conter valores `String`), e então a atribuição do array literal é permitida como uma forma de inicializar `shoppingList` com dois itens iniciais.
 
-Agradeça a inferencia de tipo do Swift, você não precisa escrever o tipo do array se você não está inicializando com um array literal, contendo valores do mesmo tipo. A inicialização de `shoppingList`deverá ser escrita de forma curta: 
+Graças à inferencia de tipo do Swift, você não precisa escrever o tipo do array se você não está inicializando com um array literal, contendo valores do mesmo tipo. A inicialização de `shoppingList` poderia ter sido escrita de uma forma curta:
 
 ```swift
 var shoppingList = ["Eggs", "Milk"]
 ```
-Portanto, como todos os valores em um array literao são do mesmo tipo, Swift pode inferir que `[String]` [e o tipo correto para usar para a variável `shoppingList`.
+Portanto, Como todos os valores de um array literal são de um mesmo tipo, Swift consegue inferir que `[String]` é o tipo correto a se usar para a variável `shoppingList`.
 
-### Acessar e modificar um Array
+### Acessando e modificando um Array
 
-Acesse e modifique um array através de seus métodos e propriedades, ou usando sintaxe subscript.
+Você acessa e modifica um array através de seus métodos e propriedades, ou usando a sintaxe de subscrição.
 
 Para saber o número de items de um array, verifique sua propriedade read-only (somente leitura) `count`: 
 
