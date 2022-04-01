@@ -3,7 +3,7 @@ Collection Types
 Tipos de Coleções (Collection Types)
 ================
 
-Swift fornece três tipos primários de coleções, conhecidos como arrays, sets (conjuntos), e dicionários, para armazenar coleções de valores. Arrays são coleções ordenadas de valores. Sets são coleções não ordenadas e valores únicos. Dicionários são coleções não ordenadas com associações de key-value (chave-valor).
+Swift fornece três tipos primários de coleções, conhecidos como arrays, sets (conjuntos), e dicionários, para armazenar coleções de valores. Arrays são coleções ordenadas de valores. Sets são coleções não ordenadas de valores únicos. Dicionários são coleções não ordenadas com associações de key-value (chave-valor).
 
 ![../_images/CollectionTypes_intro_2x.png](../_images/CollectionTypes_intro_2x.png)
 
@@ -11,12 +11,12 @@ Arrays, sets, e dicionários em Swift são sempre claros sobre o tipo de valores
 
 **Nota**
 
-> Tipos Array, set e dicionário de Swift são implementados como _colleções genéricas_.; Para mais informações sobre tipos de coleções, veja [Generics](Generics.md).
+> Tipos Array, set e dicionário de Swift são implementados como _coleções genéricas_.; Para mais informações sobre tipos de coleções, veja [Generics](Generics.md).
 
 Mutabilidade de Coleções
 -------------------------
 
-Se você já criou um array, um set, ou um dicionário, e o atribuiu a uma variável, a coleção que é criada será *mutável*. Isso significa que você pode alterar (ou *mudar*) a coleção depois de criá-la ao adicionar, remover ou alterar os itens contidos na coleção. Se você adicionar um array, um set, ou um dicionário a uma constante, a coleção será *imutável*, e o seu tamanho e conteúdo não podem ser alterados.
+Se você criar um array, um set, ou um dicionário, e o atribuiu a uma variável, a coleção que é criada será *mutável*. Isso significa que você pode alterar (ou *mudar*) a coleção depois de criá-la ao adicionar, remover ou alterar os itens contidos na coleção. Se você adicionar um array, um set, ou um dicionário a uma constante, a coleção será *imutável*, e o seu tamanho e conteúdo não podem ser alterados.
 
 **Nota**
 
@@ -35,7 +35,7 @@ Um *array* armazena valores do mesmo tipo em uma lista ordenada. O mesmo valor p
 
 ### Sintaxe Abreviada do Tipo Array
 
-A notação completa do tipo do array em Swift é `Array<Element>`, onde `Element` é o tipo do valor que o array é permitido armazenar. Você pode também escrever o tipo de um array de forma abreviada usando `[Element]`. Embora as duas formas funcionam de maneira identica, a forma abreviada é preferida e é usada em todo este guia quando se refere ao tipo de um array.
+A notação completa do tipo do array em Swift é `Array<Element>`, onde `Element` é o tipo dos valores que o array é permitido armazenar. Você pode também escrever o tipo de um array de forma abreviada usando `[Element]`. Embora as duas formas funcionam de maneira identica, a forma abreviada é preferida e é usada em todo este guia quando se refere ao tipo de um array.
 
 ### Criando um Array Vazio
 
@@ -116,7 +116,7 @@ Para saber o número de items de um array, verifique sua propriedade read-only (
 print("The shopping list contains \(shoppingList.count) items.")
 // Imprimirá "The shopping list contains 2 items."
 ```
-USe a propriedade Booleana `isEmpty` do array como um modo rápido para verificar que a propriedade `count` é igual a `0` (zero).
+Use a propriedade Booleana `isEmpty` do array como um modo rápido para verificar se a propriedade `count` é igual a `0` (zero).
 
 ```swift
 if shoppingList.isEmpty {
@@ -187,16 +187,16 @@ let mapleSyrup = shoppingList.remove(at: 0)
 
 **Nota**
 
->Se você tentar acessar ou modificar o valor em um índice que está além do limite do array, você irá disparar um erro em tempo de execução. Você pode verificar se um índice é válido antes de usá-lo comparando ele com o valor da propriedade `count`. O maior índice válido de um array é `count - 1` por que arrays são indexados a partir de zero, quando `count` é `0` (significa qeu o array está vazio), não sendo um índice válido.
+>Se você tentar acessar ou modificar o valor em um índice que está além do limite do array, você irá disparar um erro em tempo de execução. Você pode verificar se um índice é válido antes de usá-lo comparando ele com o valor da propriedade `count`. O maior índice válido de um array é `count - 1` por que arrays são indexados a partir de zero, quando `count` é `0` (significa que o array está vazio), não sendo um índice válido.
 
 Qualquer lacuna em um array é encerrado quando um item é removido, e então o valor no índice `0` é mais uma vez igual a `"Six eggs"`: 
 
 ```swift
 firstItem = shoppingList[0]
-// firstItem é  is now equal to "Six eggs"
+// firstItem agora é igual a "Six eggs
 ```
 
-Se você quer remover o item do final de um array, use o método `removeLast()` em vez do método `remove(at:)` para anular a necessidade de consultat a propriedade `count` do array. Assim como o método `remove(at:)`, `removeList()` retorna o item removido:
+Se você quer remover o item do final de um array, use o método `removeLast()` em vez do método `remove(at:)` para anular a necessidade de consultar a propriedade `count` do array. Assim como o método `remove(at:)`, `removeList()` retorna o item removido:
 
 ```swift
 let apples = shoppingList.removeLast()
