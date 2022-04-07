@@ -1,125 +1,122 @@
 Collection Types  
 
-Collection Types
-================
+Tipos de Coleções (Collection Types)
+===
 
-Swift provides three primary *collection types*, known as arrays, sets, and dictionaries, for storing collections of values. Arrays are ordered collections of values. Sets are unordered collections of unique values. Dictionaries are unordered collections of key-value associations.
+Swift fornece três tipos primários de coleções, conhecidos como arrays, sets (conjuntos), e dicionários, para armazenar coleções de valores. Arrays são coleções ordenadas de valores. Sets são coleções não ordenadas de valores únicos. Dicionários são coleções não ordenadas com associações de key-value (chave-valor).
 
 ![../_images/CollectionTypes_intro_2x.png](../_images/CollectionTypes_intro_2x.png)
 
-Arrays, sets, and dictionaries in Swift are always clear about the types of values and keys that they can store. This means that you cannot insert a value of the wrong type into a collection by mistake. It also means you can be confident about the type of values you will retrieve from a collection.
+Arrays, sets, e dicionários em Swift são sempre claros sobre o tipo de valores e chaves que eles podem armazenar. Isto significa que voce não pode inserir um valor de um tipo errado em uma coleção por engano. Isso também significa que voce pode confiar sobre o tipo de valores que você irá receber de uma coleção.
 
-**Note**
+**Nota**
 
-> Swift’s array, set, and dictionary types are implemented as _generic collections_. For more about generic types and collections, see [Generics](Generics.md).
+> Tipos Array, set e dicionário de Swift são implementados como _coleções genéricas_.; Para mais informações sobre tipos de coleções, veja [Generics](Generics.md).
 
-Mutability of Collections
+Mutabilidade de Coleções
 -------------------------
 
-If you create an array, a set, or a dictionary, and assign it to a variable, the collection that is created will be *mutable*. This means that you can change (or *mutate*) the collection after it’s created by adding, removing, or changing items in the collection. If you assign an array, a set, or a dictionary to a constant, that collection is *immutable*, and its size and contents cannot be changed.
+Se você criar um array, um set, ou um dicionário, e o atribuiu a uma variável, a coleção que é criada será *mutável*. Isso significa que você pode alterar (ou *mudar*) a coleção depois de criá-la ao adicionar, remover ou alterar os itens contidos na coleção. Se você adicionar um array, um set, ou um dicionário a uma constante, a coleção será *imutável*, e o seu tamanho e conteúdo não podem ser alterados.
 
-**Note**
+**Nota**
 
-> It is good practice to create immutable collections in all cases where the collection does not need to change. Doing so makes it easier for you to reason about your code and enables the Swift compiler to optimize the performance of the collections you create.
+> É uma boa prática criar coleções imutáveis em todos os casos onde não será necessário alterá-la. Ao fazer isso, torna mais fácil para você entender seu código e permite que o compilador do Swift otimize a performance das coleções que você criou.
 
 Arrays
 ------
 
-An *array* stores values of the same type in an ordered list. The same value can appear in an array multiple times at different positions.
+Um *array* armazena valores do mesmo tipo em uma lista ordenada. O mesmo valor pode aparecer em um array multiplas vezes em posições diferentes.
 
-**Note**
+**Nota**
 
-> Swift’s `Array` type is bridged to Foundation’s `NSArray` class.
->
->For more information about using `Array` with Foundation and Cocoa, see [Bridging Between Array and NSArray](https://developer.apple.com/documentation/swift/array#2846730).
+> O tipo `Array` do Swift, é um tipo vinculado a classe `NSArray` da Foundation.
+> 
+> Para mais informações sobre `Array` com Foundation e Cocoa, veja [Bridging Between Array and NSArray](https://developer.apple.com/documentation/swift/array#2846730).
 
-### Array Type Shorthand Syntax
+### Sintaxe Abreviada do Tipo Array
 
-The type of a Swift array is written in full as `Array<Element>`, where `Element` is the type of values the array is allowed to store. You can also write the type of an array in shorthand form as `[Element]`. Although the two forms are functionally identical, the shorthand form is preferred and is used throughout this guide when referring to the type of an array.
+A notação completa do tipo do array em Swift é `Array<Element>`, onde `Element` é o tipo dos valores que o array é permitido armazenar. Você pode também escrever o tipo de um array de forma abreviada usando `[Element]`. Embora as duas formas funcionam de maneira identica, a forma abreviada é preferida e é usada em todo este guia quando se refere ao tipo de um array.
 
-### Creating an Empty Array
+### Criando um Array Vazio
 
-You can create an empty array of a certain type using initializer syntax:
+Você pode criar um array vazio de um certo tipo usando a sintaxe de inicialização: 
 
 ```swift
 var someInts = [Int]()
 print("someInts is of type [Int] with \(someInts.count) items.")
-// Prints "someInts is of type \[Int] with 0 items."
+// Imprime "someInts is of type \[Int] with 0 items."
 ```
+Note que o tipo da variável `someInts` é inferido como sendo `[Int]` a partir do tipo do inicializador.
 
-Note that the type of the `someInts` variable is inferred to be `[Int]` from the type of the initializer.
 
-Alternatively, if the context already provides type information, such as a function argument or an already typed variable or constant, you can create an empty array with an empty array literal, which is written as `[]` (an empty pair of square brackets):
+Alternativamente, se o contexto já provê informação do tipo, tal como um argumento de função ou um variável ou constante já tipada, você pode instanciar um array vazio com um array literal vazio, escrevendo `[]` (um par de colchetes vazios):
 
 ```swift
 someInts.append(3)
-// someInts now contains 1 value of type Int
+// someInts agora contem um valor do tipo Int
 someInts = []
-// someInts is now an empty array, but is still of type [Int]
+// someInts agora é um array vazio, mas ainda é do tipo [Int]. Ou seja, ele não está nil (equivalente a nulo), no entanto não possuem valores armazenados, e somente aceita valores do tipo Int em seu armazenamento.
 ```
 
-### Creating an Array with a Default Value
+### Criando um Array com Valor Padrão
 
-Swift’s `Array` type also provides an initializer for creating an array of a certain size with all of its values set to the same default value. You pass this initializer a default value of the appropriate type (called `repeating`): and the number of times that value is repeated in the new array (called `count`):
+O tipo `Array` do Swift também fornece um inicializador para criar um array de um certo tamanho, com todos os seus valores definidos para o mesmo valor padrão. Você pode passar para este inicializador o valor padrão do tipo apropriado ( chamado `repeating`): e o numero de vezes que o valor é repetido no novo array (chamado `count`):
 
 ```swift
 var threeDoubles = Array(repeating: 0.0, count: 3)
-// threeDoubles is of type \[Double], and equals [0.0, 0.0, 0.0]
+// threeDoubles é do tipo [Double], e igual a [0.0, 0.0, 0.0]
 ```
+### Criando um array unindo dois arrays
 
-### Creating an Array by Adding Two Arrays Together
-
-You can create a new array by adding together two existing arrays with compatible types with the addition operator (`+`). The new array’s type is inferred from the type of the two arrays you add together:
+Voce pode criar um novo array unindo dois outros já existentes arrays, com tipos compatíveis, usando o operador de adição (`+`). O tipo do novo array é inferido a partir do tipo dos dois arrays que você uniu.
 
 ```swift 
 var anotherThreeDoubles = Array(repeating: 2.5, count: 3)
-// anotherThreeDoubles is of type [Double], and equals [2.5, 2.5, 2.5]
+// anotherThreeDoubles é do tipo [Double], e igual a [2.5, 2.5, 2.5]
 
 var sixDoubles = threeDoubles + anotherThreeDoubles
-// sixDoubles is inferred as [Double], and equals [0.0, 0.0, 0.0, 2.5, 2.5, 2.5]
+// sixDoubles é inferido como [Double], e igual a [0.0, 0.0, 0.0, 2.5, 2.5, 2.5]
 ```
 
-### Creating an Array with an Array Literal
+#### Criando um Array com um Array Literal
 
-You can also initialize an array with an *array literal*, which is a shorthand way to write one or more values as an array collection. An array literal is written as a list of values, separated by commas, surrounded by a pair of square brackets:
+Você também pode inicializar um array com um *array literal*, que é um jeito curto para escrever um ou mais valores como uma coleção array. Um array literal é escrito como uma lista de valores, separados por vírgula, e cercado por um par de colchetes:
 
 > [value 1, value 2, value 3]
 
-The example below creates an array called `shoppingList` to store `String` values:
+O exemplo abaixo criará um array chamado `shoopingList` para armazenar valores do tipo `String`:
 
 ```swift
 var shoppingList: [String] = ["Eggs", "Milk"]
-// shoppingList has been initialized with two initial items
+// shoppingList foi inicializado com dois items iniciais
 ```
 
-The `shoppingList` variable is declared as “an array of string values”, written as `[String]`. Because this particular array has specified a value type of `String`, it is allowed to store `String` values only. Here, the `shoppingList` array is initialized with two `String` values (`"Eggs"` and `"Milk"`), written within an array literal.
+A variável `shoppingList` é declarada como "um array de valores string", escrito como `[String]`. Como especificamente esse array possui um tipo de valor String, ele só pode armazenar valores String. Aqui, o array `shoppingList`é iniciado com dois valores `String` (`Eggs` e `Milk`), escrito como um array literal.
 
-**Note**
+**Nota**
 
->The `shoppingList` array is declared as a variable (with the `var` introducer) and not a constant (with the `let` introducer) because more items are added to the shopping list in the examples below.
+> O array `shoppingList` é declarado como uma variável (com a introdução de `var`) e não como uma constante (com a introdução de `let`) porque mais items são adicionados para a lista do shopping, como no exemplo abaixo.
 
-In this case, the array literal contains two `String` values and nothing else. This matches the type of the `shoppingList` variable’s declaration (an array that can only contain `String` values), and so the assignment of the array literal is permitted as a way to initialize `shoppingList` with two initial items.
+Neste caso, o array literal contém dois valores `String`e nada mais.  Correspondendo ao tipo da declaração da variável `shoppingList` (um array que somente pode conter valores `String`), e então a atribuição do array literal é permitida como uma forma de inicializar `shoppingList` com dois itens iniciais.
 
-Thanks to Swift’s type inference, you don’t have to write the type of the array if you’re initializing it with an array literal containing values of the same type. The initialization of `shoppingList` could have been written in a shorter form instead:
+Graças à inferencia de tipo do Swift, você não precisa escrever o tipo do array se você não está inicializando com um array literal, contendo valores do mesmo tipo. A inicialização de `shoppingList` poderia ter sido escrita de uma forma curta:
 
 ```swift
-var shoppingList = \["Eggs", "Milk"\]
+var shoppingList = ["Eggs", "Milk"]
 ```
+Portanto, Como todos os valores de um array literal são de um mesmo tipo, Swift consegue inferir que `[String]` é o tipo correto a se usar para a variável `shoppingList`.
 
-Because all values in the array literal are of the same type, Swift can infer that `[String]` is the correct type to use for the `shoppingList` variable.
+### Acessando e modificando um Array
 
-### Accessing and Modifying an Array
+Você acessa e modifica um array através de seus métodos e propriedades, ou usando a sintaxe de subscrição.
 
-You access and modify an array through its methods and properties, or by using subscript syntax.
-
-To find out the number of items in an array, check its read-only `count` property:
+Para saber o número de items de um array, verifique sua propriedade read-only (somente leitura) `count`: 
 
 ```swift
 print("The shopping list contains \(shoppingList.count) items.")
-// Prints "The shopping list contains 2 items."
+// Imprimirá "The shopping list contains 2 items."
 ```
-
-Use the Boolean `isEmpty` property as a shortcut for checking whether the `count` property is equal to `0`:
+Use a propriedade Booleana `isEmpty` do array como um modo rápido para verificar se a propriedade `count` é igual a `0` (zero).
 
 ```swift
 if shoppingList.isEmpty {
@@ -127,94 +124,91 @@ if shoppingList.isEmpty {
 } else {
     print("The shopping list is not empty.")
 }
-// Prints "The shopping list is not empty."
+// Imprimirá "The shopping list is not empty."
 ```
-
-You can add a new item to the end of an array by calling the array’s `append(_:)` method:
+Voce pode adicionar um novo item no fim de um array, chamando o método `append(_:)` do array:
 
 ```swift
 shoppingList.append("Flour")
-// shoppingList now contains 3 items, and someone is making pancakes
+// shoppingList agora contém 3 items, e now contains 3 items, e algém está fazendo panquecas
 ```
-
-Alternatively, append an array of one or more compatible items with the addition assignment operator (`+=`):
+Alternativamente, acrescente um array de um ou mais items compatíveis com o operador de adição e atribuição (`+=`): 
 
 ```swift
 shoppingList += ["Baking Powder"]
-// shoppingList now contains 4 items
+// shoppingList agora contém 4 items
 shoppingList += ["Chocolate Spread", "Cheese", "Butter"]
-// shoppingList now contains 7 items
+// shoppingList agora contém 7 items
 ```
-
-Retrieve a value from the array by using *subscript syntax*, passing the index of the value you want to retrieve within square brackets immediately after the name of the array:
+Recupere um valor de um array usando *sintaxe subscript*, passando o íncide do valor que você deseja recuperar, entre colchetes imediatamente depois do nome do array: 
 
 ```swift
 var firstItem = shoppingList[0]
-// firstItem is equal to "Eggs"
+// firstItem é igual a "Eggs"
 ```
 
-**Note**
+**Nota**
+>O primeiro item em um array possui um índice de `0`, e não `1`. Arrays em Swift são sempre indexado por zero.
 
->The first item in the array has an index of `0`, not `1`. Arrays in Swift are always zero-indexed.
-
-You can use subscript syntax to change an existing value at a given index:
+Você pode usar subscript para alterar um valor existente em um dado índice: 
 
 ```swift
 shoppingList[0] = "Six eggs"
-// the first item in the list is now equal to "Six eggs" rather than "Eggs"
+// O primeiro item na lista é agora "Six eggs" em vez de "Eggs"
 ```
 
-When you use subscript syntax, the index you specify needs to be valid. For example, writing `shoppingList[shoppingList.count] = "Salt"` to try to append an item to the end of the array results in a runtime error.
+Quando você usa subscript, o índice que você especificar precisa ser válido. Por exemplo, escrever `shoppingList[shoppingList.count] = "Salt"` tentando adicionar um item no final do array resultará em um erro em tempo de execução (runtime error).
 
-You can also use subscript syntax to change a range of values at once, even if the replacement set of values has a different length than the range you are replacing. The following example replaces `"Chocolate Spread"`, `"Cheese"`, and `"Butter"` with `"Bananas"` and `"Apples"`:
+Você também pode usar subscript para alterar um intervalo de valores de uma única vez, mesmo se o conjunto de valores na substituição possuem um tamanho diferente do intervalo daqueles que você está substituindo. O seguinte exemplo substitui `"Chocolate Spread"`, `"Cheese"`, e `"Butter"` com `"Bananas"` e `"Apples"`: 
 
 ```swift
 shoppingList[4...6] = ["Bananas", "Apples"]
-// shoppingList now contains 6 items
+// shoppingList agora contém 6 items
 ```
 
-To insert an item into the array at a specified index, call the array’s `insert(_:at:)` method:
+Para inserir um item no array em um índice específico, use o método `insert(_:at:)` do array:
 
 ```swift
 shoppingList.insert("Maple Syrup", at: 0)
-// shoppingList now contains 7 items
-// "Maple Syrup" is now the first item in the list
+// shoppingList agora contém 7 items
+// "Maple Syrup" é agora o primeiro item na lista
 ```
 
-This call to the `insert(_:at:)` method inserts a new item with a value of `"Maple Syrup"` at the very beginning of the shopping list, indicated by an index of `0`.
+Esta chamada ao método `insert (_: at:)` insere um novo item com um valor de `"Maple Syrup"` no início da lista de compras, indicado por um índice de `0`.
 
-Similarly, you remove an item from the array with the `remove(at:)` method. This method removes the item at the specified index and returns the removed item (although you can ignore the returned value if you do not need it):
+Similarmente, você remove um item do array com o método `remove(at:)`. Este método remove um item no índice específico, e retorna o item removido (Embora, você possa ignorar o valor retornado se você não precisa dele):
 
 ```swift
 let mapleSyrup = shoppingList.remove(at: 0)
-// the item that was at index 0 has just been removed
-// shoppingList now contains 6 items, and no Maple Syrup
-// the mapleSyrup constant is now equal to the removed "Maple Syrup" string
+// o item que estava no índice 0 acabou de ser removido
+// shoppingList agora contém 6 items, e não Maple Syrup
+// a constante mapleSyrup é agora igual a string removida "Mapple Syrup"
 ```
 
-**Note**
+**Nota**
 
->If you try to access or modify a value for an index that is outside of an array’s existing bounds, you will trigger a runtime error. You can check that an index is valid before using it by comparing it to the array’s `count` property. The largest valid index in an array is `count - 1` because arrays are indexed from zero—however, when `count` is `0` (meaning the array is empty), there are no valid indexes.
+>Se você tentar acessar ou modificar o valor em um índice que está além do limite do array, você irá disparar um erro em tempo de execução. Você pode verificar se um índice é válido antes de usá-lo comparando ele com o valor da propriedade `count`. O maior índice válido de um array é `count - 1` por que arrays são indexados a partir de zero, quando `count` é `0` (significa que o array está vazio), não sendo um índice válido.
 
-Any gaps in an array are closed when an item is removed, and so the value at index `0` is once again equal to `"Six eggs"`:
+Qualquer lacuna em um array é encerrado quando um item é removido, e então o valor no índice `0` é mais uma vez igual a `"Six eggs"`: 
 
 ```swift
 firstItem = shoppingList[0]
-// firstItem is now equal to "Six eggs"
+// firstItem agora é igual a "Six eggs
 ```
 
-If you want to remove the final item from an array, use the `removeLast()` method rather than the `remove(at:)` method to avoid the need to query the array’s `count` property. Like the `remove(at:)` method, `removeLast()` returns the removed item:
+Se você quer remover o item do final de um array, use o método `removeLast()` em vez do método `remove(at:)` para anular a necessidade de consultar a propriedade `count` do array. Assim como o método `remove(at:)`, `removeList()` retorna o item removido:
 
 ```swift
 let apples = shoppingList.removeLast()
-// the last item in the array has just been removed
-// shoppingList now contains 5 items, and no apples
-// the apples constant is now equal to the removed "Apples" string
+// o último item em um array acaba de ser removido
+// shoppingList agora possui 5 items, e não apples
+// a constante apples é agora igual a string removida "Apples"
 ```
 
-### Iterating Over an Array
+### Iterando Sobre um Array
 
-You can iterate over the entire set of values in an array with the `for`-`in` loop:
+Você pode iterar sobre todo um conjunto de valores em um array com o laço de repetição `for`-`in`:
+
 
 ```swift
 for item in shoppingList {
@@ -227,7 +221,7 @@ for item in shoppingList {
 // Bananas
 ```
 
-If you need the integer index of each item as well as its value, use the `enumerated()` method to iterate over the array instead. For each item in the array, the `enumerated()` method returns a tuple composed of an integer and the item. The integers start at zero and count up by one for each item; if you enumerate over a whole array, these integers match the items’ indices. You can decompose the tuple into temporary constants or variables as part of the iteration:
+Se você precisar do índice, do tipo Int, de cada item assim como o próprio valor, use o método `enumerated()` para iterar sobre o array. Para cada item no array, o método `enumarated()` retornará uma tupla composta de um inteiro e um item. O inteiro começará no zero e contará para cima para cada item; Se você enumerar sobre todo um array, esses inteiros corresponderão com os índices dos items. Você pode decompor a tupla em constantes temporárias ou variáveis como parte da iteração:  
 
 ```swift
 for (index, value) in shoppingList.enumerated() {
@@ -240,14 +234,14 @@ for (index, value) in shoppingList.enumerated() {
 // Item 5: Bananas
 ```
 
-For more about the `for`\-`in` loop, see [For-In Loops](ControlFlow.xhtml#ID121).
+Para mais informações sobre laço de repetição `for`\-`in`, veja [For-In Loops](ControlFlow.xhtml#ID121).
 
 Sets
 ----
 
 A *set* stores distinct values of the same type in a collection with no defined ordering. You can use a set instead of an array when the order of items is not important, or when you need to ensure that an item only appears once.
 
-**Note**
+**Nota**
 
 >Swift’s `Set` type is bridged to Foundation’s `NSSet` class.
 >
@@ -259,7 +253,7 @@ A type must be *hashable* in order to be stored in a set—that is, the type mus
 
 All of Swift’s basic types (such as `String`, `Int`, `Double`, and `Bool`) are hashable by default, and can be used as set value types or dictionary key types. Enumeration case values without associated values (as described in [Enumerations](Enumerations.md)) are also hashable by default.
 
-**Note**
+**Nota**
 
 >You can use your own custom types as set value types or dictionary key types by making them conform to the `Hashable` protocol from Swift’s standard library. Types that conform to the `Hashable` protocol must provide a gettable `Int` property called `hashValue`. The value returned by a type’s `hashValue` property is not required to be the same across different executions of the same program, or in different programs.
 >
@@ -286,7 +280,7 @@ var letters = Set<Character>()
 print("letters is of type Set<Character> with \(letters.count) items.")
 // Prints "letters is of type Set<Character> with 0 items."
 ```
-**Note**
+**Nota**
 
 >The type of the `letters` variable is inferred to be `Set<Character>`, from the type of the initializer.
 
@@ -466,7 +460,7 @@ Dictionaries
 
 A *dictionary* stores associations between keys of the same type and values of the same type in a collection with no defined ordering. Each value is associated with a unique *key*, which acts as an identifier for that value within the dictionary. Unlike items in an array, items in a dictionary do not have a specified order. You use a dictionary when you need to look up values based on their identifier, in much the same way that a real-world dictionary is used to look up the definition for a particular word.
 
-**Note**
+**Nota**
 
 >Swift’s `Dictionary` type is bridged to Foundation’s `NSDictionary` class.
 >
@@ -476,7 +470,7 @@ A *dictionary* stores associations between keys of the same type and values of t
 
 The type of a Swift dictionary is written in full as `Dictionary<Key, Value>`, where `Key` is the type of value that can be used as a dictionary key, and `Value` is the type of value that the dictionary stores for those keys.
 
-**Note**
+**Nota**
 
 >A dictionary `Key` type must conform to the `Hashable` protocol, like a set’s value type.
 
@@ -518,7 +512,7 @@ var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB": "Dublin"]
 
 The `airports` dictionary is declared as having a type of `[String: String]`, which means “a `Dictionary` whose keys are of type `String`, and whose values are also of type `String`”.
 
-**Note**
+**Nota**
 
 >The `airports` dictionary is declared as a variable (with the `var` introducer), and not a constant (with the `let` introducer), because more airports are added to the dictionary in the examples below.
 
