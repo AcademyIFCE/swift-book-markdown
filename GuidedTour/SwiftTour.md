@@ -150,7 +150,7 @@ var greeting = "Hello!"
 if let name = optionalName {
     greeting = "Hello, \(name)"
 }
-// Imprime "Hello, Jhon Appleseed"
+// Imprime "Hello, John Appleseed"
 ```
 
 **Experimente**
