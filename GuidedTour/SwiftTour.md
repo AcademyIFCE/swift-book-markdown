@@ -137,15 +137,20 @@ Em um declaração `if`, a condicional deve ser uma expressão Booleana, isso si
 Você pode usar `if` e `let` juntos para trabalhar com valores que podem não existir. Esses valores são representados como optionals. Um valor optional contem um valor ou contem `nil` para indicar que o valor não existe. Escreva uma interrogação (`?`) após o tipo do valor para indicar o valor como optional.
 
 ```swift
+//Código 1
 var optionalString: String? = "Hello"
 print(optionalString == nil)
 // Imprime "false"
+```
 
+```swift
+//Código 2
 var optionalName: String? = "John Appleseed"
 var greeting = "Hello!"
 if let name = optionalName {
     greeting = "Hello, \(name)"
 }
+// Imprime "Hello, Jhon Appleseed"
 ```
 
 **Experimente**
