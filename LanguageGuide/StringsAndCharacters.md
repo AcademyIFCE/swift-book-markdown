@@ -256,10 +256,10 @@ print(goodStart + end)
 
 No código acima, concatenar `badStart` com` end` produz uma string de duas linhas, que não é o resultado desejado. Como a última linha de `badStart` não termina com uma quebra de linha, essa linha é combinada com a primeira linha de` end`. Em contraste, ambas as linhas de `goodStart` terminam com uma quebra de linha, então, quando combinado com `end`, o resultado tem três linhas, como esperado.
 
-String Interpolation
+Interpolação de String
 --------------------
 
-_String interpolation_ is a way to construct a new `String` value from a mix of constants, variables, literals, and expressions by including their values inside a string literal. You can use string interpolation in both single-line and multiline string literals. Each item that you insert into the string literal is wrapped in a pair of parentheses, prefixed by a backslash (`\`):
+_Interpolação de string_ é uma forma de construir uma novo valor de `String` com uma mistura de constantes, variáveis, literais, e expressões colocando seus valores dentro de um literal de string. Você pode usar interpolação em literais de string de uma única linha ou multilinha. Cada item que você insere no literal de string é envolvido em um par de parênteses, precedido por uma barra invertida (`\`):
 
 ```swift  
 let multiplier = 3
@@ -267,27 +267,27 @@ let message = "\(multiplier) times 2.5 is \(Double(multiplier) * 2.5)"
 // message is "3 times 2.5 is 7.5"
 ```
 
-In the example above, the value of `multiplier` is inserted into a string literal as `\(multiplier)`. This placeholder is replaced with the actual value of `multiplier` when the string interpolation is evaluated to create an actual string.
+No exemplo acima, o valor de `multiplier` é inserido em um literal de string como `\(multiplier)`. Essa lacuna é substituída pelo real valor de `multiplier` quando a interpolação de string é avaliada para criar uma string de fato.
 
-The value of `multiplier` is also part of a larger expression later in the string. This expression calculates the value of `Double(multiplier) * 2.5` and inserts the result (`7.5`) into the string. In this case, the expression is written as `\(Double(multiplier) * 2.5)` when it’s included inside the string literal.
+O valor de `multiplier` também é parte de uma expressão maior posterior na string. Essa expressão calcula o valor de `Double(multiplier) * 2.5` e insere o resultado (`7.5`) na string. Nesse caso, a expressão é escrita como `\(Double(multiplier) * 2.5)` quando é incluída no literal de string.
 
-You can use extended string delimiters to create strings containing characters that would otherwise be treated as a string interpolation. For example:
+Você pode usar delimitadores extendidos de strings para criar strings contendo caracteres que seriam de outra forma tratados como uma interpolação de string. Por exemplo:
 
 ```swift  
 print(#"Write an interpolated string in Swift using \(multiplier)."#)
-// Prints "Write an interpolated string in Swift using \(multiplier)."
+// Imprime "Write an interpolated string in Swift using \(multiplier)."
 ```
 
-To use string interpolation inside a string that uses extended delimiters, match the number of number signs before the backslash to the number of number signs at the beginning and end of the string. For example:
+Para usar interpolação de string dentro de uma string que usa delimitadores extendidos, iguale o número de `#` antes da barra invertida ao número de `#` no começo e final da string. Por exemplo:
 
 ```swift  
 print(#"6 times 7 is \#(6 * 7)."#)
-// Prints "6 times 7 is 42."
+// Imprime "6 times 7 is 42."
 ```
 
-**Note**
+**Nota**
 
->The expressions you write inside parentheses within an interpolated string can’t contain an unescaped backslash (`\`), a carriage return, or a line feed. However, they can contain other string literals.
+> A expressão que você escreve dentro de uma string interpolada não pode conter uma barra invertida(`\`), uma quebra ou avanço de linha sem escaping. De qualquer forma, elas podem conter outros literais de string.
 
 Unicode
 -------
