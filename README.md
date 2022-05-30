@@ -76,7 +76,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [x] [Strings Are Value Types](LanguageGuide/StringsAndCharacters.md#strings-são-value-types)
     - [x] [Working with Characters](LanguageGuide/StringsAndCharacters.md#trabalhando-com-caracteres)
     - [x] [Concatenating Strings and Characters](LanguageGuide/StringsAndCharacters.md#concatenando-strings-e-caracteres)
-    - [ ] String Interpolation
+    - [x] String Interpolation
     - [ ] Unicode
     - [ ] Counting Characters
     - [ ] Accessing and Modifying a String
