@@ -110,7 +110,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [x] [Expressões Closure](LanguageGuide/Closures.md#express%C3%B5es-closure)
     - [ ] Trailing Closures
     - [ ] Capturando valores
-    - [x] [Closures são tipos de referência](LanguageGuide/Closures.md#closures-s%C3%A3o-reference-types)
+    - [x] [Closures são tipos de valor](LanguageGuide/Closures.md#closures-s%C3%A3o-reference-types)
     - [x] [Escaping Closures](LanguageGuide/Closures.md#escaping-closures)
     - [ ] Autoclosures
   - [ ] Enumerações
@@ -124,97 +124,96 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
   - [ ] <i>Structures</i> e Classes
     - [ ] Introdução
     - [ ] Comparando Structures e Classes
-    - [ ] Structures and Enumerations Are Value Types
-    - [ ] Classes Are Reference Types
-  - [ ] Properties
-    - [x] [Intro](LanguageGuide/Properties.md#propriedades)
-    - [x] [Stored Properties](LanguageGuide/Properties.md#propriedades-armazenadas)
-    - [x] [Computed Properties](LanguageGuide/Properties.md#propriedades-computadas)
-    - [ ] Property Observers
-    - [ ] Property Wrappers
-    - [ ] Global and Local Variables
-    - [ ] Type Properties
-  - [ ] Methods
-    - [ ] Intro
-    - [ ] Instance Methods
-    - [ ] Type Methods
-  - [ ] Subscripts
-    - [ ] Intro
-    - [ ] Subscript Syntax
-    - [ ] Subscript Usage
-    - [ ] Subscript Options
-    - [ ] Type Subscripts
-  - [ ] Inheritance
-    - [ ] Intro
-    - [ ] Defining a Base Class
-    - [ ] Subclassing
-    - [ ] Overriding
-    - [ ] Preventing Overrides
-  - [ ] Initialization
-    - [ ] Intro
-    - [ ] Setting Initial Values for Stored Properties
-    - [ ] Customizing Initialization
-    - [ ] Default Initializers
+    - [ ] Structures e enumerações são tipos de valor
+    - [ ] Classes são tipos de referência
+  - [ ] Propriedades
+    - [x] [Introdução](LanguageGuide/Properties.md#propriedades)
+    - [x] [Propriedades armazenadas](LanguageGuide/Properties.md#propriedades-armazenadas)
+    - [x] [Propriedades computadas](LanguageGuide/Properties.md#propriedades-computadas)
+    - [ ] Observadores de propriedades
+    - [ ] <i>Wrappers</i> de propriedades
+    - [ ] Variáveis globais e locais
+    - [ ] Propriedades Tipo
+  - [ ] Métodos
+    - [ ] Introdução
+    - [ ] Métodos de instância
+    - [ ] Métodos de tipos
+  - [ ] Subscritos
+    - [ ] Introdução
+    - [ ] Sintaxe de subscritos
+    - [ ] Uso de subscritos
+    - [ ] Opções de subscritos
+    - [ ] Subscritos de tipos
+  - [ ] Herança
+    - [ ] Introdução
+    - [ ] Definindo uma classe base
+    - [ ] Criando subclasses
+    - [ ] Sobrescrevendo
+    - [ ] Prevenindo Sobrescrições
+  - [ ] Inicialização
+    - [ ] Introdução
+    - [ ] Definindo valores iniciais para propriedades armazenadas
+    - [ ] Customizando inicialização
+    - [ ] Inicializadores padrão
     - [ ] Initializer Delegation for Value Types
-    - [ ] Class Inheritance and Initialization
-    - [ ] Failable Initializers
-    - [ ] Required Initializers
-    - [ ] Setting a Default Property Value with a Closure or Function
-  - [ ] Deinitialization
-    - [ ] Intro
+    - [ ] Herança de classe e inicialização
+    - [ ] Inicializadores que podem falhar
+    - [ ] Inicializadores obrigatórios
+    - [ ] Definindo um valor padrão de propriedade com uma _Closure_ ou Função
+  - [ ] Deinicialização
+    - [ ] Introdução
     - [ ] How Deinitialization Works
     - [ ] Deinitializers in Action
-  - [ ] Optional Chaining
-    - [ ] Intro
-    - [ ] Optional Chaining as an Alternative to Forced Unwrapping
-    - [ ] Defining Model Classes for Optional Chaining
-    - [ ] Accessing Properties Through Optional Chaining
-    - [ ] Calling Methods Through Optional Chaining
-    - [ ] Accessing Subscripts Through Optional Chaining
-    - [ ] Linking Multiple Levels of Chaining
-    - [ ] Chaining on Methods with Optional Return Values
-  - [ ] Error Handling
-    - [ ] Intro
-    - [x] Representing and Throwing Errors
-    - [ ] Handling Errors
-    - [ ] Specifying Cleanup Actions
-  - [ ] Type Casting
-    - [ ] Intro
-    - [ ] Defining a Class Hierarchy for Type Casting
-    - [ ] Checking Type
-    - [ ] Downcasting
-    - [ ] Type Casting for Any and AnyObject
-    - [ ] Downcasting
-  - [ ] Nested Types
-    - [ ] Intro
-    - [ ] Nested Types in Action
-    - [ ] Referring to Nested Types
-  - [ ] Extensions
-    - [ ] Intro
-    - [ ] Extension Syntax
-    - [ ] Computed Properties
-    - [ ] Initializers
-    - [ ] Methods
-    - [ ] Subscripts
-    - [ ] Nested Types
-  - [ ] Protocols
-    - [ ] Intro
-    - [ ] Protocol Syntax
-    - [ ] Property Requirements
-    - [ ] Method Requirements
-    - [ ] Mutating Method Requirements
-    - [ ] Initializer Requirements
-    - [ ] Protocols as Types
-    - [ ] Delegation
-    - [ ] Adding Protocol Conformance with an Extension
-    - [ ] Adopting a Protocol Using a Synthesized Implementation
-    - [ ] Collections of Protocol Types
-    - [ ] Protocol Inheritance
-    - [ ] Class-Only Protocols
-    - [ ] Protocol Composition
-    - [ ] Checking for Protocol Conformance
-    - [ ] Optional Protocol Requirements
-    - [ ] Protocol Extensions
+  - [ ] Encadeamento opcional
+    - [ ] Introdução
+    - [ ] Encadeamento opcional como uma alternativa ao _unwrapping_ forçado
+    - [ ] Definindo classes modelo para encadeamento opcional
+    - [ ] Acessando propriedades através de encadeamento opcional
+    - [ ] Chamando métodos através de encadeamento opcional
+    - [ ] Acessando subscrito através de encadeamento opcional
+    - [ ] Vinculando multiplos níveis de encadeamento
+    - [ ] Encadeamento em métodos com retornos do tipo opcional
+  - [ ] Manipulação de erros
+    - [ ] Introdução
+    - [x] Representando e disparando erros
+    - [ ] Manipulando erros
+    - [ ] Especificando ações de limpeza
+  - [ ] Conversão de tipo
+    - [ ] Introdução
+    - [ ] Definindo uma hierarquia de classe para conversão de tipo
+    - [ ] Verificando tipo
+    - [ ] _Downcasting_
+    - [ ] Conversão de tipo para _Any_ e _AnyObject_
+  - [ ] Tipos aninhados
+    - [ ] Introdução
+    - [ ] Tipos aninhados na prática
+    - [ ] Referenciando tipos aninhados
+  - [ ] Extensões
+    - [ ] Introdução
+    - [ ] Sintaxe de extensão
+    - [ ] Propriedades computadas
+    - [ ] Inicializadores
+    - [ ] Métodos
+    - [ ] Subscritos
+    - [ ] Tipos aninhados
+  - [ ] Protocolos
+    - [ ] Introdução
+    - [ ] Sintaxe de protocolo
+    - [ ] Requisitos de propriedades
+    - [ ] Requisitos de métodos
+    - [ ] Requisitos de métodos _mutating_
+    - [ ] Requisitos de inicializadores
+    - [ ] Protocolos como tipos
+    - [ ] Delegação
+    - [ ] Adicionando conformação de protocolo com uma extensão
+    - [ ] Adotando um protocolo usando uma implementação sintetizada
+    - [ ] Coleções de tipos de protocolos
+    - [ ] Herança de protocolos
+    - [ ] Protocolos somente de classes
+    - [ ] Composição de protocolos
+    - [ ] Verificando conformidade com protocolos
+    - [ ] Requisitos de protocolos opcionais
+    - [ ] Extensões de protocolos
   - [ ] Generics
     - [x] [Intro](LanguageGuide/Generics.md#generics)
     - [x] [The Problem That Generics Solve](LanguageGuide/Generics.md#o-problema-que-generics-resolve)
