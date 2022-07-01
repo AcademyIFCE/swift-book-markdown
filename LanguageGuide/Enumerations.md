@@ -110,18 +110,18 @@ Para algumas  enumerações, é útil ter uma coleção de todos os casos de enu
  
  
 ```swift
-enum Beverages: CaseIterable {
+enum Beverage: CaseIterable {
     case coffee, tea, juice
 }
-let numberOfChoices = Beverages.allCases.count
+let numberOfChoices = Beverage.allCases.count
 print("\(numberOfChoices) beverages available")
 // Prints "3 beverages available"
 ```
  
-No exemplo acima, você escreveu `Beverages.allCases` para acessar uma coleção que contém todos os casos da enumeração `Beverages`. Você pode usar `allCases` como qualquer outra coleção, os elementos da coleção são instâncias do tipo de enumeração, então nesse caso eles são valores `Beverages`. O exemplo acima conta quantos casos existem, e o exemplo abaixo usa um loop `for` para iterar sobre todos os casos.
+No exemplo acima, você escreveu `Beverage.allCases` para acessar uma coleção que contém todos os casos da enumeração `Beverage`. Você pode usar `allCases` como qualquer outra coleção, os elementos da coleção são instâncias do tipo de enumeração, então nesse caso eles são valores `Beverage`. O exemplo acima conta quantos casos existem, e o exemplo abaixo usa um loop `for` para iterar sobre todos os casos.
  
 ```swift
-for beverage in Beverages.allCases {
+for beverage in Beverage.allCases {
     print(beverage)
 }
 // coffee
