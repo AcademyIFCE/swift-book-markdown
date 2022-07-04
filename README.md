@@ -118,7 +118,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [X] [Intro](LanguageGuide/Enumerations.md#enumera%C3%A7%C3%B5es)
     - [X] [Enumeration Syntax](LanguageGuide/Enumerations.md#sintaxe-de-enumera%C3%A7%C3%B5es)
     - [X] [Matching Enumeration Values with a Switch Statement](LanguageGuide/Enumerations.md#correspondendo-valores-de-enumera%C3%A7%C3%B5es-com-blocos-switch)
-    - [ ] Iterating over Enumeration Cases
+    - [x] [Iterating over Enumeration Cases](LanguageGuide/Enumerations.md#iterando-sobre-casos-de-enumera%C3%A7%C3%B5es)
     - [ ] Associated Values
     - [ ] Raw Values
     - [ ] Recursive Enumerations
