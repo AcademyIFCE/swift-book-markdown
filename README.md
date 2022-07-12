@@ -117,7 +117,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [X] [Introdução](LanguageGuide/Enumerations.md#enumera%C3%A7%C3%B5es)
     - [X] [Sintaxe de Enumerações](LanguageGuide/Enumerations.md#sintaxe-de-enumera%C3%A7%C3%B5es)
     - [X] [Correspondendo valores de enumerações com blocos Switch](LanguageGuide/Enumerations.md#correspondendo-valores-de-enumera%C3%A7%C3%B5es-com-blocos-switch)
-    - [ ] Iterando sobre casos de Enumerações
+    - [ ] [Iterando sobre casos de Enumerações]((LanguageGuide/Enumerations.md#iterando-sobre-casos-de-enumera%C3%A7%C3%B5es)
     - [ ] Valores associados
     - [ ] Valores brutos
     - [ ] Enumerações recursivas
@@ -155,15 +155,15 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [ ] Definindo valores iniciais para propriedades armazenadas
     - [ ] Customizando inicialização
     - [ ] Inicializadores padrão
-    - [ ] Initializer Delegation for Value Types
+    - [ ] Delegação de inicializador para tipos de valor
     - [ ] Herança de classe e inicialização
     - [ ] Inicializadores que podem falhar
     - [ ] Inicializadores obrigatórios
     - [ ] Definindo um valor padrão de propriedade com uma _Closure_ ou Função
   - [ ] Deinicialização
     - [ ] Introdução
-    - [ ] How Deinitialization Works
-    - [ ] Deinitializers in Action
+    - [ ] Como deinicializadores funcionam
+    - [ ] Deinicializadores em ação
   - [ ] Encadeamento opcional
     - [ ] Introdução
     - [ ] Encadeamento opcional como uma alternativa ao _unwrapping_ forçado
