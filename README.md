@@ -171,7 +171,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [ ] Acessando propriedades através de encadeamento opcional
     - [ ] Chamando métodos através de encadeamento opcional
     - [ ] Acessando subscrito através de encadeamento opcional
-    - [ ] Vinculando multiplos níveis de encadeamento
+    - [ ] Vinculando múltiplos níveis de encadeamento
     - [ ] Encadeamento em métodos com retornos do tipo opcional
   - [ ] Manipulação de erros
     - [ ] Introdução
