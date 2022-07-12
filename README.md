@@ -133,7 +133,7 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [ ] Observadores de propriedades
     - [ ] <i>Wrappers</i> de propriedades
     - [ ] Variáveis globais e locais
-    - [ ] Propriedades Tipo
+    - [ ] Propriedades de tipos
   - [ ] Métodos
     - [ ] Introdução
     - [ ] Métodos de instância
