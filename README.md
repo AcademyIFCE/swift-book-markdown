@@ -116,12 +116,12 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
   - [ ] Enumerações
     - [X] [Introdução](LanguageGuide/Enumerations.md#enumera%C3%A7%C3%B5es)
     - [X] [Sintaxe de Enumerações](LanguageGuide/Enumerations.md#sintaxe-de-enumera%C3%A7%C3%B5es)
-    - [X] [Matching Enumeration Values with a Switch Statement](LanguageGuide/Enumerations.md#correspondendo-valores-de-enumera%C3%A7%C3%B5es-com-blocos-switch)
+    - [X] [Correspondendo valores de enumerações com blocos Switch](LanguageGuide/Enumerations.md#correspondendo-valores-de-enumera%C3%A7%C3%B5es-com-blocos-switch)
     - [ ] Iterando sobre casos de Enumerações
     - [ ] Valores associados
     - [ ] Valores brutos
     - [ ] Enumerações recursivas
-  - [ ] <i>Structures</i> e Classes
+  - [ ] <i>Structs</i> e Classes
     - [ ] Introdução
     - [ ] Comparando Structures e Classes
     - [ ] Structures e enumerações são tipos de valor
@@ -215,139 +215,139 @@ O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ a
     - [ ] Requisitos de protocolos opcionais
     - [ ] Extensões de protocolos
   - [ ] Generics
-    - [x] [Intro](LanguageGuide/Generics.md#generics)
-    - [x] [The Problem That Generics Solve](LanguageGuide/Generics.md#o-problema-que-generics-resolve)
-    - [x] [Generic Functions](LanguageGuide/Generics.md#fun%C3%A7%C3%B5es-generic)
-    - [ ] Type Parameters
-    - [ ] Naming Type Parameters
-    - [x] [Generic Types](LanguageGuide/Generics.md#Tipos%20Gen%C3%A9ricos)
-    - [ ] Extending a Generic Type
-    - [ ] Type Constraints
-    - [ ] Associated Types
-    - [ ] Generic Where Clauses
-    - [ ] Extensions with a Generic Where Clause
-    - [ ] Contextual Where Clauses
-    - [ ] Associated Types with a Generic Where Clause
-    - [ ] Generic Subscripts
-  - [ ] Opaque Types
-    - [ ] Intro
-    - [ ] The Problem That Opaque Types Solve
-    - [ ] Returning an Opaque Type
-    - [ ] Differences Between Opaque Types and Protocol Types
+    - [x] [Introdução](LanguageGuide/Generics.md#generics)
+    - [x] [O problema que Generics resolve](LanguageGuide/Generics.md#o-problema-que-generics-resolve)
+    - [x] [Funções genéricas](LanguageGuide/Generics.md#fun%C3%A7%C3%B5es-generic)
+    - [ ] Parâmetros de tipo
+    - [ ] Nomeando parâmetros de tipo
+    - [x] [Tipos genéricos](LanguageGuide/Generics.md#Tipos%20Gen%C3%A9ricos)
+    - [ ] Extendendo um tipo genérico
+    - [ ] Constraints de tipo
+    - [ ] Tipos associados
+    - [ ] Clausúlas Where em Generics
+    - [ ] Extensões com uma cláusura Where genérica
+    - [ ] Cláusula Where genérica
+    - [ ] Tipos associados com um a cláusula Where genérica
+    - [ ] Subscrição em Generics
+  - [ ] Tipos Opacos
+    - [ ] Introdução
+    - [ ] O problema que tipos Opacos resolvem
+    - [ ] Retornando um tipo Opaco
+    - [ ] Diferençås entre tipos Opacos e tipos Protocolos
   - [ ] Automatic Reference Counting
-    - [ ] Intro
-    - [ ] How ARC Works
-    - [ ] ARC in Action
-    - [ ] Strong Reference Cycles Between Class Instances
-    - [ ] Resolving Strong Reference Cycles Between Class Instances
-    - [ ] Strong Reference Cycles for Closures
-    - [ ] Resolving Strong Reference Cycles for Closures
-  - [ ] Memory Safety
-    - [ ] Intro
-    - [ ] Understanding Conflicting Access to Memory
-    - [ ] Conflicting Access to In-Out Parameters
-    - [ ] Conflicting Access to self in Methods
-    - [ ] Conflicting Access to Properties
-  - [ ] Access Control
-    - [ ] Intro
-    - [ ] Modules and Source Files
-    - [ ] Access Levels
-    - [ ] Access Control Syntax
-    - [ ] Custom Types
+    - [ ] Introdução
+    - [ ] Como ARC funciona
+    - [ ] ARC em ação
+    - [ ] Ciclos de referência forte entre instâncias de classes
+    - [ ] Resolvendo ciclos de referência forte entre instâncias de classes
+    - [ ] Ciclos de referência forte para Closures
+    - [ ] Resolvendo ciclos de referência forte para Closures
+  - [ ] Segurança de memória
+    - [ ] Introdução
+    - [ ] Entendendo conflitos de acesso à memória
+    - [ ] Conflitando acesso para parâmetros In-Out
+    - [ ] Conflitando acesso para self em Métodos
+    - [ ] Conflitando acesso para propriedades
+  - [ ] Controle de acesso
+    - [ ] Introdução
+    - [ ] Módulos e arquivos-fonte
+    - [ ] Níveis de acesso
+    - [ ] Sintaxe de controle de acesso
+    - [ ] Tipos customizados
     - [ ] Subclassing
-    - [ ] Constants, Variables, Properties, and Subscripts
-    - [ ] Initializers
-    - [ ] Protocols
-    - [ ] Extensions
+    - [ ] Constantes, variáveis, propriedades, e subscrições
+    - [ ] Inicializadores
+    - [ ] Protocolos
+    - [ ] Extensões
     - [ ] Generics
-    - [ ] Type Aliases
-  - [ ] Advanced Operators
-    - [ ] Intro
-    - [ ] Bitwise Operators
-    - [ ] Overflow Operators
-    - [ ] Precedence and Associativity
-    - [ ] Operator Methods
-    - [ ] Custom Operators
-- [ ] Reference Manual
-  - [ ] About The Language Reference
-  - [ ] Lexical Structure
-    - [ ] Intro
-    - [ ] Whitespace and Comments
-    - [ ] Identifiers
-    - [ ] Keywords and Punctuation
-    - [ ] Literals
-    - [ ] Operators
-  - [ ] Types
-    - [ ] Intro
+    - [ ] Aliases de tipo
+  - [ ] Operadores avançados
+    - [ ] Introdução
+    - [ ] Operadores bit a bit
+    - [ ] Sobrecarregar operadores
+    - [ ] Precedência e associatividade
+    - [ ] Métodos operadores
+    - [ ] Operadores customizados
+- [ ] Manual de referência
+  - [ ] Sobre a referência da linguagem
+  - [ ] Estrutura léxica
+    - [ ] Introdução
+    - [ ] Espaços e comentários
+    - [ ] Identificadores
+    - [ ] Palavras-chave e pontuação
+    - [ ] Literais
+    - [ ] Operadores
+  - [ ] Tipos
+    - [ ] Introdução
     - [ ] Type Annotation
-    - [ ] Type Identifier
-    - [ ] Tuple Type
-    - [ ] Function Type
-    - [ ] Array Type
-    - [ ] Dictionary Type
-    - [ ] Optional Type
-    - [ ] Implicitly Unwrapped Optional Type
-    - [ ] Protocol Composition Type
-    - [ ] Opaque Type
-    - [ ] Metatype Type
-    - [ ] Self Type
-    - [ ] Type Inheritance Clause
-    - [ ] Type Inference
-  - [ ] Expressions
-    - [ ] Intro
-    - [ ] Prefix Expressions
-    - [ ] Binary Expressions
-    - [ ] Primary Expressions
-    - [ ] Postfix Expressions
-  - [ ] Statements
-    - [ ] Intro
-    - [ ] Loop Statements
-    - [ ] Branch Statements
-    - [ ] Labeled Statement
-    - [ ] Control Transfer Statements
-    - [ ] Defer Statement
-    - [ ] Do Statement
-    - [ ] Compiler Control Statements
-    - [ ] Availability Condition
-  - [ ] Declarations
-    - [ ] Intro
-    - [ ] Top-Level Code
-    - [ ] Code Blocks
-    - [ ] Import Declaration
-    - [ ] Constant Declaration
-    - [ ] Variable Declaration
-    - [ ] Type Alias Declaration
-    - [ ] Function Declaration
-    - [ ] Enumeration Declaration
-    - [ ] Structure Declaration
-    - [ ] Class Declaration
-    - [ ] Protocol Declaration
-    - [ ] Initializer Declaration
-    - [ ] Deinitializer Declaration
-    - [ ] Extension Declaration
-    - [ ] Subscript Declaration
-    - [ ] Operator Declaration
-    - [ ] Precedence Group Declaration
-    - [ ] Declaration Modifiers
-  - [ ] Attributes
-    - [ ] Intro
-    - [ ] Declaration Attributes
-    - [ ] Type Attributes
-    - [ ] Switch Case Attributes
-  - [ ] Patterns
-    - [ ] Intro
-    - [ ] Wildcard Pattern
-    - [ ] Identifier Pattern
-    - [ ] Value-Binding Pattern
-    - [ ] Tuple Pattern
-    - [ ] Enumeration Case Pattern
-    - [ ] Optional Pattern
-    - [ ] Type-Casting Patterns
-    - [ ] Expression Pattern
-  - [ ] Generic Parameters and Arguments
-    - [ ] Intro
-    - [ ] Generic Parameter Clause
-    - [ ] Generic Argument Clause
+    - [ ] Identificador de tipo
+    - [ ] Tipo Tupla
+    - [ ] Tipo Função
+    - [ ] Tipo Vetor
+    - [ ] Tipo Dicionário
+    - [ ] Tipo Opcional
+    - [ ] Tipo Opcional com unwrapping implicíto
+    - [ ] Tipo Composição de protocolo
+    - [ ] Tipo Opaco
+    - [ ] Tipo Metatipo
+    - [ ] Tipo Self
+    - [ ] Tipo Cláusula de herança
+    - [ ] Inferência de tipo
+  - [ ] Expressões
+    - [ ] Introdução
+    - [ ] Expressões pré-fixadas
+    - [ ] Expressões binárias
+    - [ ] Expressões primárias
+    - [ ] Expressões de pós-fixadas
+  - [ ] Instruções
+    - [ ] Introdução
+    - [ ] Instruções de repetição
+    - [ ] Instruções de ramificação
+    - [ ] Instruções rotuladas
+    - [ ] Instruções de transferência de controle
+    - [ ] Instrução Defer
+    - [ ] Instrução Do
+    - [ ] Instruções de Controle de compilador
+    - [ ] Condição de disponibilidade
+  - [ ] Declarações
+    - [ ] Introdução
+    - [ ] Código de nível mais elevado
+    - [ ] Blocos de código
+    - [ ] Declação de Importação
+    - [ ] Declaração de Constante
+    - [ ] Declaração de Variável
+    - [ ] Declaração de Alias de tipo
+    - [ ] Declaração de Função
+    - [ ] Declaração de Enumeração
+    - [ ] Declaração de Struct
+    - [ ] Declaração de Classe
+    - [ ] Declaração de Protocolo
+    - [ ] Declaração de Inicializador
+    - [ ] Declaração de Desinicializador
+    - [ ] Declaração de Extensão
+    - [ ] Declaração de Subscrição
+    - [ ] Declaração de Operador
+    - [ ] Declaração de Precedência de grupo
+    - [ ] Declaração de Modificadores
+  - [ ] Atributos
+    - [ ] Introdução
+    - [ ] Declaração de Atributos
+    - [ ] Atributos de tipos
+    - [ ] Atributos de Switch Case
+  - [ ] Padrões
+    - [ ] Introdução
+    - [ ] Padrão Wildcard
+    - [ ] Padrão de identificador
+    - [ ] Padrão Value-Binding
+    - [ ] Padrão Tupla
+    - [ ] Padrão de Enumeração de casos
+    - [ ] Padrão Opcional
+    - [ ] Padrão de Conversão de tipos
+    - [ ] Padrão de Expressões
+  - [ ] Parâmetros genéricos e argumentos
+    - [ ] Introdução
+    - [ ] Cláusula de parâmetro genérico
+    - [ ] Cláusula de argumento genérico
 
 ## Começe Agora! 🎉
 
