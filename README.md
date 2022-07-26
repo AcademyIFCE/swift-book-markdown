@@ -10,321 +10,319 @@ Acesse o guia [CONTRIBUTING.md](docs/CONTRIBUTING.md) e saiba como ajudar com a 
 
 O livro em inglês está lentamente sendo migrado para o formato de _Markdown_ antes de ser traduzido. A seguintes _Sessões_ já estão em formato _Markdown_ e já podem ser traduzidas através de Pull Requests:
 
-- [x] [About Swift](GuidedTour/AboutSwift.md)
-- [x] [Version Compatibility](GuidedTour/Compatibility.md)
-- [x] [A Swift Tour](GuidedTour/SwiftTour.md)
-  - [x] [Intro](GuidedTour/SwiftTour.md#uma-tour-pela-swift)
-  - [x] [Simple Values](GuidedTour/SwiftTour.md#valores-simples)
-  - [x] [Control Flow](GuidedTour/SwiftTour.md#controle-de-fluxo)
-  - [x] [Functions and Closures](GuidedTour/SwiftTour.md#fun%C3%A7%C3%B5es-e-closures)
-  - [x] [Objects and Classes](GuidedTour/SwiftTour.md#objetos-e-classes)
-  - [x] [Enumerations and Structures](GuidedTour/SwiftTour.md#enumerations-and-structures)
-  - [x] [Protocols and Extensions](GuidedTour/SwiftTour.md#protocolos-e-extens%C3%B5es)
-  - [x] [Error Handling](GuidedTour/SwiftTour.md#tratamento-de-erros)
+- [x] [Sobre Swift](GuidedTour/AboutSwift.md)
+- [x] [Compatibilidade de Versão](GuidedTour/Compatibility.md)
+- [x] [Um tour de Swift](GuidedTour/SwiftTour.md)
+  - [x] [Introdução](GuidedTour/SwiftTour.md#uma-tour-pela-swift)
+  - [x] [Valores Simples](GuidedTour/SwiftTour.md#valores-simples)
+  - [x] [Controle de Fluxo](GuidedTour/SwiftTour.md#controle-de-fluxo)
+  - [x] [Funções e closures](GuidedTour/SwiftTour.md#fun%C3%A7%C3%B5es-e-closures)
+  - [x] [Objetos e classes](GuidedTour/SwiftTour.md#objetos-e-classes)
+  - [x] [Enumerações e Estruturas](GuidedTour/SwiftTour.md#enumerations-and-structures)
+  - [x] [Protocolos e Extensões](GuidedTour/SwiftTour.md#protocolos-e-extens%C3%B5es)
+  - [x] [Tratamento de erros](GuidedTour/SwiftTour.md#tratamento-de-erros)
   - [x] [Generics](GuidedTour/SwiftTour.md#generics)
-- [ ] Language Guide
-  - [x] [The Basics](LanguageGuide/TheBasics.md#the-basics)
-    - [x] [Intro](LanguageGuide/TheBasics.md#the-basics)
-    - [x] [Constants and Variables](LanguageGuide/TheBasics.md#constants-and-variables)
-    - [x] [Comments](LanguageGuide/TheBasics.md#coment%C3%A1rios)
-    - [x] [Semicolons](LanguageGuide/TheBasics.md#ponto-e-v%C3%ADrgula)
-    - [x] [Integers](LanguageGuide/TheBasics.md#integers)
-    - [x] [Floating-Point Numbers](LanguageGuide/TheBasics.md#n%C3%BAmeros-de-ponto-flutuante)
-    - [x] [Type Safety and Type Inference](LanguageGuide/TheBasics.md#type-safety-e-inferência-de-tipo)
-    - [x] [Numeric Literals](LanguageGuide/TheBasics.md#literais-num%C3%A9ricos)
-    - [x] [Numeric Type Conversion](LanguageGuide/TheBasics.md#convers%C3%A3o-de-tipo-num%C3%A9rico)
-    - [x] [Assertions and Preconditions](LanguageGuide/TheBasics.md#asserções-e-pré-condições)
-  - [x] [Basic Operators](LanguageGuide/BasicOperators.md)
-    - [x] [Intro](LanguageGuide/BasicOperators.md#operadores-b%C3%A1sicos)
-    - [x] [Terminology](LanguageGuide/BasicOperators.md#terminologia)
-    - [x] [Assignment Operator](LanguageGuide/BasicOperators.md#operador-de-atribui%C3%A7%C3%A3o)
-    - [x] [Arithmetic Operators](LanguageGuide/BasicOperators.md#operadores-aritm%C3%A9ticos)
-    - [x] [Compound Assignment Operators](LanguageGuide/BasicOperators.md#operadores-compostos-de-atribui%C3%A7%C3%A3o)
-    - [x] [Comparison Operators](LanguageGuide/BasicOperators.md#operadores-de-compara%C3%A7%C3%A3o)
-    - [x] [Ternary Conditional Operator](LanguageGuide/BasicOperators.md#operador-tern%C3%A1rio-condicional)
-    - [x] [Nil-Coalescing Operator](LanguageGuide/BasicOperators.md#operador-nil-coalescing)
-    - [x] [Range Operators](LanguageGuide/BasicOperators.md#operadores-de-intervalo)
-    - [x] [Logical Operators](LanguageGuide/BasicOperators.md#operadores-l%C3%B3gicos)
-  - [ ] Strings And Characters
-    - [x] [Intro](LanguageGuide/StringsAndCharacters.md#strings-e-caracteres)
-    - [x] [String Literals](LanguageGuide/StringsAndCharacters.md#literais-de-string)
-    - [x] [Initializing an Empty String](LanguageGuide/StringsAndCharacters.md#inicializando-uma-string-vazia)
-    - [x] [String Mutability](LanguageGuide/StringsAndCharacters.md#mutabilidade-da-string)
-    - [x] [Strings Are Value Types](LanguageGuide/StringsAndCharacters.md#strings-são-value-types)
-    - [x] [Working with Characters](LanguageGuide/StringsAndCharacters.md#trabalhando-com-caracteres)
-    - [x] [Concatenating Strings and Characters](LanguageGuide/StringsAndCharacters.md#concatenando-strings-e-caracteres)
-    - [x] String Interpolation
+- [ ] Guia da Linguagem
+  - [x] [O básico](LanguageGuide/TheBasics.md#the-basics)
+    - [x] [Introdução](LanguageGuide/TheBasics.md#the-basics)
+    - [x] [Constantes e variáveis](LanguageGuide/TheBasics.md#constants-and-variables)
+    - [x] [Comentários](LanguageGuide/TheBasics.md#coment%C3%A1rios)
+    - [x] [Ponto-e-vírgula](LanguageGuide/TheBasics.md#ponto-e-v%C3%ADrgula)
+    - [x] [Inteiros](LanguageGuide/TheBasics.md#integers)
+    - [x] [Números de ponto-flutuante](LanguageGuide/TheBasics.md#n%C3%BAmeros-de-ponto-flutuante)
+    - [x] [Type Safety e inferência de tipo](LanguageGuide/TheBasics.md#type-safety-e-inferência-de-tipo)
+    - [x] [Literais numéricos](LanguageGuide/TheBasics.md#literais-num%C3%A9ricos)
+    - [x] [Conversão de tipo numérico](LanguageGuide/TheBasics.md#convers%C3%A3o-de-tipo-num%C3%A9rico)
+    - [x] [Asserções e pré-condições](LanguageGuide/TheBasics.md#asserções-e-pré-condições)
+  - [x] [Operadores básicos](LanguageGuide/BasicOperators.md)
+    - [x] [Introdução](LanguageGuide/BasicOperators.md#operadores-b%C3%A1sicos)
+    - [x] [Terminologia](LanguageGuide/BasicOperators.md#terminologia)
+    - [x] [Operador de atribuição](LanguageGuide/BasicOperators.md#operador-de-atribui%C3%A7%C3%A3o)
+    - [x] [Operadores aritméticos](LanguageGuide/BasicOperators.md#operadores-aritm%C3%A9ticos)
+    - [x] [Operadores compostos de atribuição](LanguageGuide/BasicOperators.md#operadores-compostos-de-atribui%C3%A7%C3%A3o)
+    - [x] [Operadores de comparação](LanguageGuide/BasicOperators.md#operadores-de-compara%C3%A7%C3%A3o)
+    - [x] [Operador ternário condicional](LanguageGuide/BasicOperators.md#operador-tern%C3%A1rio-condicional)
+    - [x] [Operador Nil-Coalescing](LanguageGuide/BasicOperators.md#operador-nil-coalescing)
+    - [x] [Operadores de intervalo](LanguageGuide/BasicOperators.md#operadores-de-intervalo)
+    - [x] [Operadores lógicos](LanguageGuide/BasicOperators.md#operadores-l%C3%B3gicos)
+  - [ ] Strings e caracteres
+    - [x] [Introdução](LanguageGuide/StringsAndCharacters.md#strings-e-caracteres)
+    - [x] [Literais de string](LanguageGuide/StringsAndCharacters.md#literais-de-string)
+    - [x] [Inicializando uma String vazia](LanguageGuide/StringsAndCharacters.md#inicializando-uma-string-vazia)
+    - [x] [Mutabilidade de String](LanguageGuide/StringsAndCharacters.md#mutabilidade-da-string)
+    - [x] [Strings são Value Types](LanguageGuide/StringsAndCharacters.md#strings-são-value-types)
+    - [x] [Trabalhando com Characters](LanguageGuide/StringsAndCharacters.md#trabalhando-com-caracteres)
+    - [x] [Concatenando Strings e caracteres](LanguageGuide/StringsAndCharacters.md#concatenando-strings-e-caracteres)
+    - [x] [Interpolação de String](LanguageGuide/StringsAndCharacters.md#interpolação-de-string)
     - [ ] Unicode
-    - [ ] Counting Characters
-    - [ ] Accessing and Modifying a String
+    - [ ] Contando Caracteres
+    - [ ] Acessando e modificando uma String
     - [ ] Substrings
-    - [ ] Unicode
-    - [ ] Comparing Strings
-    - [ ] Unicode Representations of Strings
-  - [ ] Collection Types
-    - [x] [Intro](LanguageGuide/CollectionTypes.md#collection-types)
-    - [x] [Mutability of Collections](LanguageGuide/CollectionTypes.md#mutabilidade-de-coleções)
+    - [ ] Comparando Strings
+    - [ ] Representação de Strings em Unicode
+  - [ ] Tipos de coleções
+    - [x] [Introdução](LanguageGuide/CollectionTypes.md#collection-types)
+    - [x] [Mutabilidade de Coleções](LanguageGuide/CollectionTypes.md#mutabilidade-de-coleções)
     - [x] [Arrays](LanguageGuide/CollectionTypes.md#arrays)
     - [ ] Sets
-    - [ ] Performing Set Operations
-    - [ ] Dictionaries
-  - [ ] Control Flow
-    - [ ] Intro
-    - [ ] For-In Loops
-    - [ ] While Loops
-    - [ ] Conditional Statements
-    - [ ] Control Transfer Statements
-    - [ ] Early Exit
-    - [ ] Checking API Availability
-  - [ ] Functions
-    - [ ] Intro
-    - [ ] Defining and Calling Functions
-    - [ ] Function Parameters and Return Values
-    - [ ] Function Argument Labels and Parameter Names
-    - [ ] Function Types
-    - [ ] Nested Functions
+    - [ ] Performando operações em Sets
+    - [ ] Dicionários
+  - [ ] Controle de fluxo
+    - [ ] Introdução
+    - [ ] Laços de repetição For-In
+    - [ ] Laços de repetição While
+    - [ ] Instruções condicionais
+    - [ ] Comandos de transferência de controle
+    - [ ] Saída antecipada
+    - [ ] Verificando disponibilidade de API
+  - [ ] Funções
+    - [ ] Introdução
+    - [ ] Definindo e chamando Funções
+    - [ ] Parâmetros de funções e valores de retorno
+    - [ ] Rótulos de argumentos de Funções e nomes de parâmetros
+    - [ ] Tipos de Funcões
+    - [ ] Funções aninhadas
   - [ ] Closures
-    - [x] [Intro](LanguageGuide/Closures.md#closures)
-    - [x] [Closure Expressions](LanguageGuide/Closures.md#express%C3%B5es-closure)
+    - [x] [Introdução](LanguageGuide/Closures.md#closures)
+    - [x] [Expressões Closure](LanguageGuide/Closures.md#express%C3%B5es-closure)
     - [ ] Trailing Closures
-    - [ ] Capturing Values
-    - [x] [Closures Are Reference Types](LanguageGuide/Closures.md#closures-s%C3%A3o-reference-types)
+    - [ ] Capturando valores
+    - [x] [Closures são tipos de valor](LanguageGuide/Closures.md#closures-s%C3%A3o-reference-types)
     - [x] [Escaping Closures](LanguageGuide/Closures.md#escaping-closures)
     - [ ] Autoclosures
-  - [ ] Enumerations
-    - [X] [Intro](LanguageGuide/Enumerations.md#enumera%C3%A7%C3%B5es)
-    - [X] [Enumeration Syntax](LanguageGuide/Enumerations.md#sintaxe-de-enumera%C3%A7%C3%B5es)
-    - [X] [Matching Enumeration Values with a Switch Statement](LanguageGuide/Enumerations.md#correspondendo-valores-de-enumera%C3%A7%C3%B5es-com-blocos-switch)
-    - [x] [Iterating over Enumeration Cases](LanguageGuide/Enumerations.md#iterando-sobre-casos-de-enumera%C3%A7%C3%B5es)
-    - [ ] Associated Values
-    - [ ] Raw Values
-    - [ ] Recursive Enumerations
-  - [ ] Structures and Classes
-    - [ ] Intro
-    - [ ] Comparing Structures and Classes
-    - [ ] Structures and Enumerations Are Value Types
-    - [ ] Classes Are Reference Types
-  - [ ] Properties
-    - [x] [Intro](LanguageGuide/Properties.md#propriedades)
-    - [x] [Stored Properties](LanguageGuide/Properties.md#propriedades-armazenadas)
-    - [x] [Computed Properties](LanguageGuide/Properties.md#propriedades-computadas)
-    - [ ] Property Observers
-    - [ ] Property Wrappers
-    - [ ] Global and Local Variables
-    - [ ] Type Properties
-  - [ ] Methods
-    - [ ] Intro
-    - [ ] Instance Methods
-    - [ ] Type Methods
-  - [ ] Subscripts
-    - [ ] Intro
-    - [ ] Subscript Syntax
-    - [ ] Subscript Usage
-    - [ ] Subscript Options
-    - [ ] Type Subscripts
-  - [ ] Inheritance
-    - [ ] Intro
-    - [ ] Defining a Base Class
-    - [ ] Subclassing
-    - [ ] Overriding
-    - [ ] Preventing Overrides
-  - [ ] Initialization
-    - [ ] Intro
-    - [ ] Setting Initial Values for Stored Properties
-    - [ ] Customizing Initialization
-    - [ ] Default Initializers
-    - [ ] Initializer Delegation for Value Types
-    - [ ] Class Inheritance and Initialization
-    - [ ] Failable Initializers
-    - [ ] Required Initializers
-    - [ ] Setting a Default Property Value with a Closure or Function
-  - [ ] Deinitialization
-    - [ ] Intro
-    - [ ] How Deinitialization Works
-    - [ ] Deinitializers in Action
-  - [ ] Optional Chaining
-    - [ ] Intro
-    - [ ] Optional Chaining as an Alternative to Forced Unwrapping
-    - [ ] Defining Model Classes for Optional Chaining
-    - [ ] Accessing Properties Through Optional Chaining
-    - [ ] Calling Methods Through Optional Chaining
-    - [ ] Accessing Subscripts Through Optional Chaining
-    - [ ] Linking Multiple Levels of Chaining
-    - [ ] Chaining on Methods with Optional Return Values
-  - [ ] Error Handling
-    - [ ] Intro
-    - [x] Representing and Throwing Errors
-    - [ ] Handling Errors
-    - [ ] Specifying Cleanup Actions
-  - [ ] Type Casting
-    - [ ] Intro
-    - [ ] Defining a Class Hierarchy for Type Casting
-    - [ ] Checking Type
-    - [ ] Downcasting
-    - [ ] Type Casting for Any and AnyObject
-    - [ ] Downcasting
-  - [ ] Nested Types
-    - [ ] Intro
-    - [ ] Nested Types in Action
-    - [ ] Referring to Nested Types
-  - [ ] Extensions
-    - [ ] Intro
-    - [ ] Extension Syntax
-    - [ ] Computed Properties
-    - [ ] Initializers
-    - [ ] Methods
-    - [ ] Subscripts
-    - [ ] Nested Types
-  - [ ] Protocols
-    - [ ] Intro
-    - [ ] Protocol Syntax
-    - [ ] Property Requirements
-    - [ ] Method Requirements
-    - [ ] Mutating Method Requirements
-    - [ ] Initializer Requirements
-    - [ ] Protocols as Types
-    - [ ] Delegation
-    - [ ] Adding Protocol Conformance with an Extension
-    - [ ] Adopting a Protocol Using a Synthesized Implementation
-    - [ ] Collections of Protocol Types
-    - [ ] Protocol Inheritance
-    - [ ] Class-Only Protocols
-    - [ ] Protocol Composition
-    - [ ] Checking for Protocol Conformance
-    - [ ] Optional Protocol Requirements
-    - [ ] Protocol Extensions
+  - [ ] Enumerações
+    - [X] [Introdução](LanguageGuide/Enumerations.md#enumera%C3%A7%C3%B5es)
+    - [X] [Sintaxe de Enumerações](LanguageGuide/Enumerations.md#sintaxe-de-enumera%C3%A7%C3%B5es)
+    - [X] [Correspondendo valores de enumerações com blocos Switch](LanguageGuide/Enumerations.md#correspondendo-valores-de-enumera%C3%A7%C3%B5es-com-blocos-switch)
+    - [ ] [Iterando sobre casos de Enumerações]((LanguageGuide/Enumerations.md#iterando-sobre-casos-de-enumera%C3%A7%C3%B5es)
+    - [ ] Valores associados
+    - [ ] Valores brutos
+    - [ ] Enumerações recursivas
+  - [ ] <i>Structs</i> e Classes
+    - [ ] Introdução
+    - [ ] Comparando Structures e Classes
+    - [ ] Structures e enumerações são tipos de valor
+    - [ ] Classes são tipos de referência
+  - [ ] Propriedades
+    - [x] [Introdução](LanguageGuide/Properties.md#propriedades)
+    - [x] [Propriedades armazenadas](LanguageGuide/Properties.md#propriedades-armazenadas)
+    - [x] [Propriedades computadas](LanguageGuide/Properties.md#propriedades-computadas)
+    - [ ] Observadores de propriedades
+    - [ ] <i>Wrappers</i> de propriedades
+    - [ ] Variáveis globais e locais
+    - [ ] Propriedades de tipos
+  - [ ] Métodos
+    - [ ] Introdução
+    - [ ] Métodos de instância
+    - [ ] Métodos de tipos
+  - [ ] Subscritos
+    - [ ] Introdução
+    - [ ] Sintaxe de subscritos
+    - [ ] Uso de subscritos
+    - [ ] Opções de subscritos
+    - [ ] Subscritos de tipos
+  - [ ] Herança
+    - [ ] Introdução
+    - [ ] Definindo uma classe base
+    - [ ] Criando subclasses
+    - [ ] Sobrescrevendo
+    - [ ] Prevenindo Sobrescrições
+  - [ ] Inicialização
+    - [ ] Introdução
+    - [ ] Definindo valores iniciais para propriedades armazenadas
+    - [ ] Customizando inicialização
+    - [ ] Inicializadores padrão
+    - [ ] Delegação de inicializador para tipos de valor
+    - [ ] Herança de classe e inicialização
+    - [ ] Inicializadores que podem falhar
+    - [ ] Inicializadores obrigatórios
+    - [ ] Definindo um valor padrão de propriedade com uma _Closure_ ou Função
+  - [ ] Deinicialização
+    - [ ] Introdução
+    - [ ] Como deinicializadores funcionam
+    - [ ] Deinicializadores em ação
+  - [ ] Encadeamento opcional
+    - [ ] Introdução
+    - [ ] Encadeamento opcional como uma alternativa ao _unwrapping_ forçado
+    - [ ] Definindo classes modelo para encadeamento opcional
+    - [ ] Acessando propriedades através de encadeamento opcional
+    - [ ] Chamando métodos através de encadeamento opcional
+    - [ ] Acessando subscrito através de encadeamento opcional
+    - [ ] Vinculando múltiplos níveis de encadeamento
+    - [ ] Encadeamento em métodos com retornos do tipo opcional
+  - [ ] Manipulação de erros
+    - [ ] Introdução
+    - [x] Representando e disparando erros
+    - [ ] Manipulando erros
+    - [ ] Especificando ações de limpeza
+  - [ ] Conversão de tipo
+    - [ ] Introdução
+    - [ ] Definindo uma hierarquia de classe para conversão de tipo
+    - [ ] Verificando tipo
+    - [ ] _Downcasting_
+    - [ ] Conversão de tipo para _Any_ e _AnyObject_
+  - [ ] Tipos aninhados
+    - [ ] Introdução
+    - [ ] Tipos aninhados na prática
+    - [ ] Referenciando tipos aninhados
+  - [ ] Extensões
+    - [ ] Introdução
+    - [ ] Sintaxe de extensão
+    - [ ] Propriedades computadas
+    - [ ] Inicializadores
+    - [ ] Métodos
+    - [ ] Subscritos
+    - [ ] Tipos aninhados
+  - [ ] Protocolos
+    - [ ] Introdução
+    - [ ] Sintaxe de protocolo
+    - [ ] Requisitos de propriedades
+    - [ ] Requisitos de métodos
+    - [ ] Requisitos de métodos _mutating_
+    - [ ] Requisitos de inicializadores
+    - [ ] Protocolos como tipos
+    - [ ] Delegação
+    - [ ] Adicionando conformação de protocolo com uma extensão
+    - [ ] Adotando um protocolo usando uma implementação sintetizada
+    - [ ] Coleções de tipos de protocolos
+    - [ ] Herança de protocolos
+    - [ ] Protocolos somente de classes
+    - [ ] Composição de protocolos
+    - [ ] Verificando conformidade com protocolos
+    - [ ] Requisitos de protocolos opcionais
+    - [ ] Extensões de protocolos
   - [ ] Generics
-    - [x] [Intro](LanguageGuide/Generics.md#generics)
-    - [x] [The Problem That Generics Solve](LanguageGuide/Generics.md#o-problema-que-generics-resolve)
-    - [x] [Generic Functions](LanguageGuide/Generics.md#fun%C3%A7%C3%B5es-generic)
-    - [ ] Type Parameters
-    - [ ] Naming Type Parameters
-    - [x] [Generic Types](LanguageGuide/Generics.md#Tipos%20Gen%C3%A9ricos)
-    - [ ] Extending a Generic Type
-    - [ ] Type Constraints
-    - [ ] Associated Types
-    - [ ] Generic Where Clauses
-    - [ ] Extensions with a Generic Where Clause
-    - [ ] Contextual Where Clauses
-    - [ ] Associated Types with a Generic Where Clause
-    - [ ] Generic Subscripts
-  - [ ] Opaque Types
-    - [ ] Intro
-    - [ ] The Problem That Opaque Types Solve
-    - [ ] Returning an Opaque Type
-    - [ ] Differences Between Opaque Types and Protocol Types
+    - [x] [Introdução](LanguageGuide/Generics.md#generics)
+    - [x] [O problema que Generics resolve](LanguageGuide/Generics.md#o-problema-que-generics-resolve)
+    - [x] [Funções genéricas](LanguageGuide/Generics.md#fun%C3%A7%C3%B5es-generic)
+    - [ ] Parâmetros de tipo
+    - [ ] Nomeando parâmetros de tipo
+    - [x] [Tipos genéricos](LanguageGuide/Generics.md#Tipos%20Gen%C3%A9ricos)
+    - [ ] Extendendo um tipo genérico
+    - [ ] Constraints de tipo
+    - [ ] Tipos associados
+    - [ ] Clausúlas Where em Generics
+    - [ ] Extensões com uma cláusura Where genérica
+    - [ ] Cláusula Where genérica
+    - [ ] Tipos associados com um a cláusula Where genérica
+    - [ ] Subscrição em Generics
+  - [ ] Tipos Opacos
+    - [ ] Introdução
+    - [ ] O problema que tipos Opacos resolvem
+    - [ ] Retornando um tipo Opaco
+    - [ ] Diferençås entre tipos Opacos e tipos Protocolos
   - [ ] Automatic Reference Counting
-    - [ ] Intro
-    - [ ] How ARC Works
-    - [ ] ARC in Action
-    - [ ] Strong Reference Cycles Between Class Instances
-    - [ ] Resolving Strong Reference Cycles Between Class Instances
-    - [ ] Strong Reference Cycles for Closures
-    - [ ] Resolving Strong Reference Cycles for Closures
-  - [ ] Memory Safety
-    - [ ] Intro
-    - [ ] Understanding Conflicting Access to Memory
-    - [ ] Conflicting Access to In-Out Parameters
-    - [ ] Conflicting Access to self in Methods
-    - [ ] Conflicting Access to Properties
-  - [ ] Access Control
-    - [ ] Intro
-    - [ ] Modules and Source Files
-    - [ ] Access Levels
-    - [ ] Access Control Syntax
-    - [ ] Custom Types
+    - [ ] Introdução
+    - [ ] Como ARC funciona
+    - [ ] ARC em ação
+    - [ ] Ciclos de referência forte entre instâncias de classes
+    - [ ] Resolvendo ciclos de referência forte entre instâncias de classes
+    - [ ] Ciclos de referência forte para Closures
+    - [ ] Resolvendo ciclos de referência forte para Closures
+  - [ ] Segurança de memória
+    - [ ] Introdução
+    - [ ] Entendendo conflitos de acesso à memória
+    - [ ] Conflitando acesso para parâmetros In-Out
+    - [ ] Conflitando acesso para self em Métodos
+    - [ ] Conflitando acesso para propriedades
+  - [ ] Controle de acesso
+    - [ ] Introdução
+    - [ ] Módulos e arquivos-fonte
+    - [ ] Níveis de acesso
+    - [ ] Sintaxe de controle de acesso
+    - [ ] Tipos customizados
     - [ ] Subclassing
-    - [ ] Constants, Variables, Properties, and Subscripts
-    - [ ] Initializers
-    - [ ] Protocols
-    - [ ] Extensions
+    - [ ] Constantes, variáveis, propriedades, e subscrições
+    - [ ] Inicializadores
+    - [ ] Protocolos
+    - [ ] Extensões
     - [ ] Generics
-    - [ ] Type Aliases
-  - [ ] Advanced Operators
-    - [ ] Intro
-    - [ ] Bitwise Operators
-    - [ ] Overflow Operators
-    - [ ] Precedence and Associativity
-    - [ ] Operator Methods
-    - [ ] Custom Operators
-- [ ] Reference Manual
-  - [ ] About The Language Reference
-  - [ ] Lexical Structure
-    - [ ] Intro
-    - [ ] Whitespace and Comments
-    - [ ] Identifiers
-    - [ ] Keywords and Punctuation
-    - [ ] Literals
-    - [ ] Operators
-  - [ ] Types
-    - [ ] Intro
+    - [ ] Aliases de tipo
+  - [ ] Operadores avançados
+    - [ ] Introdução
+    - [ ] Operadores bit a bit
+    - [ ] Sobrecarregar operadores
+    - [ ] Precedência e associatividade
+    - [ ] Métodos operadores
+    - [ ] Operadores customizados
+- [ ] Manual de referência
+  - [ ] Sobre a referência da linguagem
+  - [ ] Estrutura léxica
+    - [ ] Introdução
+    - [ ] Espaços e comentários
+    - [ ] Identificadores
+    - [ ] Palavras-chave e pontuação
+    - [ ] Literais
+    - [ ] Operadores
+  - [ ] Tipos
+    - [ ] Introdução
     - [ ] Type Annotation
-    - [ ] Type Identifier
-    - [ ] Tuple Type
-    - [ ] Function Type
-    - [ ] Array Type
-    - [ ] Dictionary Type
-    - [ ] Optional Type
-    - [ ] Implicitly Unwrapped Optional Type
-    - [ ] Protocol Composition Type
-    - [ ] Opaque Type
-    - [ ] Metatype Type
-    - [ ] Self Type
-    - [ ] Type Inheritance Clause
-    - [ ] Type Inference
-  - [ ] Expressions
-    - [ ] Intro
-    - [ ] Prefix Expressions
-    - [ ] Binary Expressions
-    - [ ] Primary Expressions
-    - [ ] Postfix Expressions
-  - [ ] Statements
-    - [ ] Intro
-    - [ ] Loop Statements
-    - [ ] Branch Statements
-    - [ ] Labeled Statement
-    - [ ] Control Transfer Statements
-    - [ ] Defer Statement
-    - [ ] Do Statement
-    - [ ] Compiler Control Statements
-    - [ ] Availability Condition
-  - [ ] Declarations
-    - [ ] Intro
-    - [ ] Top-Level Code
-    - [ ] Code Blocks
-    - [ ] Import Declaration
-    - [ ] Constant Declaration
-    - [ ] Variable Declaration
-    - [ ] Type Alias Declaration
-    - [ ] Function Declaration
-    - [ ] Enumeration Declaration
-    - [ ] Structure Declaration
-    - [ ] Class Declaration
-    - [ ] Protocol Declaration
-    - [ ] Initializer Declaration
-    - [ ] Deinitializer Declaration
-    - [ ] Extension Declaration
-    - [ ] Subscript Declaration
-    - [ ] Operator Declaration
-    - [ ] Precedence Group Declaration
-    - [ ] Declaration Modifiers
-  - [ ] Attributes
-    - [ ] Intro
-    - [ ] Declaration Attributes
-    - [ ] Type Attributes
-    - [ ] Switch Case Attributes
-  - [ ] Patterns
-    - [ ] Intro
-    - [ ] Wildcard Pattern
-    - [ ] Identifier Pattern
-    - [ ] Value-Binding Pattern
-    - [ ] Tuple Pattern
-    - [ ] Enumeration Case Pattern
-    - [ ] Optional Pattern
-    - [ ] Type-Casting Patterns
-    - [ ] Expression Pattern
-  - [ ] Generic Parameters and Arguments
-    - [ ] Intro
-    - [ ] Generic Parameter Clause
-    - [ ] Generic Argument Clause
+    - [ ] Identificador de tipo
+    - [ ] Tipo Tupla
+    - [ ] Tipo Função
+    - [ ] Tipo Vetor
+    - [ ] Tipo Dicionário
+    - [ ] Tipo Opcional
+    - [ ] Tipo Opcional com unwrapping implicíto
+    - [ ] Tipo Composição de protocolo
+    - [ ] Tipo Opaco
+    - [ ] Tipo Metatipo
+    - [ ] Tipo Self
+    - [ ] Tipo Cláusula de herança
+    - [ ] Inferência de tipo
+  - [ ] Expressões
+    - [ ] Introdução
+    - [ ] Expressões pré-fixadas
+    - [ ] Expressões binárias
+    - [ ] Expressões primárias
+    - [ ] Expressões de pós-fixadas
+  - [ ] Instruções
+    - [ ] Introdução
+    - [ ] Instruções de repetição
+    - [ ] Instruções de ramificação
+    - [ ] Instruções rotuladas
+    - [ ] Instruções de transferência de controle
+    - [ ] Instrução Defer
+    - [ ] Instrução Do
+    - [ ] Instruções de Controle de compilador
+    - [ ] Condição de disponibilidade
+  - [ ] Declarações
+    - [ ] Introdução
+    - [ ] Código de nível mais elevado
+    - [ ] Blocos de código
+    - [ ] Declação de Importação
+    - [ ] Declaração de Constante
+    - [ ] Declaração de Variável
+    - [ ] Declaração de Alias de tipo
+    - [ ] Declaração de Função
+    - [ ] Declaração de Enumeração
+    - [ ] Declaração de Struct
+    - [ ] Declaração de Classe
+    - [ ] Declaração de Protocolo
+    - [ ] Declaração de Inicializador
+    - [ ] Declaração de Desinicializador
+    - [ ] Declaração de Extensão
+    - [ ] Declaração de Subscrição
+    - [ ] Declaração de Operador
+    - [ ] Declaração de Precedência de grupo
+    - [ ] Declaração de Modificadores
+  - [ ] Atributos
+    - [ ] Introdução
+    - [ ] Declaração de Atributos
+    - [ ] Atributos de tipos
+    - [ ] Atributos de Switch Case
+  - [ ] Padrões
+    - [ ] Introdução
+    - [ ] Padrão Wildcard
+    - [ ] Padrão de identificador
+    - [ ] Padrão Value-Binding
+    - [ ] Padrão Tupla
+    - [ ] Padrão de Enumeração de casos
+    - [ ] Padrão Opcional
+    - [ ] Padrão de Conversão de tipos
+    - [ ] Padrão de Expressões
+  - [ ] Parâmetros genéricos e argumentos
+    - [ ] Introdução
+    - [ ] Cláusula de parâmetro genérico
+    - [ ] Cláusula de argumento genérico
 
